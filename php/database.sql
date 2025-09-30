@@ -1,0 +1,5 @@
+-- This file USED TO embed SQL inside PHP. That caused import errors in phpMyAdmin.
+-- It is intentionally left as a placeholder so you do NOT try to import a PHP wrapper.
+-- Use the pure SQL file at project root:  ../database.sql
+-- If you need a single canonical script, open ../database.sql (no PHP tags) and import that.
+-- Keeping this file to avoid 404s if referenced anywhere.
