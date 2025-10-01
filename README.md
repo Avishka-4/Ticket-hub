@@ -102,4 +102,4 @@ Restart MySQL after changing.
 - Implement CSRF protection and strict input validation for forms when going beyond a demo
 
 ## License
-This project scaffold is provided for learning and demo purposes. You can adapt and reuse it freely in your own projects.
+
