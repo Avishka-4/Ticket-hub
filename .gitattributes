@@ -1,0 +1,29 @@
+# GitHub Linguist language detection overrides
+# This file forces GitHub to correctly identify file types and prevent Hack misclassification
+
+# Explicitly mark ALL PHP files as PHP (not Hack) - this is the key fix
+*.php linguist-language=PHP
+php/*.php linguist-language=PHP
+pages/*.php linguist-language=PHP
+includes/*.php linguist-language=PHP
+
+# Force any potential Hack-detected files to be PHP
+* linguist-language=PHP text
+*.inc linguist-language=PHP
+*.hh linguist-language=PHP
+*.hack linguist-language=PHP
+
+# Mark other file types explicitly  
+*.js linguist-language=JavaScript
+*.css linguist-language=CSS
+*.sql linguist-language=SQL
+*.md linguist-language=Markdown
+*.html linguist-language=HTML
+
+# Exclude documentation/config files from language detection
+README.md linguist-documentation
+*.sql linguist-documentation
+database*.sql linguist-documentation
+
+# Mark assets as vendored to exclude from stats
+assets/* linguist-vendored
