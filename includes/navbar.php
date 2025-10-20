@@ -62,9 +62,7 @@ $baseUrl = rtrim(str_replace('\\', '/', str_replace($documentRoot, '', $projectR
                             <li><a class="dropdown-item" href="<?php echo $baseUrl; ?>pages/profile.php">
                                 <i class="fas fa-user-circle me-2"></i>Profile
                             </a></li>
-                            <li><a class="dropdown-item" href="<?php echo $baseUrl; ?>pages/bookings.php">
-                                <i class="fas fa-ticket-alt me-2"></i>My Bookings
-                            </a></li>
+                            
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="<?php echo $baseUrl; ?>php/logout.php">
                                 <i class="fas fa-sign-out-alt me-2"></i>Logout

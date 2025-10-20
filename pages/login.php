@@ -99,9 +99,6 @@ $success = isset($_GET['success']) ? $_GET['success'] : '';
                                 <button type="button" class="btn btn-outline-danger">
                                     <i class="fab fa-google me-2"></i>Continue with Google
                                 </button>
-                                <button type="button" class="btn btn-outline-primary">
-                                    <i class="fab fa-facebook me-2"></i>Continue with Facebook
-                                </button>
                             </div>
 
                             <div class="text-center mt-3">
