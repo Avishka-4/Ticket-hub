@@ -11,31 +11,62 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicketHub - Your Gateway to Entertainment</title>
     
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Custom CSS -->
     <?php
-        // Compute base URL in case site is served from a subfolder like /xampp/htdocs/ticket booking/
         $documentRoot = realpath($_SERVER['DOCUMENT_ROOT']);
         $projectRoot = realpath(__DIR__);
         $baseUrl = rtrim(str_replace('\\', '/', str_replace($documentRoot, '', $projectRoot)), '/') . '/';
     ?>
-    <link rel="stylesheet" href="<?php echo $baseUrl; ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo $baseUrl; ?>assets/css/index.css">
 </head>
 <body>
     <?php include __DIR__ . '/includes/navbar.php'; ?>
 
     <!-- Hero Section -->
-    <section class="hero-section bg-gradient-to-r from-purple-600 to-blue-600 text-white py-20">
-        <div class="container mx-auto text-center">
-            <h1 class="text-5xl font-bold mb-4">Welcome to TicketHub</h1>
-            <p class="text-xl mb-8">Your one-stop destination for all entertainment bookings</p>
-            <!-- CTAs removed as requested -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="assets/images/film.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="assets/images/food.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="assets/images/sport.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="assets/images/dj.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="assets/images/surfing.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="assets/images/place.jpg" class="d-block w-100" alt="...">
+            </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <section class="hero-banner py-16 bg-gray-50 ">
+        <div class="hero-content mx-auto">
+            <h1 class="text-4xl font-bold text-center mb-12">Welcome to TicketHub</h1>
+        </div>
+        <p class="text-center ml-5 mr-5">TicketHub is your all-in-one platform to explore and book tickets for anything you love!
+        From the latest movies, concerts, and sports events to fun leisure activities, food 
+        and beverage experiences, and popular tourist attractions we’ve got it all covered. 
+        Whether you’re planning a night out with friends, a weekend adventure, or a special day 
+        out, TicketHub makes it super easy to find, compare, and book your tickets in just a few 
+        clicks. Enjoy life’s best moments with TicketHub where every ticket opens the door to a 
+        new experience!</p>
     </section>
 
     <!-- Categories Section -->
@@ -46,8 +77,8 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                 
                 <!-- Events Card -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-                    <div class="bg-gradient-to-r from-red-500 to-pink-500 h-48 flex items-center justify-center">
-                        <i class="fas fa-music text-6xl text-white"></i>
+                    <div class="card-image-container" style="background-image: url('assets/images/dj.jpg');">
+                        <i class="fas fa-music card-icon"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3">Events & Concerts</h3>
@@ -58,8 +89,8 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
                 <!-- Movies Card -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-                    <div class="bg-gradient-to-r from-blue-500 to-cyan-500 h-48 flex items-center justify-center">
-                        <i class="fas fa-film text-6xl text-white"></i>
+                    <div class="card-image-container" style="background-image: url('assets/images/film.jpg');">
+                        <i class="fas fa-film card-icon"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3">Movies & Theater</h3>
@@ -70,8 +101,8 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
                 <!-- Sports Card -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-                    <div class="bg-gradient-to-r from-green-500 to-emerald-500 h-48 flex items-center justify-center">
-                        <i class="fas fa-futbol text-6xl text-white"></i>
+                    <div class="card-image-container" style="background-image: url('assets/images/sport.jpg');">
+                        <i class="fas fa-futbol card-icon"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3">Sports Events</h3>
@@ -82,8 +113,8 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
                 <!-- Leisure Card -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-                    <div class="bg-gradient-to-r from-orange-500 to-yellow-500 h-48 flex items-center justify-center">
-                        <i class="fas fa-umbrella-beach text-6xl text-white"></i>
+                   <div class="card-image-container" style="background-image: url('assets/images/surfing.jpg');">
+                        <i class="fas fa-umbrella-beach card-icon"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3">Leisure Activities</h3>
@@ -94,8 +125,8 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
                 <!-- Food & Beverage Card -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-                    <div class="bg-gradient-to-r from-purple-500 to-indigo-500 h-48 flex items-center justify-center">
-                        <i class="fas fa-utensils text-6xl text-white"></i>
+                    <div class="card-image-container" style="background-image: url('assets/images/food.jpg');">
+                        <i class="fas fa-utensils card-icon"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3">Food & Beverages</h3>
@@ -106,8 +137,8 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
                 <!-- Places Card -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-                    <div class="bg-gradient-to-r from-teal-500 to-blue-500 h-48 flex items-center justify-center">
-                        <i class="fas fa-map-marked-alt text-6xl text-white"></i>
+                    <div class="card-image-container" style="background-image: url('assets/images/place.jpg');">
+                        <i class="fas fa-map-marked-alt card-icon"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3">Places & Tours</h3>
@@ -167,9 +198,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
     <?php include __DIR__ . '/includes/footer.php'; ?>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
     <script src="<?php echo $baseUrl; ?>assets/js/main.js"></script>
 </body>
 </html>

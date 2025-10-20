@@ -1,11 +1,8 @@
 <?php
-// Ensure session is started (without warnings if already active)
 if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
 }
 
-// Compute base URL for the project so links work from any included depth
-// Example result: /ticket booking/
 $documentRoot = realpath($_SERVER['DOCUMENT_ROOT']);
 $projectRoot = realpath(__DIR__ . '/..');
 $baseUrl = rtrim(str_replace('\\', '/', str_replace($documentRoot, '', $projectRoot)), '/') . '/';
@@ -16,7 +13,6 @@ $baseUrl = rtrim(str_replace('\\', '/', str_replace($documentRoot, '', $projectR
             <i class="fas fa-ticket-alt me-2"></i>TicketHub
         </a>
         
-        <!-- Simplified: always show nav content -->
         <div class="flex-grow-1 d-flex align-items-center" id="navbarNav" style="display:flex !important;">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
@@ -46,7 +42,7 @@ $baseUrl = rtrim(str_replace('\\', '/', str_replace($documentRoot, '', $projectR
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $baseUrl; ?>pages/food.php">
-                        <i class="fas fa-utensils me-1"></i>Food & Beverage
+                        <i class="fas fa-utensils me-1"></i></i>Dining
                     </a>
                 </li>
                 <li class="nav-item">
@@ -76,26 +72,25 @@ $baseUrl = rtrim(str_replace('\\', '/', str_replace($documentRoot, '', $projectR
                         </ul>
                     </div>
                 <?php else: ?>
-                    <a href="<?php echo $baseUrl; ?>pages/login.php" class="btn btn-outline-primary me-2">
+                    <a href="<?php echo $baseUrl; ?>pages/login.php" class="btn btn-primary btn-small me-2" 
+                    style="font-size: 14px; padding: 10px 20px;">
                         <i class="fas fa-sign-in-alt me-1"></i>Login
                     </a>
-                    <a href="<?php echo $baseUrl; ?>pages/register.php" class="btn btn-primary">
-                        <i class="fas fa-user-plus me-1"></i>Sign Up
+
+                    <a href="<?php echo $baseUrl; ?>pages/register.php" class="btn btn-primary btn-small me-2"
+                    style="font-size: 14px; padding: 10px 12px;">
+                        <i class="fas fa-user-plus me-1"></i>Register
                     </a>
                 <?php endif; ?>
-                
-                <button class="btn btn-success ms-2" data-bs-toggle="modal" data-bs-target="#cartModal">
-                    <i class="fas fa-shopping-cart me-1"></i>Cart 
-                    <span class="badge bg-danger" id="cart-count">0</span>
-                </button>
+                    <!-- <button class="btn btn-success btn-small ms-2" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        <i class="fas fa-shopping-cart me-1"></i>Cart 
+                        <span class="badge bg-danger" id="cart-count">0</span>
+                    </button> -->
             </div>
         </div>
     </div>
 </nav>
 
-<!-- No collapse: auth buttons will always be visible -->
-
-<!-- Cart Modal -->
 <div class="modal fade" id="cartModal" tabindex="-1">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">

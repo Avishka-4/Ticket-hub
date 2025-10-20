@@ -18,7 +18,6 @@ body {
     color: #374151;
 }
 
-/* Smooth transitions */
 * {
     transition: all 0.3s ease;
 }
@@ -43,7 +42,10 @@ body {
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
     opacity: 0.1;
 }
-
+.hero-banner .hero-content h1{
+    text-align: center;
+    font-size: 40px;
+}
 /* Card Hover Effects */
 .card {
     border: none;
@@ -90,20 +92,28 @@ body {
 
 /* Navbar Styles */
 .navbar {
+    font-size: 0.85rem;
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.95) !important;
 }
 
-.navbar-brand {
+.navbar .navbar-brand {
+    font-size: 1.3rem;
     font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--primary-color) !important;
+    color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-right: 10px; 
+    margin-left: 0;
 }
 
 .nav-link {
-    font-weight: 500;
+    font-weight: 200;
     color: var(--dark-color) !important;
-    margin: 0 8px;
+    margin: 0 3px;
     border-radius: 6px;
     padding: 8px 16px !important;
     transition: all 0.3s ease;
@@ -113,6 +123,12 @@ body {
     background: var(--light-color);
     color: var(--primary-color) !important;
 }
+
+.btn-small {
+  font-size: 0.85rem; /* or 13px */
+  padding: 6px 10px;
+}
+
 
 /* Modal Styles */
 .modal-content {
