@@ -1,14 +1,93 @@
 <?php
 session_start();
 
+use Google\Service\Oauth2;
+use Google\Client;
+
 // Redirect if already logged in
 if (isset($_SESSION['user_id'])) {
     header('Location: ../index.php');
     exit();
 }
 
+// Google Client Setup
+require_once 'vendor/autoload.php';
+require_once '../php/config.php';
+
+$client = new Google\Client();
+$client->setClientId('524339942255-oqhhst54l0afi2ntsi6vlc9hqj0putld.apps.googleusercontent.com'); // Replace with your client ID
+$client->setClientSecret('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'); // Replace with your client secret
+$client->setRedirectUri('http://localhost/Ticket-hub/pages/register.php'); // Adjust based on your setup
+$client->addScope('email');
+$client->addScope('profile');
+
 $error = isset($_GET['error']) ? $_GET['error'] : '';
 $success = isset($_GET['success']) ? $_GET['success'] : '';
+
+// Handle Google OAuth callback
+if (isset($_GET['code'])) {
+    try {
+        $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
+        $client->setAccessToken($token);
+
+        // Get user info from Google
+        $google_service = new Google\Service\Oauth2($client);
+        $google_account_info = $google_service->userinfo->get();
+        
+        $email = $google_account_info->email;
+        $firstName = $google_account_info->givenName ?? '';
+        $lastName = $google_account_info->familyName ?? '';
+        $fullName = $google_account_info->name;
+        
+        // Check if user already exists
+        $stmt = $pdo->prepare("SELECT id, first_name, last_name FROM users WHERE email = ?");
+        $stmt->execute([$email]);
+        $existingUser = $stmt->fetch();
+        
+        if ($existingUser) {
+            // User exists, log them in
+            $_SESSION['user_id'] = $existingUser['id'];
+            $_SESSION['username'] = $existingUser['first_name'] . ' ' . $existingUser['last_name'];
+            $_SESSION['email'] = $email;
+            header('Location: ../index.php?success=Welcome back!');
+            exit();
+        } else {
+            // New user, create account
+            $randomPassword = bin2hex(random_bytes(16));
+            $hashedPassword = password_hash($randomPassword, PASSWORD_DEFAULT);
+            
+            // Split name if not provided separately
+            if (empty($firstName) && empty($lastName)) {
+                $nameParts = explode(' ', $fullName, 2);
+                $firstName = $nameParts[0];
+                $lastName = $nameParts[1] ?? '';
+            }
+            
+            $stmt = $pdo->prepare("
+                INSERT INTO users (first_name, last_name, email, password) 
+                VALUES (?, ?, ?, ?)
+            ");
+            $stmt->execute([$firstName, $lastName, $email, $hashedPassword]);
+            
+            // Auto login
+            $_SESSION['user_id'] = $pdo->lastInsertId();
+            $_SESSION['username'] = $firstName . ' ' . $lastName;
+            $_SESSION['email'] = $email;
+            
+            header('Location: ../index.php?success=Account created successfully! Welcome to TicketHub!');
+            exit();
+        }
+    } catch (Exception $e) {
+        $error = "Google login failed. Please try again.";
+    }
+}
+
+// Handle Google login button click
+if (isset($_POST['google_register'])) {
+    $auth_url = $client->createAuthUrl();
+    header('Location: ' . filter_var($auth_url, FILTER_SANITIZE_URL));
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,6 +135,19 @@ $success = isset($_GET['success']) ? $_GET['success'] : '';
                                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                             </div>
                         <?php endif; ?>
+
+                        <!-- Social Registration Options -->
+                        <div class="d-grid gap-2 mb-4">
+                            <form method="POST" class="d-inline">
+                                <button type="submit" name="google_register" class="btn btn-outline-danger w-100">
+                                    <i class="fab fa-google me-2"></i>Sign up with Google
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- <div class="text-center mb-3">
+                            <span class="text-muted" style="font-weight: 700; margin: 10px;">OR</span>
+                        </div> -->
 
                         <form id="registerForm" action="../php/register_process.php" method="POST">
                             <div class="row">
@@ -140,19 +232,10 @@ $success = isset($_GET['success']) ? $_GET['success'] : '';
                                 <i class="fas fa-user-plus me-2"></i>Create Account
                             </button>
 
-                            <hr>
-
-                            <!-- Social Registration Options -->
-                            <div class="d-grid gap-2">
-                                <button type="button" class="btn btn-outline-danger">
-                                    <i class="fab fa-google me-2"></i>Sign up with Google
-                                </button>
-                            </div>
-
                             <div class="text-center mt-3">
                                 <small class="text-muted">
                                     Already have an account? 
-                                    <a href="login.php" class="text-decoration-none">Sign in here</a>
+                                    <a href="login.php" class="text-decoration-underline text-reset">Sign in here</a>
                                 </small>
                             </div>
                         </form>
