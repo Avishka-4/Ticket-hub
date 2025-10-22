@@ -136,13 +136,6 @@ $success = isset($_GET['success']) ? $_GET['success'] : '';
                                 </label>
                             </div>
 
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
-                                <label class="form-check-label" for="newsletter">
-                                    Subscribe to our newsletter for exclusive offers and updates
-                                </label>
-                            </div>
-
                             <button type="submit" class="btn btn-primary w-100 mb-3">
                                 <i class="fas fa-user-plus me-2"></i>Create Account
                             </button>
@@ -153,9 +146,6 @@ $success = isset($_GET['success']) ? $_GET['success'] : '';
                             <div class="d-grid gap-2">
                                 <button type="button" class="btn btn-outline-danger">
                                     <i class="fab fa-google me-2"></i>Sign up with Google
-                                </button>
-                                <button type="button" class="btn btn-outline-primary">
-                                    <i class="fab fa-facebook me-2"></i>Sign up with Facebook
                                 </button>
                             </div>
 

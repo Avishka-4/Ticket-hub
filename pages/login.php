@@ -124,8 +124,8 @@ $success = isset($_GET['success']) ? $_GET['success'] : '';
                             <i class="fas fa-info-circle me-2"></i>Demo Credentials
                         </h6>
                         <small class="text-muted">
-                            <strong>Email:</strong> demo@tickethub.com<br>
-                            <strong>Password:</strong> demo123
+                            <strong>Email:</strong> iamnobody0212@gmail.com<br>
+                            <strong>Password:</strong> kavindu123
                         </small>
                     </div>
                 </div>
