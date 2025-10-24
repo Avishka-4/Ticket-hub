@@ -494,7 +494,7 @@
                                     <div class="d-flex justify-content-center gap-4">
                                         <div class="d-flex align-items-center">
                                             <div class="btn btn-outline-success btn-sm me-2" style="pointer-events: none;"></div>
-                                            <small>Available</small>
+                                            <small>Availabl</small>
                                         </div>
                                         <div class="d-flex align-items-center">
                                             <div class="btn btn-success btn-sm me-2" style="pointer-events: none;"></div>
