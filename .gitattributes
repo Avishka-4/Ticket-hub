@@ -1,5 +1,5 @@
-# GitHub Linguist language detection overrides
-# This file forces GitHub to correctly identify file types and prevent Hack misclassification
+# GitHub Linguist language detection 
+# This file forces GitHub to correctly identify file types
 
 # Explicitly mark ALL PHP files as PHP (not Hack) - this is the key fix
 *.php linguist-language=PHP
@@ -7,7 +7,7 @@ php/*.php linguist-language=PHP
 pages/*.php linguist-language=PHP
 includes/*.php linguist-language=PHP
 
-# Force any potential Hack-detected files to be PHP
+# Force any potential files to be PHP
 * linguist-language=PHP text
 *.inc linguist-language=PHP
 *.hh linguist-language=PHP
