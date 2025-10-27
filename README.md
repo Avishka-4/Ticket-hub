@@ -1,5 +1,4 @@
 # TicketHub
-
 A basic but complete, PHP + MySQL ticket booking website scaffold with user auth, browsing pages, cart placeholder, and an admin dashboard. Built with Bootstrap 5 and Tailwind (CDN), and structured for easy local use on XAMPP.
 
 ## Features
@@ -18,77 +17,11 @@ A basic but complete, PHP + MySQL ticket booking website scaffold with user auth
 - Windows with XAMPP (Apache + MySQL) or a PHP 8+ + MySQL (or MariaDB) stack
 - Internet access for CDN assets (Bootstrap/Tailwind/Font Awesome). If offline, add local copies.
 
-## Quick Start (XAMPP)
-1) Move the folder to XAMPP htdocs
-- Recommended: rename it to remove spaces, e.g. `ticket-booking`
-- Target path: `C:\xampp\htdocs\ticket-booking`
-
-2) Start services
-- Open XAMPP Control Panel → Start Apache and MySQL
-
-3) Create and import the database
-- Visit http://localhost/phpmyadmin/
-- Create database: `tickethub`
-- Click the database, then Import
-- Choose ONE of these files from the project root:
-  - `database.sql` (modern; uses JSON) – recommended
-  - `database_legacy.sql` (for older MariaDB; replaces JSON with TEXT)
-- Keep “SQL compatibility mode” = None
-- Click Go → you should see tables like `users`, `events`, `movies`, `admins`, etc.
-
-4) Verify DB config
-- File: `/php/config.php`
-  - host: `localhost`
-  - dbname: `tickethub`
-  - username: `root`
-  - password: `` (empty by default on XAMPP). If you set a MySQL password, change it here.
-
-5) Open the site
-- If you renamed the folder to `ticket-booking`:
-  - Home: http://localhost/ticket-booking/
-  - Login: http://localhost/ticket-booking/pages/login.php
-  - Register: http://localhost/ticket-booking/pages/register.php
-  - Admin Login: http://localhost/ticket-booking/pages/admin-login.php
-
 ## Demo Credentials
 - User: `demo@tickethub.com` / `password`
 - Admin: `admin` / `password`
 
 > Note: Demo passwords come from the sample `database.sql`/`database_legacy.sql` inserts (hash of the word `password`).
-
-## How the Navbar Links Work
-- `includes/navbar.php` computes a base URL using `DOCUMENT_ROOT` so links work from any page (e.g., `/ticket-booking/pages/login.php`).
-- The navbar is simplified (always visible) to guarantee the Login/Sign Up buttons show.
-- If you keep a space in the folder name (`ticket booking`), your URL becomes `http://localhost/ticket%20booking/`.
-
-## Common Issues & Fixes
-1) Login/Sign Up buttons not visible
-- Hard refresh the browser (Ctrl+F5)
-- Ensure you’re accessing through `http://localhost/...` (not opening the file from disk)
-- If you see your name at top-right, you’re already logged in → go to `/php/logout.php` and refresh
-- Ensure internet connectivity for Bootstrap/Tailwind CDNs
-
-2) No tables after import in phpMyAdmin
-- Make sure you imported the correct file from project root: `database.sql` (or `database_legacy.sql`)
-- Do NOT import `/php/database.sql` – it’s a placeholder and not valid SQL
-- Leave SQL compatibility mode as `None`
-
-3) MySQL errors about JSON columns
-- Use `database_legacy.sql` (it replaces JSON with TEXT columns)
-
-4) 404 or broken links
-- If you keep spaces in the folder name, the URL must encode the space: `ticket%20booking`
-- Prefer renaming to `ticket-booking`
-
-5) “Headers already sent” or session warnings
-- All key pages call `session_start()` before output. If you add PHP above it (like echo/var_dump), you’ll trigger warnings.
-
-## Recommended MySQL `sql_mode` (optional)
-Strict mode helps catch bad data early. In `C:\xampp\mysql\bin\my.ini`, under `[mysqld]`:
-```
-sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
-```
-Restart MySQL after changing.
 
 ## Customize
 - Styles: `/assets/css/style.css`
@@ -101,5 +34,17 @@ Restart MySQL after changing.
 - Use environment variables or a secure config for DB credentials in production
 - Implement CSRF protection and strict input validation for forms when going beyond a demo
 
-## License
+##  Aims of the Project
+•	Centralize Event and Activity Bookings: To provide a single platform where users can find and book tickets for a diverse range of events, including movies, sports, leisure activities, and tourist attractions, instead of having to visit multiple websites.
+•	Enhance User Experience: To create a user-friendly interface that simplifies the process of finding, selecting, and purchasing tickets, including features like a secure login system and an easy-to-navigate homepage.
+•	Increase Accessibility: To make it easier for people to discover local events and activities they might not have otherwise known about.
+•	Streamline Business Operations: To offer a solution for event organizers, venue owners, and service providers to manage their ticket sales, bookings, and customer data more efficiently.
+•	Boost Revenue: To generate income through ticket sales commissions or service fees.
 
+## Problems This Project Will Solve
+This platform will solve several key problems for both consumers and businesses:
+•	Fragmentation of Information: Currently, a person looking to book a movie, a sports game, or a tourist tour would have to visit separate websites for each. This project solves this by consolidating all these options into one place.
+•	Inconvenience for Users: The need to create multiple accounts and enter payment details on different sites is time-consuming and inconvenient. A single platform with a secure login solves this, creating a more streamlined booking process.
+•	Limited Exposure for Businesses: Smaller event organizers or local tourist destinations may struggle to get visibility. This platform will provide them with a dedicated space to list their offerings, increasing their market reach and potential customer base.
+•	Inefficient Ticket Management: For businesses, managing manual ticket sales and tracking bookings can be a logistical headache. The website will provide a digital solution for automated ticket sales, inventory management, and data analysis.
+•	Missed Opportunities: Users often don't know about local events happening around them.
