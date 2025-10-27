@@ -79,7 +79,7 @@ $baseUrl = rtrim(str_replace('\\', '/', str_replace($documentRoot, '', $projectR
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo $baseUrl; ?>pages/food.php">
-                            <i class="fas fa-utensils me-1"></i>Dining
+                            <i class="fas fa-utensils me-1"></i>Foods
                         </a>
                     </li>
                     <li class="nav-item">
