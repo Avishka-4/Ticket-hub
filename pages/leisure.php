@@ -17,7 +17,7 @@
 <body>
     <?php include '../includes/navbar.php'; ?>
 
-    <!-- Hero Secton -->
+    
     <!-- Hero Section -->
     <section id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner" style="height: 450px;">
