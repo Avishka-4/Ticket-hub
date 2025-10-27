@@ -17,12 +17,12 @@
 <body>
     <?php include '../includes/navbar.php'; ?>
 
-    <!-- Hero Secton -->
+    
     <!-- Hero Section -->
     <section id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner" style="height: 450px;">
             <div class="carousel-item active position-relative">
-            <img src="../assets/images/leisure/1.jpg" class="d-block w-100" alt="...">
+            <img src="../assets/images/leisure/1.jpg" class="d-block w-100" alt="boat ride">
             <div class="carousel-caption d-md-block position-absolute top-50 start-50 translate-middle ">
             <div class="text-center">
                 <h1 class="text-5xl font-bold mb-4">
@@ -33,7 +33,7 @@
         </div>
             </div>
             <div class="carousel-item position-relative">
-            <img src="../assets/images/leisure/2.jpg" class="d-block w-100" alt="...">
+            <img src="../assets/images/leisure/2.jpg" class="d-block w-100" alt="Cycling">
             <div class=" carousel-caption d-md-block position-absolute top-50 start-50 translate-middle">
             <div class="text-center">
                 <h1 class="text-5xl font-bold mb-4 ">
@@ -44,7 +44,29 @@
         </div>
             </div>
             <div class="carousel-item position-relative">
-            <img src="../assets/images/leisure/3.jpg" class="d-block w-100" alt="...">
+            <img src="../assets/images/leisure/3.jpg" class="d-block w-100" alt="Camping">
+            <div class=" carousel-caption d-md-block position-absolute top-50 start-50 translate-middle">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-4 ">
+                    <i class="fas fa-umbrella-beach me-3"></i>Leisure Activities
+                </h1>
+                <p class="text-xl mb-6">Book exciting adventures and leisure activities</p>
+            </div>
+        </div>
+            </div>
+            <div class="carousel-item position-relative">
+            <img src="../assets/images/leisure/4.jpg" class="d-block w-100" alt="Walking">
+            <div class=" carousel-caption d-md-block position-absolute top-50 start-50 translate-middle">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-4 ">
+                    <i class="fas fa-umbrella-beach me-3"></i>Leisure Activities
+                </h1>
+                <p class="text-xl mb-6">Book exciting adventures and leisure activities</p>
+            </div>
+        </div>
+            </div>
+            <div class="carousel-item position-relative">
+            <img src="../assets/images/leisure/5.jpg" class="d-block w-100" alt="Surfing">
             <div class="carousel-caption d-md-block position-absolute top-50 start-50 translate-middle">
             <div class="text-center">
                 <h1 class="text-5xl font-bold mb-4">
