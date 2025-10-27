@@ -18,8 +18,12 @@
     <?php include '../includes/navbar.php'; ?>
 
     <!-- Hero Secton -->
-    <section class="bg-gradient-to-r from-orange-500 to-pink-500 text-white py-16">
-        <div class="container">
+    <!-- Hero Section -->
+    <section id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" style="height: 450px;">
+            <div class="carousel-item active position-relative">
+            <img src="../assets/images/leisure/1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-md-block position-absolute top-50 start-50 translate-middle ">
             <div class="text-center">
                 <h1 class="text-5xl font-bold mb-4">
                     <i class="fas fa-umbrella-beach me-3"></i>Leisure Activities
@@ -27,7 +31,39 @@
                 <p class="text-xl mb-6">Book exciting adventures and leisure activities</p>
             </div>
         </div>
-    </section>
+            </div>
+            <div class="carousel-item position-relative">
+            <img src="../assets/images/leisure/2.jpg" class="d-block w-100" alt="...">
+            <div class=" carousel-caption d-md-block position-absolute top-50 start-50 translate-middle">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-4 ">
+                    <i class="fas fa-umbrella-beach me-3"></i>Leisure Activities
+                </h1>
+                <p class="text-xl mb-6">Book exciting adventures and leisure activities</p>
+            </div>
+        </div>
+            </div>
+            <div class="carousel-item position-relative">
+            <img src="../assets/images/leisure/3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-md-block position-absolute top-50 start-50 translate-middle">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-4">
+                    <i class="fas fa-umbrella-beach me-3"></i>Leisure Activities
+                </h1>
+                <p class="text-xl mb-6">Book exciting adventures and leisure activities</p>
+            </div>
+        </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+</section>
 
     <!-- Filter Section -->
     <section class="py-4 bg-light">
