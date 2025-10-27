@@ -17,7 +17,7 @@
 <body>
     <?php include '../includes/navbar.php'; ?>
 
-    <!-- Hero Section -->
+    <!-- Hero Secton -->
     <section class="bg-gradient-to-r from-orange-500 to-pink-500 text-white py-16">
         <div class="container">
             <div class="text-center">
