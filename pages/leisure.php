@@ -122,8 +122,9 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="water">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-blue-500 to-cyan-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <i class="fas fa-swimmer text-6xl text-white"></i>
+                            <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <img src="../assets/images/leisure/scuba diver.jpg" alt="Scuba Diving" class="w-100 h-100 object-cover">
+                                <!-- <i class="fas fa-swimmer text-6xl text-white"></i> -->
                             </div>
                             <span class="badge bg-info position-absolute top-0 end-0 m-2">Popular</span>
                         </div>
@@ -169,8 +170,9 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="water">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-teal-500 to-blue-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <i class="fas fa-water text-6xl text-white"></i>
+                            <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <!-- <i class="fas fa-water text-6xl text-white"></i> -->
+                                 <img src="../assets/images/leisure/surfing.jpg" alt="Surfing Lessons" class="w-100 h-100 object-cover">
                             </div>
                             <span class="badge bg-warning position-absolute top-0 end-0 m-2">Trending</span>
                         </div>
@@ -215,8 +217,10 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="adventure">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-green-600 to-emerald-600 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <i class="fas fa-mountain text-6xl text-white"></i>
+                            <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <!-- <i class="fas fa-mountain text-6xl text-white"></i> -->
+                                 <img src="../assets/images/leisure/rock climbing.jpg" alt="Rock Climbing" class="w-100 h-100 object-cover">
+
                             </div>
                             <span class="badge bg-success position-absolute top-0 end-0 m-2">Adventure</span>
                         </div>
