@@ -94,6 +94,29 @@ CREATE TABLE IF NOT EXISTS leisure_activities (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Food Festivals table
+CREATE TABLE IF NOT EXISTS food_festivals (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    venue VARCHAR(255) NOT NULL,
+    festival_date DATE NOT NULL,
+    start_time TIME NOT NULL,
+    end_time TIME NOT NULL,
+    entry_fee DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+    image VARCHAR(500),
+    featured BOOLEAN DEFAULT FALSE,
+    cuisines TEXT,
+    status ENUM('upcoming', 'ongoing', 'completed', 'cancelled') DEFAULT 'upcoming',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Sample Food Festivals
+INSERT INTO food_festivals (title, description, venue, festival_date, start_time, end_time, entry_fee, featured, cuisines, status) VALUES
+('Street Food Festival', 'Experience the best street food from local vendors!', 'Central Park', '2025-11-15', '11:00:00', '21:00:00', 5.00, TRUE, 'Street Tacos, Gourmet Burgers, Asian Fusion, Desserts', 'upcoming'),
+('International Food Fair', 'A world tour of flavors under one roof!', 'City Convention Center', '2025-12-01', '10:00:00', '20:00:00', 10.00, FALSE, 'Italian, Chinese, Mexican, Indian, Thai', 'upcoming'),
+('Sweet Treats Festival', 'Indulge in the citys best desserts!', 'Riverside Park', '2025-12-20', '12:00:00', '22:00:00', 8.00, FALSE, 'Cakes, Ice Cream, Chocolates, Pastries', 'upcoming');
+
 -- Food items table
 CREATE TABLE IF NOT EXISTS food_items (
     id INT PRIMARY KEY AUTO_INCREMENT,

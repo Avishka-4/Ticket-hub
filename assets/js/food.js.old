@@ -1,0 +1,69 @@
+// Food page JavaScript
+
+// Festival page JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Preview image before upload
+    const imageInput = document.querySelector('input[name="image"]');
+    if (imageInput) {
+        imageInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const preview = document.createElement('img');
+                        preview.src = e.target.result;
+                        preview.style.maxWidth = '200px';
+                        preview.style.marginTop = '10px';
+                        preview.className = 'img-thumbnail';
+                        
+                        const container = imageInput.parentElement;
+                        const existingPreview = container.querySelector('img');
+                        if (existingPreview) {
+                            container.removeChild(existingPreview);
+                        }
+                        container.appendChild(preview);
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    alert('Please select an image file');
+                    imageInput.value = '';
+                }
+            }
+        });
+    }
+
+    // Handle error messages
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('error')) {
+        showNotification(urlParams.get('error'), 'danger');
+    }
+    if (urlParams.has('success')) {
+        showNotification(urlParams.get('success'), 'success');
+    }
+});
+
+// Show notification function
+function showNotification(message, type = 'info') {
+    const container = document.createElement('div');
+    container.style.position = 'fixed';
+    container.style.top = '20px';
+    container.style.right = '20px';
+    container.style.zIndex = '9999';
+    
+    const alert = document.createElement('div');
+    alert.className = `alert alert-${type} alert-dismissible fade show`;
+    alert.innerHTML = `
+        ${message}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    `;
+    
+    container.appendChild(alert);
+    document.body.appendChild(container);
+    
+    setTimeout(() => {
+        alert.classList.remove('show');
+        setTimeout(() => container.remove(), 150);
+    }, 3000);
+}
