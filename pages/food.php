@@ -203,6 +203,38 @@ if (empty($festivals) && !isset($error)) {
             transform: translateY(-2px) !important;
             box-shadow: 0 5px 15px rgba(13, 110, 253, 0.15) !important;
         }
+        /* Navbar Styles */
+        .navbar {
+            font-size: 0.85rem;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95) !important;
+        }
+
+        .navbar .navbar-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #007bff;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin: 0 15px;
+        }
+
+        .nav-link {
+            font-weight: 200;
+            color: var(--dark-color) !important;
+            margin: 0 3px;
+            border-radius: 6px;
+            padding: 8px 16px !important;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: var(--light-color);
+            color: var(--primary-color) !important;
+        }
     </style>
 </head>
 <body class="bg-light">
