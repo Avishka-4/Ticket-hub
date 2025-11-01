@@ -4,7 +4,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 }
 
 // Simplified base URL logic
-$baseUrl = '/ticket booking/';
+$baseUrl = '/Ticket-hub/';
 
 // Debug information
 error_log('Document Root: ' . $_SERVER['DOCUMENT_ROOT']);
@@ -190,7 +190,7 @@ error_log('Base URL: ' . $baseUrl);
                     </div>
                 <?php else: ?>
                     <div class="d-grid gap-2">
-                        <a href="<?php echo $baseUrl; ?>pages/login.php" class="btn btn-primary btn-sm">
+                        <a href="<?php echo $baseUrl; ?>Ticket-hub/pages/login.php" class="btn btn-primary btn-sm">
                             <i class="fas fa-sign-in-alt me-1"></i>Login
                         </a>
                         <a href="<?php echo $baseUrl; ?>pages/register.php" class="btn btn-outline-primary btn-sm">
