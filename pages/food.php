@@ -38,7 +38,8 @@ if (empty($festivals) && !isset($error)) {
     <style>
         .hero-section {
             /* Use the provided header background image with a dark overlay for better text visibility */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/foods/backgroung for head section.jpeg');
+            /* Clean filename, no spaces */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/foods/header-hero.jpg");
             background-size: cover;
             background-position: center;
             padding: 80px 0;
