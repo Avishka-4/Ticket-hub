@@ -37,54 +37,90 @@ if (empty($festivals) && !isset($error)) {
     </script>
     <style>
         .hero-section {
-            background: linear-gradient(135deg, #FF4B2B, #FF416C);
+            /* Use the provided header background image with a dark overlay for better text visibility */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/foods/backgroung for head section.jpeg');
+            background-size: cover;
+            background-position: center;
             padding: 80px 0;
             margin-bottom: 40px;
             position: relative;
             overflow: hidden;
+            color: #fff;
+            /* keep text readable over images with a subtle shadow */
+            text-shadow: 0 2px 6px rgba(0,0,0,0.55);
         }
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('../assets/images/food-pattern.png');
-            opacity: 0.1;
-            pointer-events: none;
-        }
+
         .festival-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
             height: 100%;
             background: white;
+            border: none;
+            overflow: hidden;
         }
         .festival-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
         .card-img-top {
-            height: 200px;
+            height: 220px;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .festival-card:hover .card-img-top {
+            transform: scale(1.05);
         }
         .festival-badge {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 15px;
+            right: 15px;
             background: rgba(255,255,255,0.95);
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
         }
         .cuisine-tag {
-            font-size: 0.75rem;
-            padding: 3px 8px;
-            border-radius: 12px;
-            background: #f8f9fa;
-            color: #6c757d;
-            margin: 2px;
+            font-size: 0.8rem;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background: #f0f4ff;
+            color: #0d6efd;
+            margin: 3px;
             display: inline-block;
+            transition: all 0.2s ease;
+            border: 1px solid #e0e7ff;
+        }
+        .cuisine-tag:hover {
+            background: #e0e7ff;
+            transform: translateY(-1px);
+        }
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            display: inline-block;
+            object-fit: cover;
+            border-radius: 6px;
+            /* no color-forcing filter so uploaded JPGs keep their colors */
+        }
+        /* Style for the view details button */
+        .btn-details {
+            padding: 10px 20px !important;
+            transition: all 0.3s ease !important;
+            background: white !important;
+            border: 1px solid #0d6efd !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 8px !important;
+        }
+        
+        .btn-details:hover {
+            background: #f8f9fa !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.15) !important;
         }
     </style>
 </head>
@@ -116,25 +152,22 @@ if (empty($festivals) && !isset($error)) {
                     <p class="lead mb-4">Experience culinary delights from around the world at our vibrant food festivals</p>
                     <div class="row justify-content-center g-4 mt-3">
                         <div class="col-md-4">
-                            <div class="p-3 bg-white bg-opacity-10 rounded-3">
-                                <i class="fas fa-map-marker-alt fa-2x mb-2"></i>
-                                <h5 class="mb-0">Multiple Venues</h5>
-                                <small>Across the city</small>
-                            </div>
+                            <div class="p-3 bg-white bg-opacity-10 rounded-3 text-center">
+                                    <h5 class="mb-0">Multiple Venues</h5>
+                                    <small>Across the city</small>
+                                </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="p-3 bg-white bg-opacity-10 rounded-3">
-                                <i class="fas fa-calendar-alt fa-2x mb-2"></i>
-                                <h5 class="mb-0">Regular Events</h5>
-                                <small>Throughout the year</small>
-                            </div>
+                            <div class="p-3 bg-white bg-opacity-10 rounded-3 text-center">
+                                    <h5 class="mb-0">Regular Events</h5>
+                                    <small>Throughout the year</small>
+                                </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="p-3 bg-white bg-opacity-10 rounded-3">
-                                <i class="fas fa-users fa-2x mb-2"></i>
-                                <h5 class="mb-0">Family Friendly</h5>
-                                <small>Fun for everyone</small>
-                            </div>
+                            <div class="p-3 bg-white bg-opacity-10 rounded-3 text-center">
+                                    <h5 class="mb-0">Family Friendly</h5>
+                                    <small>Fun for everyone</small>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -153,168 +186,188 @@ if (empty($festivals) && !isset($error)) {
         <?php endif; ?>
 
         <div class="row g-4">
-            <?php if (empty($festivals)): ?>
-                <!-- Default Festival Cards -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card festival-card shadow-sm">
-                        <div class="festival-badge">
-                            <i class="fas fa-star text-warning me-1"></i>Featured
+            <!-- Five New Festival Cards -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card festival-card shadow-sm">
+                    <div class="festival-badge">
+                        <i class="fas fa-star text-warning me-1"></i>Featured
+                    </div>
+                    <img src="../assets/images/foods/food-fest-1.jpg" class="card-img-top" alt="Asian Street Food Festival">
+                    <div class="card-body">
+                        <h5 class="card-title">Asian Street Food Festival</h5>
+                        <p class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Downtown Square
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-calendar me-2 text-primary"></i>November 15, 2025
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-clock me-2 text-success"></i>11:00 AM - 10:00 PM
+                        </p>
+                        <div class="mb-3">
+                            <span class="cuisine-tag">Asian Fusion</span>
+                            <span class="cuisine-tag">Street Food</span>
+                            <span class="cuisine-tag">Dim Sum</span>
                         </div>
-                        <img src="../assets/images/food-fest-1.jpg" class="card-img-top" alt="Street Food Festival">
-                        <div class="card-body">
-                            <h5 class="card-title">Street Food Festival</h5>
-                            <p class="mb-2">
-                                <i class="fas fa-map-marker-alt me-2 text-danger"></i>Central Park
-                            </p>
-                            <p class="mb-2">
-                                <i class="fas fa-calendar me-2 text-primary"></i>November 15, 2025
-                            </p>
-                            <p class="mb-2">
-                                <i class="fas fa-clock me-2 text-success"></i>11:00 AM - 9:00 PM
-                            </p>
-                            <div class="mb-3">
-                                <span class="cuisine-tag">Street Tacos</span>
-                                <span class="cuisine-tag">Gourmet Burgers</span>
-                                <span class="cuisine-tag">Asian Fusion</span>
-                            </div>
-                            <button class="btn btn-outline-primary w-100" 
-                                    data-bs-toggle="modal" 
-                                    data-bs-target="#festivalModal" 
-                                    data-title="Street Food Festival"
-                                    data-description="Experience the best street food from local vendors!"
-                                    data-venue="Central Park"
-                                    data-date="November 15, 2025"
-                                    data-time="11:00 AM - 9:00 PM"
-                                    data-fee="$5"
-                                    data-cuisines="Street Tacos, Gourmet Burgers, Asian Fusion, Desserts">
-                                <i class="fas fa-info-circle me-2"></i>View Details
-                            </button>
-                        </div>
+                        <button class="btn btn-outline-primary w-100 btn-details" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#festivalModal"
+                                data-title="Asian Street Food Festival"
+                                data-description="Experience authentic Asian street food culture!"
+                                data-venue="Downtown Square"
+                                data-date="November 15, 2025"
+                                data-time="11:00 AM - 10:00 PM"
+                                data-fee="$5"
+                                data-cuisines="Asian Fusion, Street Food, Dim Sum, Noodles">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="fw-bold">View Details</span>
+                        </button>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="card festival-card shadow-sm">
-                        <img src="../assets/images/food-fest-2.jpg" class="card-img-top" alt="International Food Fair">
-                        <div class="card-body">
-                            <h5 class="card-title">International Food Fair</h5>
-                            <p class="mb-2">
-                                <i class="fas fa-map-marker-alt me-2 text-danger"></i>City Convention Center
-                            </p>
-                            <p class="mb-2">
-                                <i class="fas fa-calendar me-2 text-primary"></i>December 1, 2025
-                            </p>
-                            <p class="mb-2">
-                                <i class="fas fa-clock me-2 text-success"></i>10:00 AM - 8:00 PM
-                            </p>
-                            <div class="mb-3">
-                                <span class="cuisine-tag">Italian</span>
-                                <span class="cuisine-tag">Chinese</span>
-                                <span class="cuisine-tag">Mexican</span>
-                            </div>
-                            <button class="btn btn-outline-primary w-100" 
-                                    data-bs-toggle="modal" 
-                                    data-bs-target="#festivalModal"
-                                    data-title="International Food Fair"
-                                    data-description="A world tour of flavors under one roof!"
-                                    data-venue="City Convention Center"
-                                    data-date="December 1, 2025"
-                                    data-time="10:00 AM - 8:00 PM"
-                                    data-fee="$10"
-                                    data-cuisines="Italian, Chinese, Mexican, Indian, Thai">
-                                <i class="fas fa-info-circle me-2"></i>View Details
-                            </button>
+            <div class="col-md-6 col-lg-4">
+                <div class="card festival-card shadow-sm">
+                    <img src="../assets/images/foods/food-fest-2.jpg" class="card-img-top" alt="Mediterranean Food Festival">
+                    <div class="card-body">
+                        <h5 class="card-title">Mediterranean Food Festival</h5>
+                        <p class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Seaside Park
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-calendar me-2 text-primary"></i>November 25, 2025
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-clock me-2 text-success"></i>12:00 PM - 9:00 PM
+                        </p>
+                        <div class="mb-3">
+                            <span class="cuisine-tag">Greek</span>
+                            <span class="cuisine-tag">Italian</span>
+                            <span class="cuisine-tag">Spanish</span>
                         </div>
+                        <button class="btn btn-outline-primary w-100 btn-details" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#festivalModal"
+                                data-title="Mediterranean Food Festival"
+                                data-description="Savor the flavors of the Mediterranean coast!"
+                                data-venue="Seaside Park"
+                                data-date="November 25, 2025"
+                                data-time="12:00 PM - 9:00 PM"
+                                data-fee="$8"
+                                data-cuisines="Greek, Italian, Spanish, Seafood">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="fw-bold">View Details</span>
+                        </button>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="card festival-card shadow-sm">
-                        <img src="../assets/images/food-fest-3.jpg" class="card-img-top" alt="Sweet Treats Festival">
-                        <div class="card-body">
-                            <h5 class="card-title">Sweet Treats Festival</h5>
-                            <p class="mb-2">
-                                <i class="fas fa-map-marker-alt me-2 text-danger"></i>Riverside Park
-                            </p>
-                            <p class="mb-2">
-                                <i class="fas fa-calendar me-2 text-primary"></i>December 20, 2025
-                            </p>
-                            <p class="mb-2">
-                                <i class="fas fa-clock me-2 text-success"></i>12:00 PM - 10:00 PM
-                            </p>
-                            <div class="mb-3">
-                                <span class="cuisine-tag">Desserts</span>
-                                <span class="cuisine-tag">Ice Cream</span>
-                                <span class="cuisine-tag">Chocolates</span>
-                            </div>
-                            <button class="btn btn-outline-primary w-100" 
-                                    data-bs-toggle="modal" 
-                                    data-bs-target="#festivalModal"
-                                    data-title="Sweet Treats Festival"
-                                    data-description="Indulge in the city's best desserts!"
-                                    data-venue="Riverside Park"
-                                    data-date="December 20, 2025"
-                                    data-time="12:00 PM - 10:00 PM"
-                                    data-fee="$8"
-                                    data-cuisines="Cakes, Ice Cream, Chocolates, Pastries">
-                                <i class="fas fa-info-circle me-2"></i>View Details
-                            </button>
+            <div class="col-md-6 col-lg-4">
+                <div class="card festival-card shadow-sm">
+                    <img src="../assets/images/foods/food-fest-3.jpg" class="card-img-top" alt="Dessert Paradise">
+                    <div class="card-body">
+                        <h5 class="card-title">Dessert Paradise</h5>
+                        <p class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Grand Plaza
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-calendar me-2 text-primary"></i>December 5, 2025
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-clock me-2 text-success"></i>10:00 AM - 8:00 PM
+                        </p>
+                        <div class="mb-3">
+                            <span class="cuisine-tag">Cakes</span>
+                            <span class="cuisine-tag">Ice Cream</span>
+                            <span class="cuisine-tag">Pastries</span>
                         </div>
+                        <button class="btn btn-outline-primary w-100 btn-details" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#festivalModal"
+                                data-title="Dessert Paradise"
+                                data-description="Indulge in a sweet wonderland of desserts!"
+                                data-venue="Grand Plaza"
+                                data-date="December 5, 2025"
+                                data-time="10:00 AM - 8:00 PM"
+                                data-fee="$6"
+                                data-cuisines="Cakes, Ice Cream, Pastries, Chocolates">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="fw-bold">View Details</span>
+                        </button>
                     </div>
                 </div>
-            <?php else: ?>
-                <?php foreach ($festivals as $festival): ?>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card festival-card shadow-sm">
-                            <?php if ($festival['featured']): ?>
-                                <div class="festival-badge">
-                                    <i class="fas fa-star text-warning me-1"></i>Featured
-                                </div>
-                            <?php endif; ?>
-                            <img src="<?php echo htmlspecialchars($festival['image'] ?? '../assets/images/food-fest-default.jpg'); ?>" 
-                                 class="card-img-top" 
-                                 alt="<?php echo htmlspecialchars($festival['title']); ?>">
-                            <div class="card-body">
-                                <h5 class="card-title"><?php echo htmlspecialchars($festival['title']); ?></h5>
-                                <p class="mb-2">
-                                    <i class="fas fa-map-marker-alt me-2 text-danger"></i><?php echo htmlspecialchars($festival['venue']); ?>
-                                </p>
-                                <p class="mb-2">
-                                    <i class="fas fa-calendar me-2 text-primary"></i><?php echo date('F j, Y', strtotime($festival['festival_date'])); ?>
-                                </p>
-                                <p class="mb-2">
-                                    <i class="fas fa-clock me-2 text-success"></i>
-                                    <?php 
-                                        echo date('g:i A', strtotime($festival['start_time'])) . ' - ' . 
-                                             date('g:i A', strtotime($festival['end_time']));
-                                    ?>
-                                </p>
-                                <div class="mb-3">
-                                    <?php 
-                                        $cuisines = explode(',', $festival['cuisines']);
-                                        foreach (array_slice($cuisines, 0, 3) as $cuisine): 
-                                    ?>
-                                        <span class="cuisine-tag"><?php echo htmlspecialchars(trim($cuisine)); ?></span>
-                                    <?php endforeach; ?>
-                                </div>
-                                <button class="btn btn-outline-primary w-100" 
-                                        data-bs-toggle="modal" 
-                                        data-bs-target="#festivalModal"
-                                        data-title="<?php echo htmlspecialchars($festival['title']); ?>"
-                                        data-description="<?php echo htmlspecialchars($festival['description']); ?>"
-                                        data-venue="<?php echo htmlspecialchars($festival['venue']); ?>"
-                                        data-date="<?php echo date('F j, Y', strtotime($festival['festival_date'])); ?>"
-                                        data-time="<?php echo date('g:i A', strtotime($festival['start_time'])) . ' - ' . 
-                                                             date('g:i A', strtotime($festival['end_time'])); ?>"
-                                        data-fee="$<?php echo number_format($festival['entry_fee'], 2); ?>"
-                                        data-cuisines="<?php echo htmlspecialchars($festival['cuisines']); ?>">
-                                    <i class="fas fa-info-circle me-2"></i>View Details
-                                </button>
-                            </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card festival-card shadow-sm">
+                    <img src="../assets/images/foods/food-fest-4.jpg" class="card-img-top" alt="BBQ & Grill Fest">
+                    <div class="card-body">
+                        <h5 class="card-title">BBQ & Grill Fest</h5>
+                        <p class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Riverside Garden</p>
+                        <p class="mb-2">
+                            <i class="fas fa-calendar me-2 text-primary"></i>December 15, 2025
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-clock me-2 text-success"></i>4:00 PM - 11:00 PM
+                        </p>
+                        <div class="mb-3">
+                            <span class="cuisine-tag">BBQ</span>
+                            <span class="cuisine-tag">Grilled</span>
+                            <span class="cuisine-tag">Smoked</span>
                         </div>
+                        <button class="btn btn-outline-primary w-100 btn-details" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#festivalModal"
+                                data-title="BBQ & Grill Fest"
+                                data-description="The ultimate celebration of grilled and smoked delicacies!"
+                                data-venue="Riverside Garden"
+                                data-date="December 15, 2025"
+                                data-time="4:00 PM - 11:00 PM"
+                                data-fee="$12"
+                                data-cuisines="BBQ, Grilled, Smoked, Steaks">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="fw-bold">View Details</span>
+                        </button>
                     </div>
-                <?php endforeach; ?>
-            <?php endif; ?>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card festival-card shadow-sm">
+                    <img src="../assets/images/foods/food-fest-5.jpg" class="card-img-top" alt="International Food Fair">
+                    <div class="card-body">
+                        <h5 class="card-title">International Food Fair</h5>
+                        <p class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Convention Center
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-calendar me-2 text-primary"></i>December 30, 2025
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-clock me-2 text-success"></i>11:00 AM - 10:00 PM
+                        </p>
+                        <div class="mb-3">
+                            <span class="cuisine-tag">Global</span>
+                            <span class="cuisine-tag">International</span>
+                            <span class="cuisine-tag">Fusion</span>
+                        </div>
+                        <button class="btn btn-outline-primary w-100 btn-details" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#festivalModal"
+                                data-title="International Food Fair"
+                                data-description="A global culinary journey featuring cuisines from around the world!"
+                                data-venue="Convention Center"
+                                data-date="December 30, 2025"
+                                data-time="11:00 AM - 10:00 PM"
+                                data-fee="$15"
+                                data-cuisines="Global, International, Fusion, World Cuisine">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="fw-bold">View Details</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -332,9 +385,8 @@ if (empty($festivals) && !isset($error)) {
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img id="modalImage" src="../assets/images/food-fest-default.jpg" class="img-fluid rounded mb-3" alt="Festival">
                             <h6 class="fw-bold">Description</h6>
-                            <p id="modalDescription" class="text-muted"></p>
+                            <p id="modalDescription" class="text-muted mb-4"></p>
                         </div>
                         <div class="col-md-6">
                             <div class="bg-light p-3 rounded">
@@ -432,6 +484,13 @@ if (empty($festivals) && !isset($error)) {
                 if (!button) {
                     console.error('Modal trigger button not found');
                     return;
+                }
+
+                // set modal image from the trigger button's data-image attribute
+                const imageSrc = button.dataset.image;
+                const modalImgEl = document.getElementById('modalImage');
+                if (modalImgEl && imageSrc) {
+                    modalImgEl.src = imageSrc;
                 }
 
                 const modalElements = {
