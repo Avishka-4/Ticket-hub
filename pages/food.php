@@ -8,6 +8,26 @@ require_once '../php/config.php';
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+// Compute a robust base URL (handles spaces in folder names)
+$documentRoot = realpath($_SERVER['DOCUMENT_ROOT']);
+$projectRoot = realpath(dirname(__DIR__)); // one level up from /pages
+$baseUrl = rtrim(str_replace('\\', '/', str_replace($documentRoot, '', $projectRoot)), '/') . '/';
+
+// Helper to version assets for cache-busting using file modification time
+function asset_url($relativePath) {
+    global $projectRoot, $baseUrl;
+    $fsPath = $projectRoot . '/' . str_replace('\\', '/', $relativePath);
+    $version = @filemtime($fsPath);
+    return $baseUrl . $relativePath . ($version ? ('?v=' . $version) : '');
+}
+
+// Versioned URL relative to THIS page (avoids base URL issues with spaces)
+function versioned_rel($relativeFromPage) {
+    $fsPath = realpath(__DIR__ . '/' . $relativeFromPage);
+    $version = $fsPath ? @filemtime($fsPath) : null;
+    return $relativeFromPage . ($version ? ('?v=' . $version) : '');
+}
+
 // Fetch food festivals from database
 require_once '../php/food_festivals.php';
 $festivals = getFoodFestivals();
@@ -28,7 +48,40 @@ if (empty($festivals) && !isset($error)) {
     <title>Food Festival Fiesta - TicketHub</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo versioned_rel('../assets/css/style.css'); ?>">
+    <!-- Aggressively preload ALL images with multiple methods -->
+    <link rel="preload" as="image" href="../assets/images/foods/header-hero.jpg">
+    <link rel="preload" as="image" href="../assets/images/foods/food-fest-1.jpg">
+    <link rel="preload" as="image" href="../assets/images/foods/food-fest-2.jpg">
+    <link rel="preload" as="image" href="../assets/images/foods/food-fest-3.jpg">
+    <link rel="preload" as="image" href="../assets/images/foods/food-fest-4.jpg">
+    <link rel="preload" as="image" href="../assets/images/foods/food-fest-5.jpg">
+    
+    <!-- Force immediate image loading in head -->
+    <script>
+        // Preload images immediately when script tag is parsed
+        (function() {
+            const imagesToPreload = [
+                '../assets/images/foods/header-hero.jpg',
+                '../assets/images/foods/food-fest-1.jpg',
+                '../assets/images/foods/food-fest-2.jpg',
+                '../assets/images/foods/food-fest-3.jpg',
+                '../assets/images/foods/food-fest-4.jpg',
+                '../assets/images/foods/food-fest-5.jpg'
+            ];
+            
+            console.log('Preloading images in HEAD...');
+            imagesToPreload.forEach((src, index) => {
+                const img = new Image();
+                const timestamp = Date.now() + index; // Unique timestamp for each
+                img.src = src + '?preload=' + timestamp;
+                console.log('Preloading:', img.src);
+                
+                img.onload = () => console.log('Preloaded successfully:', src);
+                img.onerror = () => console.log('Preload failed:', src);
+            });
+        })();
+    </script>
     <!-- Prevent auto-refresh -->
     <script>
         if (window.history.replaceState) {
@@ -37,11 +90,8 @@ if (empty($festivals) && !isset($error)) {
     </script>
     <style>
         .hero-section {
-            /* Use the provided header background image with a dark overlay for better text visibility */
-            /* Clean filename, no spaces */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/foods/header-hero.jpg");
-            background-size: cover;
-            background-position: center;
+            /* Initial fallback background while image loads */
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
             padding: 80px 0;
             margin-bottom: 40px;
             position: relative;
@@ -49,6 +99,12 @@ if (empty($festivals) && !isset($error)) {
             color: #fff;
             /* keep text readable over images with a subtle shadow */
             text-shadow: 0 2px 6px rgba(0,0,0,0.55);
+            min-height: 500px;
+        }
+        
+        /* Debug helper */
+        .hero-section.image-loaded {
+            border: 3px solid lime !important;
         }
 
         .festival-card {
@@ -66,9 +122,20 @@ if (empty($festivals) && !isset($error)) {
             height: 220px;
             object-fit: cover;
             transition: transform 0.5s ease;
+            background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), 
+                        linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, #f0f0f0 75%), 
+                        linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
         }
         .festival-card:hover .card-img-top {
             transform: scale(1.05);
+        }
+        
+        /* Loading state for images */
+        .card-img-top[src*="placeholder"] {
+            background: #e2e8f0;
         }
         .festival-badge {
             position: absolute;
@@ -105,6 +172,19 @@ if (empty($festivals) && !isset($error)) {
             object-fit: cover;
             border-radius: 6px;
             /* no color-forcing filter so uploaded JPGs keep their colors */
+        }
+        /* Fallback hero background image element */
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .hero-section > .container, .hero-section * {
+            position: relative;
+            z-index: 1;
         }
         /* Style for the view details button */
         .btn-details {
@@ -143,7 +223,7 @@ if (empty($festivals) && !isset($error)) {
     <?php include '../includes/navbar.php'; ?>
 
     <!-- Hero Section -->
-    <section class="hero-section text-white">
+    <section class="hero-section text-white position-relative" id="heroSection">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
@@ -193,7 +273,7 @@ if (empty($festivals) && !isset($error)) {
                     <div class="festival-badge">
                         <i class="fas fa-star text-warning me-1"></i>Featured
                     </div>
-                    <img src="../assets/images/foods/food-fest-1.jpg" class="card-img-top" alt="Asian Street Food Festival">
+                    <img src="../assets/images/foods/food-fest-1.jpg" class="card-img-top" alt="Asian Street Food Festival" loading="eager">
                     <div class="card-body">
                         <h5 class="card-title">Asian Street Food Festival</h5>
                         <p class="mb-2">
@@ -229,7 +309,7 @@ if (empty($festivals) && !isset($error)) {
 
             <div class="col-md-6 col-lg-4">
                 <div class="card festival-card shadow-sm">
-                    <img src="../assets/images/foods/food-fest-2.jpg" class="card-img-top" alt="Mediterranean Food Festival">
+                    <img src="../assets/images/foods/food-fest-2.jpg" class="card-img-top" alt="Mediterranean Food Festival" loading="eager">
                     <div class="card-body">
                         <h5 class="card-title">Mediterranean Food Festival</h5>
                         <p class="mb-2">
@@ -265,7 +345,7 @@ if (empty($festivals) && !isset($error)) {
 
             <div class="col-md-6 col-lg-4">
                 <div class="card festival-card shadow-sm">
-                    <img src="../assets/images/foods/food-fest-3.jpg" class="card-img-top" alt="Dessert Paradise">
+                    <img src="../assets/images/foods/food-fest-3.jpg" class="card-img-top" alt="Dessert Paradise" loading="eager">
                     <div class="card-body">
                         <h5 class="card-title">Dessert Paradise</h5>
                         <p class="mb-2">
@@ -301,7 +381,7 @@ if (empty($festivals) && !isset($error)) {
 
             <div class="col-md-6 col-lg-4">
                 <div class="card festival-card shadow-sm">
-                    <img src="../assets/images/foods/food-fest-4.jpg" class="card-img-top" alt="BBQ & Grill Fest">
+                    <img src="../assets/images/foods/food-fest-4.jpg" class="card-img-top" alt="BBQ & Grill Fest" loading="eager">
                     <div class="card-body">
                         <h5 class="card-title">BBQ & Grill Fest</h5>
                         <p class="mb-2">
@@ -336,7 +416,7 @@ if (empty($festivals) && !isset($error)) {
 
             <div class="col-md-6 col-lg-4">
                 <div class="card festival-card shadow-sm">
-                    <img src="../assets/images/foods/food-fest-5.jpg" class="card-img-top" alt="International Food Fair">
+                    <img src="../assets/images/foods/food-fest-5.jpg" class="card-img-top" alt="International Food Fair" loading="eager">
                     <div class="card-body">
                         <h5 class="card-title">International Food Fair</h5>
                         <p class="mb-2">
@@ -418,13 +498,23 @@ if (empty($festivals) && !isset($error)) {
                             </div>
                             
                             <?php if (isset($_SESSION['user_id'])): ?>
-                                <button class="btn btn-primary w-100 mt-4">
-                                    <i class="fas fa-ticket-alt me-2"></i>Book Tickets
-                                </button>
+                                <div class="d-grid gap-2 mt-4">
+                                    <button class="btn btn-primary w-100">
+                                        <i class="fas fa-ticket-alt me-2"></i>Book Tickets
+                                    </button>
+                                    <button class="btn btn-outline-secondary w-100" data-bs-dismiss="modal">
+                                        I'll deal with it later
+                                    </button>
+                                </div>
                             <?php else: ?>
-                                <a href="login.php" class="btn btn-primary w-100 mt-4">
-                                    <i class="fas fa-sign-in-alt me-2"></i>Login to Book Tickets
-                                </a>
+                                <div class="d-grid gap-2 mt-4">
+                                    <a href="login.php" class="btn btn-primary w-100">
+                                        <i class="fas fa-sign-in-alt me-2"></i>Login to Book Tickets
+                                    </a>
+                                    <button class="btn btn-outline-secondary w-100" data-bs-dismiss="modal">
+                                        I'll deal with it later
+                                    </button>
+                                </div>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -448,30 +538,163 @@ if (empty($festivals) && !isset($error)) {
             document.execCommand('Stop');
         }
 
-        // Initialize modal
+        // Override browser cache completely 
+        function disableCacheForImages() {
+            // Intercept all image requests and add cache busters
+            const originalSetAttribute = Image.prototype.setAttribute;
+            Image.prototype.setAttribute = function(name, value) {
+                if (name === 'src' && !value.includes('?')) {
+                    value += '?nocache=' + Math.random();
+                }
+                return originalSetAttribute.call(this, name, value);
+            };
+        }
+        
+        // Force load hero background image with multiple aggressive methods
+        function forceLoadHeroImage() {
+            const heroSection = document.querySelector('.hero-section');
+            if (!heroSection) {
+                console.error('Hero section not found!');
+                return;
+            }
+            
+            console.log('Loading hero image with aggressive methods...');
+            
+            // Method 1: Try multiple URL variations
+            const baseUrl = window.location.origin + window.location.pathname.replace('/pages/food.php', '');
+            const timestamp = Date.now();
+            const imageUrls = [
+                `../assets/images/foods/header-hero.jpg?v=${timestamp}`,
+                `${baseUrl}/assets/images/foods/header-hero.jpg?v=${timestamp}`,
+                `/ticket booking/assets/images/foods/header-hero.jpg?v=${timestamp}`,
+                `../assets/images/foods/header-hero.jpg`,
+                `assets/images/foods/header-hero.jpg`
+            ];
+            
+            let urlIndex = 0;
+            
+            function tryNextUrl() {
+                if (urlIndex >= imageUrls.length) {
+                    console.error('All image URLs failed, using fallback color');
+                    heroSection.style.background = 'linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%)';
+                    return;
+                }
+                
+                const currentUrl = imageUrls[urlIndex];
+                console.log(`Trying URL ${urlIndex + 1}:`, currentUrl);
+                
+                const testImg = new Image();
+                
+                testImg.onload = function() {
+                    console.log('SUCCESS! Hero image loaded:', currentUrl);
+                    
+                    // Apply background aggressively with multiple methods
+                    const bgStyle = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("${currentUrl}")`;
+                    
+                    heroSection.style.cssText += `
+                        background: ${bgStyle} !important;
+                        background-image: ${bgStyle} !important;
+                        background-size: cover !important;
+                        background-position: center !important;
+                        background-repeat: no-repeat !important;
+                    `;
+                    
+                    // Double-check it applied
+                    setTimeout(() => {
+                        const computedStyle = window.getComputedStyle(heroSection);
+                        console.log('Final background-image:', computedStyle.backgroundImage);
+                    }, 100);
+                };
+                
+                testImg.onerror = function() {
+                    console.log(`URL ${urlIndex + 1} failed:`, currentUrl);
+                    urlIndex++;
+                    tryNextUrl();
+                };
+                
+                testImg.src = currentUrl;
+            }
+            
+            tryNextUrl();
+        }
+        
+        // Initialize everything immediately
+        disableCacheForImages();
+        forceLoadHeroImage();
+        
+        // Also run after DOM ready as backup
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                disableCacheForImages();
+                forceLoadHeroImage();
+                forceLoadCardImages();
+            });
+        } else {
+            forceLoadCardImages();
+        }
+
+        // Force load all card images without cache issues
+        function forceLoadCardImages() {
+            const images = document.querySelectorAll('.card-img-top');
+            console.log('Force loading ' + images.length + ' card images...');
+            
+            const baseUrl = window.location.origin + window.location.pathname.replace('/pages/food.php', '');
+            const timestamp = Date.now();
+            
+            images.forEach((img, index) => {
+                const originalSrc = img.getAttribute('src');
+                const imageName = originalSrc.split('/').pop().split('?')[0]; // Extract just the filename
+                
+                console.log(`Loading card image ${index + 1}: ${imageName}`);
+                
+                // Try multiple URL patterns for each image
+                const imageUrls = [
+                    `../assets/images/foods/${imageName}?v=${timestamp}`,
+                    `${baseUrl}/assets/images/foods/${imageName}?v=${timestamp}`,
+                    `/ticket booking/assets/images/foods/${imageName}?v=${timestamp}`,
+                    `../assets/images/foods/${imageName}`,
+                    `assets/images/foods/${imageName}`
+                ];
+                
+                let urlIndex = 0;
+                
+                function tryNextImageUrl() {
+                    if (urlIndex >= imageUrls.length) {
+                        console.log(`All URLs failed for image ${index + 1}, using placeholder`);
+                        img.src = 'https://via.placeholder.com/600x400?text=Food+Festival';
+                        img.style.border = '2px solid red';
+                        return;
+                    }
+                    
+                    const currentUrl = imageUrls[urlIndex];
+                    const testImg = new Image();
+                    
+                    testImg.onload = function() {
+                        console.log(`SUCCESS! Card image ${index + 1} loaded:`, currentUrl);
+                        img.src = currentUrl;
+                        img.style.border = '2px solid green'; // Visual confirmation
+                        setTimeout(() => img.style.border = '', 2000); // Remove after 2 seconds
+                    };
+                    
+                    testImg.onerror = function() {
+                        console.log(`Card image ${index + 1} URL ${urlIndex + 1} failed:`, currentUrl);
+                        urlIndex++;
+                        tryNextImageUrl();
+                    };
+                    
+                    testImg.src = currentUrl;
+                }
+                
+                tryNextImageUrl();
+            });
+        }
+
+        // Initialize modal and force load images
         document.addEventListener('DOMContentLoaded', function() {
             console.log('DOM Content Loaded');
             
-            // Handle image errors immediately
-            const images = document.querySelectorAll('.card-img-top');
-            console.log('Found ' + images.length + ' images');
-            
-            images.forEach((img, index) => {
-                console.log('Processing image ' + index);
-                if (img.complete) {
-                    console.log('Image ' + index + ' already loaded');
-                    if (img.naturalWidth === 0) {
-                        console.log('Image ' + index + ' failed to load, using placeholder');
-                        img.src = 'https://via.placeholder.com/600x400?text=Food+Festival';
-                    }
-                } else {
-                    console.log('Image ' + index + ' not yet loaded');
-                    img.onerror = function() {
-                        console.log('Image ' + index + ' error occurred, using placeholder');
-                        this.src = 'https://via.placeholder.com/600x400?text=Food+Festival';
-                    };
-                }
-            });
+            // Force load all card images
+            forceLoadCardImages();
 
             // Modal handling
             const modal = document.getElementById('festivalModal');
