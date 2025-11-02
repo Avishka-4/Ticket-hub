@@ -266,7 +266,8 @@
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top bg-gradient-to-r from-purple-500 to-pink-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <i class="fas fa-palette text-6xl text-white"></i>
+                                <!-- <i class="fas fa-palette text-6xl text-white"></i> -->
+                                <img src="../assets/images/leisure/zip lining.jpg" alt="zip lining" class="w-100 h-100 object-cover">
                             </div>
                         </div>
                         <div class="card-body">
