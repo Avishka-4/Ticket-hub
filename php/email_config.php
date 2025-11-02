@@ -25,8 +25,8 @@ try {
     // SMTP Configuration - CHANGE THESE VALUES
     $mail->Host       = 'smtp.gmail.com'; 
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'tickethub@gmail.com'; // email address
-    $mail->Password   = 'vuld jpiy hili'; // email password or app password
+    $mail->Username   = 'tickethub.company@gmail.com'; // email address
+    $mail->Password   = 'vuld jegy qzpq znbo'; // email password or app password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587; 
     

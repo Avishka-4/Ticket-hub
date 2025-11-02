@@ -142,7 +142,8 @@ function sendResetEmail($to, $firstName, $resetCode, $resetToken) {
         return $mail->send();
         
     } catch (Exception $e) {
-        debug_log("Email sending failed: " . $mail->ErrorInfo);
+        // Use error_log instead of debug_log
+        error_log("Email sending failed: " . $e->getMessage());
         return false;
     }
 }

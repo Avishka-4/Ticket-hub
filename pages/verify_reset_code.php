@@ -1,24 +1,9 @@
 <?php
-// Enable all error reporting and custom logging
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-
-// Custom logging function
-function debug_log($message) {
-    $log_file = __DIR__ . '/../../debug.log';
-    $timestamp = date('Y-m-d H:i:s');
-    file_put_contents($log_file, "[$timestamp] $message\n", FILE_APPEND | LOCK_EX);
-}
-
-debug_log("=== verify_reset_code.php STARTED ===");
-
 session_start();
 require_once '../php/config.php';
 
 // Redirect if already logged in
 if (isset($_SESSION['user_id'])) {
-    debug_log("User already logged in, redirecting to index");
     header('Location: ../index.php');
     exit();
 }
@@ -27,40 +12,14 @@ $token = isset($_GET['token']) ? $_GET['token'] : '';
 $error = isset($_GET['error']) ? $_GET['error'] : '';
 $success = isset($_GET['success']) ? $_GET['success'] : '';
 
-debug_log("Token from URL: " . $token);
-debug_log("Error message: " . $error);
-
 // Verify token exists
 if (empty($token)) {
-    debug_log("ERROR: Empty token received");
     header('Location: forgot_password.php?error=Invalid reset link');
     exit();
 }
 
 // Check if token is valid and not expired
 try {
-    debug_log("Checking token in database: " . $token);
-    
-    // First, let's check what exactly is in the database
-    $debug_stmt = $pdo->prepare("SELECT * FROM password_resets WHERE reset_token = ?");
-    $debug_stmt->execute([$token]);
-    $debug_data = $debug_stmt->fetch(PDO::FETCH_ASSOC);
-    
-    debug_log("Raw database data: " . print_r($debug_data, true));
-    
-    if ($debug_data) {
-        debug_log("Database check - Is used: " . $debug_data['is_used']);
-        debug_log("Database check - Expires at: " . $debug_data['expires_at']);
-        debug_log("Database check - Current time: " . date('Y-m-d H:i:s'));
-        
-        // Check expiry manually
-        $expires_at = strtotime($debug_data['expires_at']);
-        $current_time = time();
-        $is_expired = $current_time > $expires_at;
-        debug_log("Manual expiry check: " . ($is_expired ? 'EXPIRED' : 'NOT EXPIRED'));
-    }
-    
-    // Try the main query but simpler
     $stmt = $pdo->prepare("
         SELECT pr.*, u.email, u.first_name 
         FROM password_resets pr 
@@ -70,43 +29,23 @@ try {
     $stmt->execute([$token]);
     $resetData = $stmt->fetch();
     
-    debug_log("Main query result: " . ($resetData ? "FOUND" : "NOT FOUND"));
+    if (!$resetData) {
+        header('Location: forgot_password.php?error=Reset link is invalid or has already been used.');
+        exit();
+    }
     
-    if ($resetData) {
-        // Manual validation instead of relying on SQL conditions
-        $is_used = $resetData['is_used'];
-        $expires_at = strtotime($resetData['expires_at']);
-        $current_time = time();
-        
-        debug_log("Manual validation - Is used: $is_used, Expired: " . ($current_time > $expires_at ? 'YES' : 'NO'));
-        
-        if ($is_used == 1) {
-            debug_log("ERROR: Token already used");
-            header('Location: forgot_password.php?error=This reset link has already been used. Please request a new one.');
-            exit();
-        }
-        
-        if ($current_time > $expires_at) {
-            debug_log("ERROR: Token expired");
-            header('Location: forgot_password.php?error=Reset link has expired. Please request a new one.');
-            exit();
-        }
-        
-        debug_log("SUCCESS: Token validated manually for user: " . $resetData['email']);
-        
-    } else {
-        debug_log("ERROR: Token not found in main query");
-        header('Location: forgot_password.php?error=Reset link is invalid. Please request a new one.');
+    // Manual expiry check
+    $expires_at = strtotime($resetData['expires_at']);
+    $current_time = time();
+    if ($current_time > $expires_at) {
+        header('Location: forgot_password.php?error=Reset link has expired. Please request a new one.');
         exit();
     }
     
 } catch (PDOException $e) {
-    debug_log("DATABASE ERROR: " . $e->getMessage());
     header('Location: forgot_password.php?error=An error occurred. Please try again.');
     exit();
 }
-
-debug_log("=== verify_reset_code.php LOADING PAGE ===");
 
 // Helper function to mask email
 function maskEmail($email) {
