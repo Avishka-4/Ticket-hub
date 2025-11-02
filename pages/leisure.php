@@ -270,7 +270,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Pottery & Ceramic Workshop</h5>
+                            <h5 class="card-title fw-bold">Flying Ravana Adventure Park</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>2.5 hours | All ages welcome
                             </p>
@@ -311,12 +311,13 @@
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top bg-gradient-to-r from-indigo-500 to-purple-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <i class="fas fa-spa text-6xl text-white"></i>
+                                <!-- <i class="fas fa-spa text-6xl text-white"></i> -->
+                                 <img src="../assets/images/leisure/Golf.jpg" alt="Golf" class="w-100 h-100 object-cover">
                             </div>
                             <span class="badge bg-info position-absolute top-0 end-0 m-2">Relaxing</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Yoga & Meditation Retreat</h5>
+                            <h5 class="card-title fw-bold">Swing Ceylon Mini Golf</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>6 hours | Beginner friendly
                             </p>
@@ -357,12 +358,13 @@
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top bg-gradient-to-r from-yellow-500 to-orange-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <i class="fas fa-hiking text-6xl text-white"></i>
+                                <!-- <i class="fas fa-hiking text-6xl text-white"></i> -->
+                                 <img src="../assets/images/leisure/boat.jpg" alt="boat" class="w-100 h-100 object-cover">
                             </div>
                             <span class="badge bg-success position-absolute top-0 end-0 m-2">Nature</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Guided Nature Hiking</h5>
+                            <h5 class="card-title fw-bold">Avant Leisure Adventure Sports</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>4 hours | Moderate difficulty
                             </p>
