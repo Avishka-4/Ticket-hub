@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports - TicketHub</title>
+    <title>Sports - TicketHub Sri Lanka</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,9 +22,9 @@
         <div class="container">
             <div class="text-center">
                 <h1 class="text-5xl font-bold mb-4">
-                    <i class="fas fa-futbol me-3"></i>Sports Events
+                    <i class="fas fa-futbol me-3"></i>Sri Lankan Sports Events
                 </h1>
-                <p class="text-xl mb-6">Get tickets for the most exciting sports events and matches</p>
+                <p class="text-xl mb-6">Get tickets for Sri Lanka’s biggest matches and tournaments</p>
             </div>
         </div>
     </section>
@@ -36,11 +36,11 @@
                 <div class="col-md-8">
                     <div class="d-flex flex-wrap gap-2">
                         <button class="btn btn-outline-primary active" data-filter="all">All Sports</button>
-                        <button class="btn btn-outline-primary" data-filter="football">Football</button>
-                        <button class="btn btn-outline-primary" data-filter="cricket">Cricket</button>
-                        <button class="btn btn-outline-primary" data-filter="basketball">Basketball</button>
-                        <button class="btn btn-outline-primary" data-filter="tennis">Tennis</button>
-                        <button class="btn btn-outline-primary" data-filter="baseball">Baseball</button>
+                        <button class="btn btn-outline-primary" data-filter="football">Cricket</button>
+                        <button class="btn btn-outline-primary" data-filter="cricket">Rugby</button>
+                        <button class="btn btn-outline-primary" data-filter="basketball">Football</button>
+                        <button class="btn btn-outline-primary" data-filter="tennis">Athletics</button>
+                        <button class="btn btn-outline-primary" data-filter="baseball">Volleyball</button>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -67,36 +67,36 @@
                             <div class="card-img-top bg-gradient-to-r from-green-600 to-green-800 d-flex align-items-center justify-content-center" style="height: 250px;">
                                 <i class="fas fa-football-ball text-6xl text-white"></i>
                             </div>
-                            <span class="badge bg-danger position-absolute top-0 end-0 m-2">Championship</span>
+                            <span class="badge bg-danger position-absolute top-0 end-0 m-2">ODI Series</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">NFL Championship Final</h5>
+                            <h5 class="card-title fw-bold">Sri Lanka vs India - ODI Match</h5>
                             <div class="match-teams mb-3">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="text-center">
-                                        <div class="fw-bold">Eagles</div>
-                                        <small class="text-muted">Philadelphia</small>
+                                        <div class="fw-bold">Sri Lanka</div>
+                                        <small class="text-muted"></small>
                                     </div>
                                     <div class="text-center">
                                         <span class="badge bg-primary fs-6">VS</span>
                                     </div>
                                     <div class="text-center">
-                                        <div class="fw-bold">Patriots</div>
-                                        <small class="text-muted">New England</small>
+                                        <div class="fw-bold">India</div>
+                                        <small class="text-muted"></small>
                                     </div>
                                 </div>
                             </div>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-calendar me-2"></i>January 15, 2025
+                                <i class="fas fa-calendar me-2"></i>December 12, 2025
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>6:30 PM EST
+                                <i class="fas fa-clock me-2"></i>2:30 PM IST
                             </p>
                             <p class="text-muted mb-3">
-                                <i class="fas fa-map-marker-alt me-2"></i>MetLife Stadium, New Jersey
+                                <i class="fas fa-map-marker-alt me-2"></i>R. Premadasa Stadium, Colombo
                             </p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $85</span>
+                                <span class="fw-bold text-success fs-5">From LKR 2500</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -123,33 +123,33 @@
                             <span class="badge bg-success position-absolute top-0 end-0 m-2">World Cup</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Cricket World Cup Semi-Final</h5>
+                            <h5 class="card-title fw-bold">Dialog Rugby League</h5>
                             <div class="match-teams mb-3">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="text-center">
-                                        <div class="fw-bold">India</div>
-                                        <small class="text-muted">Team India</small>
+                                        <div class="fw-bold">Kandy SC</div>
+                                        <small class="text-muted"></small>
                                     </div>
                                     <div class="text-center">
                                         <span class="badge bg-primary fs-6">VS</span>
                                     </div>
                                     <div class="text-center">
-                                        <div class="fw-bold">Australia</div>
-                                        <small class="text-muted">Aussies</small>
+                                        <div class="fw-bold">CR & FC</div>
+                                        <small class="text-muted"></small>
                                     </div>
                                 </div>
                             </div>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-calendar me-2"></i>February 20, 2025
+                                <i class="fas fa-calendar me-2"></i>November 20, 2025
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>2:00 PM IST
+                                <i class="fas fa-clock me-2"></i>4:00 PM IST
                             </p>
                             <p class="text-muted mb-3">
-                                <i class="fas fa-map-marker-alt me-2"></i>Wankhede Stadium, Mumbai
+                                <i class="fas fa-map-marker-alt me-2"></i>Nittawela Stadium, Kandy
                             </p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $45</span>
+                                <span class="fw-bold text-success fs-5">From LKR 1200</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
