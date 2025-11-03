@@ -131,15 +131,15 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Scuba Diving Adventure</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>4 hours | All skill levels
+                                <i class="fas fa-clock me-2"></i>2-3 Hours | All skill levels
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Crystal Bay Marina
+                                <i class="fas fa-map-marker-alt me-2"></i>Sun Diving Centre, Yakdehimulla, Unawatuna, Sri Lanka​
                             </p>
-                            <p class="card-text">Explore the underwater world with certified instructors. Perfect for beginners and experienced divers alike.</p>
+                            <p class="card-text">Explore the underwater world with certified instructors. Perfect for beginners and experienced divers alike.So many packages to choose for beginners , Certified divers, and Certification Courses </p>
                             
                             <!-- Available Dates -->
-                            <div class="mb-3">
+                            <div class="mb-3 mt-2">
                                 <small class="text-muted fw-bold">Available Dates:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectActivityDate(this, 'Dec 20')">Dec 20</button>
@@ -149,7 +149,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">$89/person</span>
+                                <span class="fw-bold text-success fs-5">Rs.100000/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -179,14 +179,14 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Professional Surfing Lessons</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>3 hours | Beginner to Advanced
+                                <i class="fas fa-clock me-2"></i>31h 30m | Beginner to Advanced
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Sunset Beach
+                                <i class="fas fa-map-marker-alt me-2"></i>Arugam Bay Beach
                             </p>
                             <p class="card-text">Learn to surf with professional instructors on the best waves in town. Equipment included.</p>
                             
-                            <div class="mb-3">
+                            <div class="mb-3 mt-4">
                                 <small class="text-muted fw-bold">Available Dates:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectActivityDate(this, 'Dec 18')">Dec 18</button>
@@ -196,7 +196,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">$65/person</span>
+                                <span class="fw-bold text-success fs-5">Rs.7000/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -227,14 +227,14 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Rock Climbing Experience</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>5 hours | Intermediate level
+                                <i class="fas fa-clock me-2"></i>10 hours | Ages 12-60
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Rocky Point Adventure Park
+                                <i class="fas fa-map-marker-alt me-2"></i>Peacock Hill and Ramboda waterfall in Sri Lanka
                             </p>
                             <p class="card-text">Challenge yourself with guided rock climbing on natural cliffs. Safety equipment provided.</p>
                             
-                            <div class="mb-3">
+                            <div class="mb-3 mt-4">
                                 <small class="text-muted fw-bold">Available Dates:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectActivityDate(this, 'Dec 19')">Dec 19</button>
@@ -244,7 +244,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">$95/person</span>
+                                <span class="fw-bold text-success fs-5">$68/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
