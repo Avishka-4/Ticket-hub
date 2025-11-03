@@ -20,14 +20,14 @@
                     <li class="mb-2"><a href="../pages/events.php" class="text-light text-decoration-none hover:text-blue-400">Events</a></li>
                     <li class="mb-2"><a href="../pages/movies.php" class="text-light text-decoration-none hover:text-blue-400">Movies</a></li>
                     <li class="mb-2"><a href="../pages/sports.php" class="text-light text-decoration-none hover:text-blue-400">Sports</a></li>
-                    <li class="mb-2"><a href="../pages/leisure.php" class="text-light text-decoration-none hover:text-blue-400">Leisure</a></li>
+                    <li class="mb-2"><a href="../pages/leisure.php" class="text-light text-decoration-none hover:text-blue-40 0">Leisure</a></li>
                 </ul>
             </div>
             
             <div class="col-md-2 mb-4">
                 <h6 class="fw-bold mb-3">Services</h6>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a href="../pages/food.php" class="text-light text-decoration-none hover:text-blue-400">Food & Beverage</a></li>
+                    <li class="mb-2"><a href="../pages/food.php" class="text-light text-decoration-none hover:text-blue-400">Food Festival Fiesta</a></li>
                     <li class="mb-2"><a href="../pages/places.php" class="text-light text-decoration-none hover:text-blue-400">Places & Tours</a></li>
                     <li class="mb-2"><a href="../pages/bookings.php" class="text-light text-decoration-none hover:text-blue-400">My Bookings</a></li>
                     <li class="mb-2"><a href="#" class="text-light text-decoration-none hover:text-blue-400">Gift Cards</a></li>

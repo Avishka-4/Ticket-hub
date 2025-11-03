@@ -1,459 +1,522 @@
+<?php
+// Prevent infinite reloads
+header("Cache-Control: max-age=300, must-revalidate");
+session_start();
+require_once '../php/config.php';
+
+// Debug information
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+// Compute a robust base URL (handles spaces in folder names)
+$documentRoot = realpath($_SERVER['DOCUMENT_ROOT']);
+$projectRoot = realpath(dirname(__DIR__)); // one level up from /pages
+$baseUrl = rtrim(str_replace('\\', '/', str_replace($documentRoot, '', $projectRoot)), '/') . '/';
+
+// Helper to version assets for cache-busting using file modification time
+function asset_url($relativePath) {
+    global $projectRoot, $baseUrl;
+    $fsPath = $projectRoot . '/' . str_replace('\\', '/', $relativePath);
+    $version = @filemtime($fsPath);
+    return $baseUrl . $relativePath . ($version ? ('?v=' . $version) : '');
+}
+
+// Versioned URL relative to THIS page (avoids base URL issues with spaces)
+function versioned_rel($relativeFromPage) {
+    $fsPath = realpath(__DIR__ . '/' . $relativeFromPage);
+    $version = $fsPath ? @filemtime($fsPath) : null;
+    return $relativeFromPage . ($version ? ('?v=' . $version) : '');
+}
+
+// Fetch food festivals from database
+require_once '../php/food_festivals.php';
+$festivals = getFoodFestivals();
+if (empty($festivals) && !isset($error)) {
+    // If no festivals found and no error occurred, this is normal behavior
+    // Leave $festivals empty to show default cards
+    error_log("No festivals found in database - using default cards");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food & Beverages - TicketHub</title>
-    
-    <!-- Bootstrap CSS -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Food Festival Fiesta - TicketHub</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo versioned_rel('../assets/css/style.css'); ?>">
+    <!-- Aggressively preload ALL images with multiple methods -->
+    <link rel="preload" as="image" href="../assets/images/foods/header-hero.jpg">
+    <link rel="preload" as="image" href="../assets/images/foods/food-fest-1.jpg">
+    <link rel="preload" as="image" href="../assets/images/foods/food-fest-2.jpg">
+    <link rel="preload" as="image" href="../assets/images/foods/food-fest-3.jpg">
+    <link rel="preload" as="image" href="../assets/images/foods/food-fest-4.jpg">
+    <link rel="preload" as="image" href="../assets/images/foods/food-fest-5.jpg">
+    
+    <!-- Force immediate image loading in head -->
+    <script>
+        // Preload images immediately when script tag is parsed
+        (function() {
+            const imagesToPreload = [
+                '../assets/images/foods/header-hero.jpg',
+                '../assets/images/foods/food-fest-1.jpg',
+                '../assets/images/foods/food-fest-2.jpg',
+                '../assets/images/foods/food-fest-3.jpg',
+                '../assets/images/foods/food-fest-4.jpg',
+                '../assets/images/foods/food-fest-5.jpg'
+            ];
+            
+            console.log('Preloading images in HEAD...');
+            imagesToPreload.forEach((src, index) => {
+                const img = new Image();
+                const timestamp = Date.now() + index; // Unique timestamp for each
+                img.src = src + '?preload=' + timestamp;
+                console.log('Preloading:', img.src);
+                
+                img.onload = () => console.log('Preloaded successfully:', src);
+                img.onerror = () => console.log('Preload failed:', src);
+            });
+        })();
+    </script>
+    <!-- Prevent auto-refresh -->
+    <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
+    <style>
+        .hero-section {
+            /* Initial fallback background while image loads */
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
+            padding: 80px 0;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+            /* keep text readable over images with a subtle shadow */
+            text-shadow: 0 2px 6px rgba(0,0,0,0.55);
+            min-height: 500px;
+        }
+        
+        /* Debug helper */
+        .hero-section.image-loaded {
+            border: 3px solid lime !important;
+        }
+
+        .festival-card {
+            transition: all 0.3s ease;
+            height: 100%;
+            background: white;
+            border: none;
+            overflow: hidden;
+        }
+        .festival-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        .card-img-top {
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), 
+                        linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, #f0f0f0 75%), 
+                        linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+        .festival-card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        
+        /* Loading state for images */
+        .card-img-top[src*="placeholder"] {
+            background: #e2e8f0;
+        }
+        .festival-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.95);
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .cuisine-tag {
+            font-size: 0.8rem;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background: #f0f4ff;
+            color: #0d6efd;
+            margin: 3px;
+            display: inline-block;
+            transition: all 0.2s ease;
+            border: 1px solid #e0e7ff;
+        }
+        .cuisine-tag:hover {
+            background: #e0e7ff;
+            transform: translateY(-1px);
+        }
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            display: inline-block;
+            object-fit: cover;
+            border-radius: 6px;
+            /* no color-forcing filter so uploaded JPGs keep their colors */
+        }
+        /* Fallback hero background image element */
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .hero-section > .container, .hero-section * {
+            position: relative;
+            z-index: 1;
+        }
+        /* Style for the view details button */
+        .btn-details {
+            padding: 10px 20px !important;
+            transition: all 0.3s ease !important;
+            background: white !important;
+            border: 1px solid #0d6efd !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 8px !important;
+        }
+        
+        .btn-details:hover {
+            background: #f8f9fa !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.15) !important;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-light">
+    <!-- Debug info -->
+    <script>
+        console.log('Page load started');
+        window.addEventListener('load', function() {
+            console.log('Page fully loaded');
+        });
+        window.addEventListener('beforeunload', function(e) {
+            console.log('Page unloading', e);
+        });
+        window.addEventListener('unload', function() {
+            console.log('Page unloaded');
+        });
+    </script>
+    
     <?php include '../includes/navbar.php'; ?>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-red-600 to-orange-600 text-white py-16">
+    <section class="hero-section text-white position-relative" id="heroSection">
         <div class="container">
-            <div class="text-center">
-                <h1 class="text-5xl font-bold mb-4">
-                    <i class="fas fa-utensils me-3"></i>Food & Beverages
-                </h1>
-                <p class="text-xl mb-6">Delicious food and refreshing drinks delivered to your doorstep</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="display-4 fw-bold mb-4">
+                        <i class="fas fa-utensils me-3"></i>Food Festival Fiesta
+                    </h1>
+                    <p class="lead mb-4">Experience culinary delights from around the world at our vibrant food festivals</p>
+                    <div class="row justify-content-center g-4 mt-3">
+                        <div class="col-md-4">
+                            <div class="p-3 bg-white bg-opacity-10 rounded-3 text-center">
+                                    <h5 class="mb-0">Multiple Venues</h5>
+                                    <small>Across the city</small>
+                                </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 bg-white bg-opacity-10 rounded-3 text-center">
+                                    <h5 class="mb-0">Regular Events</h5>
+                                    <small>Throughout the year</small>
+                                </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-3 bg-white bg-opacity-10 rounded-3 text-center">
+                                    <h5 class="mb-0">Family Friendly</h5>
+                                    <small>Fun for everyone</small>
+                                </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Category Tabs -->
-    <section class="py-4 bg-light">
-        <div class="container">
-            <ul class="nav nav-tabs justify-content-center" id="foodTabs">
-                <li class="nav-item">
-                    <a class="nav-link active" data-bs-toggle="tab" href="#appetizers">
-                        <i class="fas fa-leaf me-2"></i>Appetizers
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#mains">
-                        <i class="fas fa-hamburger me-2"></i>Main Dishes
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#desserts">
-                        <i class="fas fa-ice-cream me-2"></i>Desserts
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#beverages">
-                        <i class="fas fa-cocktail me-2"></i>Beverages
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#alcohol">
-                        <i class="fas fa-wine-glass me-2"></i>Alcoholic Drinks
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
+    <!-- Festivals Section -->
+    <section class="container mb-5">
+        <h2 class="text-center mb-4">Upcoming Food Festivals</h2>
+        
+        <?php if (isset($error)): ?>
+            <div class="alert alert-danger">
+                <i class="fas fa-exclamation-circle me-2"></i><?php echo htmlspecialchars($error); ?>
+            </div>
+        <?php endif; ?>
 
-    <!-- Food Items -->
-    <section class="py-5">
-        <div class="container">
-            <div class="tab-content" id="foodTabContent">
-                
-                <!-- Appetizers Tab -->
-                <div class="tab-pane fade show active" id="appetizers">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                                <div class="card-img-top bg-gradient-to-r from-green-500 to-lime-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                    <i class="fas fa-seedling text-6xl text-white"></i>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Caesar Salad</h5>
-                                    <p class="text-muted small">Fresh romaine lettuce, croutons, parmesan</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="fw-bold text-success">$8.99</span>
-                                        <button class="btn btn-primary btn-sm" onclick="addFoodToCart('Caesar Salad', 8.99)">
-                                            <i class="fas fa-plus me-1"></i>Add
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+        <div class="row g-4">
+            <!-- Five New Festival Cards -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card festival-card shadow-sm">
+                    <div class="festival-badge">
+                        <i class="fas fa-star text-warning me-1"></i>Featured
+                    </div>
+                    <img src="../assets/images/foods/food-fest-1.jpg" class="card-img-top" alt="Asian Street Food Festival" loading="eager">
+                    <div class="card-body">
+                        <h5 class="card-title">Asian Street Food Festival</h5>
+                        <p class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Downtown Square
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-calendar me-2 text-primary"></i>November 15, 2025
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-clock me-2 text-success"></i>11:00 AM - 10:00 PM
+                        </p>
+                        <div class="mb-3">
+                            <span class="cuisine-tag">Asian Fusion</span>
+                            <span class="cuisine-tag">Street Food</span>
+                            <span class="cuisine-tag">Dim Sum</span>
                         </div>
-                        
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                                <div class="card-img-top bg-gradient-to-r from-yellow-500 to-orange-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                    <i class="fas fa-pepper-hot text-6xl text-white"></i>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Buffalo Wings</h5>
-                                    <p class="text-muted small">Spicy chicken wings with blue cheese dip</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="fw-bold text-success">$12.99</span>
-                                        <button class="btn btn-primary btn-sm" onclick="addFoodToCart('Buffalo Wings', 12.99)">
-                                            <i class="fas fa-plus me-1"></i>Add
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                                <div class="card-img-top bg-gradient-to-r from-purple-500 to-pink-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                    <i class="fas fa-cheese text-6xl text-white"></i>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Mozzarella Sticks</h5>
-                                    <p class="text-muted small">Crispy fried mozzarella with marinara sauce</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="fw-bold text-success">$9.99</span>
-                                        <button class="btn btn-primary btn-sm" onclick="addFoodToCart('Mozzarella Sticks', 9.99)">
-                                            <i class="fas fa-plus me-1"></i>Add
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <button class="btn btn-outline-primary w-100 btn-details" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#festivalModal"
+                                data-title="Asian Street Food Festival"
+                                data-description="Experience authentic Asian street food culture!"
+                                data-venue="Downtown Square"
+                                data-date="November 15, 2025"
+                                data-time="11:00 AM - 10:00 PM"
+                                data-fee="$5"
+                                data-cuisines="Asian Fusion, Street Food, Dim Sum, Noodles">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="fw-bold">View Details</span>
+                        </button>
                     </div>
                 </div>
+            </div>
 
-                <!-- Main Dishes Tab -->
-                <div class="tab-pane fade" id="mains">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                                <div class="card-img-top bg-gradient-to-r from-red-600 to-red-800 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                    <i class="fas fa-hamburger text-6xl text-white"></i>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Classic Burger</h5>
-                                    <p class="text-muted small">Beef patty, lettuce, tomato, cheese, fries</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="fw-bold text-success">$15.99</span>
-                                        <button class="btn btn-primary btn-sm" onclick="addFoodToCart('Classic Burger', 15.99)">
-                                            <i class="fas fa-plus me-1"></i>Add
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card festival-card shadow-sm">
+                    <img src="../assets/images/foods/food-fest-2.jpg" class="card-img-top" alt="Mediterranean Food Festival" loading="eager">
+                    <div class="card-body">
+                        <h5 class="card-title">Mediterranean Food Festival</h5>
+                        <p class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Seaside Park
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-calendar me-2 text-primary"></i>November 25, 2025
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-clock me-2 text-success"></i>12:00 PM - 9:00 PM
+                        </p>
+                        <div class="mb-3">
+                            <span class="cuisine-tag">Greek</span>
+                            <span class="cuisine-tag">Italian</span>
+                            <span class="cuisine-tag">Spanish</span>
                         </div>
-                        
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                                <div class="card-img-top bg-gradient-to-r from-orange-500 to-yellow-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                    <i class="fas fa-pizza-slice text-6xl text-white"></i>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Margherita Pizza</h5>
-                                    <p class="text-muted small">Fresh mozzarella, tomato sauce, basil</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="fw-bold text-success">$18.99</span>
-                                        <button class="btn btn-primary btn-sm" onclick="addFoodToCart('Margherita Pizza', 18.99)">
-                                            <i class="fas fa-plus me-1"></i>Add
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                                <div class="card-img-top bg-gradient-to-r from-green-600 to-blue-600 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                    <i class="fas fa-fish text-6xl text-white"></i>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Grilled Salmon</h5>
-                                    <p class="text-muted small">Atlantic salmon with vegetables and rice</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="fw-bold text-success">$22.99</span>
-                                        <button class="btn btn-primary btn-sm" onclick="addFoodToCart('Grilled Salmon', 22.99)">
-                                            <i class="fas fa-plus me-1"></i>Add
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <button class="btn btn-outline-primary w-100 btn-details" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#festivalModal"
+                                data-title="Mediterranean Food Festival"
+                                data-description="Savor the flavors of the Mediterranean coast!"
+                                data-venue="Seaside Park"
+                                data-date="November 25, 2025"
+                                data-time="12:00 PM - 9:00 PM"
+                                data-fee="$8"
+                                data-cuisines="Greek, Italian, Spanish, Seafood">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="fw-bold">View Details</span>
+                        </button>
                     </div>
                 </div>
+            </div>
 
-                <!-- Desserts Tab -->
-                <div class="tab-pane fade" id="desserts">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                                <div class="card-img-top bg-gradient-to-r from-brown-500 to-amber-600 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                    <i class="fas fa-birthday-cake text-6xl text-white"></i>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Chocolate Cake</h5>
-                                    <p class="text-muted small">Rich chocolate cake with vanilla frosting</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="fw-bold text-success">$6.99</span>
-                                        <button class="btn btn-primary btn-sm" onclick="addFoodToCart('Chocolate Cake', 6.99)">
-                                            <i class="fas fa-plus me-1"></i>Add
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card festival-card shadow-sm">
+                    <img src="../assets/images/foods/food-fest-3.jpg" class="card-img-top" alt="Dessert Paradise" loading="eager">
+                    <div class="card-body">
+                        <h5 class="card-title">Dessert Paradise</h5>
+                        <p class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Grand Plaza
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-calendar me-2 text-primary"></i>December 5, 2025
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-clock me-2 text-success"></i>10:00 AM - 8:00 PM
+                        </p>
+                        <div class="mb-3">
+                            <span class="cuisine-tag">Cakes</span>
+                            <span class="cuisine-tag">Ice Cream</span>
+                            <span class="cuisine-tag">Pastries</span>
                         </div>
-                        
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                                <div class="card-img-top bg-gradient-to-r from-pink-500 to-red-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                    <i class="fas fa-ice-cream text-6xl text-white"></i>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Vanilla Ice Cream</h5>
-                                    <p class="text-muted small">Premium vanilla ice cream with toppings</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="fw-bold text-success">$4.99</span>
-                                        <button class="btn btn-primary btn-sm" onclick="addFoodToCart('Vanilla Ice Cream', 4.99)">
-                                            <i class="fas fa-plus me-1"></i>Add
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                                <div class="card-img-top bg-gradient-to-r from-yellow-500 to-orange-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                    <i class="fas fa-cookie-bite text-6xl text-white"></i>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Cheesecake</h5>
-                                    <p class="text-muted small">New York style cheesecake with berries</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="fw-bold text-success">$7.99</span>
-                                        <button class="btn btn-primary btn-sm" onclick="addFoodToCart('Cheesecake', 7.99)">
-                                            <i class="fas fa-plus me-1"></i>Add
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <button class="btn btn-outline-primary w-100 btn-details" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#festivalModal"
+                                data-title="Dessert Paradise"
+                                data-description="Indulge in a sweet wonderland of desserts!"
+                                data-venue="Grand Plaza"
+                                data-date="December 5, 2025"
+                                data-time="10:00 AM - 8:00 PM"
+                                data-fee="$6"
+                                data-cuisines="Cakes, Ice Cream, Pastries, Chocolates">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="fw-bold">View Details</span>
+                        </button>
                     </div>
                 </div>
+            </div>
 
-                <!-- Beverages Tab -->
-                <div class="tab-pane fade" id="beverages">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                                <div class="card-img-top bg-gradient-to-r from-blue-500 to-cyan-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                    <i class="fas fa-coffee text-6xl text-white"></i>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Premium Coffee</h5>
-                                    <p class="text-muted small">Freshly brewed arabica coffee</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="fw-bold text-success">$3.99</span>
-                                        <button class="btn btn-primary btn-sm" onclick="addFoodToCart('Premium Coffee', 3.99)">
-                                            <i class="fas fa-plus me-1"></i>Add
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card festival-card shadow-sm">
+                    <img src="../assets/images/foods/food-fest-4.jpg" class="card-img-top" alt="BBQ & Grill Fest" loading="eager">
+                    <div class="card-body">
+                        <h5 class="card-title">BBQ & Grill Fest</h5>
+                        <p class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Riverside Garden</p>
+                        <p class="mb-2">
+                            <i class="fas fa-calendar me-2 text-primary"></i>December 15, 2025
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-clock me-2 text-success"></i>4:00 PM - 11:00 PM
+                        </p>
+                        <div class="mb-3">
+                            <span class="cuisine-tag">BBQ</span>
+                            <span class="cuisine-tag">Grilled</span>
+                            <span class="cuisine-tag">Smoked</span>
                         </div>
-                        
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                                <div class="card-img-top bg-gradient-to-r from-orange-500 to-red-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                    <i class="fas fa-glass-whiskey text-6xl text-white"></i>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Fresh Orange Juice</h5>
-                                    <p class="text-muted small">Freshly squeezed orange juice</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="fw-bold text-success">$4.99</span>
-                                        <button class="btn btn-primary btn-sm" onclick="addFoodToCart('Fresh Orange Juice', 4.99)">
-                                            <i class="fas fa-plus me-1"></i>Add
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                                <div class="card-img-top bg-gradient-to-r from-green-500 to-blue-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                    <i class="fas fa-glass-martini text-6xl text-white"></i>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Smoothie Bowl</h5>
-                                    <p class="text-muted small">Mixed berry smoothie with granola</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="fw-bold text-success">$8.99</span>
-                                        <button class="btn btn-primary btn-sm" onclick="addFoodToCart('Smoothie Bowl', 8.99)">
-                                            <i class="fas fa-plus me-1"></i>Add
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <button class="btn btn-outline-primary w-100 btn-details" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#festivalModal"
+                                data-title="BBQ & Grill Fest"
+                                data-description="The ultimate celebration of grilled and smoked delicacies!"
+                                data-venue="Riverside Garden"
+                                data-date="December 15, 2025"
+                                data-time="4:00 PM - 11:00 PM"
+                                data-fee="$12"
+                                data-cuisines="BBQ, Grilled, Smoked, Steaks">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="fw-bold">View Details</span>
+                        </button>
                     </div>
                 </div>
+            </div>
 
-                <!-- Alcoholic Drinks Tab -->
-                <div class="tab-pane fade" id="alcohol">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                                <div class="card-img-top bg-gradient-to-r from-red-700 to-purple-700 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                    <i class="fas fa-wine-bottle text-6xl text-white"></i>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Red Wine</h5>
-                                    <p class="text-muted small">Premium red wine from Italy</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="fw-bold text-success">$12.99</span>
-                                        <button class="btn btn-primary btn-sm" onclick="addFoodToCart('Red Wine', 12.99)">
-                                            <i class="fas fa-plus me-1"></i>Add
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card festival-card shadow-sm">
+                    <img src="../assets/images/foods/food-fest-5.jpg" class="card-img-top" alt="International Food Fair" loading="eager">
+                    <div class="card-body">
+                        <h5 class="card-title">International Food Fair</h5>
+                        <p class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Convention Center
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-calendar me-2 text-primary"></i>December 30, 2025
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-clock me-2 text-success"></i>11:00 AM - 10:00 PM
+                        </p>
+                        <div class="mb-3">
+                            <span class="cuisine-tag">Global</span>
+                            <span class="cuisine-tag">International</span>
+                            <span class="cuisine-tag">Fusion</span>
                         </div>
-                        
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                                <div class="card-img-top bg-gradient-to-r from-yellow-600 to-amber-600 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                    <i class="fas fa-beer text-6xl text-white"></i>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Craft Beer</h5>
-                                    <p class="text-muted small">Local craft beer selection</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="fw-bold text-success">$6.99</span>
-                                        <button class="btn btn-primary btn-sm" onclick="addFoodToCart('Craft Beer', 6.99)">
-                                            <i class="fas fa-plus me-1"></i>Add
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                                <div class="card-img-top bg-gradient-to-r from-blue-600 to-indigo-600 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                    <i class="fas fa-cocktail text-6xl text-white"></i>
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Signature Cocktail</h5>
-                                    <p class="text-muted small">House special cocktail mix</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="fw-bold text-success">$9.99</span>
-                                        <button class="btn btn-primary btn-sm" onclick="addFoodToCart('Signature Cocktail', 9.99)">
-                                            <i class="fas fa-plus me-1"></i>Add
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <button class="btn btn-outline-primary w-100 btn-details" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#festivalModal"
+                                data-title="International Food Fair"
+                                data-description="A global culinary journey featuring cuisines from around the world!"
+                                data-venue="Convention Center"
+                                data-date="December 30, 2025"
+                                data-time="11:00 AM - 10:00 PM"
+                                data-fee="$15"
+                                data-cuisines="Global, International, Fusion, World Cuisine">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="fw-bold">View Details</span>
+                        </button>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Order Summary Sticky Footer -->
-    <div id="orderSummary" class="position-fixed bottom-0 start-0 end-0 bg-white border-top shadow-lg p-3" style="display: none; z-index: 1050;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-8">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-shopping-bag text-primary me-2"></i>
-                        <span id="orderItemCount">0 items</span>
-                        <span class="ms-3">Total: $<span id="orderTotal">0.00</span></span>
-                    </div>
-                </div>
-                <div class="col-md-4 text-end">
-                    <button class="btn btn-outline-primary me-2" onclick="viewCart()">
-                        <i class="fas fa-eye me-1"></i>View Cart
-                    </button>
-                    <button class="btn btn-success" onclick="proceedToCheckout()">
-                        <i class="fas fa-credit-card me-1"></i>Checkout
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Food Cart Modal -->
-    <div class="modal fade" id="foodCartModal" tabindex="-1">
+    <!-- Festival Details Modal -->
+    <div class="modal fade" id="festivalModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header bg-primary text-white">
                     <h5 class="modal-title">
-                        <i class="fas fa-shopping-cart me-2"></i>Your Order
+                        <i class="fas fa-utensils me-2"></i>
+                        <span id="modalTitle">Festival Details</span>
                     </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div id="foodCartItems">
-                        <!-- Cart items will be populated here -->
-                    </div>
-                    
-                    <hr>
-                    
                     <div class="row">
                         <div class="col-md-6">
-                            <h6 class="fw-bold">Delivery Information</h6>
-                            <div class="mb-3">
-                                <label class="form-label">Delivery Address</label>
-                                <textarea class="form-control" rows="3" placeholder="Enter your delivery address"></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="Your phone number">
-                            </div>
+                            <h6 class="fw-bold">Description</h6>
+                            <p id="modalDescription" class="text-muted mb-4"></p>
                         </div>
                         <div class="col-md-6">
-                            <h6 class="fw-bold">Order Options</h6>
-                            <div class="mb-3">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="deliveryOption" id="delivery" checked>
-                                    <label class="form-check-label" for="delivery">
-                                        <i class="fas fa-truck me-1"></i>Delivery ($2.99)
-                                    </label>
+                            <div class="bg-light p-3 rounded">
+                                <h6 class="fw-bold mb-3">Event Details</h6>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-map-marker-alt me-2 text-danger"></i>
+                                        <strong>Venue:</strong> <span id="modalVenue"></span>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-calendar me-2 text-primary"></i>
+                                        <strong>Date:</strong> <span id="modalDate"></span>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-clock me-2 text-success"></i>
+                                        <strong>Time:</strong> <span id="modalTime"></span>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-ticket-alt me-2 text-warning"></i>
+                                        <strong>Entry Fee:</strong> <span id="modalFee"></span>
+                                    </li>
+                                </ul>
+                                
+                                <h6 class="fw-bold mb-2 mt-4">Featured Cuisines</h6>
+                                <div id="modalCuisines" class="d-flex flex-wrap gap-2">
+                                    <!-- Cuisine tags will be inserted here -->
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="deliveryOption" id="pickup">
-                                    <label class="form-check-label" for="pickup">
-                                        <i class="fas fa-store me-1"></i>Pickup (Free)
-                                    </label>
+                            </div>
+                            
+                            <?php if (isset($_SESSION['user_id'])): ?>
+                                <div class="d-grid gap-2 mt-4">
+                                    <button class="btn btn-primary w-100">
+                                        <i class="fas fa-ticket-alt me-2"></i>Book Tickets
+                                    </button>
+                                    <button class="btn btn-outline-secondary w-100" data-bs-dismiss="modal">
+                                        I'll deal with it later
+                                    </button>
                                 </div>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Special Instructions</label>
-                                <textarea class="form-control" rows="2" placeholder="Any special requests..."></textarea>
-                            </div>
+                            <?php else: ?>
+                                <div class="d-grid gap-2 mt-4">
+                                    <a href="login.php" class="btn btn-primary w-100">
+                                        <i class="fas fa-sign-in-alt me-2"></i>Login to Book Tickets
+                                    </a>
+                                    <button class="btn btn-outline-secondary w-100" data-bs-dismiss="modal">
+                                        I'll deal with it later
+                                    </button>
+                                </div>
+                            <?php endif; ?>
                         </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="w-100">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <div>
-                                <div>Subtotal: $<span id="foodSubtotal">0.00</span></div>
-                                <div>Delivery: $<span id="deliveryFee">2.99</span></div>
-                                <div class="fw-bold">Total: $<span id="foodGrandTotal">0.00</span></div>
-                            </div>
-                        </div>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
-                        <button type="button" class="btn btn-success" onclick="placeOrder()">
-                            <i class="fas fa-check me-2"></i>Place Order
-                        </button>
                     </div>
                 </div>
             </div>
@@ -462,8 +525,232 @@
 
     <?php include '../includes/footer.php'; ?>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/food.js"></script>
+    <!-- Prevent page reload -->
+    <script>
+        // Debugging helper
+        console.log('Script starting...');
+        
+        // Stop any existing page refresh
+        if (window.stop) {
+            window.stop();
+        } else if (document.execCommand) {
+            document.execCommand('Stop');
+        }
+
+        // Override browser cache completely 
+        function disableCacheForImages() {
+            // Intercept all image requests and add cache busters
+            const originalSetAttribute = Image.prototype.setAttribute;
+            Image.prototype.setAttribute = function(name, value) {
+                if (name === 'src' && !value.includes('?')) {
+                    value += '?nocache=' + Math.random();
+                }
+                return originalSetAttribute.call(this, name, value);
+            };
+        }
+        
+        // Force load hero background image with multiple aggressive methods
+        function forceLoadHeroImage() {
+            const heroSection = document.querySelector('.hero-section');
+            if (!heroSection) {
+                console.error('Hero section not found!');
+                return;
+            }
+            
+            console.log('Loading hero image with aggressive methods...');
+            
+            // Method 1: Try multiple URL variations
+            const baseUrl = window.location.origin + window.location.pathname.replace('/pages/food.php', '');
+            const timestamp = Date.now();
+            const imageUrls = [
+                `../assets/images/foods/header-hero.jpg?v=${timestamp}`,
+                `${baseUrl}/assets/images/foods/header-hero.jpg?v=${timestamp}`,
+                `/ticket booking/assets/images/foods/header-hero.jpg?v=${timestamp}`,
+                `../assets/images/foods/header-hero.jpg`,
+                `assets/images/foods/header-hero.jpg`
+            ];
+            
+            let urlIndex = 0;
+            
+            function tryNextUrl() {
+                if (urlIndex >= imageUrls.length) {
+                    console.error('All image URLs failed, using fallback color');
+                    heroSection.style.background = 'linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%)';
+                    return;
+                }
+                
+                const currentUrl = imageUrls[urlIndex];
+                console.log(`Trying URL ${urlIndex + 1}:`, currentUrl);
+                
+                const testImg = new Image();
+                
+                testImg.onload = function() {
+                    console.log('SUCCESS! Hero image loaded:', currentUrl);
+                    
+                    // Apply background aggressively with multiple methods
+                    const bgStyle = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("${currentUrl}")`;
+                    
+                    heroSection.style.cssText += `
+                        background: ${bgStyle} !important;
+                        background-image: ${bgStyle} !important;
+                        background-size: cover !important;
+                        background-position: center !important;
+                        background-repeat: no-repeat !important;
+                    `;
+                    
+                    // Double-check it applied
+                    setTimeout(() => {
+                        const computedStyle = window.getComputedStyle(heroSection);
+                        console.log('Final background-image:', computedStyle.backgroundImage);
+                    }, 100);
+                };
+                
+                testImg.onerror = function() {
+                    console.log(`URL ${urlIndex + 1} failed:`, currentUrl);
+                    urlIndex++;
+                    tryNextUrl();
+                };
+                
+                testImg.src = currentUrl;
+            }
+            
+            tryNextUrl();
+        }
+        
+        // Initialize everything immediately
+        disableCacheForImages();
+        forceLoadHeroImage();
+        
+        // Also run after DOM ready as backup
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                disableCacheForImages();
+                forceLoadHeroImage();
+                forceLoadCardImages();
+            });
+        } else {
+            forceLoadCardImages();
+        }
+
+        // Force load all card images without cache issues
+        function forceLoadCardImages() {
+            const images = document.querySelectorAll('.card-img-top');
+            console.log('Force loading ' + images.length + ' card images...');
+            
+            const baseUrl = window.location.origin + window.location.pathname.replace('/pages/food.php', '');
+            const timestamp = Date.now();
+            
+            images.forEach((img, index) => {
+                const originalSrc = img.getAttribute('src');
+                const imageName = originalSrc.split('/').pop().split('?')[0]; // Extract just the filename
+                
+                console.log(`Loading card image ${index + 1}: ${imageName}`);
+                
+                // Try multiple URL patterns for each image
+                const imageUrls = [
+                    `../assets/images/foods/${imageName}?v=${timestamp}`,
+                    `${baseUrl}/assets/images/foods/${imageName}?v=${timestamp}`,
+                    `/ticket booking/assets/images/foods/${imageName}?v=${timestamp}`,
+                    `../assets/images/foods/${imageName}`,
+                    `assets/images/foods/${imageName}`
+                ];
+                
+                let urlIndex = 0;
+                
+                function tryNextImageUrl() {
+                    if (urlIndex >= imageUrls.length) {
+                        console.log(`All URLs failed for image ${index + 1}, using placeholder`);
+                        img.src = 'https://via.placeholder.com/600x400?text=Food+Festival';
+                        img.style.border = '2px solid red';
+                        return;
+                    }
+                    
+                    const currentUrl = imageUrls[urlIndex];
+                    const testImg = new Image();
+                    
+                    testImg.onload = function() {
+                        console.log(`SUCCESS! Card image ${index + 1} loaded:`, currentUrl);
+                        img.src = currentUrl;
+                        img.style.border = '2px solid green'; // Visual confirmation
+                        setTimeout(() => img.style.border = '', 2000); // Remove after 2 seconds
+                    };
+                    
+                    testImg.onerror = function() {
+                        console.log(`Card image ${index + 1} URL ${urlIndex + 1} failed:`, currentUrl);
+                        urlIndex++;
+                        tryNextImageUrl();
+                    };
+                    
+                    testImg.src = currentUrl;
+                }
+                
+                tryNextImageUrl();
+            });
+        }
+
+        // Initialize modal and force load images
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM Content Loaded');
+            
+            // Force load all card images
+            forceLoadCardImages();
+
+            // Modal handling
+            const modal = document.getElementById('festivalModal');
+            if (!modal) {
+                console.error('Festival modal not found');
+                return;
+            }
+
+            modal.addEventListener('show.bs.modal', function(event) {
+                const button = event.relatedTarget;
+                if (!button) {
+                    console.error('Modal trigger button not found');
+                    return;
+                }
+
+                // set modal image from the trigger button's data-image attribute
+                const imageSrc = button.dataset.image;
+                const modalImgEl = document.getElementById('modalImage');
+                if (modalImgEl && imageSrc) {
+                    modalImgEl.src = imageSrc;
+                }
+
+                const modalElements = {
+                    'modalTitle': button.dataset.title || 'Festival Details',
+                    'modalDescription': button.dataset.description || 'No description available',
+                    'modalVenue': button.dataset.venue || 'Venue TBA',
+                    'modalDate': button.dataset.date || 'Date TBA',
+                    'modalTime': button.dataset.time || 'Time TBA',
+                    'modalFee': button.dataset.fee || 'Price TBA'
+                };
+
+                // Update modal elements
+                for (const [id, text] of Object.entries(modalElements)) {
+                    const element = document.getElementById(id);
+                    if (element) {
+                        element.textContent = text;
+                    } else {
+                        console.error(`Modal element ${id} not found`);
+                    }
+                }
+
+                // Update cuisines
+                const cuisinesContainer = document.getElementById('modalCuisines');
+                if (cuisinesContainer && button.dataset.cuisines) {
+                    cuisinesContainer.innerHTML = '';
+                    button.dataset.cuisines.split(',').forEach(cuisine => {
+                        if (cuisine.trim()) {
+                            const span = document.createElement('span');
+                            span.className = 'cuisine-tag';
+                            span.textContent = cuisine.trim();
+                            cuisinesContainer.appendChild(span);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

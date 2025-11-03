@@ -1,49 +1,8 @@
-// Admin Dashboard JavaScript
-let currentSection = 'dashboard';
-
-// Load different sections
-function loadSection(section) {
-    currentSection = section;
-    
-    // Update active nav link
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('active');
-    });
-    document.querySelector(`[href="#${section}"]`).classList.add('active');
-    
-    // Load section content
-    const contentArea = document.getElementById('content-area');
-    
-    switch(section) {
-        case 'users':
-            loadUsersSection();
-            break;
-        case 'bookings':
-            loadBookingsSection();
-            break;
-        case 'events':
-            loadEventsSection();
-            break;
-        case 'movies':
-            loadMoviesSection();
-            break;
-        case 'sports':
-            loadSportsSection();
-            break;
-        case 'leisure':
-            loadLeisureSection();
-            break;
-        case 'food':
-            loadFoodSection();
-            break;
-        case 'tours':
-            loadToursSection();
-            break;
-        default:
-            // Dashboard is already loaded
-            break;
-    }
-}
+// Simplified Admin Dashboard JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    // No initialization needed for simplified dashboard
+    console.log('Admin dashboard loaded');
+});
 
 // Load Users Management Section
 function loadUsersSection() {
@@ -347,10 +306,130 @@ function submitItem(event, type) {
     // Close modal
     bootstrap.Modal.getInstance(document.getElementById('addItemModal')).hide();
     
-    // Refresh current section
-    if (currentSection === type + 's' || (type === 'tour' && currentSection === 'tours')) {
+    // Refresh current section - handle singular/plural and 'food' case
+    if (currentSection === type + 's' || currentSection === type || (type === 'tour' && currentSection === 'tours')) {
         loadSection(currentSection);
     }
+}
+
+// Load Food Management Section
+function loadFoodSection() {
+    const content = `
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Food Festivals Management</h2>
+            <button class="btn btn-primary" onclick="showAddItemModal('food')">
+                <i class="fas fa-plus me-2"></i>Add New Festival
+            </button>
+        </div>
+        
+        <div class="card shadow">
+            <div class="card-header">
+                <h6 class="m-0 font-weight-bold text-primary">All Food Festivals</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="foodTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Place</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="foodTableBody">
+                            <tr>
+                                <td colspan="6" class="text-center">Loading festivals...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    `;
+    document.getElementById('content-area').innerHTML = content;
+    fetchFood();
+}
+
+// Get Food Form
+function getFoodForm() {
+    return `
+        <form id="addFoodForm" onsubmit="submitItem(event, 'food')">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Festival Title *</label>
+                    <input type="text" class="form-control" name="title" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Place *</label>
+                    <input type="text" class="form-control" name="place" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Date *</label>
+                    <input type="date" class="form-control" name="date" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Time *</label>
+                    <input type="time" class="form-control" name="time" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">What (short description) *</label>
+                <textarea class="form-control" name="what" rows="2" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Location (full address)</label>
+                <input type="text" class="form-control" name="location">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Entrance Fees</label>
+                <input type="text" class="form-control" name="fees" placeholder="e.g. Free / $5">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Menus / Highlights</label>
+                <textarea class="form-control" name="menus" rows="3" placeholder="Comma separated or short list"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Image URL</label>
+                <input type="url" class="form-control" name="image">
+            </div>
+            <div class="text-end">
+                <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary">Add Festival</button>
+            </div>
+        </form>
+    `;
+}
+
+// Fetch Food (mock) and populate table
+function fetchFood() {
+    const mockFood = [
+        { id: 1, title: 'Taste of the City', place: 'Central Park', date: '2025-10-30', time: '10:00 AM' },
+        { id: 2, title: 'Global Flavors Fiesta', place: 'Riverside Walk', date: '2025-11-12', time: '12:00 PM' }
+    ];
+
+    let tableHTML = '';
+    mockFood.forEach(item => {
+        tableHTML += `
+            <tr>
+                <td>${item.id}</td>
+                <td>${item.title}</td>
+                <td>${item.place}</td>
+                <td>${new Date(item.date).toLocaleDateString()}</td>
+                <td>${item.time}</td>
+                <td>
+                    <button class="btn btn-sm btn-primary me-1" onclick="alert('Edit festival ${item.id}')"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-sm btn-danger" onclick="alert('Delete festival ${item.id}')"><i class="fas fa-trash"></i></button>
+                </td>
+            </tr>
+        `;
+    });
+
+    document.getElementById('foodTableBody').innerHTML = tableHTML;
 }
 
 // Fetch Users (Mock data)
