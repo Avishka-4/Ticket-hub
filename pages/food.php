@@ -275,12 +275,12 @@ if (empty($festivals) && !isset($error)) {
                     </div>
                     <img src="../assets/images/foods/food-fest-1.jpg" class="card-img-top" alt="Asian Street Food Festival" loading="eager">
                     <div class="card-body">
-                        <h5 class="card-title">Asian Street Food Festival</h5>
+                        <h5 class="card-title">Culinary Art Food Expo (CAFE)</h5>
                         <p class="mb-2">
-                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Downtown Square
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>BMICH
                         </p>
                         <p class="mb-2">
-                            <i class="fas fa-calendar me-2 text-primary"></i>November 15, 2025
+                            <i class="fas fa-calendar me-2 text-primary"></i>November 29, 2025
                         </p>
                         <p class="mb-2">
                             <i class="fas fa-clock me-2 text-success"></i>11:00 AM - 10:00 PM
@@ -288,7 +288,7 @@ if (empty($festivals) && !isset($error)) {
                         <div class="mb-3">
                             <span class="cuisine-tag">Asian Fusion</span>
                             <span class="cuisine-tag">Street Food</span>
-                            <span class="cuisine-tag">Dim Sum</span>
+                            <span class="cuisine-tag">Culinary Competitions</span>
                         </div>
                         <button class="btn btn-outline-primary w-100 btn-details" 
                                 data-bs-toggle="modal" 
@@ -311,9 +311,9 @@ if (empty($festivals) && !isset($error)) {
                 <div class="card festival-card shadow-sm">
                     <img src="../assets/images/foods/food-fest-2.jpg" class="card-img-top" alt="Mediterranean Food Festival" loading="eager">
                     <div class="card-body">
-                        <h5 class="card-title">Mediterranean Food Festival</h5>
+                        <h5 class="card-title">Grand Trunk Road Food Fest</h5>
                         <p class="mb-2">
-                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Seaside Park
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Colombo City Center
                         </p>
                         <p class="mb-2">
                             <i class="fas fa-calendar me-2 text-primary"></i>November 25, 2025
@@ -347,9 +347,9 @@ if (empty($festivals) && !isset($error)) {
                 <div class="card festival-card shadow-sm">
                     <img src="../assets/images/foods/food-fest-3.jpg" class="card-img-top" alt="Dessert Paradise" loading="eager">
                     <div class="card-body">
-                        <h5 class="card-title">Dessert Paradise</h5>
+                        <h5 class="card-title">Colombo Flavour Fiesta</h5>
                         <p class="mb-2">
-                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Grand Plaza
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Green Path , Colombo
                         </p>
                         <p class="mb-2">
                             <i class="fas fa-calendar me-2 text-primary"></i>December 5, 2025
@@ -383,9 +383,9 @@ if (empty($festivals) && !isset($error)) {
                 <div class="card festival-card shadow-sm">
                     <img src="../assets/images/foods/food-fest-4.jpg" class="card-img-top" alt="BBQ & Grill Fest" loading="eager">
                     <div class="card-body">
-                        <h5 class="card-title">BBQ & Grill Fest</h5>
+                        <h5 class="card-title">Fairway Colombo Street Food Festival</h5>
                         <p class="mb-2">
-                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Riverside Garden</p>
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Hospital Street near the Dutch Hospital , Colombo</p>
                         <p class="mb-2">
                             <i class="fas fa-calendar me-2 text-primary"></i>December 15, 2025
                         </p>
@@ -418,9 +418,9 @@ if (empty($festivals) && !isset($error)) {
                 <div class="card festival-card shadow-sm">
                     <img src="../assets/images/foods/food-fest-5.jpg" class="card-img-top" alt="International Food Fair" loading="eager">
                     <div class="card-body">
-                        <h5 class="card-title">International Food Fair</h5>
+                        <h5 class="card-title">Spicy Street Food Festival</h5>
                         <p class="mb-2">
-                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Convention Center
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Diyatha Uyana , Battaramulla
                         </p>
                         <p class="mb-2">
                             <i class="fas fa-calendar me-2 text-primary"></i>December 30, 2025
@@ -429,9 +429,10 @@ if (empty($festivals) && !isset($error)) {
                             <i class="fas fa-clock me-2 text-success"></i>11:00 AM - 10:00 PM
                         </p>
                         <div class="mb-3">
-                            <span class="cuisine-tag">Global</span>
+                            <span class="cuisine-tag">Foods</span>
                             <span class="cuisine-tag">International</span>
-                            <span class="cuisine-tag">Fusion</span>
+                            <span class="cuisine-tag">Games</span>
+                            <span class="cuisine-tag">Music</span>
                         </div>
                         <button class="btn btn-outline-primary w-100 btn-details" 
                                 data-bs-toggle="modal" 
