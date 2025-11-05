@@ -145,7 +145,8 @@ body {
     justify-content: left;
     text-decoration: none;
     transition: color 0.3s ease;
-    margin: 0 50px;
+    margin-right: 10px;
+    margin-left: 0;
 }
 
 .nav-link {
@@ -161,7 +162,6 @@ body {
     background: var(--light-color);
     color: var(--primary-color) !important;
 }
-
 
 /* Footer Styles */
 footer {

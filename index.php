@@ -19,7 +19,6 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
         $projectRoot = realpath(__DIR__);
         $baseUrl = rtrim(str_replace('\\', '/', str_replace($documentRoot, '', $projectRoot)), '/') . '/';
     ?>
-    <link rel="stylesheet" href="<?php echo $baseUrl; ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo $baseUrl; ?>assets/css/index.css">
 </head>
 <body>
