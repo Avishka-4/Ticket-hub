@@ -45,6 +45,8 @@ CREATE TABLE IF NOT EXISTS events (
     time TIME NOT NULL,
     price DECIMAL(10, 2) NOT NULL,
     image VARCHAR(500),
+    rating DECIMAL(3,1),
+    badge VARCHAR(50),
     status ENUM('active', 'inactive', 'sold_out') DEFAULT 'active',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
@@ -191,11 +193,14 @@ INSERT INTO users (first_name, last_name, email, phone, password, date_of_birth,
 ('Jane', 'Smith', 'jane@example.com', '+1234567892', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '1992-08-22', 'female');
 
 -- Sample events
-INSERT INTO events (title, category, description, venue, date, time, price, image) VALUES
-('Rock Legends Live 2024', 'concerts', 'Greatest rock hits with legendary performers', 'Madison Square Garden, NYC', '2024-12-15', '20:00:00', 45.00, NULL),
-('Summer Music Festival', 'festivals', 'Three days of non-stop music featuring top artists', 'Central Park, NYC', '2024-07-20', '14:00:00', 120.00, NULL),
-('Comedy Night Special', 'comedy', 'Funniest comedians performing their best material', 'Comedy Club Downtown', '2024-11-30', '21:00:00', 25.00, NULL),
-('Shakespeare in the Park', 'theater', 'Classic theatrical experience', 'Riverside Theater', '2024-08-10', '19:30:00', 35.00, NULL);
+INSERT INTO events 
+(title, category, description, venue, date, time, price, image, rating, badge, status) VALUES
+('Rock Legends Live 2024', 'concerts', 'Experience legendary rock bands live in Colombo!', 'Nelum Pokuna Theatre, Colombo', '2024-12-15', '18:30:00', 45.00, 'rock_legends.jpg', 4.9, 'Hot', 'active'),
+('Summer Music Festival', 'festivals', 'Three days of non-stop music by top local and international artists.', 'Galle Face Green, Colombo', '2024-07-20', '16:00:00', 120.00, 'summer_music.jpg', 4.7, '3 Days', 'active'),
+('Comedy Night Special', 'comedy', 'Laugh out loud with Sri Lanka’s best stand-up comedians.', 'Kandy City Center Hall', '2024-11-30', '19:00:00', 25.00, 'comedy_night.jpg', 4.8, '', 'active'),
+('Shakespeare in the Park', 'theater', 'Classic Shakespeare performances under the stars.', 'Viharamahadevi Open Air Theater', '2024-08-10', '18:00:00', 35.00, 'shakespeare_park.jpg', 4.6, 'Limited', 'active'),
+('Jazz & Blues Night', 'concerts', 'Smooth jazz and soulful blues by top Sri Lankan artists.', 'Lionel Wendt Theatre, Colombo', '2024-10-05', '20:00:00', 55.00, 'jazz_blues.jpg', 4.9, '', 'active'),
+('Electronic Dance Festival', 'festivals', 'Dance the night away with top DJs and light shows.', 'BMICH Grounds, Colombo', '2024-09-15', '21:00:00', 75.00, 'edm_fest.jpg', 4.5, 'New', 'active');
 
 -- Sample movies
 INSERT INTO movies (title, genre, duration, rating, description, price, image) VALUES
