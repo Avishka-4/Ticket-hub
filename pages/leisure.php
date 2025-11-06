@@ -179,7 +179,7 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Professional Surfing Lessons</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>31h 30m | Beginner to Advanced
+                                <i class="fas fa-clock me-2"></i>1h 30m | Beginner to Advanced
                             </p>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-map-marker-alt me-2"></i>Arugam Bay Beach
