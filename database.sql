@@ -184,6 +184,24 @@ CREATE TABLE IF NOT EXISTS activity_logs (
     FOREIGN KEY (admin_id) REFERENCES admins(id) ON DELETE SET NULL
 );
 
+-- Create password_resets table
+CREATE TABLE IF NOT EXISTS password_resets (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    reset_code VARCHAR(6) NOT NULL,
+    reset_token VARCHAR(64) NOT NULL,
+    expires_at DATETIME NOT NULL,
+    is_used TINYINT(1) DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    INDEX idx_reset_token (reset_token),
+    INDEX idx_user_id (user_id),
+    INDEX idx_expires_at (expires_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+ALTER TABLE password_resets 
+ADD UNIQUE KEY unique_active_reset (user_id, is_used);
+
 -- Sample users (password: password)
 INSERT INTO users (first_name, last_name, email, phone, password, date_of_birth, gender) VALUES
 ('Demo', 'User', 'demo@tickethub.com', '+1234567890', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '1990-01-01', 'prefer_not_to_say'),
