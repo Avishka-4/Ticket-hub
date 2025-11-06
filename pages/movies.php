@@ -64,9 +64,8 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="action">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-red-600 to-orange-600 d-flex align-items-center justify-content-center" style="height: 300px;">
-                                <i class="fas fa-video text-6xl text-white"></i>
-                            </div>
+                            <img src="../assets/images/movies/neera.jpg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
+
                             <span class="badge bg-danger position-absolute top-0 end-0 m-2">New Release</span>
                             <div class="position-absolute bottom-0 start-0 m-2">
                                 <span class="badge bg-warning text-dark">PG-13</span>
@@ -114,9 +113,8 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="comedy">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-yellow-500 to-orange-500 d-flex align-items-center justify-content-center" style="height: 300px;">
-                                <i class="fas fa-laugh-squint text-6xl text-white"></i>
-                            </div>
+                            <img src="../assets/images/movies/The twists.jpg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
+
                             <div class="position-absolute bottom-0 start-0 m-2">
                                 <span class="badge bg-success text-white">PG</span>
                             </div>
@@ -163,9 +161,8 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="sci-fi">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-purple-600 to-blue-600 d-flex align-items-center justify-content-center" style="height: 300px;">
-                                <i class="fas fa-rocket text-6xl text-white"></i>
-                            </div>
+                            <img src="../assets/images/movies/war of the world.jpeg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
+
                             <span class="badge bg-info position-absolute top-0 end-0 m-2">IMAX</span>
                             <div class="position-absolute bottom-0 start-0 m-2">
                                 <span class="badge bg-warning text-dark">PG-13</span>
@@ -212,9 +209,8 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="drama">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-gray-600 to-gray-800 d-flex align-items-center justify-content-center" style="height: 300px;">
-                                <i class="fas fa-heart text-6xl text-white"></i>
-                            </div>
+                            <img src="../assets/images/movies/Raani.jpeg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
+
                             <span class="badge bg-warning position-absolute top-0 end-0 m-2">Award Winner</span>
                             <div class="position-absolute bottom-0 start-0 m-2">
                                 <span class="badge bg-danger text-white">R</span>
@@ -261,9 +257,8 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="horror">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-red-800 to-black d-flex align-items-center justify-content-center" style="height: 300px;">
-                                <i class="fas fa-ghost text-6xl text-white"></i>
-                            </div>
+                            <img src="../assets/images/movies/Until dawn.jpg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
+
                             <span class="badge bg-dark position-absolute top-0 end-0 m-2">Horror</span>
                             <div class="position-absolute bottom-0 start-0 m-2">
                                 <span class="badge bg-danger text-white">R</span>
@@ -310,9 +305,8 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="action">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-green-600 to-blue-600 d-flex align-items-center justify-content-center" style="height: 300px;">
-                                <i class="fas fa-mask text-6xl text-white"></i>
-                            </div>
+                            <img src="../assets/images/movies/Pravegaya.jpg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
+
                             <span class="badge bg-success position-absolute top-0 end-0 m-2">Superhero</span>
                             <div class="position-absolute bottom-0 start-0 m-2">
                                 <span class="badge bg-warning text-dark">PG-13</span>
