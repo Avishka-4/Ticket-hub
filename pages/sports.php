@@ -19,6 +19,7 @@
 
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
+        
         <div class="container">
             <div class="text-center">
                 <h1 class="text-5xl font-bold mb-4">
@@ -66,6 +67,8 @@
                         <div class="position-relative">
                             <div class="card-img-top bg-gradient-to-r from-green-600 to-green-800 d-flex align-items-center justify-content-center" style="height: 250px;">
                                 <i class="fas fa-football-ball text-6xl text-white"></i>
+                            
+                               
                             </div>
                             <span class="badge bg-danger position-absolute top-0 end-0 m-2">ODI Series</span>
                         </div>
