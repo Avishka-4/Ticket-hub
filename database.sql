@@ -44,12 +44,14 @@ CREATE TABLE IF NOT EXISTS events (
     date DATE NOT NULL,
     time TIME NOT NULL,
     price DECIMAL(10, 2) NOT NULL,
-    image VARCHAR(500),
+    image_url VARCHAR(500),
     rating DECIMAL(3,1),
     badge VARCHAR(50),
     status ENUM('active', 'inactive', 'sold_out') DEFAULT 'active',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+
 
 -- Movies table
 CREATE TABLE IF NOT EXISTS movies (
@@ -193,14 +195,51 @@ INSERT INTO users (first_name, last_name, email, phone, password, date_of_birth,
 ('Jane', 'Smith', 'jane@example.com', '+1234567892', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '1992-08-22', 'female');
 
 -- Sample events
-INSERT INTO events 
-(title, category, description, venue, date, time, price, image, rating, badge, status) VALUES
-('Rock Legends Live 2024', 'concerts', 'Experience legendary rock bands live in Colombo!', 'Nelum Pokuna Theatre, Colombo', '2024-12-15', '18:30:00', 45.00, 'rock_legends.jpg', 4.9, 'Hot', 'active'),
-('Summer Music Festival', 'festivals', 'Three days of non-stop music by top local and international artists.', 'Galle Face Green, Colombo', '2024-07-20', '16:00:00', 120.00, 'summer_music.jpg', 4.7, '3 Days', 'active'),
-('Comedy Night Special', 'comedy', 'Laugh out loud with Sri Lanka’s best stand-up comedians.', 'Kandy City Center Hall', '2024-11-30', '19:00:00', 25.00, 'comedy_night.jpg', 4.8, '', 'active'),
-('Shakespeare in the Park', 'theater', 'Classic Shakespeare performances under the stars.', 'Viharamahadevi Open Air Theater', '2024-08-10', '18:00:00', 35.00, 'shakespeare_park.jpg', 4.6, 'Limited', 'active'),
-('Jazz & Blues Night', 'concerts', 'Smooth jazz and soulful blues by top Sri Lankan artists.', 'Lionel Wendt Theatre, Colombo', '2024-10-05', '20:00:00', 55.00, 'jazz_blues.jpg', 4.9, '', 'active'),
-('Electronic Dance Festival', 'festivals', 'Dance the night away with top DJs and light shows.', 'BMICH Grounds, Colombo', '2024-09-15', '21:00:00', 75.00, 'edm_fest.jpg', 4.5, 'New', 'active');
+INSERT INTO events (
+    title, category, description, venue, date, time, price, image_url, rating, badge, status
+) VALUES
+
+-- 1. Clean Bandit Concert
+('SUN FM Presents – Clean Bandit Live in Concert', 'concerts',
+ 'World-famous band Clean Bandit performing live for the first time in Sri Lanka.',
+ 'Lotus Tower, Colombo',
+ '2025-12-28', '18:00:00', 12000.00,
+ 'uploads/event1.jpg', 4.9, 'Hot', 'active'),
+
+-- 2. Colombo Food Festival
+('Colombo Food Festival 2026', 'festivals',
+ 'Street food, live music & Sri Lanka’s biggest culinary celebration.',
+ 'Galle Face Green, Colombo',
+ '2026-01-12', '10:00:00', 500.00,
+ 'uploads/event2.jpg', 4.7, '3 Days', 'active'),
+
+-- 3. Cinnamon Life Christmas Carnival
+('Cinnamon Life Christmas Carnival', 'comedy',
+ 'Christmas market, fun games, Santa parade & live performances.',
+ 'Cinnamon Life, Colombo 02',
+ '2025-12-01', '10:00:00', 1000.00,
+ 'uploads/event3.avif', 4.8, '', 'active'),
+
+-- 4. Kandy Esala Perahera 2025
+('Kandy Esala Perahera – 2025', 'theater',
+ 'Sri Lanka’s most iconic cultural parade with dancers, drummers & elephants.',
+ 'Kandy City',
+ '2025-12-10', '18:00:00', 3500.00,
+ 'uploads/event4.jpeg', 4.6, 'Limited', 'active'),
+
+-- 5. Colombo Stand-up Comedy Night
+('Colombo Stand-up Comedy Night', 'concerts',
+ 'Top Sri Lankan comedians performing live. Laugh till you drop!',
+ 'Nelum Pokuna Theatre, Colombo',
+ '2026-02-15', '19:00:00', 2000.00,
+ 'uploads/event5.avif', 4.9, '', 'active'),
+
+-- 6. Deep Jungle Music Festival – Ella
+('Deep Jungle Music Festival – Ella', 'festivals',
+ '3 days of EDM, camping & nature adventure in the mountains.',
+ 'Ella Forest Range',
+ '2026-01-15', '18:00:00', 8500.00,
+ 'uploads/event6.webp', 4.5, 'New', 'active');
 
 -- Sample movies
 INSERT INTO movies (title, genre, duration, rating, description, price, image) VALUES

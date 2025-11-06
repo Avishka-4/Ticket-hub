@@ -35,9 +35,7 @@ function openBookingModal(eventName, basePrice, category = '') {
     modal.show();
 }
 
-// =============================
 // 🎫 Seat Selection Functionality
-// =============================
 document.addEventListener('DOMContentLoaded', function () {
     const seatButtons = document.querySelectorAll('.seat-btn');
     const quantitySelect = document.getElementById('ticketQuantity');
@@ -92,9 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// =============================
 // 💰 Update Total Price
-// =============================
 function updateTotalPrice() {
     const quantity = parseInt(document.getElementById('ticketQuantity').value) || 1;
     const selectedType = document.querySelector('input[name="ticketType"]:checked');
@@ -117,9 +113,7 @@ function updateTotalPrice() {
     document.getElementById('totalPrice').textContent = total.toFixed(2);
 }
 
-// =============================
 // 🛒 Add to Cart
-// =============================
 function addToCart() {
     if (selectedSeats.length === 0) {
         showNotification('Please select your seats first', 'warning');
@@ -149,9 +143,7 @@ function addToCart() {
     bootstrap.Modal.getInstance(document.getElementById('bookingModal')).hide();
 }
 
-// =============================
 // 💳 Proceed to Payment
-// =============================
 function proceedToPayment() {
     if (selectedSeats.length === 0) {
         showNotification('Please select your seats first', 'warning');
@@ -177,9 +169,7 @@ function proceedToPayment() {
     bootstrap.Modal.getInstance(document.getElementById('bookingModal')).hide();
 }
 
-// =============================
 // 🔔 Notification Toast
-// =============================
 function showNotification(message, type = 'info') {
     const alert = document.createElement('div');
     alert.className = `alert alert-${type} position-fixed bottom-0 end-0 m-3`;

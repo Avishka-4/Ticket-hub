@@ -69,16 +69,16 @@
                             <span class="badge bg-danger position-absolute top-0 end-0 m-2">Hot</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Rock Legends Live 2024</h5>
+                            <h5 class="card-title fw-bold">SUN FM Presents – Clean Bandit Live in Concert</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-calendar me-2"></i>December 15, 2024
+                                <i class="fas fa-calendar me-2"></i>28 December 2025 – 6:00 PM
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Madison Square Garden, NYC
+                                <i class="fas fa-map-marker-alt me-2"></i>Lotus Tower, Colombo
                             </p>
-                            <p class="card-text">Experience the greatest rock hits with legendary performers in an unforgettable night of music.</p>
+                            <p class="card-text">World-famous band Clean Bandit performing live for the first time in Sri Lanka.</p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $45</span>
+                                <span class="fw-bold text-success fs-5">From Rs. 12,000</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -105,16 +105,16 @@
                             <span class="badge bg-success position-absolute top-0 end-0 m-2">3 Days</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Summer Music Festival</h5>
+                            <h5 class="card-title fw-bold">Colombo Food Festival 2026</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-calendar me-2"></i>July 20-22, 2024
+                                <i class="fas fa-calendar me-2"></i>12 Jan 2026 – 10:00 AM
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Central Park, NYC
+                                <i class="fas fa-map-marker-alt me-2"></i>Galle Face Green, Colombo
                             </p>
-                            <p class="card-text">Three days of non-stop music featuring top artists from around the world in a beautiful outdoor setting.</p>
+                            <p class="card-text">Street food, live music & Sri Lanka’s biggest culinary celebration.</p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $120</span>
+                                <span class="fw-bold text-success fs-5">From Rs. 500</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -140,16 +140,16 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Comedy Night Special</h5>
+                            <h5 class="card-title fw-bold">Cinnamon Life Christmas Carnival</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-calendar me-2"></i>November 30, 2024
+                                <i class="fas fa-calendar me-2"></i>1–25 Dec 2025
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Comedy Club Downtown
+                                <i class="fas fa-map-marker-alt me-2"></i>Cinnamon Life, Colombo 02
                             </p>
-                            <p class="card-text">Laugh until your sides hurt with the funniest comedians performing their best material.</p>
+                            <p class="card-text">Christmas market, fun games, Santa parade & live performances.</p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $25</span>
+                                <span class="fw-bold text-success fs-5">From Rs. 1,000</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -176,16 +176,16 @@
                             <span class="badge bg-warning position-absolute top-0 end-0 m-2">Limited</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Shakespeare in the Park</h5>
+                            <h5 class="card-title fw-bold">Kandy Esala Perahera – 2025</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-calendar me-2"></i>August 10, 2024
+                                <i class="fas fa-calendar me-2"></i>December 10, 2025
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Riverside Theater
+                                <i class="fas fa-map-marker-alt me-2"></i>Kandy City
                             </p>
-                            <p class="card-text">A classic theatrical experience featuring the timeless works of William Shakespeare.</p>
+                            <p class="card-text">Sri Lanka’s most iconic cultural parade with dancers, drummers & elephants.</p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $35</span>
+                                <span class="fw-bold text-success fs-5">From Rs. 3,500</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -211,16 +211,16 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Jazz & Blues Night</h5>
+                            <h5 class="card-title fw-bold">Colombo Stand-up Comedy Night</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-calendar me-2"></i>October 5, 2024
+                                <i class="fas fa-calendar me-2"></i>15 Feb 2026 – 7:00 PM
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Blue Note Jazz Club
+                                <i class="fas fa-map-marker-alt me-2"></i>Nelum Pokuna Theatre, Colombo
                             </p>
-                            <p class="card-text">An intimate evening of smooth jazz and soulful blues with renowned musicians.</p>
+                            <p class="card-text">Top Sri Lankan comedians performing live. Laugh till you drop!</p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $55</span>
+                                <span class="fw-bold text-success fs-5">From Rs. 2,00</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -247,16 +247,16 @@
                             <span class="badge bg-info position-absolute top-0 end-0 m-2">New</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Electronic Dance Festival</h5>
+                            <h5 class="card-title fw-bold">Deep Jungle Music Festival – Ella</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-calendar me-2"></i>September 15, 2024
+                                <i class="fas fa-calendar me-2"></i>Januvary 15, 2026
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Convention Center Plaza
+                                <i class="fas fa-map-marker-alt me-2"></i>Ella Forest Range
                             </p>
-                            <p class="card-text">Dance the night away with top DJs and electronic music artists from around the globe.</p>
+                            <p class="card-text">3 days of EDM, camping & nature adventure in the mountains.</p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $75</span>
+                                <span class="fw-bold text-success fs-5">From Rs. 8,500</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -277,6 +277,8 @@
         </div>
     </section>
 
+    
+
     <!-- Booking Modal -->
     <div class="modal fade" id="bookingModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
@@ -294,8 +296,8 @@
                             <div class="mb-3">
                                 <label class="form-label">Select Date & Time</label>
                                 <select class="form-select">
-                                    <option>December 15, 2024 - 8:00 PM</option>
-                                    <option>December 16, 2024 - 8:00 PM</option>
+                                    <option>December 15, 2025 - 8:00 PM</option>
+                                    <option>December 16, 2025 - 8:00 PM</option>
                                 </select>
                             </div>
                             <div class="mb-3">
