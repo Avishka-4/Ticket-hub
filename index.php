@@ -130,8 +130,8 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3">Food & Beverages</h3>
-                        <p class="text-gray-600 mb-4">Order delicious food and beverages online</p>
-                        <a href="pages/food.php" class="btn btn-primary">Order Now</a>
+                        <p class="text-gray-600 mb-4">Your guide to the best culinary local festivals</p>
+                        <a href="pages/food.php" class="btn btn-primary">Reserve Tickets</a>
                     </div>
                 </div>
 

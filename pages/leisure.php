@@ -25,8 +25,8 @@
             <img src="../assets/images/leisure/1.jpg" class="d-block w-100" alt="boat ride">
             <div class="carousel-caption d-md-block position-absolute top-50 start-50 translate-middle ">
             <div class="text-center">
-                <h1 class="text-5xl font-bold mb-4">
-                    <i class="fas fa-umbrella-beach me-3"></i>Leisure Activities
+                <h1 class="text-5xl font-bold mb-3 ">
+                    <i class="fas fa-umbrella-beach"></i>Leisure Activities
                 </h1>
                 <p class="text-xl mb-6">Book exciting adventures and leisure activities</p>
             </div>
@@ -36,8 +36,8 @@
             <img src="../assets/images/leisure/2.jpg" class="d-block w-100" alt="Cycling">
             <div class=" carousel-caption d-md-block position-absolute top-50 start-50 translate-middle">
             <div class="text-center">
-                <h1 class="text-5xl font-bold mb-4 ">
-                    <i class="fas fa-umbrella-beach me-3"></i>Leisure Activities
+                <h1 class="text-5xl font-bold mb-3 ">
+                    <i class="fas fa-umbrella-beach"></i>Leisure Activities
                 </h1>
                 <p class="text-xl mb-6">Book exciting adventures and leisure activities</p>
             </div>
@@ -47,8 +47,8 @@
             <img src="../assets/images/leisure/3.jpg" class="d-block w-100" alt="Camping">
             <div class=" carousel-caption d-md-block position-absolute top-50 start-50 translate-middle">
             <div class="text-center">
-                <h1 class="text-5xl font-bold mb-4 ">
-                    <i class="fas fa-umbrella-beach me-3"></i>Leisure Activities
+                <h1 class="text-5xl font-bold mb-3">
+                    <i class="fas fa-umbrella-beach"></i>Leisure Activities
                 </h1>
                 <p class="text-xl mb-6">Book exciting adventures and leisure activities</p>
             </div>
@@ -58,8 +58,8 @@
             <img src="../assets/images/leisure/4.jpg" class="d-block w-100" alt="Walking">
             <div class=" carousel-caption d-md-block position-absolute top-50 start-50 translate-middle">
             <div class="text-center">
-                <h1 class="text-5xl font-bold mb-4 ">
-                    <i class="fas fa-umbrella-beach me-3"></i>Leisure Activities
+                <h1 class="text-5xl font-bold mb-3">
+                    <i class="fas fa-umbrella-beach"></i>Leisure Activities
                 </h1>
                 <p class="text-xl mb-6">Book exciting adventures and leisure activities</p>
             </div>
@@ -69,15 +69,15 @@
             <img src="../assets/images/leisure/5.jpg" class="d-block w-100" alt="Surfing">
             <div class="carousel-caption d-md-block position-absolute top-50 start-50 translate-middle">
             <div class="text-center">
-                <h1 class="text-5xl font-bold mb-4">
-                    <i class="fas fa-umbrella-beach me-3"></i>Leisure Activities
+                <h1 class="text-5xl font-bold mb-3">
+                    <i class="fas fa-umbrella-beach"></i>Leisure Activities
                 </h1>
                 <p class="text-xl mb-6">Book exciting adventures and leisure activities</p>
             </div>
         </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
@@ -131,15 +131,15 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Scuba Diving Adventure</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>4 hours | All skill levels
+                                <i class="fas fa-clock me-2"></i>2-3 Hours | All skill levels
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Crystal Bay Marina
+                                <i class="fas fa-map-marker-alt me-2"></i>Sun Diving Centre, Yakdehimulla, Unawatuna, Sri Lanka​
                             </p>
-                            <p class="card-text">Explore the underwater world with certified instructors. Perfect for beginners and experienced divers alike.</p>
+                            <p class="card-text">Explore the underwater world with certified instructors. Perfect for beginners and experienced divers alike.So many packages to choose for beginners , Certified divers, and Certification Courses </p>
                             
                             <!-- Available Dates -->
-                            <div class="mb-3">
+                            <div class="mb-3 mt-2">
                                 <small class="text-muted fw-bold">Available Dates:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectActivityDate(this, 'Dec 20')">Dec 20</button>
@@ -149,7 +149,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">$89/person</span>
+                                <span class="fw-bold text-success fs-5">Rs.100000/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -179,14 +179,14 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Professional Surfing Lessons</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>3 hours | Beginner to Advanced
+                                <i class="fas fa-clock me-2"></i>31h 30m | Beginner to Advanced
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Sunset Beach
+                                <i class="fas fa-map-marker-alt me-2"></i>Arugam Bay Beach
                             </p>
                             <p class="card-text">Learn to surf with professional instructors on the best waves in town. Equipment included.</p>
                             
-                            <div class="mb-3">
+                            <div class="mb-3 mt-4">
                                 <small class="text-muted fw-bold">Available Dates:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectActivityDate(this, 'Dec 18')">Dec 18</button>
@@ -196,7 +196,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">$65/person</span>
+                                <span class="fw-bold text-success fs-5">Rs.7000/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -227,14 +227,14 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Rock Climbing Experience</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>5 hours | Intermediate level
+                                <i class="fas fa-clock me-2"></i>10 hours | Ages 12-60
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Rocky Point Adventure Park
+                                <i class="fas fa-map-marker-alt me-2"></i>Peacock Hill and Ramboda waterfall in Sri Lanka
                             </p>
                             <p class="card-text">Challenge yourself with guided rock climbing on natural cliffs. Safety equipment provided.</p>
                             
-                            <div class="mb-3">
+                            <div class="mb-3 mt-4">
                                 <small class="text-muted fw-bold">Available Dates:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectActivityDate(this, 'Dec 19')">Dec 19</button>
@@ -244,7 +244,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">$95/person</span>
+                                <span class="fw-bold text-success fs-5">$68/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -266,11 +266,12 @@
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top bg-gradient-to-r from-purple-500 to-pink-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <i class="fas fa-palette text-6xl text-white"></i>
+                                <!-- <i class="fas fa-palette text-6xl text-white"></i> -->
+                                <img src="../assets/images/leisure/zip lining.jpg" alt="zip lining" class="w-100 h-100 object-cover">
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Pottery & Ceramic Workshop</h5>
+                            <h5 class="card-title fw-bold">Flying Ravana Adventure Park</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>2.5 hours | All ages welcome
                             </p>
@@ -311,12 +312,13 @@
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top bg-gradient-to-r from-indigo-500 to-purple-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <i class="fas fa-spa text-6xl text-white"></i>
+                                <!-- <i class="fas fa-spa text-6xl text-white"></i> -->
+                                 <img src="../assets/images/leisure/Golf.jpg" alt="Golf" class="w-100 h-100 object-cover">
                             </div>
                             <span class="badge bg-info position-absolute top-0 end-0 m-2">Relaxing</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Yoga & Meditation Retreat</h5>
+                            <h5 class="card-title fw-bold">Swing Ceylon Mini Golf</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>6 hours | Beginner friendly
                             </p>
@@ -357,12 +359,13 @@
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top bg-gradient-to-r from-yellow-500 to-orange-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <i class="fas fa-hiking text-6xl text-white"></i>
+                                <!-- <i class="fas fa-hiking text-6xl text-white"></i> -->
+                                 <img src="../assets/images/leisure/boat.jpg" alt="boat" class="w-100 h-100 object-cover">
                             </div>
                             <span class="badge bg-success position-absolute top-0 end-0 m-2">Nature</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Guided Nature Hiking</h5>
+                            <h5 class="card-title fw-bold">Avant Leisure Adventure Sports</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>4 hours | Moderate difficulty
                             </p>
