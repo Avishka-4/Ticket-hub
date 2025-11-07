@@ -105,7 +105,7 @@
                             <span class="badge bg-success position-absolute top-0 end-0 m-2">3 Days</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Colombo Food Festival 2025</h5>
+                            <h5 class="card-title fw-bold">Colombo Food Festival 2026</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-calendar me-2"></i>12 Jan 2026 – 10:00 AM
                             </p>
