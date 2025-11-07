@@ -203,42 +203,42 @@ INSERT INTO events (
  'World-famous band Clean Bandit performing live for the first time in Sri Lanka.',
  'Lotus Tower, Colombo',
  '2025-12-28', '18:00:00', 12000.00,
- 'event1.jpg', 4.9, 'Hot', 'active'),
+ 'uploads/event1.jpg', 4.9, 'Hot', 'active'),
 
 -- 2. Colombo Food Festival
 ('Colombo Food Festival 2026', 'festivals',
  'Street food, live music & Sri Lanka’s biggest culinary celebration.',
  'Galle Face Green, Colombo',
  '2026-01-12', '10:00:00', 500.00,
- 'event2.jpg', 4.7, '3 Days', 'active'),
+ 'uploads/event2.jpg', 4.7, '3 Days', 'active'),
 
 -- 3. Cinnamon Life Christmas Carnival
 ('Cinnamon Life Christmas Carnival', 'comedy',
  'Christmas market, fun games, Santa parade & live performances.',
  'Cinnamon Life, Colombo 02',
  '2025-12-01', '10:00:00', 1000.00,
- 'event3.jpg', 4.8, '', 'active'),
+ 'uploads/event3.jpg', 4.8, '', 'active'),
 
 -- 4. Kandy Esala Perahera 2025
 ('Kandy Esala Perahera – 2025', 'theater',
  'Sri Lanka’s most iconic cultural parade with dancers, drummers & elephants.',
  'Kandy City',
  '2025-12-10', '18:00:00', 3500.00,
- 'event4.jpg', 4.6, 'Limited', 'active'),
+ 'uploads/event4.jpg', 4.6, 'Limited', 'active'),
 
 -- 5. Colombo Stand-up Comedy Night
 ('Colombo Stand-up Comedy Night', 'concerts',
  'Top Sri Lankan comedians performing live. Laugh till you drop!',
  'Nelum Pokuna Theatre, Colombo',
  '2026-02-15', '19:00:00', 2000.00,
- 'event5.jpg', 4.9, '', 'active'),
+ 'uploads/event5.jpg', 4.9, '', 'active'),
 
 -- 6. Deep Jungle Music Festival – Ella
 ('Deep Jungle Music Festival – Ella', 'festivals',
  '3 days of EDM, camping & nature adventure in the mountains.',
  'Ella Forest Range',
  '2026-01-15', '18:00:00', 8500.00,
- 'event6.jpg', 4.5, 'New', 'active');
+ 'uploads/event6.jpg', 4.5, 'New', 'active');
 
 -- Sample movies
 INSERT INTO movies (title, genre, duration, rating, description, price, image) VALUES
