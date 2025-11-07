@@ -65,11 +65,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="football">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-green-600 to-green-800 d-flex align-items-center justify-content-center" style="height: 250px;">
-                                <i class="fas fa-football-ball text-6xl text-white"></i>
-                            
-                               
-                            </div>
+                            <img src="images/sports/ODI.png">
                             <span class="badge bg-danger position-absolute top-0 end-0 m-2">ODI Series</span>
                         </div>
                         <div class="card-body">
@@ -120,9 +116,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="cricket">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-blue-600 to-indigo-600 d-flex align-items-center justify-content-center" style="height: 250px;">
-                                <i class="fas fa-baseball-ball text-6xl text-white"></i>
-                            </div>
+                            <img src="images/sports/RUGBY.png">
                             <span class="badge bg-success position-absolute top-0 end-0 m-2">RUGBY Cup</span>
                         </div>
                         <div class="card-body">
@@ -173,9 +167,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="basketball">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-orange-600 to-red-600 d-flex align-items-center justify-content-center" style="height: 250px;">
-                                <i class="fas fa-basketball-ball text-6xl text-white"></i>
-                            </div>
+                            <img src="images/sports/FOOTBALL.png">
                             <span class="badge bg-warning position-absolute top-0 end-0 m-2">Football</span>
                         </div>
                         <div class="card-body">
@@ -225,9 +217,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="tennis">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-green-500 to-lime-500 d-flex align-items-center justify-content-center" style="height: 250px;">
-                                <i class="fas fa-table-tennis text-6xl text-white"></i>
-                            </div>
+                            <img src="images/sports/NAC.png">
                             <span class="badge bg-info position-absolute top-0 end-0 m-2">National Games</span>
                         </div>
                         <div class="card-body">
@@ -273,18 +263,15 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Sports Event Card 5 -->
                 <div class="col-md-6 col-lg-4 mb-4" data-category="baseball">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-blue-700 to-red-700 d-flex align-items-center justify-content-center" style="height: 250px;">
-                                <i class="fas fa-baseball-ball text-6xl text-white"></i>
-                            </div>
+                            <img src="images/sports/VOLLEYBALL.png">
                             <span class="badge bg-primary position-absolute top-0 end-0 m-2">National Volleyball</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Sri Lanka Army vs Air Force</h5>
+                            <h5 class="card-title fw-bold">Sri Lanka Army vs Air Force - Volleyball</h5>
                             <div class="match-teams mb-3">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="text-center">
@@ -328,6 +315,57 @@
                 </div>
 
                 <!-- Sports Event Card 6 -->
+                <div class="col-md-6 col-lg-4 mb-4" data-category="baseball">
+                    <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="position-relative">
+                            <img src="images/sports/BASKETBALL.png">
+                            <span class="badge bg-primary position-absolute top-0 end-0 m-2">National Basketball</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sri Lanka Police vs Navy - Basketball</h5>
+                            <div class="match-teams mb-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="text-center">
+                                        <div class="fw-bold"></div>
+                                        <small class="text-muted"></small>
+                                    </div>
+                                    <div class="text-center">
+                                        <span class="badge bg-primary fs-6"></span>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="fw-bold"></div>
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-muted mb-2">
+                                <i class="fas fa-calendar me-2"></i>November 11, 2025
+                            </p>
+                            <p class="text-muted mb-2">
+                                <i class="fas fa-clock me-2"></i>7:00 PM IST
+                            </p>
+                            <p class="text-muted mb-3">
+                                <i class="fas fa-map-marker-alt me-2"></i>National Basket Centre, Hingragoda
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="fw-bold text-success fs-5">From LKR 600</span>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <small class="text-muted ms-1">(4.5)</small>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100" onclick="openSportsBooking('MLB World Series Game 7', 95)">
+                                <i class="fas fa-ticket-alt me-2"></i>Book Tickets
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sports Event Card 7 -->
                 
 
             </div>
