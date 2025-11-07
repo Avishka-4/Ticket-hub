@@ -63,9 +63,11 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="concerts">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-red-500 to-pink-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <i class="fas fa-microphone text-6xl text-white"></i>
-                            </div>
+                            <img src="../assets/images/events/event1.jpg" 
+                                 class="card-img-top" 
+                                 style="height: 200px; object-fit: cover;" 
+                                 alt="SUN FM Presents – Clean Bandit Live in Concert">
+
                             <span class="badge bg-danger position-absolute top-0 end-0 m-2">Hot</span>
                         </div>
                         <div class="card-body">
@@ -99,9 +101,11 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="festivals">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-green-500 to-blue-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <i class="fas fa-glass-cheers text-6xl text-white"></i>
-                            </div>
+                           <img src="../assets/images/events/event2.jpg" 
+                                class="card-img-top" 
+                                style="height: 200px; object-fit: cover;" 
+                                 alt="Colombo Food Festival 2026">
+
                             <span class="badge bg-success position-absolute top-0 end-0 m-2">3 Days</span>
                         </div>
                         <div class="card-body">
@@ -135,9 +139,11 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="comedy">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-yellow-500 to-orange-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <i class="fas fa-laugh text-6xl text-white"></i>
-                            </div>
+                            <img src="../assets/images/events/event3.jpg" 
+                                class="card-img-top" 
+                                style="height: 200px; object-fit: cover;" 
+                                alt="Cinnamon Life Christmas Carnival">
+
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Cinnamon Life Christmas Carnival</h5>
@@ -170,9 +176,11 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="theater">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-purple-500 to-pink-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <i class="fas fa-theater-masks text-6xl text-white"></i>
-                            </div>
+                            <img src="../assets/images/events/event4.jpg" 
+                                 class="card-img-top" 
+                                 style="height: 200px; object-fit: cover;" 
+                                 alt="Kandy Esala Perahera – 2025">
+
                             <span class="badge bg-warning position-absolute top-0 end-0 m-2">Limited</span>
                         </div>
                         <div class="card-body">
@@ -206,9 +214,11 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="concerts">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-blue-500 to-cyan-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <i class="fas fa-guitar text-6xl text-white"></i>
-                            </div>
+                            <img src="../assets/images/events/event5.jpg" 
+                                class="card-img-top" 
+                                style="height: 200px; object-fit: cover;" 
+                                 alt="Colombo Stand-up Comedy Night">
+
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Colombo Stand-up Comedy Night</h5>
@@ -241,9 +251,11 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="festivals">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-indigo-500 to-purple-500 d-flex align-items-center justify-content-center" style="height: 200px;">
-                                <i class="fas fa-drum text-6xl text-white"></i>
-                            </div>
+                            <img src="../assets/images/events/event6.jpg" 
+                                 class="card-img-top" 
+                                 style="height: 200px; object-fit: cover;" 
+                                 alt="Deep Jungle Music Festival – Ella">
+
                             <span class="badge bg-info position-absolute top-0 end-0 m-2">New</span>
                         </div>
                         <div class="card-body">
