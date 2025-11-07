@@ -68,7 +68,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="football">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="images/sports/ODI.png">
+                            <img src="images/sports/CRI.png">
                             <span class="badge bg-danger position-absolute top-0 end-0 m-2">ODI Series</span>
                         </div>
                         <div class="card-body">
@@ -119,7 +119,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="cricket">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="images/sports/RUGBY.png">
+                            <img src="images/sports/RUG.png">
                             <span class="badge bg-success position-absolute top-0 end-0 m-2">RUGBY Cup</span>
                         </div>
                         <div class="card-body">
@@ -170,7 +170,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="basketball">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="images/sports/FOOTBALL.png">
+                            <img src="images/sports/FB.png">
                             <span class="badge bg-warning position-absolute top-0 end-0 m-2">Football</span>
                         </div>
                         <div class="card-body">
@@ -179,14 +179,14 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="text-center">
                                         <div class="fw-bold">Sudar Ozhi</div>
-                                        <small class="text-muted">Kommathurai</small>
+                                        <small class="text-muted"></small>
                                     </div>
                                     <div class="text-center">
                                         <span class="badge bg-primary fs-6">VS</span>
                                     </div>
                                     <div class="text-center">
                                         <div class="fw-bold">Ding Dong</div>
-                                        <small class="text-muted">Valaichenai</small>
+                                        <small class="text-muted"></small>
                                     </div>
                                 </div>
                             </div>
@@ -270,7 +270,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="baseball">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="images/sports/VOLLEYBALL.png">
+                            <img src="images/sports/VLB.png">
                             <span class="badge bg-primary position-absolute top-0 end-0 m-2">National Volleyball</span>
                         </div>
                         <div class="card-body">
@@ -321,7 +321,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="baseball">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="images/sports/BASKETBALL.png">
+                            <img src="images/sports/BSB.png">
                             <span class="badge bg-primary position-absolute top-0 end-0 m-2">National Basketball</span>
                         </div>
                         <div class="card-body">
