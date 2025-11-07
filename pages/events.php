@@ -255,7 +255,6 @@
                                  class="card-img-top" 
                                  style="height: 200px; object-fit: cover;" 
                                  alt="Deep Jungle Music Festival – Ella">
-
                             <span class="badge bg-info position-absolute top-0 end-0 m-2">New</span>
                         </div>
                         <div class="card-body">
