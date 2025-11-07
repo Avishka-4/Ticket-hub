@@ -63,7 +63,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="concerts">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="../assets/images/events/event1.jpg" 
+                            <img src="pages\event-image\event1.jpg" 
                                  class="card-img-top" 
                                  style="height: 200px; object-fit: cover;" 
                                  alt="SUN FM Presents – Clean Bandit Live in Concert">
