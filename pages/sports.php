@@ -18,17 +18,20 @@
     <?php include '../includes/navbar.php'; ?>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
-        
-        <div class="container">
-            <div class="text-center">
-                <h1 class="text-5xl font-bold mb-4">
-                    <i class="fas fa-futbol me-3"></i>Sri Lankan Sports Events
-                </h1>
-                <p class="text-xl mb-6">Get tickets for Sri Lanka’s biggest matches and tournaments</p>
-            </div>
+<section class="relative bg-gradient-to-r from-green-600 to-blue-600 text-white py-20 bg-cover bg-center" 
+    style="background-image: url('images/sports/SPORTS.png'); aspect-ratio: 3 / 1; background-blend-mode: overlay;">
+    <div class="container">
+        <div class="text-center relative z-10">
+            <h1 class="text-5xl font-bold mb-4 drop-shadow-lg">
+                <i class="fas fa-futbol me-3"></i>Sri Lankan Sports Events
+            </h1>
+            <p class="text-xl mb-0 drop-shadow-md">
+                Get tickets for Sri Lanka’s biggest matches and tournaments
+            </p>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Filter Section -->
     <section class="py-4 bg-light">
