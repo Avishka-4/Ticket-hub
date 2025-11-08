@@ -238,7 +238,7 @@
                             <p class="text-muted mb-2">
                                 <i class="fas fa-map-marker-alt me-2"></i>Viharamahadevi Open Air Theatre, Colombo.
                             </p>
-                            <p class="card-text">Good for a general live-music outing in Colombo.</p>
+                            <p class="card-text">Good for a general live-music outing in Colombo(not specifically Tamil-language).</p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 3,500LKR</span>
                                 <div class="text-warning">
