@@ -19,10 +19,13 @@
 
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16">
-        <div class="container">
+        <div class="carousel-inner" style="height: 450px;">
+            <div class="carousel-item active position-relative">
+            <img src="../assets\images\event-image\2.jpg" class="d-block w-100" alt="boat ride">
+            <div class="carousel-caption d-md-block position-absolute top-50 start-50 translate-middle ">
             <div class="text-center">
-                <h1 class="text-5xl font-bold mb-4">
-                    <i class="fas fa-music me-3"></i>Live Events & Concerts
+                <h1 class="text-5xl font-bold mb-3 ">
+                    <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
                 </h1>
                 <p class="text-xl mb-6">Discover amazing live performances, concerts, and festivals</p>
             </div>
@@ -63,7 +66,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="concerts">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="../assets/images/events/event1.jpg" 
+                            <img src="../assets\images\event-image\event1.jpg" 
                                  class="card-img-top" 
                                  style="height: 200px; object-fit: cover;" 
                                  alt="SUN FM Presents – Clean Bandit Live in Concert">
@@ -80,7 +83,7 @@
                             </p>
                             <p class="card-text">World-famous band Clean Bandit performing live for the first time in Sri Lanka.</p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From Rs. 12,000</span>
+                                <span class="fw-bold text-success fs-5">From 12,000LKR</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -101,12 +104,12 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="festivals">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                           <img src="../assets/images/events/event2.jpg" 
+                           <img src="../assets\images\event-image\event2.jpg" 
                                 class="card-img-top" 
                                 style="height: 200px; object-fit: cover;" 
                                  alt="Colombo Food Festival 2026">
 
-                            <span class="badge bg-success position-absolute top-0 end-0 m-2">3 Days</span>
+                            <span class="badge bg-success position-absolute top-0 end-0 m-2">Favourite</span>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Colombo Food Festival 2026</h5>
@@ -118,7 +121,7 @@
                             </p>
                             <p class="card-text">Street food, live music & Sri Lanka’s biggest culinary celebration.</p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From Rs. 500</span>
+                                <span class="fw-bold text-success fs-5">From 500LKR</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -139,7 +142,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="comedy">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="../assets/images/events/event3.jpg" 
+                            <img src="../assets\images\event-image\event3.jpg" 
                                 class="card-img-top" 
                                 style="height: 200px; object-fit: cover;" 
                                 alt="Cinnamon Life Christmas Carnival">
@@ -155,7 +158,7 @@
                             </p>
                             <p class="card-text">Christmas market, fun games, Santa parade & live performances.</p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From Rs. 1,000</span>
+                                <span class="fw-bold text-success fs-5">From 1,000LKR</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -176,7 +179,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="theater">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="../assets/images/events/event4.jpg" 
+                            <img src="../assets\images\event-image\event4.jpg" 
                                  class="card-img-top" 
                                  style="height: 200px; object-fit: cover;" 
                                  alt="Kandy Esala Perahera – 2025">
@@ -193,7 +196,7 @@
                             </p>
                             <p class="card-text">Sri Lanka’s most iconic cultural parade with dancers, drummers & elephants.</p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From Rs. 3,500</span>
+                                <span class="fw-bold text-success fs-5">From 3,500LKR</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -214,7 +217,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="concerts">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="../assets/images/events/event5.jpg" 
+                            <img src="../assets\images\event-image\event5.jpg" 
                                 class="card-img-top" 
                                 style="height: 200px; object-fit: cover;" 
                                  alt="Colombo Stand-up Comedy Night">
@@ -228,9 +231,11 @@
                             <p class="text-muted mb-2">
                                 <i class="fas fa-map-marker-alt me-2"></i>Nelum Pokuna Theatre, Colombo
                             </p>
-                            <p class="card-text">Top Sri Lankan comedians performing live. Laugh till you drop!</p>
+                            <p class="card-text">Top Sri Lankan comedians performing live. Laugh till you drop!
+                                Come & Enjoy!!
+                            </p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From Rs. 2,00</span>
+                                <span class="fw-bold text-success fs-5">From 2,000LKR</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -251,11 +256,10 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="festivals">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="../assets/images/events/event6.jpg" 
+                            <img src="../assets\images\event-image\event6.jpg" 
                                  class="card-img-top" 
                                  style="height: 200px; object-fit: cover;" 
                                  alt="Deep Jungle Music Festival – Ella">
-
                             <span class="badge bg-info position-absolute top-0 end-0 m-2">New</span>
                         </div>
                         <div class="card-body">
@@ -266,9 +270,11 @@
                             <p class="text-muted mb-2">
                                 <i class="fas fa-map-marker-alt me-2"></i>Ella Forest Range
                             </p>
-                            <p class="card-text">3 days of EDM, camping & nature adventure in the mountains.</p>
+                            <p class="card-text">Three days of EDM, camping & nature adventure in the mountains.
+
+                            </p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From Rs. 8,500</span>
+                                <span class="fw-bold text-success fs-5">From 8,500LKR</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
