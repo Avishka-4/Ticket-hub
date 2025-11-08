@@ -13,6 +13,18 @@ error_log('Base URL: ' . $baseUrl);
 ?>
 <!-- Navbar Styles -->
 <style>
+    /* Ensure consistent navbar positioning */
+    .navbar {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+    .navbar .container {
+        width: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
     /* Ensure proper spacing for mobile menu */
     .offcanvas-body {
         padding: 1.5rem;
@@ -38,7 +50,7 @@ error_log('Base URL: ' . $baseUrl);
 </style>
     <!-- Bootstrap Offcanvas Side Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-        <div class="container">
+        <div class="container mx-auto">
             <a class="navbar-brand fw-bold text-primary" href="<?php echo $baseUrl; ?>index.php">
                 <i class="fas fa-ticket-alt me-2"></i>TicketHub
             </a>
