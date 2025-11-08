@@ -289,7 +289,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('Jazz & Blues Night', 55)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('Colombo Stand-up Comedy Night', 55)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -328,7 +328,7 @@
                                     <small class="text-muted ms-1">(4.5)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('Electronic Dance Festival', 75)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('Deep Jungle Music Festival – Ella', 75)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
