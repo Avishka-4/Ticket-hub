@@ -159,7 +159,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Scuba Diving Adventure', 89)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Scuba Diving Adventure', 10000)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -206,7 +206,7 @@
                                     <small class="text-muted ms-1">(4.7)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Professional Surfing Lessons', 65)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Professional Surfing Lessons', 7000)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -256,7 +256,7 @@
                                     <small class="text-muted ms-1">(4.8)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Rock Climbing Experience', 95)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Rock Climbing Experience', 20500)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -304,7 +304,7 @@
                                     <small class="text-muted ms-1">(4.6)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Pottery & Ceramic Workshop', 45)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Flying Ravana Adventure Park', 13700)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -353,7 +353,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Yoga & Meditation Retreat', 75)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Swing Ceylon Mini Golf - Unawatuna', 8500)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -368,10 +368,10 @@
                                 <!-- <i class="fas fa-hiking text-6xl text-white"></i> -->
                                  <img src="../assets/images/leisure/boat.jpg" alt="boat" class="w-100 h-100 object-cover">
                             </div>
-                            <span class="badge bg-success position-absolute top-0 end-0 m-2">Nature</span>
+                            <span class="badge bg-success position-absolute top-0 end-0 m-2">Water Sports</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Avant Leisure Adventure Sports</h5>
+                            <h5 class="card-title fw-bold ">Avant Leisure Adventure Sports</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>7 mins 30 Sec | Moderate difficulty
                             </p>
@@ -402,7 +402,7 @@
                                     <small class="text-muted ms-1">(4.5)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Guided Nature Hiking', 35)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Avant Leisure Adventure Sports', 5000)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -436,7 +436,7 @@
                                 <select class="form-select" id="leisureTimeSlot">
                                     <option>9:00 AM - 1:00 PM</option>
                                     <option>2:00 PM - 6:00 PM</option>
-                                    <option>7:00 AM - 12:00 PM (Early Bird)</option>
+                                    <option>7:00 AM - 12:00 PM</option>
                                 </select>
                             </div>
                             <div class="mb-3">
@@ -485,8 +485,8 @@
                     <div class="w-100">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div>
-                                <strong>Price per person: $<span id="leisurePricePerPerson">0</span></strong><br>
-                                <strong>Total: $<span id="leisureTotalPrice">0.00</span></strong>
+                                <strong>Price per person: Rs.<span id="leisurePricePerPerson">0</span></strong><br>
+                                <strong>Total: Rs.<span id="leisureTotalPrice">0.00</span></strong>
                             </div>
                         </div>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
