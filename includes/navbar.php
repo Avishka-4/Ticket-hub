@@ -11,8 +11,6 @@ error_log('Document Root: ' . $_SERVER['DOCUMENT_ROOT']);
 error_log('Current Script: ' . $_SERVER['SCRIPT_NAME']);
 error_log('Base URL: ' . $baseUrl);
 ?>
-<<<<<<< HEAD
-=======
 <!-- Navbar Styles -->
 <style>
     /* Ensure consistent navbar positioning */
@@ -50,7 +48,6 @@ error_log('Base URL: ' . $baseUrl);
         }
     }
 </style>
->>>>>>> 6a6e9cfcf7d63e998a9289837df014265b218e7a
     <!-- Bootstrap Offcanvas Side Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container mx-auto">
@@ -244,5 +241,3 @@ error_log('Base URL: ' . $baseUrl);
             </div>
         </div>
     </div>
-
-<!-- No closing tags needed as this is an include file -->
