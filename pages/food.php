@@ -10,7 +10,7 @@ ini_set('display_errors', 1);
 
 // Compute a robust base URL (handles spaces in folder names)
 $documentRoot = realpath($_SERVER['DOCUMENT_ROOT']);
-$projectRoot = realpath(dirname(__DIR__)); // one level up from /pages
+$projectRoot = realpath(dirname(__DIR__)); 
 $baseUrl = rtrim(str_replace('\\', '/', str_replace($documentRoot, '', $projectRoot)), '/') . '/';
 
 // Helper to version assets for cache-busting using file modification time
@@ -49,6 +49,7 @@ if (empty($festivals) && !isset($error)) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="<?php echo versioned_rel('../assets/css/style.css'); ?>">
+    <link rel="stylesheet" href="../assets/css/index.css">
     <!-- Aggressively preload ALL images with multiple methods -->
     <link rel="preload" as="image" href="../assets/images/foods/header-hero.jpg">
     <link rel="preload" as="image" href="../assets/images/foods/food-fest-1.jpg">
@@ -211,6 +212,32 @@ if (empty($festivals) && !isset($error)) {
             transform: translateY(-2px) !important;
             box-shadow: 0 5px 15px rgba(13, 110, 253, 0.15) !important;
         }
+
+        /* .nav-item{
+            margin-left: 15px;
+        }
+
+        .navbar .navbar-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #007bff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin-left: 35px;
+        }
+
+        .nav-link {
+            font-weight: 200;
+            color: var(--dark-color) !important;
+            margin: 0 3px;
+            border-radius: 6px;
+            padding: 8px 16px !important;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+        } */
     </style>
 </head>
 <body class="bg-light">

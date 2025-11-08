@@ -11,31 +11,6 @@ error_log('Document Root: ' . $_SERVER['DOCUMENT_ROOT']);
 error_log('Current Script: ' . $_SERVER['SCRIPT_NAME']);
 error_log('Base URL: ' . $baseUrl);
 ?>
-<!-- Navbar Styles -->
-<style>
-    /* Ensure proper spacing for mobile menu */
-    .offcanvas-body {
-        padding: 1.5rem;
-    }
-    
-    .user-menu-mobile {
-        margin-top: 2rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid #dee2e6;
-    }
-    
-    /* Hide mobile toggle on desktop */
-    @media (min-width: 992px) {
-        .navbar-toggler {
-            display: none !important;
-        }
-    }
-    @media (max-width: 991.98px) {
-        .offcanvas-start {
-            width: 250px !important; 
-        }
-    }
-</style>
     <!-- Bootstrap Offcanvas Side Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
@@ -44,7 +19,7 @@ error_log('Base URL: ' . $baseUrl);
             </a>
             
             <!-- Desktop Navigation (hidden on mobile) -->
-            <div class="flex-grow-1 d-none d-lg-flex align-items-center" id="navbarNav">
+            <div class="flex-grow-1 d-none d-lg-flex align-items-center justify-content-center" id="navbarNav">
 
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
