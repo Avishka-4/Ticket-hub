@@ -137,7 +137,7 @@
                             <p class="text-muted mb-2">
                                 <i class="fas fa-map-marker-alt me-2"></i>Sun Diving Centre, Yakdehimulla, Unawatuna, Sri Lanka​
                             </p>
-                            <p class="card-text">Explore the underwater world with certified instructors. Perfect for beginners and experienced divers alike.So many packages to choose for beginners , Certified divers, and Certification Courses </p>
+                            <p class="card-text">Explore the underwater world with certified instructors. Perfect for beginners and experienced divers alike.So many packages to choose for beginners , Certified divers, and Certification Courses </p></br>
                             
                             <!-- Available Dates -->
                             <div class="mb-3 mt-2">
@@ -150,7 +150,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">Rs.100000/person</span>
+                                <span class="fw-bold text-success fs-5">Rs.10000/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -185,9 +185,9 @@
                             <p class="text-muted mb-2">
                                 <i class="fas fa-map-marker-alt me-2"></i>Arugam Bay Beach
                             </p>
-                            <p class="card-text">Learn to surf with professional instructors on the best waves in town. Equipment included.</p>
+                            <p class="card-text">Learn to surf with professional instructors on the best waves in town. With skilled instructors, quality surfboards, and access to Arugambay’s world-famous surf breaks, every session brings you closer to mastering the ocean. Stay with us, surf with us, and feel the true spirit of Arugambay — the paradise for wave lovers.</p>
                             
-                            <div class="mb-3 mt-4">
+                            <div class="mb-3 mt-2">
                                 <small class="text-muted fw-bold">Available Dates:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectActivityDate(this, 'Dec 18')">Dec 18</button>
@@ -233,7 +233,9 @@
                             <p class="text-muted mb-2">
                                 <i class="fas fa-map-marker-alt me-2"></i>Peacock Hill and Ramboda waterfall in Sri Lanka
                             </p>
-                            <p class="card-text">Challenge yourself with guided rock climbing on natural cliffs. Safety equipment provided.</p>
+                            <p class="card-text">Challenge yourself with guided rock climbing on natural cliffs. Safety equipment provided.
+                                Visitors say the sound of rushing water, cool breezes, and chance for a cold water dip create a calming, unforgettable escape into nature.
+                            </p>
                             
                             <div class="mb-3 mt-4">
                                 <small class="text-muted fw-bold">Available Dates:</small>
@@ -245,7 +247,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">$68/person</span>
+                                <span class="fw-bold text-success fs-5">Rs.20500/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -274,14 +276,16 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Flying Ravana Adventure Park</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>2.5 hours | All ages welcome
+                                <i class="fas fa-clock me-2"></i>3-5 hours | All ages welcome
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Creative Arts Studio
+                                <i class="fas fa-map-marker-alt me-2"></i>Ella, Sri Lanka
                             </p>
-                            <p class="card-text">Create beautiful ceramic pieces in this hands-on workshop. Perfect for families and art enthusiasts.</p>
+                            <p class="card-text">Flying Ravana is Sri Lanka’s first ever mega dual zip-line, located amidst the luscious green estates of Ella,Sri Lanka.
+                                The two-wire zip-line stretches for more than half a kilometre, slides at max 80kmph and offers a bird’s-eye view of the beautiful hills of the island.
+                            </p>
                             
-                            <div class="mb-3">
+                            <div class="mb-3 mt-4">
                                 <small class="text-muted fw-bold">Available Dates:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectActivityDate(this, 'Dec 17')">Dec 17</button>
@@ -291,7 +295,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">$45/person</span>
+                                <span class="fw-bold text-success fs-5">Rs.13700/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -319,16 +323,18 @@
                             <span class="badge bg-info position-absolute top-0 end-0 m-2">Relaxing</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Swing Ceylon Mini Golf</h5>
+                            <h5 class="card-title fw-bold">Swing Ceylon Mini Golf - Unawatuna </h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>6 hours | Beginner friendly
+                                <i class="fas fa-clock me-2"></i>2-3 hours | Beginner friendly
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Zen Garden Retreat Center
+                                <i class="fas fa-map-marker-alt me-2"></i>beach town of Unawatuna near Galle
                             </p>
-                            <p class="card-text">Find inner peace with guided yoga sessions and meditation practices in a serene environment.</p>
+                            <p class="card-text">Swing Ceylon is not your average mini-golf course.It’s Sri Lanka’s top-rated mini-golf destination, and nature in one unforgettable outing.
+                                Play 18 imaginative holes inspired by iconic Sri Lankan landmarks like the Nine Arch Bridge and Sigiriya Rock, surrounded by lush palm trees and local wildlife.
+                            </p>
                             
-                            <div class="mb-3">
+                            <div class="mb-3 mt-1">
                                 <small class="text-muted fw-bold">Available Dates:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectActivityDate(this, 'Dec 21')">Dec 21</button>
@@ -338,7 +344,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">$75/person</span>
+                                <span class="fw-bold text-success fs-5">Rs.8500/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -368,14 +374,16 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Avant Leisure Adventure Sports</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>4 hours | Moderate difficulty
+                                <i class="fas fa-clock me-2"></i>7 mins 30 Sec | Moderate difficulty
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>National Forest Trail
+                                <i class="fas fa-map-marker-alt me-2"></i>Bentota, Sri Lanka
                             </p>
-                            <p class="card-text">Explore scenic trails with experienced guides and discover local wildlife and flora.</p>
+                            <p class="card-text">Feel the rush as you ride the latest Yamaha and Sea-Doo jet skis across the scenic Bentota River.
+                                Avant Leisure Adventure Sports offers top-tier equipment, personalized safety briefings, and unmatched service.Open year-round with flexible rental options, we’re here to make every ride smooth, safe, and unforgettable.
+                            </p>
                             
-                            <div class="mb-3">
+                            <div class="mb-3 mt-2">
                                 <small class="text-muted fw-bold">Available Dates:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectActivityDate(this, 'Dec 16')">Dec 16</button>
@@ -385,7 +393,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">$35/person</span>
+                                <span class="fw-bold text-success fs-5">Rs.5000/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>

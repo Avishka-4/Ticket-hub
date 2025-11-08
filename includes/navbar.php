@@ -11,9 +11,49 @@ error_log('Document Root: ' . $_SERVER['DOCUMENT_ROOT']);
 error_log('Current Script: ' . $_SERVER['SCRIPT_NAME']);
 error_log('Base URL: ' . $baseUrl);
 ?>
+<<<<<<< HEAD
+=======
+<!-- Navbar Styles -->
+<style>
+    /* Ensure consistent navbar positioning */
+    .navbar {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+    .navbar .container {
+        width: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    /* Ensure proper spacing for mobile menu */
+    .offcanvas-body {
+        padding: 1.5rem;
+    }
+    
+    .user-menu-mobile {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #dee2e6;
+    }
+    
+    /* Hide mobile toggle on desktop */
+    @media (min-width: 992px) {
+        .navbar-toggler {
+            display: none !important;
+        }
+    }
+    @media (max-width: 991.98px) {
+        .offcanvas-start {
+            width: 250px !important; 
+        }
+    }
+</style>
+>>>>>>> 6a6e9cfcf7d63e998a9289837df014265b218e7a
     <!-- Bootstrap Offcanvas Side Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-        <div class="container">
+        <div class="container mx-auto">
             <a class="navbar-brand fw-bold text-primary" href="<?php echo $baseUrl; ?>index.php">
                 <i class="fas fa-ticket-alt me-2"></i>TicketHub
             </a>
