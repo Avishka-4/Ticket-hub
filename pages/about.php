@@ -11,6 +11,7 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 <body class="bg-gray-50">
     <?php include '../includes/navbar.php'; ?>
@@ -72,7 +73,7 @@ session_start();
                                      alt="Concert" class="img-fluid rounded shadow">
                             </div>
                             <div class="col-6">
-                                <img src="https://images.unsplash.com/photo-1489599511986-e6d8e97fbce6?w=300&h=300&fit=crop" 
+                                <img src="../assets/images/theater.jpg" 
                                      alt="Theater" class="img-fluid rounded shadow">
                             </div>
                             <div class="col-6">
