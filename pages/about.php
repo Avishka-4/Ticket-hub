@@ -51,7 +51,7 @@ session_start();
                 <div class="col-lg-6 mb-8 mb-lg-0">
                     <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Story</h2>
                     <p class="text-gray-600 mb-4">
-                        Founded in 2020, TicketHub began with a simple vision: to make discovering and booking 
+                        Founded in 2025, TicketHub began with a simple vision: to make discovering and booking 
                         amazing experiences as easy as a few clicks. What started as a small startup has grown 
                         into a global platform connecting millions of people with their perfect entertainment.
                     </p>
@@ -181,8 +181,8 @@ session_start();
                             </div>
                             <h4 class="font-bold mb-3">Partnership</h4>
                             <p class="text-gray-600">
-                                We build lasting relationships with event organizers, 
-                                venues, and communities.
+                                We collaborate closely with event organizers, venues, and 
+                                communities to create lasting connections.
                             </p>
                         </div>
                     </div>
@@ -207,31 +207,31 @@ session_start();
                 <div class="row g-4">
                     <div class="col-lg-3 col-md-6">
                         <div class="team-card text-center">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" 
-                                 alt="CEO" class="team-photo mb-3">
-                            <h5 class="font-bold">John Smith</h5>
-                            <p class="text-primary mb-2">CEO & Founder</p>
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" 
+                                 alt="Head of Marketing" class="team-photo mb-3">
+                            <h5 class="font-bold">Mike Chen</h5>
+                            <p class="text-primary mb-2">Head of Marketing</p>
                             <p class="text-gray-600 small">
-                                Visionary leader with 15+ years in the entertainment industry.
+                                Creative strategist connecting events with their perfect audiences.
                             </p>
                             <div class="social-links">
                                 <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" class="text-primary"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-primary"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="team-card text-center">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b977?w=200&h=200&fit=crop&crop=face" 
-                                 alt="CTO" class="team-photo mb-3">
-                            <h5 class="font-bold">Sarah Johnson</h5>
-                            <p class="text-primary mb-2">CTO</p>
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face" 
+                                 alt="Customer Success" class="team-photo mb-3">
+                            <h5 class="font-bold">Emily Davis</h5>
+                            <p class="text-primary mb-2">Customer Success</p>
                             <p class="text-gray-600 small">
-                                Tech innovator driving our platform's cutting-edge features.
+                                Dedicated to ensuring every customer has an amazing experience.
                             </p>
                             <div class="social-links">
                                 <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" class="text-primary"><i class="fab fa-github"></i></a>
+                                <a href="#" class="text-primary"><i class="fab fa-twitter"></i></a>
                             </div>
                         </div>
                     </div>
@@ -315,7 +315,7 @@ session_start();
         .value-icon i {
             font-size: 2.5rem;
             background: linear-gradient(45deg, #007bff, #6f42c1);
-            -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         

@@ -106,7 +106,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3">Sports Events</h3>
-                        <p class="text-gray-600 mb-4">Get tickets for cricket, football, and other sports</p>
+                        <p class="text-gray-600 mb-4">Get tickets for cricket, football, tennis and other sports</p>
                         <a href="pages/sports.php" class="btn btn-primary">Sports Tickets</a>
                     </div>
                 </div>
