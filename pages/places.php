@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Places & Tours - TicketHub</title>
+    <title>Places & Best Destinations in Sri Lanka- TicketHub</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +44,7 @@
         <div class="container">
             <div class="text-center">
                 <h1 class="text-5xl font-bold mb-4">
-                    <i class="fas fa-map-marked-alt me-3"></i>Places & Tours
+                    <i class="fas fa-map-marked-alt me-3"></i>Places & Best Destinations in Sri Lanka
                 </h1>
                 <p class="text-xl mb-6">Discover amazing destinations and get unforgettable experience</p>
             </div>
@@ -330,7 +330,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">
-                        <i class="fas fa-plane me-2"></i>Book Your Tour
+                        <i class="fas fa-plane me-2"></i>Book Your Adventure:
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
