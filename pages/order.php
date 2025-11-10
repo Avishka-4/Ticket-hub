@@ -26,10 +26,17 @@
     }
     
 </style>
-<body>
+<body >
     <div class="form-p">
-
     <form class="row g-3">
+  <div class="col-md-12">
+    <label for="inputPassword4" class="form-label">Full Name</label>
+    <input type="name" class="form-control" id="name" placeholder="Enter Your Full Name">
+  </div>
+  <div class="col-md-12">
+    <label for="inputPassword4" class="form-label">Email Address</label>
+    <input type="email" class="form-control" id="email" placeholder="Enater Your Email Address">
+  </div>
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Departure Date</label>
     <input type="date" class="form-control" id="date">
@@ -73,7 +80,27 @@
     <button type="submit" class="btn btn-primary">Pay Now</button>
     <button type="submit" class="btn btn-primary"><a href="places.php">Back to Places</a></button>
   </div>
-  </div>
+
+  <script>
+  // get inputs
+  const priceInput = document.getElementById('price');
+  const quantityInput = document.getElementById('quantity');
+  const totalInput = document.getElementById('total');
+
+  // function to calculate total
+  function calculateTotal() {
+    const price = parseFloat(priceInput.value) || 0;
+    const quantity = parseFloat(quantityInput.value) || 0;
+    const total = price * quantity;
+    totalInput.value = total.toFixed(2); // show 2 decimal places
+  }
+
+  // add event listeners
+  priceInput.addEventListener('input', calculateTotal);
+  quantityInput.addEventListener('input', calculateTotal);
+</script>
+
 </form>
+</div>
 </body>
 </html>
