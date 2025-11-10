@@ -37,6 +37,18 @@
     <label for="inputPassword4" class="form-label">Email Address</label>
     <input type="email" class="form-control" id="email" placeholder="Enater Your Email Address">
   </div>
+  <div class="col-md-4">
+    <label for="inputPassword4" class="form-label">Phone Number</label>
+    <input type="number" class="form-control" id="phone" placeholder="Enater Your Phone Number">
+  </div>
+  <div class="col-md-4">
+    <label for="inputPassword4" class="form-label">Number of Members</label>
+    <input type="number" min="1" max="20" class="form-control" id="members">
+  </div>
+  <div class="col-md-4">
+    <label for="inputPassword4" class="form-label">Email Address</label>
+    <input type="email" class="form-control" id="email" placeholder="Enater Your Email Address">
+  </div>
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Departure Date</label>
     <input type="date" class="form-control" id="date">
