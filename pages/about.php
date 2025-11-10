@@ -207,12 +207,12 @@ session_start();
                 <div class="row g-4">
                     <div class="col-lg-3 col-md-6">
                         <div class="team-card text-center">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" 
-                                 alt="Head of Marketing" class="team-photo mb-3">
-                            <h5 class="font-bold">Mike Chen</h5>
-                            <p class="text-primary mb-2">Head of Marketing</p>
+                            <img src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=200&h=200&fit=crop&crop=face" 
+                                 alt="Head of Marketing" class="team-photo mb-3 img-fluid d-block mx-auto">
+                            <h5 class="font-bold">Pubudu Sampath</h5>
+                            <p class="text-primary mb-2">Marketing Director</p>
                             <p class="text-gray-600 small">
-                                Creative strategist connecting events with their perfect audiences.
+                                Strategic thinker driving growth through creative marketing and data-driven insights.
                             </p>
                             <div class="social-links">
                                 <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
@@ -223,11 +223,26 @@ session_start();
                     <div class="col-lg-3 col-md-6">
                         <div class="team-card text-center">
                             <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face" 
-                                 alt="Customer Success" class="team-photo mb-3">
-                            <h5 class="font-bold">Emily Davis</h5>
-                            <p class="text-primary mb-2">Customer Success</p>
+                            alt="Head of Marketing" class="team-photo mb-3 img-fluid d-block mx-auto">
+                            <h5 class="font-bold">Nisalka Hettiarachchi</h5>
+                            <p class="text-primary mb-2">Digital Marketing Specialist</p>
                             <p class="text-gray-600 small">
-                                Dedicated to ensuring every customer has an amazing experience.
+                                Passionate about connecting brands with audiences through engaging online campaigns.
+                            </p>
+                            <div class="social-links">
+                                <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="text-primary"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-card text-center">
+                            <img src="https://images.unsplash.com/photo-1581382575275-97901c2635b7?w=200&h=200&fit=crop&crop=face" 
+                                 alt="Customer Success" class="team-photo mb-3 img-fluid d-block mx-auto">
+                            <h5 class="font-bold">Akila Perera</h5>
+                            <p class="text-primary mb-2">Brand Manager</p>
+                            <p class="text-gray-600 small">
+                                Focused on building strong brand identities and lasting relationships with clients.
                             </p>
                             <div class="social-links">
                                 <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
@@ -238,26 +253,11 @@ session_start();
                     <div class="col-lg-3 col-md-6">
                         <div class="team-card text-center">
                             <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" 
-                                 alt="Head of Marketing" class="team-photo mb-3">
-                            <h5 class="font-bold">Mike Chen</h5>
-                            <p class="text-primary mb-2">Head of Marketing</p>
+                                 alt="Customer Success" class="team-photo mb-3 img-fluid d-block mx-auto">
+                            <h5 class="font-bold">Gamini Herath</h5>
+                            <p class="text-primary mb-2">Creative Designer</p>
                             <p class="text-gray-600 small">
-                                Creative strategist connecting events with their perfect audiences.
-                            </p>
-                            <div class="social-links">
-                                <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" class="text-primary"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-card text-center">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face" 
-                                 alt="Customer Success" class="team-photo mb-3">
-                            <h5 class="font-bold">Emily Davis</h5>
-                            <p class="text-primary mb-2">Customer Success</p>
-                            <p class="text-gray-600 small">
-                                Dedicated to ensuring every customer has an amazing experience.
+                                Transforms ideas into impactful visuals that capture attention and emotion.
                             </p>
                             <div class="social-links">
                                 <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>

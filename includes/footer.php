@@ -57,7 +57,7 @@ $basePath = $isInPagesFolder ? './' : './pages/';
                     </li>
                     <li class="mb-2">
                         <a href="<?php echo $basePath; ?>food.php">
-                            <i class="fas fa-chevron-right me-2"></i>Dining
+                            <i class="fas fa-chevron-right me-2"></i>Foods
                         </a>
                     </li>
                     <li class="mb-2">
@@ -105,7 +105,7 @@ $basePath = $isInPagesFolder ? './' : './pages/';
                     </li>
                     <li class="mb-3 d-flex align-items-center justify-content-center justify-content-md-start">
                         <i class="fas fa-phone me-3 text-primary"></i>
-                        <small>+94 (70) 123-4567</small>
+                        <small>+94 (70) 123 4567</small>
                     </li>
                     <li class="mb-3 d-flex align-items-center justify-content-center justify-content-md-start">
                         <i class="fas fa-envelope me-3 text-primary"></i>
@@ -113,7 +113,8 @@ $basePath = $isInPagesFolder ? './' : './pages/';
                     </li>
                     <li class="mb-3 d-flex align-items-center justify-content-center justify-content-md-start">
                         <i class="fas fa-clock me-3 text-primary"></i>
-                        <small>Mon - Fri: 9AM - 6PM</small>
+                        <small>Mon - Fri: 9:00 AM - 6:00 PM<br>
+                               Sat - Sun: 10:00 AM - 4:00 PM</small>
                     </li>
                 </ul>
             </div>
