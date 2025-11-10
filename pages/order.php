@@ -8,7 +8,7 @@
 </head>
 <style>
     form{
-        width: 50%;
+        width: 60%;
         padding: 20px;
         border: 1px solid black;
         border-radius: 10px;
@@ -22,8 +22,7 @@
         padding-top: 50px;
     }
     .btn btn-primary{
-        align-items: center !important;
-
+        color: while !important;
     }
     
 </style>
@@ -72,7 +71,7 @@
   </div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Pay Now</button>
-    <button type="submit" class="btn btn-primary">Back</button>
+    <button type="submit" class="btn btn-primary"><a href="places.php">Back to Places</a></button>
   </div>
   </div>
 </form>
