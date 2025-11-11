@@ -13,28 +13,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
-    
-    <style>
-        .card-img-top {
-            object-fit: cover;
-            height: 250px;
-            width: 100%;
-        }
-        .image-overlay {
-            position: relative;
-            overflow: hidden;
-        }
-        .image-overlay::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
-        }
-    </style>
-    
 </head>
 <body>
     <?php include '../includes/navbar.php'; ?>
