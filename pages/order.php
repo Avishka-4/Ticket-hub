@@ -27,9 +27,9 @@
     $result = mysqli_query($con,$sql);
     if($result){
       echo "";
-    }else{
+    } else {
       die(mysqli_error($con));
-    }
+    } 
   }
 
 ?>
@@ -64,7 +64,7 @@
     <form class="row g-3" action="order.php" method="POST">
   <div class="col-md-12">
     <label for="inputPassword4" class="form-label">Full Name</label>
-    <input type="text" class="form-control" id="name" placeholder="Enter Your Full Name" name="full_name">
+    <input type="text" class="form-control" id="name" placeholder="Enter Your Full Name" name="full_name" required>
   </div>
   <div class="col-md-12">
     <label for="inputPassword4" class="form-label">Email Address</label>
@@ -72,23 +72,23 @@
   </div>
   <div class="col-md-3">
     <label for="inputPassword4" class="form-label">Phone Number</label>
-    <input type="number" class="form-control" id="phone-number" placeholder="Enater Your Phone Number" name="phone_number">
+    <input type="number" class="form-control" id="phone-number" placeholder="Enater Your Phone Number" name="phone_number" required>
   </div>
   <div class="col-md-3">
     <label for="inputPassword4" class="form-label">Number of Members</label>
-    <input type="number" min="1" max="20" class="form-control" id="members" name="members">
+    <input type="number" min="1" max="20" class="form-control" id="members" name="members" required>
   </div>
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Departure Date</label>
-    <input type="date" class="form-control" id="date" name="d_date">
+    <input type="date" class="form-control" id="date" name="d_date" required>
   </div>
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">Return Date</label>
-    <input type="date" class="form-control" id="date" name="r_date">
+    <input type="date" class="form-control" id="date" name="r_date" required>
   </div>
    <div class="col-md-6">
     <label for="inputState" class="form-label">Payment Mothod</label>
-    <select id="inputState" class="form-select" name="p_method">
+    <select id="inputState" class="form-select" name="p_method" required>
       <option selected>Choose Your Payment Mothod</option>
       <option value="card">Debit Card</option>
       <option value="card">Credi Card</option>
@@ -96,21 +96,20 @@
   </div>
   <div class="col-12">
     <label for="inputAddress" class="form-label">Account Number</label>
-    <input type="number" class="form-control" id="inputnumber" placeholder="Please Enter Your Account Number" name="account_number">
+    <input type="text" class="form-control" id="inputnumber" placeholder="Please Enter Your Account Number" name="account_number" required>
   </div>
   <div class="col-9">
     <label for="inputAddress2" class="form-label">Account Holder Name</label>
-    <input type="text" class="form-control" id="name" placeholder="Please Enter Account Holder Name" name="account_name">
+    <input type="text" class="form-control" id="name" placeholder="Please Enter Account Holder Name" name="account_name" required>
   </div>
   <div class="col-md-3">
     <label for="inputCity" class="form-label">CVV</label>
-    <input type="number" class="form-control" id="number" placeholder="CVV" name="cvv">
+    <input type="text" class="form-control" id="number" placeholder="CVV" name="cvv" required>
   </div>
   <div class="col-12">
   </div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Pay Now</button>
-    <button type="submit" class="btn btn-primary"><a href="places.php">Back to Places</a></button>
   </div>
 </form>
 </div>

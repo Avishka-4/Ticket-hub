@@ -115,9 +115,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openPlaceBooking('Tropical Paradise Island', 1299)">
-                                Book Now
-                            </button>
+                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -155,8 +153,7 @@
                                     <small class="text-muted ms-1">(4.7)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openPlaceBooking('Alpine Mountain Adventure', 899)">Book Now
-                            </button>
+                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -194,8 +191,7 @@
                                     <small class="text-muted ms-1">(4.8)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openPlaceBooking('European Capital Cities', 1599)">Book Now
-                            </button>
+                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -233,9 +229,7 @@
                                     <small class="text-muted ms-1">(4.6)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openPlaceBooking('Ancient Wonders Explorer', 1899)">
-                                </i>Book Now
-                            </button>
+                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -273,9 +267,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openPlaceBooking('Safari Adventure', 2199)">
-                                </i>Book Now
-                            </button>
+                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -313,9 +305,7 @@
                                     <small class="text-muted ms-1">(4.7)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openPlaceBooking('Caribbean Island Hopping', 999)">
-                                Book Now
-                            </button>
+                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
                         </div>
                     </div>
                 </div>
