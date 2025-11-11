@@ -136,17 +136,23 @@ body {
     background: rgba(255, 255, 255, 0.95) !important;
 }
 
+.nav-item{
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
 .navbar .navbar-brand {
     font-size: 1.3rem;
     font-weight: 700;
     color: #007bff;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     text-decoration: none;
     transition: color 0.3s ease;
-    margin-right: 10px;
-    margin-left: 0;
+    /* margin-right: 10px; */
+    margin-left: 35px;
 }
 
 .nav-link {
@@ -156,12 +162,36 @@ body {
     border-radius: 6px;
     padding: 8px 16px !important;
     transition: all 0.3s ease;
+    margin-left: 10px;
 }
 
 .nav-link:hover {
     background: var(--light-color);
     color: var(--primary-color) !important;
 }
+/* Ensure proper spacing for mobile menu */
+    .offcanvas-body {
+        padding: 1.5rem;
+    }
+    
+    .user-menu-mobile {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #dee2e6;
+    }
+    
+    /* Hide mobile toggle on desktop */
+    @media (min-width: 992px) {
+        .navbar-toggler {
+            display: none !important;
+        }
+    }
+    @media (max-width: 991.98px) {
+        .offcanvas-start {
+            width: 250px !important; 
+        }
+    }
+
 
 /* Footer Styles */
 footer {

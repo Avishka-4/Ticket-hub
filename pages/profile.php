@@ -81,29 +81,29 @@ if ($isDemo) {
             }
         }
         
-        // Handle password change
-        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['change_password'])) {
-            $currentPassword = $_POST['currentPassword'];
-            $newPassword = $_POST['newPassword'];
-            $confirmPassword = $_POST['confirmPassword'];
+        // // Handle password change
+        // if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['change_password'])) {
+        //     $currentPassword = $_POST['currentPassword'];
+        //     $newPassword = $_POST['newPassword'];
+        //     $confirmPassword = $_POST['confirmPassword'];
             
-            if (!password_verify($currentPassword, $user['password'])) {
-                $error = "Current password is incorrect";
-            } elseif (strlen($newPassword) < 6) {
-                $error = "New password must be at least 6 characters";
-            } elseif ($newPassword !== $confirmPassword) {
-                $error = "Passwords do not match";
-            } else {
-                $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
-                $stmt = $pdo->prepare("UPDATE users SET password = ? WHERE id = ?");
+        //     if (!password_verify($currentPassword, $user['password'])) {
+        //         $error = "Current password is incorrect";
+        //     } elseif (strlen($newPassword) < 6) {
+        //         $error = "New password must be at least 6 characters";
+        //     } elseif ($newPassword !== $confirmPassword) {
+        //         $error = "Passwords do not match";
+        //     } else {
+        //         $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+        //         $stmt = $pdo->prepare("UPDATE users SET password = ? WHERE id = ?");
                 
-                if ($stmt->execute([$hashedPassword, $userId])) {
-                    $success = "Password changed successfully!";
-                } else {
-                    $error = "Failed to change password";
-                }
-            }
-        }
+        //         if ($stmt->execute([$hashedPassword, $userId])) {
+        //             $success = "Password changed successfully!";
+        //         } else {
+        //             $error = "Failed to change password";
+        //         }
+        //     }
+        // }
         
     } catch (PDOException $e) {
         $error = "Database error: " . $e->getMessage();
@@ -120,6 +120,8 @@ if ($isDemo) {
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    
 </head>
 <body class="bg-gray-50">
     <?php include '../includes/navbar.php'; ?>
@@ -231,16 +233,16 @@ if ($isDemo) {
                             <i class="fas fa-history me-2"></i>My Bookings
                         </button>
                     </li>
-                    <li class="nav-item" role="presentation">
+                    <!-- <li class="nav-item" role="presentation">
                         <button class="nav-link" id="security-tab" data-bs-toggle="tab" data-bs-target="#security" type="button">
                             <i class="fas fa-lock me-2"></i>Security
                         </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
+                    </li> -->
+                    <!-- <li class="nav-item" role="presentation">
                         <button class="nav-link" id="preferences-tab" data-bs-toggle="tab" data-bs-target="#preferences" type="button">
                             <i class="fas fa-cog me-2"></i>Preferences
                         </button>
-                    </li>
+                    </li> -->
                 </ul>
 
                 <!-- Tab Content -->
@@ -351,7 +353,7 @@ if ($isDemo) {
                         </div>
                     </div>
 
-                    <!-- Security Tab -->
+                    <!-- Security Tab
                     <div class="tab-pane fade" id="security" role="tabpanel">
                         <div class="row">
                             <div class="col-lg-6">
@@ -436,9 +438,9 @@ if ($isDemo) {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <!-- Preferences Tab -->
+                    <!-- Preferences Tab
                     <div class="tab-pane fade" id="preferences" role="tabpanel">
                         <div class="card shadow-sm">
                             <div class="card-header">
@@ -490,14 +492,11 @@ if ($isDemo) {
                             </div>
                         </div>
                     </div>
-                </div>
-            <?php endif; ?>
+                </div>-->
+            <?php endif; ?> 
 
-            <!-- Danger Zone removed (not shown for demo users) -->
         </div>
     </div>
-
-    <!-- Delete account modal removed -->
 
     <?php include '../includes/footer.php'; ?>
 
