@@ -105,3 +105,4 @@ function proceedToLeisurePayment() {
     bootstrap.Modal.getInstance(document.getElementById('leisureBookingModal')).hide();
     proceedToPayment(orderDetails);
 }
+
