@@ -72,7 +72,7 @@
   </div>
   <div class="col-md-3">
     <label for="inputPassword4" class="form-label">Phone Number</label>
-    <input type="number" class="form-control" id="phone-number" placeholder="Enater Your Phone Number" name="phone_number" required>
+    <input type="text" class="form-control" id="phone-number" placeholder="Enater Your Phone Number" name="phone_number" required>
   </div>
   <div class="col-md-3">
     <label for="inputPassword4" class="form-label">Number of Members</label>
@@ -104,7 +104,7 @@
   </div>
   <div class="col-md-3">
     <label for="inputCity" class="form-label">CVV</label>
-    <input type="text" class="form-control" id="number" placeholder="CVV" name="cvv" required>
+    <input type="text" class="form-control" id="number" placeholder="cvv" name="cvv" required>
   </div>
   <div class="col-12">
   </div>
