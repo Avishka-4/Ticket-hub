@@ -114,12 +114,6 @@ CREATE TABLE IF NOT EXISTS food_festivals (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Sample Food Festivals
-INSERT INTO food_festivals (title, description, venue, festival_date, start_time, end_time, entry_fee, featured, cuisines, status) VALUES
-('Street Food Festival', 'Experience the best street food from local vendors!', 'Central Park', '2025-11-15', '11:00:00', '21:00:00', 5.00, TRUE, 'Street Tacos, Gourmet Burgers, Asian Fusion, Desserts', 'upcoming'),
-('International Food Fair', 'A world tour of flavors under one roof!', 'City Convention Center', '2025-12-01', '10:00:00', '20:00:00', 10.00, FALSE, 'Italian, Chinese, Mexican, Indian, Thai', 'upcoming'),
-('Sweet Treats Festival', 'Indulge in the citys best desserts!', 'Riverside Park', '2025-12-20', '12:00:00', '22:00:00', 8.00, FALSE, 'Cakes, Ice Cream, Chocolates, Pastries', 'upcoming');
-
 -- Food items table
 CREATE TABLE IF NOT EXISTS food_items (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -187,11 +181,27 @@ CREATE TABLE IF NOT EXISTS activity_logs (
     FOREIGN KEY (admin_id) REFERENCES admins(id) ON DELETE SET NULL
 );
 
+-- Create password_resets table
+CREATE TABLE IF NOT EXISTS password_resets (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    reset_code VARCHAR(6) NOT NULL,
+    reset_token VARCHAR(64) NOT NULL,
+    expires_at DATETIME NOT NULL,
+    is_used TINYINT(1) DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    INDEX idx_reset_token (reset_token),
+    INDEX idx_user_id (user_id),
+    INDEX idx_expires_at (expires_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+ALTER TABLE password_resets 
+ADD UNIQUE KEY unique_active_reset (user_id, is_used);
+
 -- Sample users (password: password)
 INSERT INTO users (first_name, last_name, email, phone, password, date_of_birth, gender) VALUES
 ('Demo', 'User', 'demo@tickethub.com', '+1234567890', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '1990-01-01', 'prefer_not_to_say'),
-('John', 'Doe', 'john@example.com', '+1234567891', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '1985-05-15', 'male'),
-('Jane', 'Smith', 'jane@example.com', '+1234567892', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '1992-08-22', 'female');
 
 -- Sample events
 INSERT INTO events (
@@ -281,6 +291,4 @@ INSERT INTO tours (title, location, duration, price, description, image, date, t
 
 -- Sample admins (password hash corresponds to 'password')
 INSERT INTO admins (username, email, password, full_name, role) VALUES
-('admin', 'admin@tickethub.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'System Administrator', 'super_admin'),
-('manager', 'manager@tickethub.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Event Manager', 'manager'),
-('support', 'support@tickethub.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Support Staff', 'admin');
+('admin', 'admin@tickethub.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'System Administrator', 'super_admin')

@@ -10,7 +10,7 @@ ini_set('display_errors', 1);
 
 // Compute a robust base URL (handles spaces in folder names)
 $documentRoot = realpath($_SERVER['DOCUMENT_ROOT']);
-$projectRoot = realpath(dirname(__DIR__)); // one level up from /pages
+$projectRoot = realpath(dirname(__DIR__)); 
 $baseUrl = rtrim(str_replace('\\', '/', str_replace($documentRoot, '', $projectRoot)), '/') . '/';
 
 // Helper to version assets for cache-busting using file modification time
@@ -49,6 +49,7 @@ if (empty($festivals) && !isset($error)) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="<?php echo versioned_rel('../assets/css/style.css'); ?>">
+    <link rel="stylesheet" href="../assets/css/index.css">
     <!-- Aggressively preload ALL images with multiple methods -->
     <link rel="preload" as="image" href="../assets/images/foods/header-hero.jpg">
     <link rel="preload" as="image" href="../assets/images/foods/food-fest-1.jpg">
@@ -211,6 +212,32 @@ if (empty($festivals) && !isset($error)) {
             transform: translateY(-2px) !important;
             box-shadow: 0 5px 15px rgba(13, 110, 253, 0.15) !important;
         }
+
+        /* .nav-item{
+            margin-left: 15px;
+        }
+
+        .navbar .navbar-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #007bff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin-left: 35px;
+        }
+
+        .nav-link {
+            font-weight: 200;
+            color: var(--dark-color) !important;
+            margin: 0 3px;
+            border-radius: 6px;
+            padding: 8px 16px !important;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+        } */
     </style>
 </head>
 <body class="bg-light">
@@ -283,7 +310,7 @@ if (empty($festivals) && !isset($error)) {
                     </div>
                     <img src="../assets/images/foods/food-fest-1.jpg" class="card-img-top" alt="Asian Street Food Festival" loading="eager">
                     <div class="card-body">
-                        <h5 class="card-title">Culinary Art Food Expo (CAFE)</h5>
+                        <h5 class="card-title">Culinary Art Food Expo </h5>
                         <p class="mb-2">
                             <i class="fas fa-map-marker-alt me-2 text-danger"></i>BMICH
                         </p>
@@ -296,7 +323,6 @@ if (empty($festivals) && !isset($error)) {
                         <div class="mb-3">
                             <span class="cuisine-tag">Asian Fusion</span>
                             <span class="cuisine-tag">Street Food</span>
-                            <span class="cuisine-tag">Culinary Competitions</span>
                         </div>
                             <button class="btn btn-outline-primary w-100 btn-details" 
                                 onclick="showFestivalDetails('Culinary Art Food Expo (CAFE)', 'Join us for an extraordinary culinary journey at CAFE 2025! Experience the finest selection of international and local cuisine, live cooking demonstrations by renowned chefs, and interactive food workshops. This premier food event brings together over 50 vendors showcasing their signature dishes, innovative food concepts, and culinary expertise.')"
@@ -375,7 +401,7 @@ if (empty($festivals) && !isset($error)) {
                     <div class="card-body">
                         <h5 class="card-title">Fairway Colombo Street Food Festival</h5>
                         <p class="mb-2">
-                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Hospital Street near the Dutch Hospital , Colombo</p>
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Hospital Street (Dutch Hospital) , Colombo</p>
                         <p class="mb-2">
                             <i class="fas fa-calendar me-2 text-primary"></i>December 15, 2025
                         </p>
@@ -402,9 +428,9 @@ if (empty($festivals) && !isset($error)) {
                 <div class="card festival-card shadow-sm">
                     <img src="../assets/images/foods/food-fest-5.jpg" class="card-img-top" alt="International Food Fair" loading="eager">
                     <div class="card-body">
-                        <h5 class="card-title">Spicy Street Food Festival</h5>
+                        <h5 class="card-title">Spicy Street Food Festival 2026 (SSFF) </h5>
                         <p class="mb-2">
-                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Diyatha Uyana , Battaramulla
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Diyatha Uyana road , Battaramulla
                         </p>
                         <p class="mb-2">
                             <i class="fas fa-calendar me-2 text-primary"></i>December 30, 2025
@@ -416,7 +442,7 @@ if (empty($festivals) && !isset($error)) {
                             <span class="cuisine-tag">Foods</span>
                             <span class="cuisine-tag">International</span>
                             <span class="cuisine-tag">Games</span>
-                            <span class="cuisine-tag">Music</span>
+                            
                         </div>
                             <button class="btn btn-outline-primary w-100 btn-details" 
                                 onclick="showFestivalDetails('Spicy Street Food Festival', 'Heat up your taste buds at the Spicy Street Food Festival in Diyatha Uyana! This exciting event celebrates the spicier side of street food culture, featuring vendors specializing in hot and flavorful dishes from around Sri Lanka and beyond. Challenge yourself with different levels of spiciness, from mild to extreme. Enjoy cooking competitions, spice mixing demonstrations, and cool refreshments to balance the heat. A perfect event for spicy food lovers and adventure seekers!')"
@@ -446,6 +472,21 @@ if (empty($festivals) && !isset($error)) {
                     <div class="mb-4">
                         <h6 class="fw-bold">Description</h6>
                         <div id="modalDescription" class="text-muted mb-4"></div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h6 class="fw-bold">Contact Information</h6>
+                        <ul class="list-unstyled text-muted">
+                            <li><i class="fas fa-phone me-2"></i><span id="modalContact">Contact numbers will appear here</span></li>
+                            <li><i class="fas fa-envelope me-2"></i><span id="modalEmail">Email will appear here</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4">
+                        <h6 class="fw-bold">Ticket Prices</h6>
+                        <ul class="list-unstyled text-muted">
+                            <li id="modalPrices">Price information will appear here</li>
+                        </ul>
                     </div>
                     
                     <?php if (isset($_SESSION['user_id'])): ?>
@@ -485,6 +526,47 @@ if (empty($festivals) && !isset($error)) {
             // Update modal content
             document.getElementById('modalTitle').textContent = title;
             document.getElementById('modalDescription').textContent = description;
+
+            // Set contact information based on festival
+            let contact = '';
+            let email = '';
+            let prices = '';
+
+            switch(title) {
+                case 'Culinary Art Food Expo (CAFE)':
+                    contact = '+94 11 2456789 - Saman, +94 77 1234567 - Lionel';
+                    email = 'cafe@tickethub.lk';
+                    prices = 'Regular: Rs. 1000<br>VIP: Rs. 2500<br>Children (under 12): Rs. 500';
+                    break;
+                case 'Grand Trunk Road Food Fest':
+                    contact = '+94 11 2789456 - Mahinda, +94 76 8901234 - B.K.Perera';
+                    email = 'gtrfest@tickethub.lk';
+                    prices = 'Regular: Rs. 800<br>VIP: Rs. 2000<br>Children (under 12): Free';
+                    break;
+                case 'Colombo Flavour Fiesta':
+                    contact = '+94 11 2345678 - Sunil, +94 75 6789012 - Ranil';
+                    email = 'flavourfiesta@tickethub.lk';
+                    prices = 'Regular: Rs. 750<br>VIP: Rs. 1800<br>Family Pack (4 persons): Rs. 2500';
+                    break;
+                case 'Fairway Colombo Street Food Festival':
+                    contact = '+94 11 2567890 - Sumedha, +94 78 3456789 - Saman';
+                    email = 'fairwayfest@tickethub.lk';
+                    prices = 'Regular: Rs. 500<br>VIP: Rs. 1500<br>Children (under 12): Free';
+                    break;
+                case 'Spicy Street Food Festival':
+                    contact = '+94 11 2678901 - Saduni, +94 71 4567890 - Pahan';
+                    email = 'spicyfest@tickethub.lk';
+                    prices = 'Regular: Rs. 600<br>VIP: Rs. 1600<br>Family Pack (4 persons): Rs. 2000';
+                    break;
+                default:
+                    contact = 'Contact information not available';
+                    email = 'info@tickethub.lk';
+                    prices = 'Price information not available';
+            }
+
+            document.getElementById('modalContact').textContent = contact;
+            document.getElementById('modalEmail').textContent = email;
+            document.getElementById('modalPrices').innerHTML = prices;
         }
         
         // Debugging helper

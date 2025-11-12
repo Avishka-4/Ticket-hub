@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Places & Tours - TicketHub</title>
+    <title>Places & Best Destinations in Sri Lanka- TicketHub</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,9 +22,9 @@
         <div class="container">
             <div class="text-center">
                 <h1 class="text-5xl font-bold mb-4">
-                    <i class="fas fa-map-marked-alt me-3"></i>Places & Tours
+                    <i class="fas fa-map-marked-alt me-3"></i>Places & Best Destinations in Sri Lanka
                 </h1>
-                <p class="text-xl mb-6">Discover amazing destinations and book unforgettable tours</p>
+                <p class="text-xl mb-6">Discover amazing destinations and get unforgettable experience</p>
             </div>
         </div>
     </section>
@@ -63,34 +63,27 @@
                 <!-- Destination Card 1 -->
                 <div class="col-md-6 col-lg-4 mb-4" data-category="beaches">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                        <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-cyan-500 to-blue-500 d-flex align-items-center justify-content-center" style="height: 250px;">
-                                <i class="fas fa-umbrella-beach text-6xl text-white"></i>
-                            </div>
-                            <span class="badge bg-success position-absolute top-0 end-0 m-2">Featured</span>
+                        <div class="position-relative image-overlay">
+                            <img src="..\assets\images\places\ella.jpg" class="card-img-top" alt="Tropical Paradise Island">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Tropical Paradise Island</h5>
-                            <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Maldives
-                            </p>
+                            <h5 class="card-title fw-bold">Ella</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>5 Days / 4 Nights
                             </p>
-                            <p class="card-text">Experience crystal clear waters, white sandy beaches, and luxury overwater bungalows in this tropical paradise.</p>
-                            
+                            <p class="card-text">Ella is a small, picturesque town nestled in the highlands of Sri Lanka, known for its breathtaking scenery and laid-back, bohemian atmosphere.</p>
+                            <br>
                             <div class="tour-highlights mb-3">
-                                <small class="fw-bold text-muted">Tour Highlights:</small>
+                                <small class="fw-bold text-muted">Destination Highlights:</small>
                                 <ul class="small mt-1 mb-0">
-                                    <li>Private beach access</li>
-                                    <li>Snorkeling & diving</li>
-                                    <li>Sunset cruise</li>
-                                    <li>Spa treatments</li>
+                                    <li>Historical</li>
+                                    <li>Adventure</li>
+                                    <li>Photography</li>
                                 </ul>
                             </div>
-                            
+                            <br>
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $1,299</span>
+                                <span class="fw-bold text-success fs-5">From Rs.180,000.00</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -100,9 +93,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openPlaceBooking('Tropical Paradise Island', 1299)">
-                                <i class="fas fa-plane me-2"></i>Book Tour
-                            </button>
+                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -110,34 +101,27 @@
                 <!-- Destination Card 2 -->
                 <div class="col-md-6 col-lg-4 mb-4" data-category="mountains">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                        <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-green-600 to-emerald-600 d-flex align-items-center justify-content-center" style="height: 250px;">
-                                <i class="fas fa-mountain text-6xl text-white"></i>
-                            </div>
-                            <span class="badge bg-info position-absolute top-0 end-0 m-2">Adventure</span>
+                        <div class="position-relative image-overlay">
+                            <img src="..\assets\images\places\mirissa.jpg" class="card-img-top" alt="Alpine Mountain Adventure">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Alpine Mountain Adventure</h5>
-                            <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Swiss Alps
-                            </p>
+                            <h5 class="card-title fw-bold">Mirissa</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>7 Days / 6 Nights
                             </p>
-                            <p class="card-text">Explore breathtaking mountain landscapes, pristine lakes, and charming alpine villages in the heart of the Swiss Alps.</p>
-                            
+                            <p class="card-text">It is approximately 150 kilometres (93 mi) south of Colombo and is situated at an elevation of 4 metres (13 ft) above sea level. Mirissa's beach and nightlife make it a popular tourist destination.</p>
+                            <br>
                             <div class="tour-highlights mb-3">
-                                <small class="fw-bold text-muted">Tour Highlights:</small>
+                                <small class="fw-bold text-muted">Destination Highlights:</small>
                                 <ul class="small mt-1 mb-0">
-                                    <li>Cable car rides</li>
-                                    <li>Hiking trails</li>
-                                    <li>Mountain lodges</li>
-                                    <li>Local cuisine</li>
+                                    <li>Adventure</li>
+                                    <li>Photography</li>
+                                    <li>Beach</li>
                                 </ul>
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $899</span>
+                                <span class="fw-bold text-success fs-5">From Rs.220,000.00</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -147,9 +131,7 @@
                                     <small class="text-muted ms-1">(4.7)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openPlaceBooking('Alpine Mountain Adventure', 899)">
-                                <i class="fas fa-plane me-2"></i>Book Tour
-                            </button>
+                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -157,34 +139,27 @@
                 <!-- Destination Card 3 -->
                 <div class="col-md-6 col-lg-4 mb-4" data-category="cities">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                        <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-purple-600 to-indigo-600 d-flex align-items-center justify-content-center" style="height: 250px;">
-                                <i class="fas fa-city text-6xl text-white"></i>
-                            </div>
-                            <span class="badge bg-warning position-absolute top-0 end-0 m-2">Popular</span>
+                        <div class="position-relative image-overlay">
+                            <img src="..\assets\images\places\hikkaduwa.jpg" class="card-img-top" alt="European Capital Cities">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">European Capital Cities</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Paris, London, Rome
-                            </p>
-                            <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>10 Days / 9 Nights
                             </p>
-                            <p class="card-text">Discover the rich history, culture, and cuisine of Europe's most iconic capitals on this comprehensive tour.</p>
-                            
+                            <p class="card-text">Hikkaduwa, in south-west of Sri Lanka, is a large costal tourist area, covering 11 different villages over six kilometres (31⁄2 miles) on the ocean, and three kilometres (2 miles) inland.</p>
+                            <br>
                             <div class="tour-highlights mb-3">
-                                <small class="fw-bold text-muted">Tour Highlights:</small>
+                                <small class="fw-bold text-muted">Destination Highlights:</small>
                                 <ul class="small mt-1 mb-0">
-                                    <li>Guided city tours</li>
-                                    <li>Museum visits</li>
-                                    <li>Local experiences</li>
-                                    <li>Historic landmarks</li>
+                                    <li>Photography</li>
+                                    <li>Adventure</li>
+                                    <li>Beach</li>
                                 </ul>
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $1,599</span>
+                                <span class="fw-bold text-success fs-5">From Rs.300,000.00</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -194,9 +169,7 @@
                                     <small class="text-muted ms-1">(4.8)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openPlaceBooking('European Capital Cities', 1599)">
-                                <i class="fas fa-plane me-2"></i>Book Tour
-                            </button>
+                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -204,34 +177,27 @@
                 <!-- Destination Card 4 -->
                 <div class="col-md-6 col-lg-4 mb-4" data-category="historical">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                        <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-yellow-600 to-orange-600 d-flex align-items-center justify-content-center" style="height: 250px;">
-                                <i class="fas fa-monument text-6xl text-white"></i>
-                            </div>
-                            <span class="badge bg-primary position-absolute top-0 end-0 m-2">Historical</span>
+                        <div class="position-relative image-overlay">
+                            <img src="..\assets\images\places\maligawa.jpg" class="card-img-top" alt="Ancient Wonders Explorer">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Ancient Wonders Explorer</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Egypt & Greece
-                            </p>
-                            <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>12 Days / 11 Nights
                             </p>
-                            <p class="card-text">Journey through time exploring ancient pyramids, temples, and archaeological wonders of two great civilizations.</p>
-                            
+                            <p class="card-text">The Sri Dalada Maligawa, or Temple of the Sacred Tooth Relic, is a Buddhist temple in Kandy, Sri Lanka, and a UNESCO World Heritage site.</p>
+                            <br>
                             <div class="tour-highlights mb-3">
-                                <small class="fw-bold text-muted">Tour Highlights:</small>
+                                <small class="fw-bold text-muted">Destination Highlights:</small>
                                 <ul class="small mt-1 mb-0">
-                                    <li>Pyramids of Giza</li>
-                                    <li>Acropolis of Athens</li>
-                                    <li>Nile River cruise</li>
-                                    <li>Expert guides</li>
+                                    <li>Historical</li>
+                                    <li>Cultural</li>
+                                    <li>Sacred</li>
                                 </ul>
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $1,899</span>
+                                <span class="fw-bold text-success fs-5">From Rs.200,000.00</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -241,9 +207,7 @@
                                     <small class="text-muted ms-1">(4.6)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openPlaceBooking('Ancient Wonders Explorer', 1899)">
-                                <i class="fas fa-plane me-2"></i>Book Tour
-                            </button>
+                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -251,34 +215,27 @@
                 <!-- Destination Card 5 -->
                 <div class="col-md-6 col-lg-4 mb-4" data-category="adventure">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                        <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-red-600 to-orange-600 d-flex align-items-center justify-content-center" style="height: 250px;">
-                                <i class="fas fa-fire text-6xl text-white"></i>
-                            </div>
-                            <span class="badge bg-danger position-absolute top-0 end-0 m-2">Extreme</span>
+                        <div class="position-relative image-overlay">
+                            <img src="..\assets\images\places\Arugam-bay.jpg" class="card-img-top" alt="Safari Adventure">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Safari Adventure</h5>
-                            <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Kenya & Tanzania
-                            </p>
+                            <h5 class="card-title fw-bold">Arugam Bay</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>8 Days / 7 Nights
                             </p>
-                            <p class="card-text">Experience the thrill of African wildlife up close in their natural habitat with guided safari tours and luxury lodges.</p>
-                            
+                            <p class="card-text">Arugam Bay is a charming coastal town on the eastern coast of Sri Lanka, renowned for its golden sandy beaches and world-class surf breaks.</p>
+                            <br>
                             <div class="tour-highlights mb-3">
-                                <small class="fw-bold text-muted">Tour Highlights:</small>
+                                <small class="fw-bold text-muted">Destination Highlights:</small>
                                 <ul class="small mt-1 mb-0">
-                                    <li>Big Five spotting</li>
-                                    <li>Serengeti plains</li>
-                                    <li>Luxury tented camps</li>
-                                    <li>Professional guides</li>
+                                    <li>Historical</li>
+                                    <li>Beach</li>
+                                    <li>Photography</li>
                                 </ul>
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $2,199</span>
+                                <span class="fw-bold text-success fs-5">From Rs.280,000.00</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -288,9 +245,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openPlaceBooking('Safari Adventure', 2199)">
-                                <i class="fas fa-plane me-2"></i>Book Tour
-                            </button>
+                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -298,34 +253,27 @@
                 <!-- Destination Card 6 -->
                 <div class="col-md-6 col-lg-4 mb-4" data-category="beaches">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                        <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-blue-600 to-teal-600 d-flex align-items-center justify-content-center" style="height: 250px;">
-                                <i class="fas fa-water text-6xl text-white"></i>
-                            </div>
-                            <span class="badge bg-info position-absolute top-0 end-0 m-2">Relaxing</span>
+                        <div class="position-relative image-overlay">
+                            <img src="..\assets\images\places\sigiriya.jpg" class="card-img-top" alt="Caribbean Island Hopping">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Caribbean Island Hopping</h5>
-                            <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Bahamas & Jamaica
-                            </p>
+                            <h5 class="card-title fw-bold">Sigiriya</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>6 Days / 5 Nights
                             </p>
-                            <p class="card-text">Relax on pristine beaches, enjoy water sports, and experience the vibrant culture of the Caribbean islands.</p>
-                            
+                            <p class="card-text">Sigiriya, a UNESCO World Heritage site in Sri Lanka, is an ancient rock fortress and palace built by King Kashyapa in the 5th century A.D.</p>
+                            <br>
                             <div class="tour-highlights mb-3">
-                                <small class="fw-bold text-muted">Tour Highlights:</small>
+                                <small class="fw-bold text-muted">Destination Highlights:</small>
                                 <ul class="small mt-1 mb-0">
-                                    <li>Beach resorts</li>
-                                    <li>Water activities</li>
-                                    <li>Cultural experiences</li>
-                                    <li>Local cuisine</li>
+                                    <li>Historical</li>
+                                    <li>Cultural</li>
+                                    <li>Photography</li>
                                 </ul>
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $999</span>
+                                <span class="fw-bold text-success fs-5">From Rs.230,000.00</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -335,9 +283,7 @@
                                     <small class="text-muted ms-1">(4.7)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openPlaceBooking('Caribbean Island Hopping', 999)">
-                                <i class="fas fa-plane me-2"></i>Book Tour
-                            </button>
+                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -352,7 +298,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">
-                        <i class="fas fa-plane me-2"></i>Book Your Tour
+                        <i class="fas fa-plane me-2"></i>Book Your Adventure:
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
