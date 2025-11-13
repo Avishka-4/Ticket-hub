@@ -24,10 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             FROM password_resets pr 
             JOIN users u ON pr.user_id = u.id 
             WHERE pr.reset_token = ? 
-            AND pr.reset_code = ?
-            AND pr.is_used = 0
+            AND pr.reset_code = ? 
+            AND pr.is_used = 0 
         ");
-        
         $stmt->execute([$token, $resetCode]);
         $resetData = $stmt->fetch();
 
@@ -43,10 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header('Location: ../pages/forgot_password.php?error=Reset code has expired. Please request a new one.');
             exit();
         }
-
-        // Code is valid, redirect to reset password page
-        $_SESSION['reset_user_id'] = $resetData['user_id'];
-        // ... rest of your code
         
         // Code is valid, redirect to reset password page
         $_SESSION['reset_user_id'] = $resetData['user_id'];

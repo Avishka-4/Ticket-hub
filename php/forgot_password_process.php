@@ -1,7 +1,6 @@
 <?php
-
 require_once 'config.php';
-require_once 'email_config.php'; 
+require_once 'email_config.php'; // You'll need to create this file
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = trim($_POST['email']);
@@ -24,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $user = $stmt->fetch();
         
         if (!$user) {
+            // Don't reveal if email exists or not for security
             header('Location: ../pages/forgot_password.php?success=If your email is registered, you will receive a reset code shortly.');
             exit();
         }
@@ -45,20 +45,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 is_used = 0
         ");
         $stmt->execute([$user['id'], $resetCode, $resetToken, $expiryTime]);
-
         
-        /// Send email with reset code
-        $emailSent = sendResetEmail($user['email'], $user['first_name'], $resetCode, $resetToken);
+        // Send email with reset code
+    $emailSent = sendResetEmail($user['email'], $user['first_name'], $resetCode, $resetToken);
 
-        if ($emailSent) {
-            header('Location: ../pages/forgot_password.php?success=If your email is registered, you will receive a reset code shortly.');
-            exit();
-        } else {
-            header('Location: ../pages/forgot_password.php?success=Failed to send reset code. Please try again.');
-            exit();
-        }
+    if ($emailSent) {
+        header('Location: ../pages/forgot_password.php?success=If your email is registered, you will receive a reset code shortly.');
+        exit();
+    } else {
+        error_log("Failed to send reset email to: " . $user['email']);
+        header('Location: ../pages/forgot_password.php?error=Failed to send reset code. Please try again.');
+        exit();
+    }
         
     } catch (PDOException $e) {
+        error_log("Password reset error: " . $e->getMessage());
         header('Location: ../pages/forgot_password.php?error=An error occurred. Please try again later.');
         exit();
     }
@@ -142,8 +143,7 @@ function sendResetEmail($to, $firstName, $resetCode, $resetToken) {
         return $mail->send();
         
     } catch (Exception $e) {
-        // Use error_log instead of debug_log
-        error_log("Email sending failed: " . $e->getMessage());
+        error_log("Email sending failed: " . $mail->ErrorInfo);
         return false;
     }
 }

@@ -33,14 +33,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         // Verify token is still valid
         $stmt = $pdo->prepare("
-            SELECT * FROM password_resets 
-            WHERE reset_token = ? 
-            AND user_id = ? 
-            AND is_used = 0 
+        SELECT * FROM password_resets 
+        WHERE reset_token = ? 
+        AND user_id = ? 
+        AND is_used = 0
         ");
-        $stmt->execute([$token, $userId]);
-        $resetData = $stmt->fetch();
-        
         $stmt->execute([$token, $userId]);
         $resetData = $stmt->fetch();
 

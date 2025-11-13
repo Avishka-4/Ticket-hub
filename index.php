@@ -19,7 +19,6 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
         $projectRoot = realpath(__DIR__);
         $baseUrl = rtrim(str_replace('\\', '/', str_replace($documentRoot, '', $projectRoot)), '/') . '/';
     ?>
-    <link rel="stylesheet" href="<?php echo $baseUrl; ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo $baseUrl; ?>assets/css/index.css">
 </head>
 <body>
@@ -107,7 +106,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3">Sports Events</h3>
-                        <p class="text-gray-600 mb-4">Get tickets for cricket, football, and other sports</p>
+                        <p class="text-gray-600 mb-4">Get tickets for cricket, football, tennis and other sports</p>
                         <a href="pages/sports.php" class="btn btn-primary">Sports Tickets</a>
                     </div>
                 </div>
@@ -131,8 +130,8 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3">Food & Beverages</h3>
-                        <p class="text-gray-600 mb-4">Order delicious food and beverages online</p>
-                        <a href="pages/food.php" class="btn btn-primary">Order Now</a>
+                        <p class="text-gray-600 mb-4">Your guide to the best culinary local festivals</p>
+                        <a href="pages/food.php" class="btn btn-primary">Reserve Tickets</a>
                     </div>
                 </div>
 
@@ -162,10 +161,10 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                         <div class="card-body">
                             <h5 class="card-title">
                                 <i class="fas fa-star text-warning"></i>
-                                Rock Concert 2024
+                                Deep Jungle Music Festival – Ella
                             </h5>
-                            <p class="card-text">Experience the best rock music with top artists performing live.</p>
-                            <small class="text-muted">Starting from $25</small>
+                            <p class="card-text">Experience the best outdoor music event with top artists performing live.</p>
+                            <small class="text-muted">Starting from 8,500LKR</small>
                         </div>
                     </div>
                 </div>
@@ -174,10 +173,10 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                         <div class="card-body">
                             <h5 class="card-title">
                                 <i class="fas fa-trophy text-warning"></i>
-                                Championship Final
+                                Sri Lanka vs India - ODI Match Sri Lanka
                             </h5>
                             <p class="card-text">Don't miss the most anticipated sports event of the year.</p>
-                            <small class="text-muted">Starting from $50</small>
+                            <small class="text-muted">Starting from 2,500LKR</small>
                         </div>
                     </div>
                 </div>
@@ -186,10 +185,10 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                         <div class="card-body">
                             <h5 class="card-title">
                                 <i class="fas fa-camera text-warning"></i>
-                                Island Adventure
+                                Scuba Diving Adventure
                             </h5>
-                            <p class="card-text">Explore beautiful islands with our exclusive tour packages.</p>
-                            <small class="text-muted">Starting from $150</small>
+                            <p class="card-text">Explore beautiful diving experience with our exclusive tour packages.</p>
+                            <small class="text-muted">Starting from 10,000LKR</small>
                         </div>
                     </div>
                 </div>

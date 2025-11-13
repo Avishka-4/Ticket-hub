@@ -24,37 +24,18 @@ try {
         SELECT pr.*, u.email, u.first_name 
         FROM password_resets pr 
         JOIN users u ON pr.user_id = u.id 
-        WHERE pr.reset_token = ? AND pr.is_used = 0
+        WHERE pr.reset_token = ? AND pr.is_used = 0 
     ");
     $stmt->execute([$token]);
     $resetData = $stmt->fetch();
     
     if (!$resetData) {
-        header('Location: forgot_password.php?error=Reset link is invalid or has already been used.');
+        header('Location: forgot_password.php?error=Reset link has expired or is invalid. Please request a new one.');
         exit();
     }
-    
-    // Manual expiry check
-    $expires_at = strtotime($resetData['expires_at']);
-    $current_time = time();
-    if ($current_time > $expires_at) {
-        header('Location: forgot_password.php?error=Reset link has expired. Please request a new one.');
-        exit();
-    }
-    
 } catch (PDOException $e) {
     header('Location: forgot_password.php?error=An error occurred. Please try again.');
     exit();
-}
-
-// Helper function to mask email
-function maskEmail($email) {
-    $parts = explode('@', $email);
-    $name = $parts[0];
-    $domain = $parts[1];
-    
-    $maskedName = substr($name, 0, 2) . str_repeat('*', strlen($name) - 2);
-    return $maskedName . '@' . $domain;
 }
 ?>
 <!DOCTYPE html>
@@ -196,7 +177,6 @@ function maskEmail($email) {
                 timeLeft--;
             }
         }, 1000);
-        
         // Code input handling
         const codeInputs = document.querySelectorAll('.code-input');
         
@@ -293,3 +273,15 @@ function maskEmail($email) {
     </script>
 </body>
 </html>
+
+<?php
+// Helper function to mask email
+function maskEmail($email) {
+    $parts = explode('@', $email);
+    $name = $parts[0];
+    $domain = $parts[1];
+    
+    $maskedName = substr($name, 0, 2) . str_repeat('*', strlen($name) - 2);
+    return $maskedName . '@' . $domain;
+}
+?>
