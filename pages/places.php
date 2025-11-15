@@ -147,12 +147,7 @@
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>10 Days / 9 Nights
                             </p>
-                            <p class="card-text">
-
-
-+8
-Hikkaduwa Beach - The Best Tourist Destination in Sri Lanka
-Hikkaduwa is a popular coastal town in Sri Lanka known for its beautiful beaches, vibrant surfing and diving scenes, and a protected coral reef. Located about 100km south of Colombo, it attracts tourists with its laid-back yet energetic atmosphere, opportunities for seeing turtles at Turtle Beach.</p>
+                            <p class="card-text">The Best Tourist Destination in Sri Lanka. Hikkaduwa is a popular coastal town in Sri Lanka known for its beautiful beaches, vibrant surfing and diving scenes, and a protected coral reef. Located about 100km south of Colombo, it attracts tourists with its laid-back yet energetic atmosphere, opportunities for seeing turtles at Turtle Beach.</p>
                             <br>
                             <div class="tour-highlights mb-3">
                                 <small class="fw-bold text-muted">Destination Highlights:</small>
@@ -164,7 +159,7 @@ Hikkaduwa is a popular coastal town in Sri Lanka known for its beautiful beaches
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From Rs.300,000.00</span>
+                                <span class="fw-bold text-success fs">From Rs.5,000.00 per day for one person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>

@@ -15,6 +15,7 @@
     $num_rooms      = $_POST['num_rooms']?? '';
     $d_date         = $_POST['d_date'];
     $r_date         = $_POST['r_date'];
+    $num_nights    = $_POST['num_nights']?? '';
     $p_method       = $_POST['p_method'];
     $account_number = $_POST['account_number'];
     $account_name   = $_POST['account_name'];
@@ -22,11 +23,8 @@
     $total_price    = $_POST['total_price']?? '';
 
 
-    $sql = "INSERT INTO tbl_order (full_name,email_address,phone_number,members,num_rooms,d_date,r_date,p_method,account_number,account_name,cvv,total_price)
-    VALUES ('$full_name','$email_address','$phone_number','$members','$num_rooms','$d_date','$r_date','$p_method','$account_number','$account_name','$cvv','$total_price')";
-
-
-
+    $sql = "INSERT INTO tbl_order (full_name,email_address,phone_number,members,num_rooms,d_date,r_date,num_nights,p_method,account_number,account_name,cvv,total_price)
+    VALUES ('$full_name','$email_address','$phone_number','$members','$num_rooms','$d_date','$r_date','$num_nights','$p_method','$account_number','$account_name','$cvv','$total_price')";
 
     $result = mysqli_query($con,$sql);
     if($result){
@@ -35,6 +33,8 @@
       die(mysqli_error($con));
     } 
   }
+
+  $con->close();
 
 ?>
 
@@ -91,15 +91,19 @@
     <label for="inputPassword4" class="form-label">Number of Rooms(1 Romm for 4 members)</label>
     <input type="number" min="1" max="5" class="form-control" id="num_rooms" oninput="calculateTotal()" name="rooms" required>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-3">
     <label for="inputEmail4" class="form-label">Departure Date</label>
     <input type="date" class="form-control" id="date" name="d_date" required>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-3">
     <label for="inputPassword4" class="form-label">Return Date</label>
     <input type="date" class="form-control" id="date" name="r_date" required>
   </div>
-   <div class="col-md-4">
+  <div class="col-md-3">
+    <label for="inputPassword4" class="form-label">Number of Nigths</label>
+    <input type="number" min="1" max="30" class="form-control" id="nights" name="num_nights" oninput="calculateTotal()" required>
+  </div>
+   <div class="col-md-3">
     <label for="inputState" class="form-label">Payment Mothod</label>
     <select id="inputState" class="form-select" name="p_method" required>
       <option selected>Choose Your Payment Mothod</option>
@@ -121,7 +125,7 @@
   </div>
   <div class="col-12">
     <label>Total Amount(LKR)</label>
-  <input type="text" id="total" readonly name="total_price">
+  <input type="text" id="total" class="form-control" readonly name="total_price">
   </div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Pay Now</button>
@@ -138,8 +142,9 @@
       function calculateTotal() {
         let members = parseInt(document.getElementById("members").value) || 0;
         let rooms = parseInt(document.getElementById("num_rooms").value) || 0;
+        let nights = parseInt(document.getElementById("nights").value) || 0;
 
-        let total = (members * member_price) + (rooms * room_price);
+        let total = [(members * member_price) + (rooms * room_price)]*nights;
 
         document.getElementById("total").value = total.toLocaleString() + " LKR";
     }
