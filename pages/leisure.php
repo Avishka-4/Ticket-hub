@@ -33,7 +33,6 @@
 </head>
 <body>
     <?php include '../includes/navbar.php'; ?>
-
     
     <!-- Hero Section -->
     <section id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
