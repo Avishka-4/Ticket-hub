@@ -109,7 +109,7 @@
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>7 Days / 6 Nights
                             </p>
-                            <p class="card-text">It is approximately 150 kilometres (93 mi) south of Colombo and is situated at an elevation of 4 metres (13 ft) above sea level. Mirissa's beach and nightlife make it a popular tourist destination.</p>
+                            <p class="card-text">Mirissa is a popular coastal town on Sri Lanka's south coast known for its beautiful beaches, whale watching tours, and surfing. It features popular spots like Mirissa Beach, the secluded Secret Beach, Parrot Rock for sunset views, and Coconut Tree Hill.</p>
                             <br>
                             <div class="tour-highlights mb-3">
                                 <small class="fw-bold text-muted">Destination Highlights:</small>
@@ -147,7 +147,12 @@
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>10 Days / 9 Nights
                             </p>
-                            <p class="card-text">Hikkaduwa, in south-west of Sri Lanka, is a large costal tourist area, covering 11 different villages over six kilometres (31⁄2 miles) on the ocean, and three kilometres (2 miles) inland.</p>
+                            <p class="card-text">
+
+
++8
+Hikkaduwa Beach - The Best Tourist Destination in Sri Lanka
+Hikkaduwa is a popular coastal town in Sri Lanka known for its beautiful beaches, vibrant surfing and diving scenes, and a protected coral reef. Located about 100km south of Colombo, it attracts tourists with its laid-back yet energetic atmosphere, opportunities for seeing turtles at Turtle Beach.</p>
                             <br>
                             <div class="tour-highlights mb-3">
                                 <small class="fw-bold text-muted">Destination Highlights:</small>

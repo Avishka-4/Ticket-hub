@@ -8,19 +8,22 @@
   }
 
   if($_SERVER['REQUEST_METHOD']==='POST'){
-    $full_name = $_POST['full_name'];
-    $email_address = $_POST['email_address'];
-    $phone_number = $_POST['phone_number'];
-    $members = $_POST['members'];
-    $d_date = $_POST['d_date'];
-    $r_date = $_POST['r_date'];
-    $p_method = $_POST['p_method'];
+    $full_name      = $_POST['full_name'];
+    $email_address  = $_POST['email_address'];
+    $phone_number   = $_POST['phone_number'];
+    $members        = $_POST['members'];
+    $num_rooms      = $_POST['num_rooms']?? '';
+    $d_date         = $_POST['d_date'];
+    $r_date         = $_POST['r_date'];
+    $p_method       = $_POST['p_method'];
     $account_number = $_POST['account_number'];
-    $account_name = $_POST['account_name'];
-    $cvv = $_POST['cvv'];
+    $account_name   = $_POST['account_name'];
+    $cvv            = $_POST['cvv'];
 
-    $sql = "INSERT INTO `tbl_order`(full_name,email_address,phone_number,members,d_date,r_date,p_method,account_number,account_name,cvv) 
-    VALUES('$full_name','$email_address','$phone_number','$members','$d_date','$r_date','$p_method','$account_number','$account_name','$cvv')";
+
+    $sql = "INSERT INTO tbl_order (full_name,email_address,phone_number,members,num_rooms,d_date,r_date,p_method,account_number,account_name,cvv)
+    VALUES ('$full_name','$email_address','$phone_number','$members','$num_rooms','$d_date','$r_date','$p_method','$account_number','$account_name','$cvv')";
+
 
 
 
@@ -79,14 +82,18 @@
     <input type="number" min="1" max="20" class="form-control" id="members" name="members" required>
   </div>
   <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Number of Rooms(1 Romm for 4 members)</label>
+    <input type="number" min="1" max="5" class="form-control" id="num_rooms" name="members" required>
+  </div>
+  <div class="col-md-4">
     <label for="inputEmail4" class="form-label">Departure Date</label>
     <input type="date" class="form-control" id="date" name="d_date" required>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-4">
     <label for="inputPassword4" class="form-label">Return Date</label>
     <input type="date" class="form-control" id="date" name="r_date" required>
   </div>
-   <div class="col-md-6">
+   <div class="col-md-4">
     <label for="inputState" class="form-label">Payment Mothod</label>
     <select id="inputState" class="form-select" name="p_method" required>
       <option selected>Choose Your Payment Mothod</option>
