@@ -109,6 +109,7 @@ $success = isset($_GET['success']) ? $_GET['success'] : '';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 <body class="bg-gray-100">
     <?php include '../includes/navbar.php'; ?>
@@ -210,8 +211,8 @@ $success = isset($_GET['success']) ? $_GET['success'] : '';
                             <i class="fas fa-info-circle me-2"></i>Demo Credentials
                         </h6>
                         <small class="text-muted">
-                            <strong>Email:</strong> iamnobody0212@gmail.com<br>
-                            <strong>Password:</strong> kavindu123
+                            <strong>Email:</strong> demo@tickethub.com<br>
+                            <strong>Password:</strong> password
                         </small>
                     </div>
                 </div>

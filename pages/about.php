@@ -11,6 +11,7 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 <body class="bg-gray-50">
     <?php include '../includes/navbar.php'; ?>
@@ -50,7 +51,7 @@ session_start();
                 <div class="col-lg-6 mb-8 mb-lg-0">
                     <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Story</h2>
                     <p class="text-gray-600 mb-4">
-                        Founded in 2020, TicketHub began with a simple vision: to make discovering and booking 
+                        Founded in 2025, TicketHub began with a simple vision: to make discovering and booking 
                         amazing experiences as easy as a few clicks. What started as a small startup has grown 
                         into a global platform connecting millions of people with their perfect entertainment.
                     </p>
@@ -72,7 +73,7 @@ session_start();
                                      alt="Concert" class="img-fluid rounded shadow">
                             </div>
                             <div class="col-6">
-                                <img src="https://images.unsplash.com/photo-1489599511986-e6d8e97fbce6?w=300&h=300&fit=crop" 
+                                <img src="../assets/images/theater.jpg" 
                                      alt="Theater" class="img-fluid rounded shadow">
                             </div>
                             <div class="col-6">
@@ -180,8 +181,8 @@ session_start();
                             </div>
                             <h4 class="font-bold mb-3">Partnership</h4>
                             <p class="text-gray-600">
-                                We build lasting relationships with event organizers, 
-                                venues, and communities.
+                                We collaborate closely with event organizers, venues, and 
+                                communities to create lasting connections.
                             </p>
                         </div>
                     </div>
@@ -206,42 +207,12 @@ session_start();
                 <div class="row g-4">
                     <div class="col-lg-3 col-md-6">
                         <div class="team-card text-center">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" 
-                                 alt="CEO" class="team-photo mb-3">
-                            <h5 class="font-bold">John Smith</h5>
-                            <p class="text-primary mb-2">CEO & Founder</p>
+                            <img src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=200&h=200&fit=crop&crop=face" 
+                                 alt="Head of Marketing" class="team-photo mb-3 img-fluid d-block mx-auto">
+                            <h5 class="font-bold">Pubudu Sampath</h5>
+                            <p class="text-primary mb-2">Marketing Director</p>
                             <p class="text-gray-600 small">
-                                Visionary leader with 15+ years in the entertainment industry.
-                            </p>
-                            <div class="social-links">
-                                <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" class="text-primary"><i class="fab fa-twitter"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-card text-center">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b977?w=200&h=200&fit=crop&crop=face" 
-                                 alt="CTO" class="team-photo mb-3">
-                            <h5 class="font-bold">Sarah Johnson</h5>
-                            <p class="text-primary mb-2">CTO</p>
-                            <p class="text-gray-600 small">
-                                Tech innovator driving our platform's cutting-edge features.
-                            </p>
-                            <div class="social-links">
-                                <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" class="text-primary"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-card text-center">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" 
-                                 alt="Head of Marketing" class="team-photo mb-3">
-                            <h5 class="font-bold">Mike Chen</h5>
-                            <p class="text-primary mb-2">Head of Marketing</p>
-                            <p class="text-gray-600 small">
-                                Creative strategist connecting events with their perfect audiences.
+                                Strategic thinker driving growth through creative marketing and data-driven insights.
                             </p>
                             <div class="social-links">
                                 <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
@@ -252,11 +223,41 @@ session_start();
                     <div class="col-lg-3 col-md-6">
                         <div class="team-card text-center">
                             <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face" 
-                                 alt="Customer Success" class="team-photo mb-3">
-                            <h5 class="font-bold">Emily Davis</h5>
-                            <p class="text-primary mb-2">Customer Success</p>
+                            alt="Head of Marketing" class="team-photo mb-3 img-fluid d-block mx-auto">
+                            <h5 class="font-bold">Nisalka Hettiarachchi</h5>
+                            <p class="text-primary mb-2">Digital Marketing Specialist</p>
                             <p class="text-gray-600 small">
-                                Dedicated to ensuring every customer has an amazing experience.
+                                Passionate about connecting brands with audiences through engaging online campaigns.
+                            </p>
+                            <div class="social-links">
+                                <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="text-primary"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-card text-center">
+                            <img src="https://images.unsplash.com/photo-1581382575275-97901c2635b7?w=200&h=200&fit=crop&crop=face" 
+                                 alt="Customer Success" class="team-photo mb-3 img-fluid d-block mx-auto">
+                            <h5 class="font-bold">Akila Perera</h5>
+                            <p class="text-primary mb-2">Brand Manager</p>
+                            <p class="text-gray-600 small">
+                                Focused on building strong brand identities and lasting relationships with clients.
+                            </p>
+                            <div class="social-links">
+                                <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="text-primary"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-card text-center">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" 
+                                 alt="Customer Success" class="team-photo mb-3 img-fluid d-block mx-auto">
+                            <h5 class="font-bold">Gamini Herath</h5>
+                            <p class="text-primary mb-2">Creative Designer</p>
+                            <p class="text-gray-600 small">
+                                Transforms ideas into impactful visuals that capture attention and emotion.
                             </p>
                             <div class="social-links">
                                 <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
@@ -314,7 +315,7 @@ session_start();
         .value-icon i {
             font-size: 2.5rem;
             background: linear-gradient(45deg, #007bff, #6f42c1);
-            -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         

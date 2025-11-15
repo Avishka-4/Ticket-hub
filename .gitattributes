@@ -27,3 +27,8 @@ database*.sql linguist-documentation
 
 # Mark assets as vendored to exclude from stats
 assets/* linguist-vendored
+
+# Treat image files as binary to prevent corruption
+*.jpg binary
+*.png binary
+*.gif binary

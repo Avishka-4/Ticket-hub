@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 <body>
     <?php include '../includes/navbar.php'; ?>
@@ -73,9 +74,9 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Action Hero Chronicles</h5>
+                            <h5 class="card-title fw-bold">Neera</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>2h 15min | Action, Adventure
+                                <i class="fas fa-clock me-2"></i>2h 11min | Romance, Action
                             </p>
                             <div class="mb-2">
                                 <div class="text-warning">
@@ -87,13 +88,13 @@
                                     <small class="text-muted ms-1">(8.5/10)</small>
                                 </div>
                             </div>
-                            <p class="card-text">An epic action adventure featuring spectacular stunts and incredible special effects that will keep you on the edge of your seat.</p>
+                            <p class="card-text">Neera is a heartfelt tale of love, rediscovery, and the unseen threads that bind us. </p>
                             
                             <!-- Show Times -->
                             <div class="mb-3">
                                 <small class="text-muted fw-bold">Today's Showtimes:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
-                                    <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '12:30 PM')">12:30 PM</button>
+                                    <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '12:30 PM')">10:30 PM</button>
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '3:45 PM')">3:45 PM</button>
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '7:00 PM')">7:00 PM</button>
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '10:15 PM')">10:15 PM</button>
@@ -101,7 +102,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $12</span>
+                                <span class="fw-bold text-success fs-5">From 400LKR</span>
                             </div>
                             <button class="btn btn-primary w-100" onclick="openMovieBooking('Action Hero Chronicles', 12)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
@@ -122,9 +123,9 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Comedy Central Deluxe</h5>
+                            <h5 class="card-title fw-bold">The Twists</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>1h 45min | Comedy, Romance
+                                <i class="fas fa-clock me-2"></i>1h 45min | Animatio, Comedy, Family
                             </p>
                             <div class="mb-2">
                                 <div class="text-warning">
@@ -136,7 +137,7 @@
                                     <small class="text-muted ms-1">(9.2/10)</small>
                                 </div>
                             </div>
-                            <p class="card-text">A hilarious romantic comedy that will have you laughing from start to finish with its witty dialogue and charming characters.</p>
+                            <p class="card-text">Two orphans join forces with a family of magical animals to save their city from the powerful Mr. and Mrs. Twit, the meanest, smelliest, nastiest people in the world.</p>
                             
                             <!-- Show Times -->
                             <div class="mb-3">
@@ -150,7 +151,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $10</span>
+                                <span class="fw-bold text-success fs-5">From 450LKR</span>
                             </div>
                             <button class="btn btn-primary w-100" onclick="openMovieBooking('Comedy Central Deluxe', 10)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
@@ -172,7 +173,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Space Odyssey 2025</h5>
+                            <h5 class="card-title fw-bold">War of the Worlds</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>2h 30min | Sci-Fi, Thriller
                             </p>
@@ -186,7 +187,7 @@
                                     <small class="text-muted ms-1">(9.0/10)</small>
                                 </div>
                             </div>
-                            <p class="card-text">A mind-bending sci-fi epic that explores the mysteries of space and time with stunning visual effects and compelling storyline.</p>
+                            <p class="card-text">A colossal invasion of Earth is coming in this off-kilter take on the legendary novel of the same name, filled with present-day theme</p>
                             
                             <!-- Show Times -->
                             <div class="mb-3">
@@ -199,7 +200,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $15</span>
+                                <span class="fw-bold text-success fs-5">From 500LKR</span>
                             </div>
                             <button class="btn btn-primary w-100" onclick="openMovieBooking('Space Odyssey 2025', 15)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
@@ -221,9 +222,9 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">The Heart's Journey</h5>
+                            <h5 class="card-title fw-bold">Rani</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>2h 5min | Drama, Romance
+                                <i class="fas fa-clock me-2"></i>2h 5min | Drama
                             </p>
                             <div class="mb-2">
                                 <div class="text-warning">
@@ -235,7 +236,7 @@
                                     <small class="text-muted ms-1">(8.7/10)</small>
                                 </div>
                             </div>
-                            <p class="card-text">A touching drama about love, loss, and redemption that will move you to tears with its powerful performances.</p>
+                            <p class="card-text">The film follows Dr. Manorani Saravanamuttu's relentless pursuit of justice after the tragic abduction and murder of her son, Richard de Zoysa, a journalist, writer, and human rights activist, in 1990.</p>
                             
                             <!-- Show Times -->
                             <div class="mb-3">
@@ -248,7 +249,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $11</span>
+                                <span class="fw-bold text-success fs-5">From 400LKR</span>
                             </div>
                             <button class="btn btn-primary w-100" onclick="openMovieBooking('The Hearts Journey', 11)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
@@ -270,7 +271,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Midnight Shadows</h5>
+                            <h5 class="card-title fw-bold">Until Dawn</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>1h 50min | Horror, Thriller
                             </p>
@@ -284,7 +285,7 @@
                                     <small class="text-muted ms-1">(7.8/10)</small>
                                 </div>
                             </div>
-                            <p class="card-text">A spine-chilling horror experience that will keep you on the edge of your seat with its terrifying plot twists.</p>
+                            <p class="card-text">A group of friends trapped in a time loop, where mysterious foes chase and kill them in gruesome ways, must survive until dawn to escape it.</p>
                             
                             <!-- Show Times -->
                             <div class="mb-3">
@@ -297,7 +298,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $13</span>
+                                <span class="fw-bold text-success fs-5">From 550LKR</span>
                             </div>
                             <button class="btn btn-primary w-100" onclick="openMovieBooking('Midnight Shadows', 13)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
@@ -319,7 +320,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Guardian Force</h5>
+                            <h5 class="card-title fw-bold">Pravegaya</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>2h 20min | Action, Superhero
                             </p>
@@ -333,7 +334,7 @@
                                     <small class="text-muted ms-1">(9.1/10)</small>
                                 </div>
                             </div>
-                            <p class="card-text">An epic superhero adventure featuring incredible action sequences and a compelling story about justice and heroism.</p>
+                            <p class="card-text">A Young man fights for his lost bike with courage. Honest Gangster with his foolish brother who destroyed everything.</p>
                             
                             <!-- Show Times -->
                             <div class="mb-3">
@@ -346,7 +347,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From $14</span>
+                                <span class="fw-bold text-success fs-5">From 400LKR</span>
                             </div>
                             <button class="btn btn-primary w-100" onclick="openMovieBooking('Guardian Force', 14)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
@@ -494,7 +495,7 @@
                                     <div class="d-flex justify-content-center gap-4">
                                         <div class="d-flex align-items-center">
                                             <div class="btn btn-outline-success btn-sm me-2" style="pointer-events: none;"></div>
-                                            <small>Availabl</small>
+                                            <small>Available</small>
                                         </div>
                                         <div class="d-flex align-items-center">
                                             <div class="btn btn-success btn-sm me-2" style="pointer-events: none;"></div>

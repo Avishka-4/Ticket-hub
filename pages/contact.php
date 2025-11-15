@@ -11,6 +11,7 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 <body class="bg-gray-50">
     <?php include '../includes/navbar.php'; ?>
@@ -99,7 +100,7 @@ session_start();
                                     </div>
                                     <div>
                                         <h6 class="mb-1">Address</h6>
-                                        <p class="text-muted mb-0">123 Entertainment Street<br>City Center, State 12345</p>
+                                        <p class="text-muted mb-0">Colombo 07, Sri Lanka</p>
                                     </div>
                                 </div>
                             </div>
@@ -111,7 +112,7 @@ session_start();
                                     </div>
                                     <div>
                                         <h6 class="mb-1">Phone</h6>
-                                        <p class="text-muted mb-0">+1 (555) 123-4567</p>
+                                        <p class="text-muted mb-0">+94 (70) 123 4567</p>
                                     </div>
                                 </div>
                             </div>
@@ -123,7 +124,7 @@ session_start();
                                     </div>
                                     <div>
                                         <h6 class="mb-1">Email</h6>
-                                        <p class="text-muted mb-0">support@tickethub.com</p>
+                                        <p class="text-muted mb-0">tickethub.company@gmail.com</p>
                                     </div>
                                 </div>
                             </div>

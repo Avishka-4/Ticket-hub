@@ -3,53 +3,60 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
 }
 
-$documentRoot = realpath($_SERVER['DOCUMENT_ROOT']);
-$projectRoot = realpath(__DIR__ . '/..');
-$baseUrl = rtrim(str_replace('\\', '/', str_replace($documentRoot, '', $projectRoot)), '/') . '/';
+// Simplified base URL logic
+$baseUrl = '/Ticket-hub/';
+
+// Debug information
+error_log('Document Root: ' . $_SERVER['DOCUMENT_ROOT']);
+error_log('Current Script: ' . $_SERVER['SCRIPT_NAME']);
+error_log('Base URL: ' . $baseUrl);
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TicketHub</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Ensure proper spacing for mobile menu */
-        .offcanvas-body {
-            padding: 1.5rem;
+<!-- Navbar Styles -->
+<style>
+    /* Ensure consistent navbar positioning */
+    .navbar {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+    .navbar .container {
+        width: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+    /* Ensure proper spacing for mobile menu */
+    .offcanvas-body {
+        padding: 1.5rem;
+    }
+    
+    .user-menu-mobile {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #dee2e6;
+    }
+    
+    /* Hide mobile toggle on desktop */
+    @media (min-width: 992px) {
+        .navbar-toggler {
+            display: none !important;
         }
-        
-        .user-menu-mobile {
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #dee2e6;
+    }
+    @media (max-width: 991.98px) {
+        .offcanvas-start {
+            width: 250px !important; 
         }
-        
-        /* Hide mobile toggle on desktop */
-        @media (min-width: 992px) {
-            .navbar-toggler {
-                display: none !important;
-            }
-        }
-        @media (max-width: 991.98px) {
-            .offcanvas-start {
-                width: 250px !important; 
-            }
-        }
-    </style>
-</head>
-<body>
+    }
+</style>
     <!-- Bootstrap Offcanvas Side Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-        <div class="container">
+        <div class="container mx-auto">
             <a class="navbar-brand fw-bold text-primary" href="<?php echo $baseUrl; ?>index.php">
                 <i class="fas fa-ticket-alt me-2"></i>TicketHub
             </a>
             
             <!-- Desktop Navigation (hidden on mobile) -->
-            <div class="flex-grow-1 d-none d-lg-flex align-items-center" id="navbarNav">
+            <div class="flex-grow-1 d-none d-lg-flex align-items-center justify-content-center" id="navbarNav">
 
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
@@ -168,7 +175,7 @@ $baseUrl = rtrim(str_replace('\\', '/', str_replace($documentRoot, '', $projectR
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $baseUrl; ?>pages/food.php">
-                        <i class="fas fa-utensils me-2"></i>Dining
+                        <i class="fas fa-utensils me-2"></i>Foods
                     </a>
                 </li>
                 <li class="nav-item">
@@ -234,7 +241,3 @@ $baseUrl = rtrim(str_replace('\\', '/', str_replace($documentRoot, '', $projectR
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
