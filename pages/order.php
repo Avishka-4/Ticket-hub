@@ -19,10 +19,11 @@
     $account_number = $_POST['account_number'];
     $account_name   = $_POST['account_name'];
     $cvv            = $_POST['cvv'];
+    $total_price    = $_POST['total_price']?? '';
 
 
-    $sql = "INSERT INTO tbl_order (full_name,email_address,phone_number,members,num_rooms,d_date,r_date,p_method,account_number,account_name,cvv)
-    VALUES ('$full_name','$email_address','$phone_number','$members','$num_rooms','$d_date','$r_date','$p_method','$account_number','$account_name','$cvv')";
+    $sql = "INSERT INTO tbl_order (full_name,email_address,phone_number,members,num_rooms,d_date,r_date,p_method,account_number,account_name,cvv,total_price)
+    VALUES ('$full_name','$email_address','$phone_number','$members','$num_rooms','$d_date','$r_date','$p_method','$account_number','$account_name','$cvv','$total_price')";
 
 
 
@@ -60,11 +61,16 @@
         display: flex;
         padding-top: 50px;
     }
+    .h2{
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+    }
 
 </style>
 <body >
     <div class="form-p">
     <form class="row g-3" action="order.php" method="POST">
+      <h2 class="h2">Fill this Form</h2>
   <div class="col-md-12">
     <label for="inputPassword4" class="form-label">Full Name</label>
     <input type="text" class="form-control" id="name" placeholder="Enter Your Full Name" name="full_name" required>
@@ -79,11 +85,11 @@
   </div>
   <div class="col-md-3">
     <label for="inputPassword4" class="form-label">Number of Members</label>
-    <input type="number" min="1" max="20" class="form-control" id="members" name="members" required>
+    <input type="number" min="1" max="20" class="form-control" id="members" oninput="calculateTotal()" name="members" required>
   </div>
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">Number of Rooms(1 Romm for 4 members)</label>
-    <input type="number" min="1" max="5" class="form-control" id="num_rooms" name="members" required>
+    <input type="number" min="1" max="5" class="form-control" id="num_rooms" oninput="calculateTotal()" name="rooms" required>
   </div>
   <div class="col-md-4">
     <label for="inputEmail4" class="form-label">Departure Date</label>
@@ -114,11 +120,30 @@
     <input type="text" class="form-control" id="number" placeholder="cvv" name="cvv" required>
   </div>
   <div class="col-12">
+    <label>Total Amount(LKR)</label>
+  <input type="text" id="total" readonly name="total_price">
   </div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Pay Now</button>
+    <button type="reset" class="btn btn-primary">Reset</button>
   </div>
 </form>
 </div>
+
+    <script>
+      
+      const member_price = 1000;
+      const room_price = 3500;
+
+      function calculateTotal() {
+        let members = parseInt(document.getElementById("members").value) || 0;
+        let rooms = parseInt(document.getElementById("num_rooms").value) || 0;
+
+        let total = (members * member_price) + (rooms * room_price);
+
+        document.getElementById("total").value = total.toLocaleString() + " LKR";
+    }
+    calculateTotal();
+    </script>
 </body>
 </html>
