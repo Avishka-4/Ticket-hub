@@ -295,11 +295,6 @@ if (empty($festivals) && !isset($error)) {
     <section class="container mb-5">
         <h2 class="text-center mb-4">Upcoming Food Festivals</h2>
         
-        <?php if (isset($error)): ?>
-            <div class="alert alert-danger">
-                <i class="fas fa-exclamation-circle me-2"></i><?php echo htmlspecialchars($error); ?>
-            </div>
-        <?php endif; ?>
 
         <div class="row g-4">
             <!-- Five New Festival Cards -->
