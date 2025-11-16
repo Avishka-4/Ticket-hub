@@ -194,7 +194,7 @@
                             <p class="text-muted mb-2">
                                 <i class="fas fa-map-marker-alt me-2"></i>Cinnamon Life, Colombo 02
                             </p>
-                            <p class="card-text">Tamil musical concert by singers Shakthisree Gopalan / Harish …</p>
+                            <p class="card-text">Tamil musical concert by singers Shakthisree Gopalan / Harish Jayaraj …</p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 1,000LKR</span>
                                 <div class="text-warning">
