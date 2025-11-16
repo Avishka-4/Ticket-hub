@@ -14,10 +14,25 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/index.css">
+
+    <style>
+        .card-img-top {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 9s ease;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.3) translateX(-8%);
+        }
+        .card-body{
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <?php include '../includes/navbar.php'; ?>
-
     
     <!-- Hero Section -->
     <section id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -97,8 +112,8 @@
                         <button class="btn btn-outline-primary active" data-filter="all">All Activities</button>
                         <button class="btn btn-outline-primary" data-filter="water">Water Sports</button>
                         <button class="btn btn-outline-primary" data-filter="adventure">Adventure</button>
-                        <button class="btn btn-outline-primary" data-filter="crafts">Arts & Crafts</button>
-                        <button class="btn btn-outline-primary" data-filter="wellness">Wellness</button>
+                        <button class="btn btn-outline-primary" data-filter="crafts">Relaxing</button>
+                        <button class="btn btn-outline-primary" data-filter="wellness">Creative or Artistic</button>
                         <button class="btn btn-outline-primary" data-filter="outdoor">Outdoor</button>
                     </div>
                 </div>
@@ -120,14 +135,14 @@
             <div class="row">
                 
                 <!-- Activity Card 1 -->
-                <div class="col-md-6 col-lg-4 mb-4" data-category="water">
+                <div class="col-md-6 col-lg-4 mb-4" data-category="Water Sports">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 200px;">
                                 <img src="../assets/images/leisure/scuba diver.jpg" alt="Scuba Diving" class="w-100 h-100 object-cover">
                                 <!-- <i class="fas fa-swimmer text-6xl text-white"></i> -->
                             </div>
-                            <span class="badge bg-info position-absolute top-0 end-0 m-2">Popular</span>
+                            <span class="card-category badge bg-info position-absolute top-0 end-0 m-2">Water Sports</span>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Scuba Diving Adventure</h5>
@@ -150,7 +165,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">Rs.10000/person</span>
+                                <span class="fw-bold text-success fs-5"> 10000 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -160,7 +175,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Scuba Diving Adventure', 89)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Scuba Diving Adventure', 10000)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -168,14 +183,14 @@
                 </div>
 
                 <!-- Activity Card 2 -->
-                <div class="col-md-6 col-lg-4 mb-4" data-category="water">
+                <div class="col-md-6 col-lg-4 mb-4" data-category="Water Sports">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 200px;">
                                 <!-- <i class="fas fa-water text-6xl text-white"></i> -->
                                  <img src="../assets/images/leisure/surfing.jpg" alt="Surfing Lessons" class="w-100 h-100 object-cover">
                             </div>
-                            <span class="badge bg-warning position-absolute top-0 end-0 m-2">Trending</span>
+                            <span class="card-category badge bg-warning position-absolute top-0 end-0 m-2">Water Sports</span>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Professional Surfing Lessons</h5>
@@ -197,7 +212,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">Rs.7000/person</span>
+                                <span class="fw-bold text-success fs-5">7000 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -207,7 +222,7 @@
                                     <small class="text-muted ms-1">(4.7)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Professional Surfing Lessons', 65)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Professional Surfing Lessons', 7000)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -215,7 +230,7 @@
                 </div>
 
                 <!-- Activity Card 3 -->
-                <div class="col-md-6 col-lg-4 mb-4" data-category="adventure">
+                <div class="col-md-6 col-lg-4 mb-4" data-category="Adventure">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 200px;">
@@ -223,7 +238,7 @@
                                  <img src="../assets/images/leisure/rock climbing.jpg" alt="Rock Climbing" class="w-100 h-100 object-cover">
 
                             </div>
-                            <span class="badge bg-success position-absolute top-0 end-0 m-2">Adventure</span>
+                            <span class="card-category badge bg-success position-absolute top-0 end-0 m-2">Adventure</span>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Rock Climbing Experience</h5>
@@ -247,7 +262,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">Rs.20500/person</span>
+                                <span class="fw-bold text-success fs-5">20500 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -257,7 +272,7 @@
                                     <small class="text-muted ms-1">(4.8)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Rock Climbing Experience', 95)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Rock Climbing Experience', 20500)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -265,7 +280,7 @@
                 </div>
 
                 <!-- Activity Card 4 -->
-                <div class="col-md-6 col-lg-4 mb-4" data-category="crafts">
+                <div class="col-md-6 col-lg-4 mb-4" data-category="Adventure">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top bg-gradient-to-r from-purple-500 to-pink-500 d-flex align-items-center justify-content-center" style="height: 200px;">
@@ -273,6 +288,7 @@
                                 <img src="../assets/images/leisure/zip lining.jpg" alt="zip lining" class="w-100 h-100 object-cover">
                             </div>
                         </div>
+                        <span class="card-category badge bg-warning position-absolute top-0 end-0 m-2">Adventure</span>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Flying Ravana Adventure Park</h5>
                             <p class="text-muted mb-2">
@@ -295,7 +311,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">Rs.13700/person</span>
+                                <span class="fw-bold text-success fs-5"> 13700 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -305,7 +321,7 @@
                                     <small class="text-muted ms-1">(4.6)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Pottery & Ceramic Workshop', 45)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Flying Ravana Adventure Park', 13700)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -313,14 +329,14 @@
                 </div>
 
                 <!-- Activity Card 5 -->
-                <div class="col-md-6 col-lg-4 mb-4" data-category="wellness">
+                <div class="col-md-6 col-lg-4 mb-4" data-category="Relaxing">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top bg-gradient-to-r from-indigo-500 to-purple-500 d-flex align-items-center justify-content-center" style="height: 200px;">
                                 <!-- <i class="fas fa-spa text-6xl text-white"></i> -->
                                  <img src="../assets/images/leisure/Golf.jpg" alt="Golf" class="w-100 h-100 object-cover">
                             </div>
-                            <span class="badge bg-info position-absolute top-0 end-0 m-2">Relaxing</span>
+                            <span class="card-category badge bg-info position-absolute top-0 end-0 m-2">Relaxing</span>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Swing Ceylon Mini Golf - Unawatuna </h5>
@@ -344,7 +360,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">Rs.8500/person</span>
+                                <span class="fw-bold text-success fs-5"> 8500 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -354,7 +370,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Yoga & Meditation Retreat', 75)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Swing Ceylon Mini Golf - Unawatuna', 8500)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -362,17 +378,17 @@
                 </div>
 
                 <!-- Activity Card 6 -->
-                <div class="col-md-6 col-lg-4 mb-4" data-category="outdoor">
+                <div class="col-md-6 col-lg-4 mb-4" data-category="Water Sports">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top bg-gradient-to-r from-yellow-500 to-orange-500 d-flex align-items-center justify-content-center" style="height: 200px;">
                                 <!-- <i class="fas fa-hiking text-6xl text-white"></i> -->
                                  <img src="../assets/images/leisure/boat.jpg" alt="boat" class="w-100 h-100 object-cover">
                             </div>
-                            <span class="badge bg-success position-absolute top-0 end-0 m-2">Nature</span>
+                            <span class="card-category badge bg-success position-absolute top-0 end-0 m-2">Water Sports</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Avant Leisure Adventure Sports</h5>
+                            <h5 class="card-title fw-bold ">Avant Leisure Adventure Sports</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>7 mins 30 Sec | Moderate difficulty
                             </p>
@@ -393,7 +409,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">Rs.5000/person</span>
+                                <span class="fw-bold text-success fs-5">5000 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -403,7 +419,7 @@
                                     <small class="text-muted ms-1">(4.5)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Guided Nature Hiking', 35)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Avant Leisure Adventure Sports', 5000)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -437,7 +453,7 @@
                                 <select class="form-select" id="leisureTimeSlot">
                                     <option>9:00 AM - 1:00 PM</option>
                                     <option>2:00 PM - 6:00 PM</option>
-                                    <option>7:00 AM - 12:00 PM (Early Bird)</option>
+                                    <option>7:00 AM - 12:00 PM</option>
                                 </select>
                             </div>
                             <div class="mb-3">
@@ -461,14 +477,14 @@
                                         <li>Professional instruction</li>
                                         <li>All necessary equipment</li>
                                         <li>Safety briefing</li>
-                                        <li>Light refreshments</li>
+                                        
                                     </ul>
                                 </div>
                                 <div class="mb-2">
                                     <strong>What to Bring:</strong>
                                     <ul class="mt-1 mb-0">
                                         <li>Comfortable clothing</li>
-                                        <li>Sunscreen</li>
+                                        <li>Protection items</li>
                                         <li>Water bottle</li>
                                         <li>Camera (optional)</li>
                                     </ul>
@@ -486,8 +502,8 @@
                     <div class="w-100">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div>
-                                <strong>Price per person: $<span id="leisurePricePerPerson">0</span></strong><br>
-                                <strong>Total: $<span id="leisureTotalPrice">0.00</span></strong>
+                                <strong>Price per person: Rs.<span id="leisurePricePerPerson">0</span></strong><br>
+                                <strong>Total: Rs.<span id="leisureTotalPrice">0.00</span></strong>
                             </div>
                         </div>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
