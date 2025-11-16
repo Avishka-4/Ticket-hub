@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/index.css">
-
 </head>
 <body>
     <?php include '../includes/navbar.php'; ?>
@@ -111,7 +109,7 @@
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>7 Days / 6 Nights
                             </p>
-                            <p class="card-text">It is approximately 150 kilometres (93 mi) south of Colombo and is situated at an elevation of 4 metres (13 ft) above sea level. Mirissa's beach and nightlife make it a popular tourist destination.</p>
+                            <p class="card-text">Mirissa is a popular coastal town on Sri Lanka's south coast known for its beautiful beaches, whale watching tours, and surfing. It features popular spots like Mirissa Beach, the secluded Secret Beach, Parrot Rock for sunset views, and Coconut Tree Hill.</p>
                             <br>
                             <div class="tour-highlights mb-3">
                                 <small class="fw-bold text-muted">Destination Highlights:</small>
@@ -145,11 +143,11 @@
                             <img src="..\assets\images\places\hikkaduwa.jpg" class="card-img-top" alt="European Capital Cities">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">European Capital Cities</h5>
+                            <h5 class="card-title fw-bold">Hikkaduwa</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>10 Days / 9 Nights
                             </p>
-                            <p class="card-text">Hikkaduwa, in south-west of Sri Lanka, is a large costal tourist area, covering 11 different villages over six kilometres (31⁄2 miles) on the ocean, and three kilometres (2 miles) inland.</p>
+                            <p class="card-text">The Best Tourist Destination in Sri Lanka. Hikkaduwa is a popular coastal town in Sri Lanka known for its beautiful beaches, vibrant surfing and diving scenes, and a protected coral reef. Located about 100km south of Colombo, it attracts tourists with its laid-back yet energetic atmosphere, opportunities for seeing turtles at Turtle Beach.</p>
                             <br>
                             <div class="tour-highlights mb-3">
                                 <small class="fw-bold text-muted">Destination Highlights:</small>
@@ -161,7 +159,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">From Rs.300,000.00</span>
+                                <span class="fw-bold text-success fs">From Rs.5,000.00 per day for one person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -218,7 +216,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="adventure">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative image-overlay">
-                            <img src="..\assets\images\places\Arugam-bay.jpg" class="card-img-top" alt="Safari Adventure">
+                            <img src="..\assets\images\places\Arugam-bay2.jpg" class="card-img-top" alt="Safari Adventure">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Arugam Bay</h5>
@@ -290,160 +288,122 @@
                     </div>
                 </div>
 
+                <!-- Destination Card 7 -->
+                <div class="col-md-6 col-lg-4 mb-4" data-category="beaches">
+                    <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="position-relative image-overlay">
+                            <img src="..\assets\images\places\matara.jpg" class="card-img-top" alt="Caribbean Island Hopping">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Matara</h5>
+                            <p class="text-muted mb-2">
+                                <i class="fas fa-clock me-2"></i>6 Days / 5 Nights
+                            </p>
+                            <p class="card-text">Matara is a busy, booming and sprawling commercial town. Matara's main attractions are its ramparts, Dutch architecture, a well-preserved fort and its street life. Parey Dewa or Paravi Dupatha temple is a relatively modern Buddhist temple on Pigeon Island in front of the city</p>
+                            <br>
+                            <div class="tour-highlights mb-3">
+                                <small class="fw-bold text-muted">Destination Highlights:</small>
+                                <ul class="small mt-1 mb-0">
+                                    <li>Historical</li>
+                                    <li>Architecture</li>
+                                    <li>Photography</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="fw-bold text-success fs-5">From Rs.250,000.00</span>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <small class="text-muted ms-1">(4.7)</small>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination Card 8 -->
+                <div class="col-md-6 col-lg-4 mb-4" data-category="beaches">
+                    <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="position-relative image-overlay">
+                            <img src="..\assets\images\places\Anuradhapura.jpg" class="card-img-top" alt="Caribbean Island Hopping">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Anuradhapura</h5>
+                            <p class="text-muted mb-2">
+                                <i class="fas fa-clock me-2"></i>6 Days / 5 Nights
+                            </p>
+                            <p class="card-text">Anuradhapura's main attractions include the sacred Jaya Sri Maha Bodhi tree, ancient stupas like Ruwanwelisaya and Abhayagiri Stupa, the rock-carved Isurumuniya Temple, and the Samadhi Buddha statue</p>
+                            <br>
+                            <div class="tour-highlights mb-3">
+                                <small class="fw-bold text-muted">Destination Highlights:</small>
+                                <ul class="small mt-1 mb-0">
+                                    <li>Historical</li>
+                                    <li>Cultural</li>
+                                    <li>Photography</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="fw-bold text-success fs-5">From Rs.220,000.00</span>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <small class="text-muted ms-1">(4.7)</small>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination Card 9 -->
+                <div class="col-md-6 col-lg-4 mb-4" data-category="beaches">
+                    <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="position-relative image-overlay">
+                            <img src="..\assets\images\places\jaffna.jpg" class="card-img-top" alt="Caribbean Island Hopping">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Jaffna</h5>
+                            <p class="text-muted mb-2">
+                                <i class="fas fa-clock me-2"></i>6 Days / 5 Nights
+                            </p>
+                            <p class="card-text">Jaffna is the capital of the Northern Province of Sri Lanka, located on a peninsula known for its distinct Tamil culture. It features significant historical sites like the Jaffna Fort and the Nallur Kandaswamy Temple, alongside agricultural and fishing industries.</p>
+                            <br>
+                            <div class="tour-highlights mb-3">
+                                <small class="fw-bold text-muted">Destination Highlights:</small>
+                                <ul class="small mt-1 mb-0">
+                                    <li>Historical</li>
+                                    <li>Cultural</li>
+                                    <li>Photography</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="fw-bold text-success fs-5">From Rs.230,000.00</span>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <small class="text-muted ms-1">(4.7)</small>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- Places Booking Modal -->
-    <div class="modal fade" id="placeBookingModal" tabindex="-1">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">
-                        <i class="fas fa-plane me-2"></i>Book Your Adventure:
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h6 id="placeTourTitle" class="fw-bold mb-3"></h6>
-                            <div class="mb-3">
-                                <label class="form-label">Departure Date</label>
-                                <input type="date" class="form-control" id="departureDate">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Return Date</label>
-                                <input type="date" class="form-control" id="returnDate">
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label">Adults (18+)</label>
-                                    <select class="form-select" id="adultsCount">
-                                        <option value="1">1 Adult</option>
-                                        <option value="2">2 Adults</option>
-                                        <option value="3">3 Adults</option>
-                                        <option value="4">4 Adults</option>
-                                        <option value="5">5 Adults</option>
-                                        <option value="6">6 Adults</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label">Children (2-17)</label>
-                                    <select class="form-select" id="childrenCount">
-                                        <option value="0">No Children</option>
-                                        <option value="1">1 Child</option>
-                                        <option value="2">2 Children</option>
-                                        <option value="3">3 Children</option>
-                                        <option value="4">4 Children</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Room Type</label>
-                                <select class="form-select" id="roomType">
-                                    <option value="standard">Standard Room</option>
-                                    <option value="deluxe">Deluxe Room (+$200)</option>
-                                    <option value="suite">Suite (+$500)</option>
-                                    <option value="presidential">Presidential Suite (+$1000)</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <h6 class="fw-bold mb-3">Tour Package Includes</h6>
-                            <div class="tour-package-details p-3 bg-light rounded mb-3">
-                                <div class="row">
-                                    <div class="col-12 mb-2">
-                                        <div class="d-flex align-items-center">
-                                            <i class="fas fa-check-circle text-success me-2"></i>
-                                            <span>Round-trip airfare</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 mb-2">
-                                        <div class="d-flex align-items-center">
-                                            <i class="fas fa-check-circle text-success me-2"></i>
-                                            <span>Accommodation</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 mb-2">
-                                        <div class="d-flex align-items-center">
-                                            <i class="fas fa-check-circle text-success me-2"></i>
-                                            <span>Daily breakfast</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 mb-2">
-                                        <div class="d-flex align-items-center">
-                                            <i class="fas fa-check-circle text-success me-2"></i>
-                                            <span>Guided tours</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 mb-2">
-                                        <div class="d-flex align-items-center">
-                                            <i class="fas fa-check-circle text-success me-2"></i>
-                                            <span>Airport transfers</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 mb-2">
-                                        <div class="d-flex align-items-center">
-                                            <i class="fas fa-check-circle text-success me-2"></i>
-                                            <span>Travel insurance</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <h6 class="fw-bold mb-3">Additional Options</h6>
-                            <div class="additional-options">
-                                <div class="form-check mb-2">
-                                    <input class="form-check-input" type="checkbox" id="travelInsurance" value="50">
-                                    <label class="form-check-label" for="travelInsurance">
-                                        Premium Travel Insurance (+$50)
-                                    </label>
-                                </div>
-                                <div class="form-check mb-2">
-                                    <input class="form-check-input" type="checkbox" id="airportLounge" value="25">
-                                    <label class="form-check-label" for="airportLounge">
-                                        Airport Lounge Access (+$25)
-                                    </label>
-                                </div>
-                                <div class="form-check mb-2">
-                                    <input class="form-check-input" type="checkbox" id="photoPackage" value="75">
-                                    <label class="form-check-label" for="photoPackage">
-                                        Professional Photo Package (+$75)
-                                    </label>
-                                </div>
-                            </div>
-                            
-                            <div class="mt-3">
-                                <label class="form-label">Special Requests</label>
-                                <textarea class="form-control" rows="3" placeholder="Any special requirements or preferences..."></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="w-100">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <div>
-                                <div>Base price: $<span id="placeBasePrice">0</span> per person</div>
-                                <div>Room upgrade: $<span id="roomUpgrade">0</span></div>
-                                <div>Add-ons: $<span id="addOns">0</span></div>
-                                <div class="fw-bold fs-5">Total: $<span id="placeTotalPrice">0.00</span></div>
-                            </div>
-                        </div>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" onclick="addPlaceToCart()">
-                            <i class="fas fa-shopping-cart me-2"></i>Add to Cart
-                        </button>
-                        <button type="button" class="btn btn-success" onclick="proceedToPlacePayment()">
-                            <i class="fas fa-credit-card me-2"></i>Book Now
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <?php include '../includes/footer.php'; ?>
 
     <!-- Bootstrap JS -->
