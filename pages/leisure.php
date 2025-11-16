@@ -477,14 +477,14 @@
                                         <li>Professional instruction</li>
                                         <li>All necessary equipment</li>
                                         <li>Safety briefing</li>
-                                        <li>Light refreshments</li>
+                                        
                                     </ul>
                                 </div>
                                 <div class="mb-2">
                                     <strong>What to Bring:</strong>
                                     <ul class="mt-1 mb-0">
                                         <li>Comfortable clothing</li>
-                                        <li>Sunscreen</li>
+                                        <li>Protection items</li>
                                         <li>Water bottle</li>
                                         <li>Camera (optional)</li>
                                     </ul>
