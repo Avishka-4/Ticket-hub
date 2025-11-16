@@ -329,7 +329,7 @@ if (empty($festivals) && !isset($error)) {
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
                             <i class="fas fa-info-circle"></i>
-                            <span class="fw-bold">View Details</span>
+                            <span class="fw-bold">View Event Details</span>
                         </button>
                     </div>
                 </div>
@@ -337,6 +337,9 @@ if (empty($festivals) && !isset($error)) {
 
             <div class="col-md-6 col-lg-4">
                 <div class="card festival-card shadow-sm">
+                    <div class="festival-badge">
+                        <i class="fas fa-star text-warning me-1"></i>Trending
+                    </div>
                     <img src="../assets/images/foods/food-fest-2.jpg" class="card-img-top" alt="Mediterranean Food Festival" loading="eager">
                     <div class="card-body">
                         <h5 class="card-title">Grand Trunk Road Food Fest</h5>
@@ -359,7 +362,7 @@ if (empty($festivals) && !isset($error)) {
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
                             <i class="fas fa-info-circle"></i>
-                            <span class="fw-bold">View Details</span>
+                            <span class="fw-bold">View Event Details</span>
                         </button>
                     </div>
                 </div>
@@ -389,7 +392,7 @@ if (empty($festivals) && !isset($error)) {
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
                             <i class="fas fa-info-circle"></i>
-                            <span class="fw-bold">View Details</span>
+                            <span class="fw-bold">View Event Details</span>
                         </button>
                     </div>
                 </div>
@@ -418,7 +421,7 @@ if (empty($festivals) && !isset($error)) {
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
                             <i class="fas fa-info-circle"></i>
-                            <span class="fw-bold">View Details</span>
+                            <span class="fw-bold">View Event Details</span>
                         </button>
                     </div>
                 </div>
@@ -449,7 +452,7 @@ if (empty($festivals) && !isset($error)) {
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
                             <i class="fas fa-info-circle"></i>
-                            <span class="fw-bold">View Details</span>
+                            <span class="fw-bold">View Event Details</span>
                         </button>
                     </div>
                 </div>
