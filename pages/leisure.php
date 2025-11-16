@@ -502,8 +502,8 @@
                     <div class="w-100">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div>
-                                <strong>Price per person: Rs.<span id="leisurePricePerPerson">0</span></strong><br>
-                                <strong>Total: Rs.<span id="leisureTotalPrice">0.00</span></strong>
+                                <strong>Price per person: LKR <span id="leisurePricePerPerson"></span></strong><br>
+                                <strong>Total: LKR <span id="leisureTotalPrice"></span></strong>
                             </div>
                         </div>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
