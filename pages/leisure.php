@@ -33,7 +33,6 @@
 </head>
 <body>
     <?php include '../includes/navbar.php'; ?>
-
     
     <!-- Hero Section -->
     <section id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -153,11 +152,7 @@
                             <p class="text-muted mb-2">
                                 <i class="fas fa-map-marker-alt me-2"></i>Sun Diving Centre, Yakdehimulla, Unawatuna, Sri Lanka​
                             </p>
-<<<<<<< HEAD
-                            <p class="card-text">Explore the underwater world with certified instructors. Perfect for beginners and experienced divers alike.So many packages to choose for beginners , Certified divers, and Certification Courses </p>
-=======
                             <p class="card-text">Explore the underwater world with certified instructors. Perfect for beginners and experienced divers alike.So many packages to choose for beginners , Certified divers, and Certification Courses </p></br>
->>>>>>> 913f0ab27dd2823ef369920ee4b8a681301701fe
                             
                             <!-- Available Dates -->
                             <div class="mb-3 mt-2">
@@ -170,11 +165,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-<<<<<<< HEAD
-                                <span class="fw-bold text-success fs-5">Rs.100000/person</span>
-=======
-                                <span class="fw-bold text-success fs-5">Rs.10000/person</span>
->>>>>>> 913f0ab27dd2823ef369920ee4b8a681301701fe
+                                <span class="fw-bold text-success fs-5"> 10000 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -211,11 +202,7 @@
                             </p>
                             <p class="card-text">Learn to surf with professional instructors on the best waves in town. With skilled instructors, quality surfboards, and access to Arugambay’s world-famous surf breaks, every session brings you closer to mastering the ocean. Stay with us, surf with us, and feel the true spirit of Arugambay — the paradise for wave lovers.</p>
                             
-<<<<<<< HEAD
-                            <div class="mb-3 mt-4">
-=======
                             <div class="mb-3 mt-2">
->>>>>>> 913f0ab27dd2823ef369920ee4b8a681301701fe
                                 <small class="text-muted fw-bold">Available Dates:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectActivityDate(this, 'Dec 18')">Dec 18</button>
@@ -225,7 +212,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">Rs.7000/person</span>
+                                <span class="fw-bold text-success fs-5">7000 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -260,12 +247,9 @@
                             </p>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-map-marker-alt me-2"></i>Peacock Hill and Ramboda waterfall in Sri Lanka
-<<<<<<< HEAD
-=======
                             </p>
                             <p class="card-text">Challenge yourself with guided rock climbing on natural cliffs. Safety equipment provided.
                                 Visitors say the sound of rushing water, cool breezes, and chance for a cold water dip create a calming, unforgettable escape into nature.
->>>>>>> 913f0ab27dd2823ef369920ee4b8a681301701fe
                             </p>
                             
                             <div class="mb-3 mt-4">
@@ -278,11 +262,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-<<<<<<< HEAD
-                                <span class="fw-bold text-success fs-5">$68/person</span>
-=======
-                                <span class="fw-bold text-success fs-5">Rs.20500/person</span>
->>>>>>> 913f0ab27dd2823ef369920ee4b8a681301701fe
+                                <span class="fw-bold text-success fs-5">20500 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -331,7 +311,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">Rs.13700/person</span>
+                                <span class="fw-bold text-success fs-5"> 13700 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -359,11 +339,7 @@
                             <span class="card-category badge bg-info position-absolute top-0 end-0 m-2">Relaxing</span>
                         </div>
                         <div class="card-body">
-<<<<<<< HEAD
-                            <h5 class="card-title fw-bold">Swing Ceylon Mini Golf</h5>
-=======
                             <h5 class="card-title fw-bold">Swing Ceylon Mini Golf - Unawatuna </h5>
->>>>>>> 913f0ab27dd2823ef369920ee4b8a681301701fe
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>2-3 hours | Beginner friendly
                             </p>
@@ -384,7 +360,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">Rs.8500/person</span>
+                                <span class="fw-bold text-success fs-5"> 8500 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -412,11 +388,7 @@
                             <span class="card-category badge bg-success position-absolute top-0 end-0 m-2">Water Sports</span>
                         </div>
                         <div class="card-body">
-<<<<<<< HEAD
-                            <h5 class="card-title fw-bold">Avant Leisure Adventure Sports</h5>
-=======
                             <h5 class="card-title fw-bold ">Avant Leisure Adventure Sports</h5>
->>>>>>> 913f0ab27dd2823ef369920ee4b8a681301701fe
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>7 mins 30 Sec | Moderate difficulty
                             </p>
@@ -437,7 +409,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">Rs.5000/person</span>
+                                <span class="fw-bold text-success fs-5">5000 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -505,14 +477,14 @@
                                         <li>Professional instruction</li>
                                         <li>All necessary equipment</li>
                                         <li>Safety briefing</li>
-                                        <li>Light refreshments</li>
+                                        
                                     </ul>
                                 </div>
                                 <div class="mb-2">
                                     <strong>What to Bring:</strong>
                                     <ul class="mt-1 mb-0">
                                         <li>Comfortable clothing</li>
-                                        <li>Sunscreen</li>
+                                        <li>Protection items</li>
                                         <li>Water bottle</li>
                                         <li>Camera (optional)</li>
                                     </ul>

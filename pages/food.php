@@ -10,11 +10,7 @@ ini_set('display_errors', 1);
 
 // Compute a robust base URL (handles spaces in folder names)
 $documentRoot = realpath($_SERVER['DOCUMENT_ROOT']);
-<<<<<<< HEAD
-$projectRoot = realpath(dirname(__DIR__)); // one level up from /pages
-=======
 $projectRoot = realpath(dirname(__DIR__)); 
->>>>>>> 913f0ab27dd2823ef369920ee4b8a681301701fe
 $baseUrl = rtrim(str_replace('\\', '/', str_replace($documentRoot, '', $projectRoot)), '/') . '/';
 
 // Helper to version assets for cache-busting using file modification time
@@ -177,47 +173,6 @@ if (empty($festivals) && !isset($error)) {
         .cuisine-tag:hover {
             background: #e0e7ff;
             transform: translateY(-1px);
-<<<<<<< HEAD
-        }
-        .feature-icon {
-            width: 56px;
-            height: 56px;
-            display: inline-block;
-            object-fit: cover;
-            border-radius: 6px;
-            /* no color-forcing filter so uploaded JPGs keep their colors */
-        }
-        /* Fallback hero background image element */
-        .hero-bg {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-        }
-        .hero-section > .container, .hero-section * {
-            position: relative;
-            z-index: 1;
-        }
-        /* Style for the view details button */
-        .btn-details {
-            padding: 10px 20px !important;
-            transition: all 0.3s ease !important;
-            background: white !important;
-            border: 1px solid #0d6efd !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            gap: 8px !important;
-        }
-        
-        .btn-details:hover {
-            background: #f8f9fa !important;
-            transform: translateY(-2px) !important;
-            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.15) !important;
-        }
-=======
         }
         .feature-icon {
             width: 56px;
@@ -283,7 +238,6 @@ if (empty($festivals) && !isset($error)) {
             transition: all 0.3s ease;
             margin-left: 10px;
         } */
->>>>>>> 913f0ab27dd2823ef369920ee4b8a681301701fe
     </style>
 </head>
 <body class="bg-light">
@@ -356,11 +310,7 @@ if (empty($festivals) && !isset($error)) {
                     </div>
                     <img src="../assets/images/foods/food-fest-1.jpg" class="card-img-top" alt="Asian Street Food Festival" loading="eager">
                     <div class="card-body">
-<<<<<<< HEAD
-                        <h5 class="card-title">Culinary Art Food Expo (CAFE)</h5>
-=======
                         <h5 class="card-title">Culinary Art Food Expo </h5>
->>>>>>> 913f0ab27dd2823ef369920ee4b8a681301701fe
                         <p class="mb-2">
                             <i class="fas fa-map-marker-alt me-2 text-danger"></i>BMICH
                         </p>
@@ -373,17 +323,13 @@ if (empty($festivals) && !isset($error)) {
                         <div class="mb-3">
                             <span class="cuisine-tag">Asian Fusion</span>
                             <span class="cuisine-tag">Street Food</span>
-<<<<<<< HEAD
-                            <span class="cuisine-tag">Culinary Competitions</span>
-=======
->>>>>>> 913f0ab27dd2823ef369920ee4b8a681301701fe
                         </div>
                             <button class="btn btn-outline-primary w-100 btn-details" 
                                 onclick="showFestivalDetails('Culinary Art Food Expo (CAFE)', 'Join us for an extraordinary culinary journey at CAFE 2025! Experience the finest selection of international and local cuisine, live cooking demonstrations by renowned chefs, and interactive food workshops. This premier food event brings together over 50 vendors showcasing their signature dishes, innovative food concepts, and culinary expertise.')"
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
                             <i class="fas fa-info-circle"></i>
-                            <span class="fw-bold">View Details</span>
+                            <span class="fw-bold">View Event Details</span>
                         </button>
                     </div>
                 </div>
@@ -391,6 +337,9 @@ if (empty($festivals) && !isset($error)) {
 
             <div class="col-md-6 col-lg-4">
                 <div class="card festival-card shadow-sm">
+                    <div class="festival-badge">
+                        <i class="fas fa-star text-warning me-1"></i>Trending
+                    </div>
                     <img src="../assets/images/foods/food-fest-2.jpg" class="card-img-top" alt="Mediterranean Food Festival" loading="eager">
                     <div class="card-body">
                         <h5 class="card-title">Grand Trunk Road Food Fest</h5>
@@ -413,7 +362,7 @@ if (empty($festivals) && !isset($error)) {
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
                             <i class="fas fa-info-circle"></i>
-                            <span class="fw-bold">View Details</span>
+                            <span class="fw-bold">View Event Details</span>
                         </button>
                     </div>
                 </div>
@@ -443,7 +392,7 @@ if (empty($festivals) && !isset($error)) {
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
                             <i class="fas fa-info-circle"></i>
-                            <span class="fw-bold">View Details</span>
+                            <span class="fw-bold">View Event Details</span>
                         </button>
                     </div>
                 </div>
@@ -455,11 +404,7 @@ if (empty($festivals) && !isset($error)) {
                     <div class="card-body">
                         <h5 class="card-title">Fairway Colombo Street Food Festival</h5>
                         <p class="mb-2">
-<<<<<<< HEAD
-                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Hospital Street near the Dutch Hospital , Colombo</p>
-=======
                             <i class="fas fa-map-marker-alt me-2 text-danger"></i>Hospital Street (Dutch Hospital) , Colombo</p>
->>>>>>> 913f0ab27dd2823ef369920ee4b8a681301701fe
                         <p class="mb-2">
                             <i class="fas fa-calendar me-2 text-primary"></i>December 15, 2025
                         </p>
@@ -476,7 +421,7 @@ if (empty($festivals) && !isset($error)) {
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
                             <i class="fas fa-info-circle"></i>
-                            <span class="fw-bold">View Details</span>
+                            <span class="fw-bold">View Event Details</span>
                         </button>
                     </div>
                 </div>
@@ -486,15 +431,9 @@ if (empty($festivals) && !isset($error)) {
                 <div class="card festival-card shadow-sm">
                     <img src="../assets/images/foods/food-fest-5.jpg" class="card-img-top" alt="International Food Fair" loading="eager">
                     <div class="card-body">
-<<<<<<< HEAD
-                        <h5 class="card-title">Spicy Street Food Festival</h5>
-                        <p class="mb-2">
-                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Diyatha Uyana , Battaramulla
-=======
                         <h5 class="card-title">Spicy Street Food Festival 2026 (SSFF) </h5>
                         <p class="mb-2">
                             <i class="fas fa-map-marker-alt me-2 text-danger"></i>Diyatha Uyana road , Battaramulla
->>>>>>> 913f0ab27dd2823ef369920ee4b8a681301701fe
                         </p>
                         <p class="mb-2">
                             <i class="fas fa-calendar me-2 text-primary"></i>December 30, 2025
@@ -506,18 +445,14 @@ if (empty($festivals) && !isset($error)) {
                             <span class="cuisine-tag">Foods</span>
                             <span class="cuisine-tag">International</span>
                             <span class="cuisine-tag">Games</span>
-<<<<<<< HEAD
-                            <span class="cuisine-tag">Music</span>
-=======
                             
->>>>>>> 913f0ab27dd2823ef369920ee4b8a681301701fe
                         </div>
                             <button class="btn btn-outline-primary w-100 btn-details" 
                                 onclick="showFestivalDetails('Spicy Street Food Festival', 'Heat up your taste buds at the Spicy Street Food Festival in Diyatha Uyana! This exciting event celebrates the spicier side of street food culture, featuring vendors specializing in hot and flavorful dishes from around Sri Lanka and beyond. Challenge yourself with different levels of spiciness, from mild to extreme. Enjoy cooking competitions, spice mixing demonstrations, and cool refreshments to balance the heat. A perfect event for spicy food lovers and adventure seekers!')"
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
                             <i class="fas fa-info-circle"></i>
-                            <span class="fw-bold">View Details</span>
+                            <span class="fw-bold">View Event Details</span>
                         </button>
                     </div>
                 </div>
@@ -542,8 +477,6 @@ if (empty($festivals) && !isset($error)) {
                         <div id="modalDescription" class="text-muted mb-4"></div>
                     </div>
                     
-<<<<<<< HEAD
-=======
                     <div class="mb-4">
                         <h6 class="fw-bold">Contact Information</h6>
                         <ul class="list-unstyled text-muted">
@@ -559,7 +492,6 @@ if (empty($festivals) && !isset($error)) {
                         </ul>
                     </div>
                     
->>>>>>> 913f0ab27dd2823ef369920ee4b8a681301701fe
                     <?php if (isset($_SESSION['user_id'])): ?>
                         <div class="d-grid gap-2">
                             <button class="btn btn-primary">
@@ -597,8 +529,6 @@ if (empty($festivals) && !isset($error)) {
             // Update modal content
             document.getElementById('modalTitle').textContent = title;
             document.getElementById('modalDescription').textContent = description;
-<<<<<<< HEAD
-=======
 
             // Set contact information based on festival
             let contact = '';
@@ -640,7 +570,6 @@ if (empty($festivals) && !isset($error)) {
             document.getElementById('modalContact').textContent = contact;
             document.getElementById('modalEmail').textContent = email;
             document.getElementById('modalPrices').innerHTML = prices;
->>>>>>> 913f0ab27dd2823ef369920ee4b8a681301701fe
         }
         
         // Debugging helper
