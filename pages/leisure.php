@@ -13,10 +13,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+
+    <style>
+        .card-img-top {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 9s ease;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.3) translateX(-8%);
+        }
+        .card-body{
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <?php include '../includes/navbar.php'; ?>
-
     
     <!-- Hero Section -->
     <section id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -96,8 +112,8 @@
                         <button class="btn btn-outline-primary active" data-filter="all">All Activities</button>
                         <button class="btn btn-outline-primary" data-filter="water">Water Sports</button>
                         <button class="btn btn-outline-primary" data-filter="adventure">Adventure</button>
-                        <button class="btn btn-outline-primary" data-filter="crafts">Arts & Crafts</button>
-                        <button class="btn btn-outline-primary" data-filter="wellness">Wellness</button>
+                        <button class="btn btn-outline-primary" data-filter="crafts">Relaxing</button>
+                        <button class="btn btn-outline-primary" data-filter="wellness">Creative or Artistic</button>
                         <button class="btn btn-outline-primary" data-filter="outdoor">Outdoor</button>
                     </div>
                 </div>
@@ -119,14 +135,14 @@
             <div class="row">
                 
                 <!-- Activity Card 1 -->
-                <div class="col-md-6 col-lg-4 mb-4" data-category="water">
+                <div class="col-md-6 col-lg-4 mb-4" data-category="Water Sports">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 200px;">
                                 <img src="../assets/images/leisure/scuba diver.jpg" alt="Scuba Diving" class="w-100 h-100 object-cover">
                                 <!-- <i class="fas fa-swimmer text-6xl text-white"></i> -->
                             </div>
-                            <span class="badge bg-info position-absolute top-0 end-0 m-2">Popular</span>
+                            <span class="card-category badge bg-info position-absolute top-0 end-0 m-2">Water Sports</span>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Scuba Diving Adventure</h5>
@@ -136,7 +152,7 @@
                             <p class="text-muted mb-2">
                                 <i class="fas fa-map-marker-alt me-2"></i>Sun Diving Centre, Yakdehimulla, Unawatuna, Sri Lanka​
                             </p>
-                            <p class="card-text">Explore the underwater world with certified instructors. Perfect for beginners and experienced divers alike.So many packages to choose for beginners , Certified divers, and Certification Courses </p>
+                            <p class="card-text">Explore the underwater world with certified instructors. Perfect for beginners and experienced divers alike.So many packages to choose for beginners , Certified divers, and Certification Courses </p></br>
                             
                             <!-- Available Dates -->
                             <div class="mb-3 mt-2">
@@ -149,7 +165,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">Rs.100000/person</span>
+                                <span class="fw-bold text-success fs-5"> 10000 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -159,7 +175,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Scuba Diving Adventure', 89)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Scuba Diving Adventure', 10000)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -167,14 +183,14 @@
                 </div>
 
                 <!-- Activity Card 2 -->
-                <div class="col-md-6 col-lg-4 mb-4" data-category="water">
+                <div class="col-md-6 col-lg-4 mb-4" data-category="Water Sports">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 200px;">
                                 <!-- <i class="fas fa-water text-6xl text-white"></i> -->
                                  <img src="../assets/images/leisure/surfing.jpg" alt="Surfing Lessons" class="w-100 h-100 object-cover">
                             </div>
-                            <span class="badge bg-warning position-absolute top-0 end-0 m-2">Trending</span>
+                            <span class="card-category badge bg-warning position-absolute top-0 end-0 m-2">Water Sports</span>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Professional Surfing Lessons</h5>
@@ -184,9 +200,9 @@
                             <p class="text-muted mb-2">
                                 <i class="fas fa-map-marker-alt me-2"></i>Arugam Bay Beach
                             </p>
-                            <p class="card-text">Learn to surf with professional instructors on the best waves in town. Equipment included.</p>
+                            <p class="card-text">Learn to surf with professional instructors on the best waves in town. With skilled instructors, quality surfboards, and access to Arugambay’s world-famous surf breaks, every session brings you closer to mastering the ocean. Stay with us, surf with us, and feel the true spirit of Arugambay — the paradise for wave lovers.</p>
                             
-                            <div class="mb-3 mt-4">
+                            <div class="mb-3 mt-2">
                                 <small class="text-muted fw-bold">Available Dates:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectActivityDate(this, 'Dec 18')">Dec 18</button>
@@ -196,7 +212,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">Rs.7000/person</span>
+                                <span class="fw-bold text-success fs-5">7000 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -206,7 +222,7 @@
                                     <small class="text-muted ms-1">(4.7)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Professional Surfing Lessons', 65)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Professional Surfing Lessons', 7000)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -214,7 +230,7 @@
                 </div>
 
                 <!-- Activity Card 3 -->
-                <div class="col-md-6 col-lg-4 mb-4" data-category="adventure">
+                <div class="col-md-6 col-lg-4 mb-4" data-category="Adventure">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 200px;">
@@ -222,7 +238,7 @@
                                  <img src="../assets/images/leisure/rock climbing.jpg" alt="Rock Climbing" class="w-100 h-100 object-cover">
 
                             </div>
-                            <span class="badge bg-success position-absolute top-0 end-0 m-2">Adventure</span>
+                            <span class="card-category badge bg-success position-absolute top-0 end-0 m-2">Adventure</span>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Rock Climbing Experience</h5>
@@ -232,7 +248,9 @@
                             <p class="text-muted mb-2">
                                 <i class="fas fa-map-marker-alt me-2"></i>Peacock Hill and Ramboda waterfall in Sri Lanka
                             </p>
-                            <p class="card-text">Challenge yourself with guided rock climbing on natural cliffs. Safety equipment provided.</p>
+                            <p class="card-text">Challenge yourself with guided rock climbing on natural cliffs. Safety equipment provided.
+                                Visitors say the sound of rushing water, cool breezes, and chance for a cold water dip create a calming, unforgettable escape into nature.
+                            </p>
                             
                             <div class="mb-3 mt-4">
                                 <small class="text-muted fw-bold">Available Dates:</small>
@@ -244,7 +262,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">$68/person</span>
+                                <span class="fw-bold text-success fs-5">20500 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -254,7 +272,7 @@
                                     <small class="text-muted ms-1">(4.8)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Rock Climbing Experience', 95)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Rock Climbing Experience', 20500)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -262,7 +280,7 @@
                 </div>
 
                 <!-- Activity Card 4 -->
-                <div class="col-md-6 col-lg-4 mb-4" data-category="crafts">
+                <div class="col-md-6 col-lg-4 mb-4" data-category="Adventure">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top bg-gradient-to-r from-purple-500 to-pink-500 d-flex align-items-center justify-content-center" style="height: 200px;">
@@ -270,17 +288,20 @@
                                 <img src="../assets/images/leisure/zip lining.jpg" alt="zip lining" class="w-100 h-100 object-cover">
                             </div>
                         </div>
+                        <span class="card-category badge bg-warning position-absolute top-0 end-0 m-2">Adventure</span>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Flying Ravana Adventure Park</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>2.5 hours | All ages welcome
+                                <i class="fas fa-clock me-2"></i>3-5 hours | All ages welcome
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Creative Arts Studio
+                                <i class="fas fa-map-marker-alt me-2"></i>Ella, Sri Lanka
                             </p>
-                            <p class="card-text">Create beautiful ceramic pieces in this hands-on workshop. Perfect for families and art enthusiasts.</p>
+                            <p class="card-text">Flying Ravana is Sri Lanka’s first ever mega dual zip-line, located amidst the luscious green estates of Ella,Sri Lanka.
+                                The two-wire zip-line stretches for more than half a kilometre, slides at max 80kmph and offers a bird’s-eye view of the beautiful hills of the island.
+                            </p>
                             
-                            <div class="mb-3">
+                            <div class="mb-3 mt-4">
                                 <small class="text-muted fw-bold">Available Dates:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectActivityDate(this, 'Dec 17')">Dec 17</button>
@@ -290,7 +311,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">$45/person</span>
+                                <span class="fw-bold text-success fs-5"> 13700 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -300,7 +321,7 @@
                                     <small class="text-muted ms-1">(4.6)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Pottery & Ceramic Workshop', 45)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Flying Ravana Adventure Park', 13700)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -308,26 +329,28 @@
                 </div>
 
                 <!-- Activity Card 5 -->
-                <div class="col-md-6 col-lg-4 mb-4" data-category="wellness">
+                <div class="col-md-6 col-lg-4 mb-4" data-category="Relaxing">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top bg-gradient-to-r from-indigo-500 to-purple-500 d-flex align-items-center justify-content-center" style="height: 200px;">
                                 <!-- <i class="fas fa-spa text-6xl text-white"></i> -->
                                  <img src="../assets/images/leisure/Golf.jpg" alt="Golf" class="w-100 h-100 object-cover">
                             </div>
-                            <span class="badge bg-info position-absolute top-0 end-0 m-2">Relaxing</span>
+                            <span class="card-category badge bg-info position-absolute top-0 end-0 m-2">Relaxing</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Swing Ceylon Mini Golf</h5>
+                            <h5 class="card-title fw-bold">Swing Ceylon Mini Golf - Unawatuna </h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>6 hours | Beginner friendly
+                                <i class="fas fa-clock me-2"></i>2-3 hours | Beginner friendly
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Zen Garden Retreat Center
+                                <i class="fas fa-map-marker-alt me-2"></i>beach town of Unawatuna near Galle
                             </p>
-                            <p class="card-text">Find inner peace with guided yoga sessions and meditation practices in a serene environment.</p>
+                            <p class="card-text">Swing Ceylon is not your average mini-golf course.It’s Sri Lanka’s top-rated mini-golf destination, and nature in one unforgettable outing.
+                                Play 18 imaginative holes inspired by iconic Sri Lankan landmarks like the Nine Arch Bridge and Sigiriya Rock, surrounded by lush palm trees and local wildlife.
+                            </p>
                             
-                            <div class="mb-3">
+                            <div class="mb-3 mt-1">
                                 <small class="text-muted fw-bold">Available Dates:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectActivityDate(this, 'Dec 21')">Dec 21</button>
@@ -337,7 +360,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">$75/person</span>
+                                <span class="fw-bold text-success fs-5"> 8500 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -347,7 +370,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Yoga & Meditation Retreat', 75)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Swing Ceylon Mini Golf - Unawatuna', 8500)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -355,26 +378,28 @@
                 </div>
 
                 <!-- Activity Card 6 -->
-                <div class="col-md-6 col-lg-4 mb-4" data-category="outdoor">
+                <div class="col-md-6 col-lg-4 mb-4" data-category="Water Sports">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                             <div class="card-img-top bg-gradient-to-r from-yellow-500 to-orange-500 d-flex align-items-center justify-content-center" style="height: 200px;">
                                 <!-- <i class="fas fa-hiking text-6xl text-white"></i> -->
                                  <img src="../assets/images/leisure/boat.jpg" alt="boat" class="w-100 h-100 object-cover">
                             </div>
-                            <span class="badge bg-success position-absolute top-0 end-0 m-2">Nature</span>
+                            <span class="card-category badge bg-success position-absolute top-0 end-0 m-2">Water Sports</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Avant Leisure Adventure Sports</h5>
+                            <h5 class="card-title fw-bold ">Avant Leisure Adventure Sports</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>4 hours | Moderate difficulty
+                                <i class="fas fa-clock me-2"></i>7 mins 30 Sec | Moderate difficulty
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>National Forest Trail
+                                <i class="fas fa-map-marker-alt me-2"></i>Bentota, Sri Lanka
                             </p>
-                            <p class="card-text">Explore scenic trails with experienced guides and discover local wildlife and flora.</p>
+                            <p class="card-text">Feel the rush as you ride the latest Yamaha and Sea-Doo jet skis across the scenic Bentota River.
+                                Avant Leisure Adventure Sports offers top-tier equipment, personalized safety briefings, and unmatched service.Open year-round with flexible rental options, we’re here to make every ride smooth, safe, and unforgettable.
+                            </p>
                             
-                            <div class="mb-3">
+                            <div class="mb-3 mt-2">
                                 <small class="text-muted fw-bold">Available Dates:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectActivityDate(this, 'Dec 16')">Dec 16</button>
@@ -384,7 +409,7 @@
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                <span class="fw-bold text-success fs-5">$35/person</span>
+                                <span class="fw-bold text-success fs-5">5000 LKR/person</span>
                                 <div class="text-warning">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -394,7 +419,7 @@
                                     <small class="text-muted ms-1">(4.5)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Guided Nature Hiking', 35)">
+                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Avant Leisure Adventure Sports', 5000)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
@@ -428,7 +453,7 @@
                                 <select class="form-select" id="leisureTimeSlot">
                                     <option>9:00 AM - 1:00 PM</option>
                                     <option>2:00 PM - 6:00 PM</option>
-                                    <option>7:00 AM - 12:00 PM (Early Bird)</option>
+                                    <option>7:00 AM - 12:00 PM</option>
                                 </select>
                             </div>
                             <div class="mb-3">
@@ -452,14 +477,14 @@
                                         <li>Professional instruction</li>
                                         <li>All necessary equipment</li>
                                         <li>Safety briefing</li>
-                                        <li>Light refreshments</li>
+                                        
                                     </ul>
                                 </div>
                                 <div class="mb-2">
                                     <strong>What to Bring:</strong>
                                     <ul class="mt-1 mb-0">
                                         <li>Comfortable clothing</li>
-                                        <li>Sunscreen</li>
+                                        <li>Protection items</li>
                                         <li>Water bottle</li>
                                         <li>Camera (optional)</li>
                                     </ul>
@@ -477,8 +502,8 @@
                     <div class="w-100">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div>
-                                <strong>Price per person: $<span id="leisurePricePerPerson">0</span></strong><br>
-                                <strong>Total: $<span id="leisureTotalPrice">0.00</span></strong>
+                                <strong>Price per person: LKR <span id="leisurePricePerPerson"></span></strong><br>
+                                <strong>Total: LKR <span id="leisureTotalPrice"></span></strong>
                             </div>
                         </div>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
