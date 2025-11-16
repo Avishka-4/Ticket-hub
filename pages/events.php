@@ -29,19 +29,21 @@
                 </h1>
                 <p class="text-xl mb-6">Discover amazing live performances, concerts, and festivels.</p>
             </div>
-        </div>
             </div>
+            </div>
+
             <div class="carousel-item position-relative">
             <img src="../assets\images\event-image\2.jpg" class="d-block w-100" >
             <div class=" carousel-caption d-md-block position-absolute top-50 start-50 translate-middle">
-             <div class="text-center">
+            <div class="text-center">
                 <h1 class="text-5xl font-bold mb-3 ">
                     <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
                 </h1>
                 <p class="text-xl mb-6">Discover amazing live performances, concerts, and festivels.</p>
             </div>
-        </div>
             </div>
+            </div>
+
             <div class="carousel-item position-relative">
             <img src="../assets\images\event-image\3.jpg" class="d-block w-100" >
             <div class=" carousel-caption d-md-block position-absolute top-50 start-50 translate-middle">
@@ -51,20 +53,10 @@
                 </h1>
                 <p class="text-xl mb-6">Discover amazing live performances, concerts, and festivels.</p>
             </div>
-        </div>
             </div>
-            <div class="carousel-item position-relative">
-            <img src="../assets\images\event-image\4.jpg" class="d-block w-100" >
-            <div class=" carousel-caption d-md-block position-absolute top-50 start-50 translate-middle">
-             <div class="text-center">
-                <h1 class="text-5xl font-bold mb-3 ">
-                    <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
-                </h1>
-                <p class="text-xl mb-6">Discover amazing live performances, concerts, and festivels.</p>
             </div>
-        </div>
-        </div>
-            </div>
+
+
         </div>
         <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
