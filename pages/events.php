@@ -19,16 +19,18 @@
     <?php include '../includes/navbar.php'; ?>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16">
+    <section class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div class="carousel-inner" style="height: 450px;">
-            <div class="carousel-item active position-relative">
-            <img src="../assets\images\event-image\2.jpg" class="d-block w-100" alt="boat ride">
-            <div class="carousel-caption d-md-block position-absolute top-50 start-50 translate-middle ">
-            <div class="text-center">
-                <h1 class="text-5xl font-bold mb-3 ">
-                    <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
-                </h1>
-                <p class="text-xl mb-6">Discover amazing live performances, concerts, and festivals</p>
+            <div class="carousel-item active position-relative h-full">
+                <img src="../assets/images/event-image/2.jpg" class="d-block w-100 h-full object-cover" alt="boat ride">
+                <div class="carousel-caption d-md-block position-absolute top-50 start-50 translate-middle">
+                    <div class="text-center">
+                        <h1 class="text-5xl font-bold mb-3">
+                            <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
+                        </h1>
+                        <p class="text-xl mb-6">Discover amazing live performances, concerts, and festivals</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -75,7 +77,7 @@
                             <span class="badge bg-danger position-absolute top-0 end-0 m-2">Hot</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">SUN FM Presents – Clean Bandit Live in Concert</h5>
+                            <h5 class="card-title fw-bold">SUN FM Presents – Bandit Live in Concert</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-calendar me-2"></i>28 December 2025 – 6:00 PM
                             </p>
