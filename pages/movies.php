@@ -156,7 +156,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="sci-fi">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="../assets/images/movies/WOW.jpeg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
+                            <img src="../assets/images/movies/WOW.jpg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
                             
                         </div>
                         <div class="card-body">
@@ -200,7 +200,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="drama">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="../assets/images/movies/Rani.jpg" class="card-img-top" alt="Raani Movie Poster" style="height: 300px; object-fit: cover;">
+                            <img src="../assets/images/movies/Rani.jpg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
 
                             <span class="badge bg-warning position-absolute top-0 end-0 m-2">Award Winner</span>
                             
