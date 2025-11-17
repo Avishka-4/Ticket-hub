@@ -20,54 +20,78 @@
 
     <!-- Hero Section -->
     <section id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner" style="height: 450px;">
-            <div class="carousel-item active position-relative">
-            <img src="../assets\images\event-image\1.jpg" class="d-block w-100" >
-            <div class="carousel-caption d-md-block position-absolute top-50 start-50 translate-middle ">
-            <div class="text-center">
-                <h1 class="text-5xl font-bold mb-3 ">
-                    <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
-                </h1>
-                <p class="text-xl mb-6">Discover amazing live performances, concerts, and festivels.</p>
-
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../assets/images/event-image/1.jpg" class="d-block w-100 vh-50" alt="Event">
+            <div class="carousel-caption d-none d-md-block position-absolute top-50 start-50 translate-middle">
+                <div class="text-center">
+                    <h1 class="display-4 fw-bold mb-3">
+                        <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
+                    </h1>
+                    <p class="lead mb-4">Discover amazing live performances, concerts, and festivals.</p>
+                </div>
             </div>
+            <!-- Mobile caption -->
+            <div class="carousel-caption d-md-none position-absolute top-50 start-50 translate-middle w-75">
+                <div class="text-center">
+                    <h2 class="fw-bold mb-2">
+                        <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
+                    </h2>
+                    <p class="mb-3">Discover amazing live performances, concerts, and festivals.</p>
+                </div>
             </div>
-            </div>
-
-            <div class="carousel-item position-relative">
-            <img src="../assets\images\event-image\2.jpg" class="d-block w-100" >
-            <div class=" carousel-caption d-md-block position-absolute top-50 start-50 translate-middle">
-            <div class="text-center">
-                <h1 class="text-5xl font-bold mb-3 ">
-                    <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
-                </h1>
-                <p class="text-xl mb-6">Discover amazing live performances, concerts, and festivels.</p>
-            </div>
-            </div>
-            </div>
-
-            <div class="carousel-item position-relative">
-            <img src="../assets\images\event-image\3.jpg" class="d-block w-100" >
-            <div class=" carousel-caption d-md-block position-absolute top-50 start-50 translate-middle">
-             <div class="text-center">
-                <h1 class="text-5xl font-bold mb-3 ">
-                    <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
-                </h1>
-                <p class="text-xl mb-6">Discover amazing live performances, concerts, and festivels.</p>
-            </div>
-            </div>
-            </div>
-
-
         </div>
-        <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+
+        <div class="carousel-item">
+            <img src="../assets/images/event-image/2.jpg" class="d-block w-100 vh-50" alt="Event">
+            <div class="carousel-caption d-none d-md-block position-absolute top-50 start-50 translate-middle">
+                <div class="text-center">
+                    <h1 class="display-4 fw-bold mb-3">
+                        <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
+                    </h1>
+                    <p class="lead mb-4">Discover amazing live performances, concerts, and festivals.</p>
+                </div>
+            </div>
+            <!-- Mobile caption -->
+            <div class="carousel-caption d-md-none position-absolute top-50 start-50 translate-middle w-75">
+                <div class="text-center">
+                    <h2 class="fw-bold mb-2">
+                        <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
+                    </h2>
+                    <p class="mb-3">Discover amazing live performances, concerts, and festivals.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="../assets/images/event-image/3.jpg" class="d-block w-100 vh-50" alt="Event">
+            <div class="carousel-caption d-none d-md-block position-absolute top-50 start-50 translate-middle">
+                <div class="text-center">
+                    <h1 class="display-4 fw-bold mb-3">
+                        <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
+                    </h1>
+                    <p class="lead mb-4">Discover amazing live performances, concerts, and festivals.</p>
+                </div>
+            </div>
+            <!-- Mobile caption -->
+            <div class="carousel-caption d-md-none position-absolute top-50 start-50 translate-middle w-75">
+                <div class="text-center">
+                    <h2 class="fw-bold mb-2">
+                        <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
+                    </h2>
+                    <p class="mb-3">Discover amazing live performances, concerts, and festivals.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </section>
 
     <!-- Filter Section -->
@@ -131,7 +155,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('SUN FM Presents – Clean Bandit Live in Concert, 45)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('SUN FM Presents – Clean Bandit Live in Concert', 45)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -150,7 +174,7 @@
                             <span class="badge bg-success position-absolute top-0 end-0 m-2">Favourite</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Sébastien Léger & Roy Rosenfeld — Lost Miracle</h5>
+                            <h5 class="card-title fw-bold">Léger & Roy Rosenfeld — Lost Miracle</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-calendar me-2"></i>24 January 2026 – 04:00 PM
                             </p>
@@ -169,7 +193,7 @@
                                     <small class="text-muted ms-1">(4.7)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('Sébastien Léger & Roy Rosenfeld — Lost Miracle', 120)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('Léger & Roy Rosenfeld — Lost Miracle', 120)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
