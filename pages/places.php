@@ -218,7 +218,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="adventure">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative image-overlay">
-                            <img src="..\assets\images\places\Arugam-bay.jpg" class="card-img-top" alt="Safari Adventure">
+                            <img src="..\assets\images/places/Arugam-bay.jpg" class="card-img-top" alt="Safari Adventure">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Arugam Bay</h5>
