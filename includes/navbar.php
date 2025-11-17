@@ -4,7 +4,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 }
 
 // Simplified base URL logic
-$baseUrl = '/ticket booking/';
+$baseUrl = '/Ticket-hub/';
 
 // Debug information
 error_log('Document Root: ' . $_SERVER['DOCUMENT_ROOT']);
