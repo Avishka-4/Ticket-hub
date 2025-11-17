@@ -18,7 +18,7 @@
     <?php include '../includes/navbar.php'; ?>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-teal-600 to-blue-600 text-white py-16">
+    <!-- <section class="bg-gradient-to-r from-teal-600 to-blue-600 text-white py-16">
         <div class="container">
             <div class="text-center">
                 <h1 class="text-5xl font-bold mb-4">
@@ -27,7 +27,29 @@
                 <p class="text-xl mb-6">Discover amazing destinations and get unforgettable experience</p>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..\assets\images\places\home1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..\assets\images\places\home2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..\assets\images\places\home3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
     <!-- Filter Section -->
     <section class="py-4 bg-light">
@@ -92,7 +114,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
+                            <button class="btn btn-primary w-100"><i class="fas fa-calendar-plus me-2"></i><a href="order.php">Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -130,7 +152,7 @@
                                     <small class="text-muted ms-1">(4.7)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
+                            <button class="btn btn-primary w-100"><a href="order.php"><i class="fas fa-calendar-plus me-2"></i>Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -168,7 +190,7 @@
                                     <small class="text-muted ms-1">(4.8)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
+                            <button class="btn btn-primary w-100"><a href="order.php"><i class="fas fa-calendar-plus me-2"></i>Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -206,7 +228,7 @@
                                     <small class="text-muted ms-1">(4.6)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
+                            <button class="btn btn-primary w-100"><a href="order.php"><i class="fas fa-calendar-plus me-2"></i>Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -244,7 +266,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
+                            <button class="btn btn-primary w-100"><a href="order.php"><i class="fas fa-calendar-plus me-2"></i>Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -282,7 +304,7 @@
                                     <small class="text-muted ms-1">(4.7)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
+                            <button class="btn btn-primary w-100"><a href="order.php"><i class="fas fa-calendar-plus me-2"></i>Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -291,11 +313,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="beaches">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative image-overlay">
-<<<<<<<<< Temporary merge branch 1
-                            <img src="..\assets\images\places\mathara.jpg" class="card-img-top" alt="Caribbean Island Hopping">
-=========
                             <img src="..\assets\images\places\matara.jpg" class="card-img-top" alt="Caribbean Island Hopping">
->>>>>>>>> Temporary merge branch 2
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Matara</h5>
@@ -324,7 +342,7 @@
                                     <small class="text-muted ms-1">(4.7)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
+                            <button class="btn btn-primary w-100"><a href="order.php"><i class="fas fa-calendar-plus me-2"></i>Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -362,7 +380,7 @@
                                     <small class="text-muted ms-1">(4.7)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
+                            <button class="btn btn-primary w-100"><a href="order.php"><i class="fas fa-calendar-plus me-2"></i>Book Now</a></button>
                         </div>
                     </div>
                 </div>
@@ -400,7 +418,7 @@
                                     <small class="text-muted ms-1">(4.7)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100"><a href="order.php">Book Now</a></button>
+                            <button class="btn btn-primary w-100"><a href="order.php"><i class="fas fa-calendar-plus me-2"></i>Book Now</a></button>
                         </div>
                     </div>
                 </div>

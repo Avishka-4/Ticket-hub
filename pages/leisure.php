@@ -194,8 +194,8 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Scuba Diving Adventure', 10000)">
-                                <i class="fas fa-calendar-plus me-2"></i>Book Activity
+                            <button class="btn btn-primary w-100">
+                                <i class="fas fa-calendar-plus me-2"></i><a href="order.php">Book Now</a>
                             </button>
                         </div>
                     </div>
