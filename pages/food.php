@@ -452,6 +452,39 @@ if (empty($festivals) && !isset($error)) {
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card festival-card shadow-sm">
+                    <div class="festival-badge">
+                        <i class="fas fa-star text-warning me-1"></i>Popular
+                    </div>
+                    <img src="../assets/images/foods/food-fest-1.jpg" class="card-img-top" alt="Urban Food Market" loading="eager">
+                    <div class="card-body">
+                        <h5 class="card-title">Food Market Festival - John Keels Holdings</h5>
+                        <p class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Independence Square, Colombo
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-calendar me-2 text-primary"></i>January 10, 2026
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-clock me-2 text-success"></i>9:00 AM - 7:00 PM
+                        </p>
+                        <div class="mb-3">
+                            <span class="cuisine-tag">Local</span>
+                            <span class="cuisine-tag">Organic</span>
+                            <span class="cuisine-tag">Artisan</span>
+                        </div>
+                            <button class="btn btn-outline-primary w-100 btn-details" 
+                                onclick="showFestivalDetails('Urban Food Market Festival', 'Discover the best of local produce and artisanal foods at the Urban Food Market Festival! This unique event brings together local farmers, artisan food producers, and specialty vendors showcasing fresh, organic, and locally-sourced ingredients. Experience farm-to-table dining, cooking workshops with local chefs, and learn about sustainable food practices. Perfect for food enthusiasts who value quality, freshness, and supporting local communities.')"
+                                data-bs-toggle="modal" 
+                                data-bs-target="#festivalModal">
+                            <i class="fas fa-info-circle"></i>
+                            <span class="fw-bold">View Event Details</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -556,6 +589,7 @@ if (empty($festivals) && !isset($error)) {
                     email = 'spicyfest@tickethub.lk';
                     prices = 'Regular: Rs. 600<br>VIP: Rs. 1600<br>Family Pack (4 persons): Rs. 2000';
                     break;
+                
                 default:
                     contact = 'Contact information not available';
                     email = 'info@tickethub.lk';
