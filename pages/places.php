@@ -215,7 +215,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="adventure">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative image-overlay">
-                            <img src="..\assets\images\places\Arugam-bay.jpg" class="card-img-top" alt="Safari Adventure">
+                            <img src="..\assets\images/places/Arugam-bay.jpg" class="card-img-top" alt="Safari Adventure">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Arugam Bay</h5>
@@ -287,26 +287,27 @@
                     </div>
                 </div>
 
-                <!-- Destination Card 7 -->
-                <div class="col-md-6 col-lg-4 mb-4" data-category="beaches">
-                    <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
-                        <div class="position-relative image-overlay">
-                            <img src="..\assets\images\places\matara.jpg" class="card-img-top" alt="Caribbean Island Hopping">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Matara</h5>
-                            <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>6 Days / 5 Nights
-                            </p>
-                            <p class="card-text">Matara is a busy, booming and sprawling commercial town. Matara's main attractions are its ramparts, Dutch architecture, a well-preserved fort and its street life. Parey Dewa or Paravi Dupatha temple is a relatively modern Buddhist temple on Pigeon Island in front of the city</p>
-                            <br>
-                            <div class="tour-highlights mb-3">
-                                <small class="fw-bold text-muted">Destination Highlights:</small>
-                                <ul class="small mt-1 mb-0">
-                                    <li>Historical</li>
-                                    <li>Architecture</li>
-                                    <li>Photography</li>
-                                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Places Booking Modal -->
+    <div class="modal fade" id="placeBookingModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-plane me-2"></i>Book Your Adventure:
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 id="placeTourTitle" class="fw-bold mb-3"></h6>
+                            <div class="mb-3">
+                                <label class="form-label">Departure Date</label>
+                                <input type="date" class="form-control" id="departureDate">
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
