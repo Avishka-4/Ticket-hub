@@ -63,7 +63,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="action">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="../assets/images/movies/Neera.jpg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
+                            <img src="../assets/images/movies/Neera.jpg" class="card-img-top" alt="Card1 Movie Poster" style="height: 300px; object-fit: cover;">
 
                             <span class="badge bg-danger position-absolute top-0 end-0 m-2">New Release</span>
                             
@@ -99,7 +99,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 400LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Action Hero Chronicles', 12)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Action Hero Chronicles', 400)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -110,7 +110,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="comedy">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="../assets/images/movies/The twists.jpg" class="card-img-top" alt="The twists Movie Poster" style="height: 300px; object-fit: cover;">
+                            <img src="../assets/images/movies/The twists.jpg" class="card-img-top" alt="Card2 Movie Poster" style="height: 300px; object-fit: cover;">
 
                             
                         </div>
@@ -145,7 +145,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 450LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Comedy Central Deluxe', 10)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Comedy Central Deluxe', 450)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -156,7 +156,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="sci-fi">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="../assets/images/movies/WOW.jpg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
+                            <img src="../assets/images/movies/WOW.jpg" class="card-img-top" alt="Card3 Movie Poster" style="height: 300px; object-fit: cover;">
                             
                         </div>
                         <div class="card-body">
@@ -189,7 +189,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 500LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Space Odyssey 2025', 15)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Space Odyssey 2025', 500)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -200,7 +200,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="drama">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="../assets/images/movies/Rani.jpg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
+                            <img src="../assets/images/movies/Rani.jpg" class="card-img-top" alt="Card4 Movie Poster" style="height: 300px; object-fit: cover;">
 
                             <span class="badge bg-warning position-absolute top-0 end-0 m-2">Award Winner</span>
                             
@@ -235,7 +235,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 400LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('The Hearts Journey', 11)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('The Hearts Journey', 400)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -246,7 +246,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="horror">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="../assets/images/movies/Until dawn1.jpg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
+                            <img src="../assets/images/movies/Until dawn1.jpg" class="card-img-top" alt="Card5 Movie Poster" style="height: 300px; object-fit: cover;">
 
                             <span class="badge bg-dark position-absolute top-0 end-0 m-2">Horror</span>
                             
@@ -281,7 +281,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 550LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Midnight Shadows', 13)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Midnight Shadows',550)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -292,7 +292,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="action">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="../assets/images/movies/karnan1.jpg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
+                            <img src="../assets/images/movies/karnan1.jpg" class="card-img-top" alt="Card6 Movie Poster" style="height: 300px; object-fit: cover;">
 
                             <span class="badge bg-success position-absolute top-0 end-0 m-2">Superhero</span>
                             
@@ -327,7 +327,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 400LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Guardian Force', 14)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Guardian Force', 400)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -494,7 +494,7 @@
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div>
                                 <strong>Selected Seats: </strong><span id="selectedSeats">None</span><br>
-                                <strong>Total: $<span id="movieTotalPrice">0.00</span></strong>
+                                <strong>Total: LKR <span id="movieTotalPrice">0.00</span></strong>
                             </div>
                         </div>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
