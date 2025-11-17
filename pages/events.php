@@ -131,7 +131,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('SUN FM Presents – Clean Bandit Live in Concert, 45)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('SUN FM Presents – Clean Bandit Live in Concert', 45)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -150,7 +150,7 @@
                             <span class="badge bg-success position-absolute top-0 end-0 m-2">Favourite</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Sébastien Léger & Roy Rosenfeld — Lost Miracle</h5>
+                            <h5 class="card-title fw-bold">Léger & Roy Rosenfeld — Lost Miracle</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-calendar me-2"></i>24 January 2026 – 04:00 PM
                             </p>
@@ -169,7 +169,7 @@
                                     <small class="text-muted ms-1">(4.7)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('Sébastien Léger & Roy Rosenfeld — Lost Miracle', 120)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('Léger & Roy Rosenfeld — Lost Miracle', 120)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
