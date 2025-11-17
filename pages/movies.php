@@ -20,19 +20,23 @@
 
     <!-- Hero Section -->
     <section>
-       <div class="carousel-inner" style="height: 600px;">
-            <div class="carousel-item active position-relative">
-            <img src="../assets/images/movies/cinema banner.jpg" class="d-block w-100" alt="boat ride">
-            <div class="carousel-caption d-md-block position-absolute top-50 start-50 translate-middle ">
-            <div class="text-center">
-                <h1 class="text-5xl font-bold mb-3 ">
-                    <i class="fas fa-umbrella-beach"></i>Movies & Theater
-                </h1>
-                <p class="text-xl mb-6">Book your favorite movies with premium seating experience</p>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../assets/images/movies/cinema banner.jpg" class="d-block w-100 vh-50" alt="cinema">
+                <div class="carousel-caption position-absolute top-50 start-50 translate-middle w-75">
+                    <div class="text-center">
+                        <h1 class="display-4 fw-bold mb-3 d-none d-md-block">
+                            <i class="fas fa-film"></i>Movies & Theater
+                        </h1>
+                        <h2 class="fw-bold mb-2 d-md-none">
+                            <i class="fas fa-film"></i>Movies & Theater
+                        </h2>
+                        <p class="lead mb-4 d-none d-md-block">Book your favorite movies with premium seating experience</p>
+                        <p class="mb-3 d-md-none">Book your favorite movies with premium seating experience</p>
+                    </div>
+                </div>
             </div>
         </div>
-            </div>
-</div>
     </section>
 
     <!-- Filter Section -->
@@ -218,7 +222,7 @@
                                     <small class="text-muted ms-1">(8.7/10)</small>
                                 </div>
                             </div>
-                            <p class="card-text">The film follows Dr. Manorani Saravanamuttu's relentless pursuit of justice after the tragic abduction and murder of her son, Richard de Zoysa.</p>
+                            <p class="card-text">The film follows Dr. Manorani Saravanamuttu's relentless pursuit of justice after the abduction and murder of her son, Richard de Zoysa.</p>
                             
                             <!-- Show Times -->
                             <div class="mb-3">
