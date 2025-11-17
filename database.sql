@@ -215,24 +215,24 @@ INSERT INTO events (
  '2025-12-28', '18:00:00', 12000.00,
  'uploads/event1.jpg', 4.9, 'Hot', 'active'),
 
--- 2. Colombo Food Festival
-('Colombo Food Festival 2026', 'festivals',
- 'Street food, live music & Sri Lanka’s biggest culinary celebration.',
+-- 2. Sébastien Léger & Roy Rosenfeld — Lost Miracle
+('Sébastien Léger & Roy Rosenfeld — Lost Miracle', 'festivals',
+ 'If you enjoy energetic electronic music and want a major event in Colombo, this one fits.',
  'Galle Face Green, Colombo',
  '2026-01-12', '10:00:00', 500.00,
  'uploads/event2.jpg', 4.7, '3 Days', 'active'),
 
--- 3. Cinnamon Life Christmas Carnival
-('Cinnamon Life Christmas Carnival', 'comedy',
- 'Christmas market, fun games, Santa parade & live performances.',
+-- 3. Nenjame Nenjame – Tamil Musical Concert
+('Nenjame Nenjame – Tamil Musical Concert', 'MusicConcert',
+ 'Tamil musical concert by singers Shakthisree Gopalan / Harish …',
  'Cinnamon Life, Colombo 02',
  '2025-12-01', '10:00:00', 1000.00,
  'uploads/event3.jpg', 4.8, '', 'active'),
 
--- 4. Kandy Esala Perahera 2025
-('Kandy Esala Perahera – 2025', 'theater',
- 'Sri Lanka’s most iconic cultural parade with dancers, drummers & elephants.',
- 'Kandy City',
+-- 4. The Saiko Show
+('The Saiko Show', 'theater',
+ 'Good for a general live-music outing in Colombo.',
+ 'Viharamahadevi Open Air Theater, Colombo',
  '2025-12-10', '18:00:00', 3500.00,
  'uploads/event4.jpg', 4.6, 'Limited', 'active'),
 

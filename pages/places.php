@@ -39,7 +39,6 @@
                     <div class="d-flex flex-wrap gap-2">
                         <button class="btn btn-outline-primary active" data-filter="all">All Destinations</button>
                         <button class="btn btn-outline-primary" data-filter="beaches">Beaches</button>
-                        <button class="btn btn-outline-primary" data-filter="mountains">Mountains</button>
                         <button class="btn btn-outline-primary" data-filter="cities">City Tours</button>
                         <button class="btn btn-outline-primary" data-filter="historical">Historical</button>
                         <button class="btn btn-outline-primary" data-filter="adventure">Adventure</button>
@@ -218,7 +217,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="adventure">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative image-overlay">
-                            <img src="..\assets\images\places\Arugam-bay.jpg" class="card-img-top" alt="Safari Adventure">
+                            <img src="..\assets\images/places/Arugam-bay.jpg" class="card-img-top" alt="Safari Adventure">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Arugam Bay</h5>

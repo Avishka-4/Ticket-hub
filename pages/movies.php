@@ -19,13 +19,22 @@
     <?php include '../includes/navbar.php'; ?>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
-        <div class="container">
-            <div class="text-center">
-                <h1 class="text-5xl font-bold mb-4">
-                    <i class="fas fa-film me-3"></i>Movies & Theater
-                </h1>
-                <p class="text-xl mb-6">Book your favorite movies with premium seating experience</p>
+    <section>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../assets/images/movies/cinema banner.jpg" class="d-block w-100 vh-50" alt="cinema">
+                <div class="carousel-caption position-absolute top-50 start-50 translate-middle w-75">
+                    <div class="text-center">
+                        <h1 class="display-4 fw-bold mb-3 d-none d-md-block">
+                            <i class="fas fa-film"></i>Movies & Theater
+                        </h1>
+                        <h2 class="fw-bold mb-2 d-md-none">
+                            <i class="fas fa-film"></i>Movies & Theater
+                        </h2>
+                        <p class="lead mb-4 d-none d-md-block">Book your favorite movies with premium seating experience</p>
+                        <p class="mb-3 d-md-none">Book your favorite movies with premium seating experience</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -44,14 +53,7 @@
                         <button class="btn btn-outline-primary" data-filter="sci-fi">Sci-Fi</button>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search movies...">
-                        <button class="btn btn-primary" type="button">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -65,13 +67,10 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="action">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-red-600 to-orange-600 d-flex align-items-center justify-content-center" style="height: 300px;">
-                                <i class="fas fa-video text-6xl text-white"></i>
-                            </div>
+                            <img src="../assets/images/movies/Neera.jpg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
+
                             <span class="badge bg-danger position-absolute top-0 end-0 m-2">New Release</span>
-                            <div class="position-absolute bottom-0 start-0 m-2">
-                                <span class="badge bg-warning text-dark">PG-13</span>
-                            </div>
+                            
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Neera</h5>
@@ -97,7 +96,6 @@
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '12:30 PM')">10:30 PM</button>
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '3:45 PM')">3:45 PM</button>
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '7:00 PM')">7:00 PM</button>
-                                    <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '10:15 PM')">10:15 PM</button>
                                 </div>
                             </div>
                             
@@ -115,17 +113,14 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="comedy">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-yellow-500 to-orange-500 d-flex align-items-center justify-content-center" style="height: 300px;">
-                                <i class="fas fa-laugh-squint text-6xl text-white"></i>
-                            </div>
-                            <div class="position-absolute bottom-0 start-0 m-2">
-                                <span class="badge bg-success text-white">PG</span>
-                            </div>
+                            <img src="../assets/images/movies/The twists.jpg" class="card-img-top" alt="The twists Movie Poster" style="height: 300px; object-fit: cover;">
+
+                            
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">The Twists</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>1h 45min | Animatio, Comedy, Family
+                                <i class="fas fa-clock me-2"></i>1h 45min |Comedy, Family
                             </p>
                             <div class="mb-2">
                                 <div class="text-warning">
@@ -137,7 +132,7 @@
                                     <small class="text-muted ms-1">(9.2/10)</small>
                                 </div>
                             </div>
-                            <p class="card-text">Two orphans join forces with a family of magical animals to save their city from the powerful Mr. and Mrs. Twit, the meanest, smelliest, nastiest people in the world.</p>
+                            <p class="card-text">Two orphans join forces with a family of magical animals to save their city from Mr. and Mrs. Twit.</p>
                             
                             <!-- Show Times -->
                             <div class="mb-3">
@@ -146,7 +141,6 @@
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '1:00 PM')">1:00 PM</button>
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '4:30 PM')">4:30 PM</button>
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '7:45 PM')">7:45 PM</button>
-                                    <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '10:30 PM')">10:30 PM</button>
                                 </div>
                             </div>
                             
@@ -164,13 +158,8 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="sci-fi">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-purple-600 to-blue-600 d-flex align-items-center justify-content-center" style="height: 300px;">
-                                <i class="fas fa-rocket text-6xl text-white"></i>
-                            </div>
-                            <span class="badge bg-info position-absolute top-0 end-0 m-2">IMAX</span>
-                            <div class="position-absolute bottom-0 start-0 m-2">
-                                <span class="badge bg-warning text-dark">PG-13</span>
-                            </div>
+                            <img src="../assets/images/movies/WOW.jpg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
+                            
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">War of the Worlds</h5>
@@ -187,7 +176,7 @@
                                     <small class="text-muted ms-1">(9.0/10)</small>
                                 </div>
                             </div>
-                            <p class="card-text">A colossal invasion of Earth is coming in this off-kilter take on the legendary novel of the same name, filled with present-day theme</p>
+                            <p class="card-text">A colossal invasion of Earth is coming in this kilter take on the legendary novel of the same name.</p>
                             
                             <!-- Show Times -->
                             <div class="mb-3">
@@ -213,13 +202,10 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="drama">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-gray-600 to-gray-800 d-flex align-items-center justify-content-center" style="height: 300px;">
-                                <i class="fas fa-heart text-6xl text-white"></i>
-                            </div>
+                            <img src="../assets/images/movies/Rani.jpg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
+
                             <span class="badge bg-warning position-absolute top-0 end-0 m-2">Award Winner</span>
-                            <div class="position-absolute bottom-0 start-0 m-2">
-                                <span class="badge bg-danger text-white">R</span>
-                            </div>
+                            
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Rani</h5>
@@ -236,7 +222,7 @@
                                     <small class="text-muted ms-1">(8.7/10)</small>
                                 </div>
                             </div>
-                            <p class="card-text">The film follows Dr. Manorani Saravanamuttu's relentless pursuit of justice after the tragic abduction and murder of her son, Richard de Zoysa, a journalist, writer, and human rights activist, in 1990.</p>
+                            <p class="card-text">The film follows Dr. Manorani Saravanamuttu's relentless pursuit of justice after the abduction and murder of her son, Richard de Zoysa.</p>
                             
                             <!-- Show Times -->
                             <div class="mb-3">
@@ -262,13 +248,10 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="horror">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-red-800 to-black d-flex align-items-center justify-content-center" style="height: 300px;">
-                                <i class="fas fa-ghost text-6xl text-white"></i>
-                            </div>
+                            <img src="../assets/images/movies/Until dawn1.jpg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
+
                             <span class="badge bg-dark position-absolute top-0 end-0 m-2">Horror</span>
-                            <div class="position-absolute bottom-0 start-0 m-2">
-                                <span class="badge bg-danger text-white">R</span>
-                            </div>
+                            
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Until Dawn</h5>
@@ -311,16 +294,13 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="action">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <div class="card-img-top bg-gradient-to-r from-green-600 to-blue-600 d-flex align-items-center justify-content-center" style="height: 300px;">
-                                <i class="fas fa-mask text-6xl text-white"></i>
-                            </div>
+                            <img src="../assets/images/movies/karnan1.jpg" class="card-img-top" alt="Neera Movie Poster" style="height: 300px; object-fit: cover;">
+
                             <span class="badge bg-success position-absolute top-0 end-0 m-2">Superhero</span>
-                            <div class="position-absolute bottom-0 start-0 m-2">
-                                <span class="badge bg-warning text-dark">PG-13</span>
-                            </div>
+                            
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Pravegaya</h5>
+                            <h5 class="card-title fw-bold">Karnan</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-clock me-2"></i>2h 20min | Action, Superhero
                             </p>
@@ -334,7 +314,7 @@
                                     <small class="text-muted ms-1">(9.1/10)</small>
                                 </div>
                             </div>
-                            <p class="card-text">A Young man fights for his lost bike with courage. Honest Gangster with his foolish brother who destroyed everything.</p>
+                            <p class="card-text">Karnan, a fearless village youth, must fight for the rights of the conservative people of his village, due to the torture given by a police officer.</p>
                             
                             <!-- Show Times -->
                             <div class="mb-3">
