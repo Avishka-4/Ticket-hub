@@ -20,7 +20,7 @@
 
     <!-- Hero Section -->
 <section class="relative bg-gradient-to-r from-green-600 to-blue-600 text-white py-20 bg-cover bg-center" 
-    style="background-image: url('images/sports/SPR.png'); aspect-ratio: 3 / 1; background-blend-mode: overlay;">
+    style="background-image: url('../assets/images/sports/SPR.png'); aspect-ratio: 3 / 1; background-blend-mode: overlay;">
     <div class="container">
         <div class="text-center relative z-10">
             <h1 class="text-5xl font-bold mb-4 drop-shadow-lg">
@@ -69,7 +69,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="football">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="images/sports/CRI.png">
+                            <img src="../assets/images/sports/CRI.png">
                             <span class="badge bg-danger position-absolute top-0 end-0 m-2">ODI Series</span>
                         </div>
                         <div class="card-body">
@@ -109,7 +109,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openSportsBooking('NFL Championship Final', 85)">
+                            <button class="btn btn-primary w-100" onclick="openSportsBooking('Sri Lanka vs India - ODI Match', 2500, 3500, 5000)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -120,7 +120,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="cricket">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="images/sports/RUG.png">
+                            <img src="../assets/images/sports/RUG.png">
                             <span class="badge bg-success position-absolute top-0 end-0 m-2">RUGBY Cup</span>
                         </div>
                         <div class="card-body">
@@ -160,7 +160,7 @@
                                     <small class="text-muted ms-1">(4.8)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openSportsBooking('Cricket World Cup Semi-Final', 45)">
+                            <button class="btn btn-primary w-100" onclick="openSportsBooking('Dialog Rugby League', 1200, 1800, 2500)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -171,7 +171,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="basketball">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="images/sports/FB.png">
+                            <img src="../assets/images/sports/FB.png">
                             <span class="badge bg-warning position-absolute top-0 end-0 m-2">Football</span>
                         </div>
                         <div class="card-body">
@@ -210,7 +210,7 @@
                                     <small class="text-muted ms-1">(4.7)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openSportsBooking('NBA Playoff Game', 65)">
+                            <button class="btn btn-primary w-100" onclick="openSportsBooking('Football Championship', 800, 1200, 2000)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -221,7 +221,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="tennis">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="images/sports/NAC.png">
+                            <img src="../assets/images/sports/NAC.png">
                             <span class="badge bg-info position-absolute top-0 end-0 m-2">National Games</span>
                         </div>
                         <div class="card-body">
@@ -261,7 +261,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openSportsBooking('Wimbledon Mens Final', 120)">
+                            <button class="btn btn-primary w-100" onclick="openSportsBooking('National Athletics Championship', 600, 900, 1500)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -271,7 +271,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="baseball">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="images/sports/VLB.png">
+                            <img src="../assets/images/sports/VLB.png">
                             <span class="badge bg-primary position-absolute top-0 end-0 m-2">National Volleyball</span>
                         </div>
                         <div class="card-body">
@@ -311,7 +311,7 @@
                                     <small class="text-muted ms-1">(4.8)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openSportsBooking('MLB World Series Game 7', 95)">
+                            <button class="btn btn-primary w-100" onclick="openSportsBooking('Sri Lanka Army vs Air Force - Volleyball', 500, 800, 1200)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -322,7 +322,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="baseball">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="images/sports/BSB.png">
+                            <img src="../assets/images/sports/BSB.png">
                             <span class="badge bg-primary position-absolute top-0 end-0 m-2">National Basketball</span>
                         </div>
                         <div class="card-body">
@@ -362,7 +362,7 @@
                                     <small class="text-muted ms-1">(4.5)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openSportsBooking('MLB World Series Game 7', 95)">
+                            <button class="btn btn-primary w-100" onclick="openSportsBooking('Sri Lanka Police vs Navy - Basketball', 600, 900, 1500)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -395,15 +395,15 @@
                                 <div class="list-group">
                                     <label class="list-group-item">
                                         <input class="form-check-input me-1" type="radio" name="sectionType" value="general">
-                                        General Admission - $<span id="sportsGeneralPrice"></span>
+                                        General Admission - LKR<span id="sportsGeneralPrice"></span>
                                     </label>
                                     <label class="list-group-item">
                                         <input class="form-check-input me-1" type="radio" name="sectionType" value="premium">
-                                        Premium Seats - $<span id="sportsPremiumPrice"></span>
+                                        Premium Seats - LKR<span id="sportsPremiumPrice"></span>
                                     </label>
                                     <label class="list-group-item">
                                         <input class="form-check-input me-1" type="radio" name="sectionType" value="vip">
-                                        VIP Box - $<span id="sportsVipPrice"></span>
+                                        VIP Box - LKR<span id="sportsVipPrice"></span>
                                     </label>
                                 </div>
                             </div>
@@ -430,19 +430,18 @@
                                 <div class="row text-center">
                                     <div class="col-12 mb-2">
                                         <div class="d-flex justify-content-center gap-2">
-                                            <button class="btn btn-outline-warning btn-sm stadium-section" data-section="VIP-A">VIP A</button>
-                                            <button class="btn btn-outline-warning btn-sm stadium-section" data-section="VIP-B">VIP B</button>
-                                            <button class="btn btn-outline-warning btn-sm stadium-section" data-section="VIP-C">VIP C</button>
+                                            <button class="btn btn-outline-warning btn-sm stadium-section" data-section="VIP-A">>VIP Colombo</button>
+                                            <button class="btn btn-outline-warning btn-sm stadium-section" data-section="VIP-B">VIP Kandy</button>
+                                            
                                         </div>
-                                        <small class="text-muted d-block">VIP Section</small>
+                                        <small class="text-muted d-block">VIP Boxes</small>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="d-flex justify-content-center gap-1 flex-wrap">
                                             <button class="btn btn-outline-info btn-sm stadium-section" data-section="PREM-1">P1</button>
                                             <button class="btn btn-outline-info btn-sm stadium-section" data-section="PREM-2">P2</button>
                                             <button class="btn btn-outline-info btn-sm stadium-section" data-section="PREM-3">P3</button>
-                                            <button class="btn btn-outline-info btn-sm stadium-section" data-section="PREM-4">P4</button>
-                                            <button class="btn btn-outline-info btn-sm stadium-section" data-section="PREM-5">P5</button>
+                                            
                                         </div>
                                         <small class="text-muted d-block">Premium Section</small>
                                     </div>
@@ -452,8 +451,7 @@
                                             <button class="btn btn-outline-success btn-sm stadium-section" data-section="GEN-2">G2</button>
                                             <button class="btn btn-outline-success btn-sm stadium-section" data-section="GEN-3">G3</button>
                                             <button class="btn btn-outline-success btn-sm stadium-section" data-section="GEN-4">G4</button>
-                                            <button class="btn btn-outline-success btn-sm stadium-section" data-section="GEN-5">G5</button>
-                                            <button class="btn btn-outline-success btn-sm stadium-section" data-section="GEN-6">G6</button>
+                                            
                                         </div>
                                         <small class="text-muted d-block">General Admission</small>
                                     </div>
@@ -463,7 +461,7 @@
                             <!-- Selected seats display -->
                             <div class="mt-3">
                                 <h6 class="fw-bold">Selected Sections:</h6>
-                                <div id="selectedSections" class="text-muted">None selected</div>
+                                <div id="selectedSections" class="text-muted">No sections selected yet</div>
                             </div>
                         </div>
                     </div>
@@ -471,7 +469,7 @@
                 <div class="modal-footer">
                     <div class="w-100">
                         <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="fw-bold">Total: $<span id="sportsTotalPrice">0.00</span></span>
+                            <span class="fw-bold">Total: LKR<span id="sportsTotalPrice">0.00</span></span>
                         </div>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                         <button type="button" class="btn btn-primary" onclick="addSportsToCart()">
