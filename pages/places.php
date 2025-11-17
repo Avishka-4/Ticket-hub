@@ -292,12 +292,8 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="beaches">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative image-overlay">
-<<<<<<< HEAD
                             <img src="..\assets\images\places\mathara.jpg" class="card-img-top" alt="Caribbean Island Hopping">
-=======
-                            <img src="..\assets\images\places\matara.jpg" class="card-img-top" alt="Caribbean Island Hopping">
->>>>>>> main
-                        </div>
+=======                    </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Matara</h5>
                             <p class="text-muted mb-2">
