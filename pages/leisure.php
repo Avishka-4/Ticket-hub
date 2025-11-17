@@ -194,7 +194,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openLeisureBooking('Scuba Diving Adventure', 10000)">
+                           <button class="btn btn-primary w-100" onclick="openLeisureBooking('Professional Surfing Lessons', 10000)">
                                 <i class="fas fa-calendar-plus me-2"></i>Book Activity
                             </button>
                         </div>
