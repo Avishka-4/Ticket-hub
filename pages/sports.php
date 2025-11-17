@@ -20,7 +20,7 @@
 
     <!-- Hero Section -->
 <section class="relative bg-gradient-to-r from-green-600 to-blue-600 text-white py-20 bg-cover bg-center" 
-    style="background-image: url('images/sports/SPR.png'); aspect-ratio: 3 / 1; background-blend-mode: overlay;">
+    style="background-image: url('../assets/images/sports/SPR.png'); aspect-ratio: 3 / 1; background-blend-mode: overlay;">
     <div class="container">
         <div class="text-center relative z-10">
             <h1 class="text-5xl font-bold mb-4 drop-shadow-lg">
