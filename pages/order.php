@@ -6,9 +6,6 @@
   }else{
     die(mysqli_error($con));
   }
- 
-
-
   if($_SERVER['REQUEST_METHOD']==='POST'){
     $full_name      = $_POST['full_name'];
     $email_address  = $_POST['email_address'];
