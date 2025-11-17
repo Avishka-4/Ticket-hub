@@ -19,19 +19,80 @@
     <?php include '../includes/navbar.php'; ?>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16">
-        <div class="carousel-inner" style="height: 450px;">
-            <div class="carousel-item active position-relative">
-            <img src="../assets\images\event-image\2.jpg" class="d-block w-100" alt="boat ride">
-            <div class="carousel-caption d-md-block position-absolute top-50 start-50 translate-middle ">
-            <div class="text-center">
-                <h1 class="text-5xl font-bold mb-3 ">
-                    <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
-                </h1>
-                <p class="text-xl mb-6">Discover amazing live performances, concerts, and festivals</p>
+    <section id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../assets/images/event-image/1.jpg" class="d-block w-100 vh-50" alt="Event">
+            <div class="carousel-caption d-none d-md-block position-absolute top-50 start-50 translate-middle">
+                <div class="text-center">
+                    <h1 class="display-4 fw-bold mb-3">
+                        <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
+                    </h1>
+                    <p class="lead mb-4">Discover amazing live performances, concerts, and festivals.</p>
+                </div>
+            </div>
+            <!-- Mobile caption -->
+            <div class="carousel-caption d-md-none position-absolute top-50 start-50 translate-middle w-75">
+                <div class="text-center">
+                    <h2 class="fw-bold mb-2">
+                        <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
+                    </h2>
+                    <p class="mb-3">Discover amazing live performances, concerts, and festivals.</p>
+                </div>
             </div>
         </div>
-    </section>
+
+        <div class="carousel-item">
+            <img src="../assets/images/event-image/2.jpg" class="d-block w-100 vh-50" alt="Event">
+            <div class="carousel-caption d-none d-md-block position-absolute top-50 start-50 translate-middle">
+                <div class="text-center">
+                    <h1 class="display-4 fw-bold mb-3">
+                        <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
+                    </h1>
+                    <p class="lead mb-4">Discover amazing live performances, concerts, and festivals.</p>
+                </div>
+            </div>
+            <!-- Mobile caption -->
+            <div class="carousel-caption d-md-none position-absolute top-50 start-50 translate-middle w-75">
+                <div class="text-center">
+                    <h2 class="fw-bold mb-2">
+                        <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
+                    </h2>
+                    <p class="mb-3">Discover amazing live performances, concerts, and festivals.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="../assets/images/event-image/3.jpg" class="d-block w-100 vh-50" alt="Event">
+            <div class="carousel-caption d-none d-md-block position-absolute top-50 start-50 translate-middle">
+                <div class="text-center">
+                    <h1 class="display-4 fw-bold mb-3">
+                        <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
+                    </h1>
+                    <p class="lead mb-4">Discover amazing live performances, concerts, and festivals.</p>
+                </div>
+            </div>
+            <!-- Mobile caption -->
+            <div class="carousel-caption d-md-none position-absolute top-50 start-50 translate-middle w-75">
+                <div class="text-center">
+                    <h2 class="fw-bold mb-2">
+                        <i class="fas fa-umbrella-beach"></i>Live Events & Concerts
+                    </h2>
+                    <p class="mb-3">Discover amazing live performances, concerts, and festivals.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</section>
 
     <!-- Filter Section -->
     <section class="py-4 bg-light">
@@ -75,7 +136,7 @@
                             <span class="badge bg-danger position-absolute top-0 end-0 m-2">Hot</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">SUN FM Presents – Clean Bandit Live in Concert</h5>
+                            <h5 class="card-title fw-bold">SUN FM Presents – Bandit Live in Concert</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-calendar me-2"></i>28 December 2025 – 6:00 PM
                             </p>
@@ -94,7 +155,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('Rock Legends Live 2024', 45)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('SUN FM Presents – Clean Bandit Live in Concert', 12000)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -102,25 +163,25 @@
                 </div>
 
                 <!-- Event Card 2 -->
-                <div class="col-md-6 col-lg-4 mb-4" data-category="festivals">
+                <div class="col-md-6 col-lg-4 mb-4" data-category="Fun">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
                            <img src="../assets\images\event-image\event2.jpg" 
                                 class="card-img-top" 
                                 style="height: 200px; object-fit: cover;" 
-                                 alt="Colombo Food Festival 2026">
+                                 alt="Sébastien Léger & Roy Rosenfeld — Lost Miracle">
 
                             <span class="badge bg-success position-absolute top-0 end-0 m-2">Favourite</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Colombo Food Festival 2026</h5>
+                            <h5 class="card-title fw-bold">Léger & Roy Rosenfeld — Lost Miracle</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-calendar me-2"></i>12 Jan 2026 – 10:00 AM
+                                <i class="fas fa-calendar me-2"></i>24 January 2026 – 04:00 PM
                             </p>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-map-marker-alt me-2"></i>Galle Face Green, Colombo
                             </p>
-                            <p class="card-text">Street food, live music & Sri Lanka’s biggest culinary celebration.</p>
+                            <p class="card-text">If you enjoy energetic electronic music and want a major event in Colombo, this one fits.</p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 500LKR</span>
                                 <div class="text-warning">
@@ -132,7 +193,7 @@
                                     <small class="text-muted ms-1">(4.7)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('Summer Music Festival', 120)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('Léger & Roy Rosenfeld — Lost Miracle', 500)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -146,18 +207,18 @@
                             <img src="../assets\images\event-image\event3.jpg" 
                                 class="card-img-top" 
                                 style="height: 200px; object-fit: cover;" 
-                                alt="Cinnamon Life Christmas Carnival">
+                                alt="Nenjame Nenjame – Tamil Musical Concert">
 
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Cinnamon Life Christmas Carnival</h5>
+                            <h5 class="card-title fw-bold">Nenjame Nenjame – Tamil Musical Concert</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-calendar me-2"></i>1–25 Dec 2025
                             </p>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-map-marker-alt me-2"></i>Cinnamon Life, Colombo 02
                             </p>
-                            <p class="card-text">Christmas market, fun games, Santa parade & live performances.</p>
+                            <p class="card-text">Tamil musical concert by singers Shakthisree Gopalan / Harish Jayaraj …</p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 1,000LKR</span>
                                 <div class="text-warning">
@@ -169,7 +230,7 @@
                                     <small class="text-muted ms-1">(4.8)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('Comedy Night Special', 25)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('Nenjame Nenjame – Tamil Musical Concert', 1000)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -183,19 +244,19 @@
                             <img src="../assets\images\event-image\event4.jpg" 
                                  class="card-img-top" 
                                  style="height: 200px; object-fit: cover;" 
-                                 alt="Kandy Esala Perahera – 2025">
+                                 alt="The Saiko Show – 2025">
 
                             <span class="badge bg-warning position-absolute top-0 end-0 m-2">Limited</span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Kandy Esala Perahera – 2025</h5>
+                            <h5 class="card-title fw-bold">The Saiko Show – 2025</h5>
                             <p class="text-muted mb-2">
                                 <i class="fas fa-calendar me-2"></i>December 10, 2025
                             </p>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-map-marker-alt me-2"></i>Kandy City
+                                <i class="fas fa-map-marker-alt me-2"></i>Viharamahadevi Open Air Theatre, Colombo.
                             </p>
-                            <p class="card-text">Sri Lanka’s most iconic cultural parade with dancers, drummers & elephants.</p>
+                            <p class="card-text">Good for a general live-music outing in Colombo(not specifically Tamil-language).</p>
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 3,500LKR</span>
                                 <div class="text-warning">
@@ -207,7 +268,7 @@
                                     <small class="text-muted ms-1">(4.6)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('Shakespeare in the Park', 35)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('The Saiko Show', 3500)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -246,7 +307,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('Jazz & Blues Night', 55)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('Colombo Stand-up Comedy Night', 2000)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -285,7 +346,7 @@
                                     <small class="text-muted ms-1">(4.5)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('Electronic Dance Festival', 75)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('Deep Jungle Music Festival – Ella', 8500)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -313,26 +374,19 @@
                         <div class="col-md-6">
                             <h6 id="eventTitle" class="fw-bold mb-3"></h6>
                             <div class="mb-3">
-                                <label class="form-label">Select Date & Time</label>
-                                <select class="form-select">
-                                    <option>December 15, 2025 - 8:00 PM</option>
-                                    <option>December 16, 2025 - 8:00 PM</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
                                 <label class="form-label">Ticket Type</label>
                                 <div class="list-group">
                                     <label class="list-group-item">
                                         <input class="form-check-input me-1" type="radio" name="ticketType" value="general">
-                                        General Admission - $<span id="generalPrice"></span>
+                                        General Admission - LKR<span id="generalPrice"></span>
                                     </label>
                                     <label class="list-group-item">
                                         <input class="form-check-input me-1" type="radio" name="ticketType" value="vip">
-                                        VIP - $<span id="vipPrice"></span>
+                                        VIP - LKR<span id="vipPrice"></span>
                                     </label>
                                     <label class="list-group-item">
                                         <input class="form-check-input me-1" type="radio" name="ticketType" value="premium">
-                                        Premium - $<span id="premiumPrice"></span>
+                                        Premium - LKR<span id="premiumPrice"></span>
                                     </label>
                                 </div>
                             </div>
@@ -376,7 +430,7 @@
                 <div class="modal-footer">
                     <div class="w-100">
                         <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="fw-bold">Total: $<span id="totalPrice">0.00</span></span>
+                            <span class="fw-bold">Total: LKR<span id="totalPrice">0.00</span></span>
                         </div>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                         <button type="button" class="btn btn-primary" onclick="addToCart()">

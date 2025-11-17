@@ -20,19 +20,23 @@
 
     <!-- Hero Section -->
     <section>
-       <div class="carousel-inner" style="height: 600px;">
-            <div class="carousel-item active position-relative">
-            <img src="../assets/images/movies/cinema banner.jpg" class="d-block w-100" alt="boat ride">
-            <div class="carousel-caption d-md-block position-absolute top-50 start-50 translate-middle ">
-            <div class="text-center">
-                <h1 class="text-5xl font-bold mb-3 ">
-                    <i class="fas fa-umbrella-beach"></i>Movies & Theater
-                </h1>
-                <p class="text-xl mb-6">Book your favorite movies with premium seating experience</p>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../assets/images/movies/cinema banner.jpg" class="d-block w-100 vh-50" alt="cinema">
+                <div class="carousel-caption position-absolute top-50 start-50 translate-middle w-75">
+                    <div class="text-center">
+                        <h1 class="display-4 fw-bold mb-3 d-none d-md-block">
+                            <i class="fas fa-film"></i>Movies & Theater
+                        </h1>
+                        <h2 class="fw-bold mb-2 d-md-none">
+                            <i class="fas fa-film"></i>Movies & Theater
+                        </h2>
+                        <p class="lead mb-4 d-none d-md-block">Book your favorite movies with premium seating experience</p>
+                        <p class="mb-3 d-md-none">Book your favorite movies with premium seating experience</p>
+                    </div>
+                </div>
             </div>
         </div>
-            </div>
-</div>
     </section>
 
     <!-- Filter Section -->
@@ -49,7 +53,14 @@
                         <button class="btn btn-outline-primary" data-filter="sci-fi">Sci-Fi</button>
                     </div>
                 </div>
-                
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search activities...">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>             
             </div>
         </div>
     </section>
@@ -89,17 +100,16 @@
                             <div class="mb-3">
                                 <small class="text-muted fw-bold">Today's Showtimes:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
-                                    <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '12:30 PM')">10:30 PM</button>
+                                    <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '10:30 PM')">10:30 PM</button>
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '3:45 PM')">3:45 PM</button>
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '7:00 PM')">7:00 PM</button>
-                                    <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '10:15 PM')">10:15 PM</button>
                                 </div>
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 400LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Action Hero Chronicles', 400)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Neera', 400)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -117,7 +127,7 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold">The Twists</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>1h 45min | Animatio, Comedy, Family
+                                <i class="fas fa-clock me-2"></i>1h 45min |Comedy, Family
                             </p>
                             <div class="mb-2">
                                 <div class="text-warning">
@@ -129,7 +139,7 @@
                                     <small class="text-muted ms-1">(9.2/10)</small>
                                 </div>
                             </div>
-                            <p class="card-text">Two orphans join forces with a family of magical animals to save their city from the powerful Mr. and Mrs. Twit, the meanest, smelliest, nastiest people in the world.</p>
+                            <p class="card-text">Two orphans join forces with a family of magical animals to save their city from Mr. and Mrs. Twit.</p>
                             
                             <!-- Show Times -->
                             <div class="mb-3">
@@ -138,14 +148,13 @@
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '1:00 PM')">1:00 PM</button>
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '4:30 PM')">4:30 PM</button>
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '7:45 PM')">7:45 PM</button>
-                                    <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '10:30 PM')">10:30 PM</button>
                                 </div>
                             </div>
                             
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 450LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Comedy Central Deluxe', 450)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('The Twists', 450)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -174,7 +183,7 @@
                                     <small class="text-muted ms-1">(9.0/10)</small>
                                 </div>
                             </div>
-                            <p class="card-text">A colossal invasion of Earth is coming in this off-kilter take on the legendary novel of the same name, filled with present-day theme</p>
+                            <p class="card-text">A colossal invasion of Earth is coming in this kilter take on the legendary novel of the same name.</p>
                             
                             <!-- Show Times -->
                             <div class="mb-3">
@@ -189,7 +198,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 500LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Space Odyssey 2025', 500)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('War of the Worlds', 500)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -220,7 +229,7 @@
                                     <small class="text-muted ms-1">(8.7/10)</small>
                                 </div>
                             </div>
-                            <p class="card-text">The film follows Dr. Manorani Saravanamuttu's relentless pursuit of justice after the tragic abduction and murder of her son, Richard de Zoysa, a journalist, writer, and human rights activist, in 1990.</p>
+                            <p class="card-text">The film follows Dr. Manorani Saravanamuttu's relentless pursuit of justice after the abduction and murder of her son, Richard de Zoysa.</p>
                             
                             <!-- Show Times -->
                             <div class="mb-3">
@@ -235,7 +244,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 400LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('The Hearts Journey', 400)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Award Winner', 400)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -281,7 +290,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 550LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Midnight Shadows',550)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Until Dawn', 550)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -327,7 +336,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 400LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Guardian Force', 400)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Superhero', 400)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -355,7 +364,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Select Cinema</label>
                                 <select class="form-select" id="cinemaSelect">
-                                    <option>AMC Theater Downtown</option>
+                                    <option>AMC Theater DownSouth</option>
                                     <option>Regal Cinema Complex</option>
                                     <option>CineMax IMAX Theater</option>
                                 </select>
@@ -363,9 +372,9 @@
                             <div class="mb-3">
                                 <label class="form-label">Select Date</label>
                                 <select class="form-select" id="dateSelect">
-                                    <option>Today - Dec 15, 2024</option>
-                                    <option>Tomorrow - Dec 16, 2024</option>
-                                    <option>Dec 17, 2024</option>
+                                    <option>Today - Dec 15, 2025</option>
+                                    <option>Tomorrow - Dec 16, 2025</option>
+                                    <option>Dec 17, 2025</option>
                                 </select>
                             </div>
                             <div class="mb-3">
@@ -395,7 +404,7 @@
                                     <div class="row justify-content-center mb-2">
                                         <div class="col-auto">
                                             <div class="d-flex gap-1">
-                                                <span class="text-muted small me-3">A</span>
+                                                <span class="text-muted small me-3 mt-3">A</span>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="A1">1</button>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="A2">2</button>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="A3">3</button>
@@ -414,7 +423,7 @@
                                     <div class="row justify-content-center mb-2">
                                         <div class="col-auto">
                                             <div class="d-flex gap-1">
-                                                <span class="text-muted small me-3">B</span>
+                                                <span class="text-muted small me-3 mt-3">B</span>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="B1">1</button>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="B2">2</button>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="B3">3</button>
@@ -433,7 +442,7 @@
                                     <div class="row justify-content-center mb-2">
                                         <div class="col-auto">
                                             <div class="d-flex gap-1">
-                                                <span class="text-muted small me-3">C</span>
+                                                <span class="text-muted small me-3 mt-3">C</span>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="C1">1</button>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="C2">2</button>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="C3">3</button>
@@ -452,7 +461,7 @@
                                     <div class="row justify-content-center">
                                         <div class="col-auto">
                                             <div class="d-flex gap-1">
-                                                <span class="text-muted small me-3">D</span>
+                                                <span class="text-muted small me-3 mt-3">D</span>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="D1">1</button>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="D2">2</button>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="D3">3</button>
@@ -494,14 +503,14 @@
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div>
                                 <strong>Selected Seats: </strong><span id="selectedSeats">None</span><br>
-                                <strong>Total: LKR <span id="movieTotalPrice">0.00</span></strong>
+                                <strong>Total: LKR<span id="movieTotalPrice">0.00</span></strong>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" onclick="addMovieToCart()">
-                            <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                        <button type="button" class="btn btn-secondary m-1" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary m-1" onclick="addMovieToCart()">
+                            <i class="fas fa-shopping-cart me-2 "></i>Add to Cart
                         </button>
-                        <button type="button" class="btn btn-success" onclick="proceedToMoviePayment()">
+                        <button type="button" class="btn btn-success m-1" onclick="proceedToMoviePayment()">
                             <i class="fas fa-credit-card me-2"></i>Buy Now
                         </button>
                     </div>
