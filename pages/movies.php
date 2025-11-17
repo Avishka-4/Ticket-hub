@@ -53,7 +53,14 @@
                         <button class="btn btn-outline-primary" data-filter="sci-fi">Sci-Fi</button>
                     </div>
                 </div>
-                
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search activities...">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>             
             </div>
         </div>
     </section>
@@ -93,7 +100,7 @@
                             <div class="mb-3">
                                 <small class="text-muted fw-bold">Today's Showtimes:</small>
                                 <div class="d-flex flex-wrap gap-1 mt-1">
-                                    <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '12:30 PM')">10:30 PM</button>
+                                    <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '10:30 PM')">10:30 PM</button>
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '3:45 PM')">3:45 PM</button>
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '7:00 PM')">7:00 PM</button>
                                 </div>
@@ -397,7 +404,7 @@
                                     <div class="row justify-content-center mb-2">
                                         <div class="col-auto">
                                             <div class="d-flex gap-1">
-                                                <span class="text-muted small me-3">A</span>
+                                                <span class="text-muted small me-3 mt-3">A</span>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="A1">1</button>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="A2">2</button>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="A3">3</button>
@@ -416,7 +423,7 @@
                                     <div class="row justify-content-center mb-2">
                                         <div class="col-auto">
                                             <div class="d-flex gap-1">
-                                                <span class="text-muted small me-3">B</span>
+                                                <span class="text-muted small me-3 mt-3">B</span>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="B1">1</button>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="B2">2</button>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="B3">3</button>
@@ -435,7 +442,7 @@
                                     <div class="row justify-content-center mb-2">
                                         <div class="col-auto">
                                             <div class="d-flex gap-1">
-                                                <span class="text-muted small me-3">C</span>
+                                                <span class="text-muted small me-3 mt-3">C</span>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="C1">1</button>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="C2">2</button>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="C3">3</button>
@@ -454,7 +461,7 @@
                                     <div class="row justify-content-center">
                                         <div class="col-auto">
                                             <div class="d-flex gap-1">
-                                                <span class="text-muted small me-3">D</span>
+                                                <span class="text-muted small me-3 mt-3">D</span>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="D1">1</button>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="D2">2</button>
                                                 <button class="btn btn-outline-success btn-sm movie-seat" data-seat="D3">3</button>
