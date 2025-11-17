@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/index.css">
-
 </head>
 <body>
     <?php include '../includes/navbar.php'; ?>
@@ -294,7 +292,11 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="beaches">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative image-overlay">
+<<<<<<< HEAD
                             <img src="..\assets\images\places\mathara.jpg" class="card-img-top" alt="Caribbean Island Hopping">
+=======
+                            <img src="..\assets\images\places\matara.jpg" class="card-img-top" alt="Caribbean Island Hopping">
+>>>>>>> main
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-bold">Matara</h5>

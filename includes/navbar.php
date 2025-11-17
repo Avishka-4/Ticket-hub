@@ -111,6 +111,8 @@ error_log('Base URL: ' . $baseUrl);
                         style="font-size: 14px; padding: 10px 12px;">
                             <i class="fas fa-user-plus me-1"></i>Register
                         </a>
+
+
                     <?php endif; ?>
                         <!-- <button class="btn btn-success btn-small ms-2" data-bs-toggle="modal" data-bs-target="#cartModal">
                             <i class="fas fa-shopping-cart me-1"></i>Cart 
