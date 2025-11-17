@@ -476,7 +476,7 @@ if (empty($festivals) && !isset($error)) {
                             <span class="cuisine-tag">Artisan</span>
                         </div>
                             <button class="btn btn-outline-primary w-100 btn-details" 
-                                onclick="showFestivalDetails('Urban Food Market Festival', 'Discover the best of local produce and artisanal foods at the Urban Food Market Festival! This unique event brings together local farmers, artisan food producers, and specialty vendors showcasing fresh, organic, and locally-sourced ingredients. Experience farm-to-table dining, cooking workshops with local chefs, and learn about sustainable food practices. Perfect for food enthusiasts who value quality, freshness, and supporting local communities.')"
+                                onclick="showFestivalDetails('Food Market Festival - John Keels Holdings', 'Discover the best of local produce and artisanal foods at the Urban Food Market Festival! This unique event brings together local farmers, artisan food producers, and specialty vendors showcasing fresh, organic, and locally-sourced ingredients. Experience farm-to-table dining, cooking workshops with local chefs, and learn about sustainable food practices. Perfect for food enthusiasts who value quality, freshness, and supporting local communities.')"
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
                             <i class="fas fa-info-circle"></i>
@@ -589,7 +589,11 @@ if (empty($festivals) && !isset($error)) {
                     email = 'spicyfest@tickethub.lk';
                     prices = 'Regular: Rs. 600<br>VIP: Rs. 1600<br>Family Pack (4 persons): Rs. 2000';
                     break;
-                
+                case 'Food Market Festival - John Keels Holdings':
+                    contact = '+94 11 2890123 - Nimal, +94 77 5678901 - Kaushal';
+                    email = 'urbanmarket@tickethub.lk';
+                    prices = 'Regular: Rs. 600<br>VIP: Rs. 1200<br>Children (under 12): Free';
+                    break;
                 default:
                     contact = 'Contact information not available';
                     email = 'info@tickethub.lk';
