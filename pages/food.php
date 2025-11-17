@@ -199,9 +199,9 @@ if (empty($festivals) && !isset($error)) {
         .btn-details {
             padding: 10px 20px !important;
             transition: all 0.3s ease !important;
-            background: #6f42c1 !important;
+            background: #7761f4 !important;
             color: white !important;
-            border: 1px solid #6f42c1 !important;
+            border: 1px solid #7761f4 !important;
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
@@ -209,10 +209,10 @@ if (empty($festivals) && !isset($error)) {
         }
         
         .btn-details:hover {
-            background: #5a359a !important;
+            background: #6350e8 !important;
             color: white !important;
             transform: translateY(-2px) !important;
-            box-shadow: 0 5px 15px rgba(111, 66, 193, 0.25) !important;
+            box-shadow: 0 5px 15px rgba(119, 97, 244, 0.25) !important;
         }
 
         /* .nav-item{
