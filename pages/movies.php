@@ -92,7 +92,6 @@
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '12:30 PM')">10:30 PM</button>
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '3:45 PM')">3:45 PM</button>
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '7:00 PM')">7:00 PM</button>
-                                    <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '10:15 PM')">10:15 PM</button>
                                 </div>
                             </div>
                             
@@ -117,7 +116,7 @@
                         <div class="card-body">
                             <h5 class="card-title fw-bold">The Twists</h5>
                             <p class="text-muted mb-2">
-                                <i class="fas fa-clock me-2"></i>1h 45min | Animatio, Comedy, Family
+                                <i class="fas fa-clock me-2"></i>1h 45min |Comedy, Family
                             </p>
                             <div class="mb-2">
                                 <div class="text-warning">
@@ -129,7 +128,7 @@
                                     <small class="text-muted ms-1">(9.2/10)</small>
                                 </div>
                             </div>
-                            <p class="card-text">Two orphans join forces with a family of magical animals to save their city from the powerful Mr. and Mrs. Twit, the meanest, smelliest, nastiest people in the world.</p>
+                            <p class="card-text">Two orphans join forces with a family of magical animals to save their city from Mr. and Mrs. Twit.</p>
                             
                             <!-- Show Times -->
                             <div class="mb-3">
@@ -138,7 +137,6 @@
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '1:00 PM')">1:00 PM</button>
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '4:30 PM')">4:30 PM</button>
                                     <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '7:45 PM')">7:45 PM</button>
-                                    <button class="btn btn-outline-primary btn-sm" onclick="selectShowtime(this, '10:30 PM')">10:30 PM</button>
                                 </div>
                             </div>
                             
@@ -174,7 +172,7 @@
                                     <small class="text-muted ms-1">(9.0/10)</small>
                                 </div>
                             </div>
-                            <p class="card-text">A colossal invasion of Earth is coming in this off-kilter take on the legendary novel of the same name, filled with present-day theme</p>
+                            <p class="card-text">A colossal invasion of Earth is coming in this kilter take on the legendary novel of the same name.</p>
                             
                             <!-- Show Times -->
                             <div class="mb-3">
@@ -220,7 +218,7 @@
                                     <small class="text-muted ms-1">(8.7/10)</small>
                                 </div>
                             </div>
-                            <p class="card-text">The film follows Dr. Manorani Saravanamuttu's relentless pursuit of justice after the tragic abduction and murder of her son, Richard de Zoysa, a journalist, writer, and human rights activist, in 1990.</p>
+                            <p class="card-text">The film follows Dr. Manorani Saravanamuttu's relentless pursuit of justice after the tragic abduction and murder of her son, Richard de Zoysa.</p>
                             
                             <!-- Show Times -->
                             <div class="mb-3">

@@ -457,9 +457,9 @@ if (empty($festivals) && !isset($error)) {
                     </div>
                     <img src="../assets/images/foods/food-fest-6.jpg" class="card-img-top" alt="Urban Food Market" loading="eager">
                     <div class="card-body">
-                        <h5 class="card-title">Food Market Festival - John Keels Holdings</h5>
+                        <h5 class="card-title">Food Market Festival - John Keels PLC</h5>
                         <p class="mb-2">
-                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>Independence Square, Colombo
+                            <i class="fas fa-map-marker-alt me-2 text-danger"></i>7 Independence Ave, Colombo 00700
                         </p>
                         <p class="mb-2">
                             <i class="fas fa-calendar me-2 text-primary"></i>January 10, 2026
@@ -473,7 +473,7 @@ if (empty($festivals) && !isset($error)) {
                             <span class="cuisine-tag">Artisan</span>
                         </div>
                             <button class="btn btn-outline-primary w-100 btn-details" 
-                                onclick="showFestivalDetails('Urban Food Market Festival', 'Discover the best of local produce and artisanal foods at the Urban Food Market Festival! This unique event brings together local farmers, artisan food producers, and specialty vendors showcasing fresh, organic, and locally-sourced ingredients. Experience farm-to-table dining, cooking workshops with local chefs, and learn about sustainable food practices. Perfect for food enthusiasts who value quality, freshness, and supporting local communities.')"
+                                onclick="showFestivalDetails('Food Market Festival - John Keels PLC', 'Discover the best of local produce and artisanal foods at the Urban Food Market Festival! This unique event brings together local farmers, artisan food producers, and specialty vendors showcasing fresh, organic, and locally-sourced ingredients. Experience farm-to-table dining, cooking workshops with local chefs, and learn about sustainable food practices. Perfect for food enthusiasts who value quality, freshness, and supporting local communities.')"
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
                             <span class="fw-bold">View Event Details</span>
@@ -585,7 +585,7 @@ if (empty($festivals) && !isset($error)) {
                     email = 'spicyfest@tickethub.lk';
                     prices = 'Regular: Rs. 600<br>VIP: Rs. 1600<br>Family Pack (4 persons): Rs. 2000';
                     break;
-                case 'Food Market Festival - John Keels Holdings':
+                case 'Food Market Festival - John Keels PLC':
                     contact = '+94 11 2890123 - Nimal, +94 77 5678901 - Kaushal';
                     email = 'urbanmarket@tickethub.lk';
                     prices = 'Regular: Rs. 600<br>VIP: Rs. 1200<br>Children (under 12): Free';
