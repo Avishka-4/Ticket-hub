@@ -199,8 +199,9 @@ if (empty($festivals) && !isset($error)) {
         .btn-details {
             padding: 10px 20px !important;
             transition: all 0.3s ease !important;
-            background: white !important;
-            border: 1px solid #0d6efd !important;
+            background: #6f42c1 !important;
+            color: white !important;
+            border: 1px solid #6f42c1 !important;
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
@@ -208,9 +209,10 @@ if (empty($festivals) && !isset($error)) {
         }
         
         .btn-details:hover {
-            background: #f8f9fa !important;
+            background: #5a359a !important;
+            color: white !important;
             transform: translateY(-2px) !important;
-            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.15) !important;
+            box-shadow: 0 5px 15px rgba(111, 66, 193, 0.25) !important;
         }
 
         /* .nav-item{
@@ -323,7 +325,6 @@ if (empty($festivals) && !isset($error)) {
                                 onclick="showFestivalDetails('Culinary Art Food Expo (CAFE)', 'Join us for an extraordinary culinary journey at CAFE 2025! Experience the finest selection of international and local cuisine, live cooking demonstrations by renowned chefs, and interactive food workshops. This premier food event brings together over 50 vendors showcasing their signature dishes, innovative food concepts, and culinary expertise.')"
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
-                            <i class="fas fa-info-circle"></i>
                             <span class="fw-bold">View Event Details</span>
                         </button>
                     </div>
@@ -356,7 +357,6 @@ if (empty($festivals) && !isset($error)) {
                                 onclick="showFestivalDetails('Grand Trunk Road Food Fest', 'Embark on a gastronomic adventure at the Grand Trunk Road Food Fest! This unique festival celebrates the diverse culinary heritage of South Asia\'s historic trade route. Discover authentic street food, traditional delicacies, and modern fusion dishes from regions spanning from Bengal to Peshawar. Experience live cooking demonstrations, cultural performances, and the vibrant atmosphere of this legendary route.')"
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
-                            <i class="fas fa-info-circle"></i>
                             <span class="fw-bold">View Event Details</span>
                         </button>
                     </div>
@@ -386,7 +386,6 @@ if (empty($festivals) && !isset($error)) {
                                 onclick="showFestivalDetails('Colombo Flavour Fiesta', 'Experience the essence of Sri Lankan cuisine at Colombo Flavour Fiesta! This vibrant festival brings together the best local chefs and food artisans showcasing authentic Sri Lankan dishes, street food favorites, and contemporary fusion creations. Enjoy live cooking demonstrations, traditional food preparation methods, and the aromatic spices that make Sri Lankan cuisine unique. Don\'t miss special workshops on making hoppers, kottu, and traditional curries.')"
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
-                            <i class="fas fa-info-circle"></i>
                             <span class="fw-bold">View Event Details</span>
                         </button>
                     </div>
@@ -415,7 +414,6 @@ if (empty($festivals) && !isset($error)) {
                                 onclick="showFestivalDetails('Fairway Colombo Street Food Festival', 'Step into the historic Dutch Hospital precinct for an unforgettable evening of street food delights! The Fairway Colombo Street Food Festival transforms this colonial-era building into a bustling food haven, featuring the best street food vendors from across Colombo. Explore a diverse range of local and international street food, from kottu and isso wade to tacos and sliders. Enjoy live music, cultural performances, and the unique ambiance of Old Colombo while savoring your favorite street food delicacies.')"
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
-                            <i class="fas fa-info-circle"></i>
                             <span class="fw-bold">View Event Details</span>
                         </button>
                     </div>
@@ -446,7 +444,6 @@ if (empty($festivals) && !isset($error)) {
                                 onclick="showFestivalDetails('Spicy Street Food Festival', 'Heat up your taste buds at the Spicy Street Food Festival in Diyatha Uyana! This exciting event celebrates the spicier side of street food culture, featuring vendors specializing in hot and flavorful dishes from around Sri Lanka and beyond. Challenge yourself with different levels of spiciness, from mild to extreme. Enjoy cooking competitions, spice mixing demonstrations, and cool refreshments to balance the heat. A perfect event for spicy food lovers and adventure seekers!')"
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
-                            <i class="fas fa-info-circle"></i>
                             <span class="fw-bold">View Event Details</span>
                         </button>
                     </div>
@@ -458,7 +455,7 @@ if (empty($festivals) && !isset($error)) {
                     <div class="festival-badge">
                         <i class="fas fa-star text-warning me-1"></i>Popular
                     </div>
-                    <img src="../assets/images/foods/food-fest-1.jpg" class="card-img-top" alt="Urban Food Market" loading="eager">
+                    <img src="../assets/images/foods/food-fest-6.jpg" class="card-img-top" alt="Urban Food Market" loading="eager">
                     <div class="card-body">
                         <h5 class="card-title">Food Market Festival - John Keels Holdings</h5>
                         <p class="mb-2">
@@ -476,10 +473,9 @@ if (empty($festivals) && !isset($error)) {
                             <span class="cuisine-tag">Artisan</span>
                         </div>
                             <button class="btn btn-outline-primary w-100 btn-details" 
-                                onclick="showFestivalDetails('Food Market Festival - John Keels Holdings', 'Discover the best of local produce and artisanal foods at the Urban Food Market Festival! This unique event brings together local farmers, artisan food producers, and specialty vendors showcasing fresh, organic, and locally-sourced ingredients. Experience farm-to-table dining, cooking workshops with local chefs, and learn about sustainable food practices. Perfect for food enthusiasts who value quality, freshness, and supporting local communities.')"
+                                onclick="showFestivalDetails('Urban Food Market Festival', 'Discover the best of local produce and artisanal foods at the Urban Food Market Festival! This unique event brings together local farmers, artisan food producers, and specialty vendors showcasing fresh, organic, and locally-sourced ingredients. Experience farm-to-table dining, cooking workshops with local chefs, and learn about sustainable food practices. Perfect for food enthusiasts who value quality, freshness, and supporting local communities.')"
                                 data-bs-toggle="modal" 
                                 data-bs-target="#festivalModal">
-                            <i class="fas fa-info-circle"></i>
                             <span class="fw-bold">View Event Details</span>
                         </button>
                     </div>
