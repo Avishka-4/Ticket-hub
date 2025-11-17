@@ -6,7 +6,6 @@
   }else{
     die(mysqli_error($con));
   }
-
  
 
 
@@ -26,7 +25,7 @@
     $total_price    = $_POST['total_price']?? '';
 
 
-    $sql = "INSERT INTO tbl_order (full_name,email_address,phone_number,members,num_rooms,d_date,r_date,num_nights,p_method,account_number,account_name,cvv,total_price)
+    $sql = "INSERT INTO `tbl_order` (full_name,email_address,phone_number,members,num_rooms,d_date,r_date,num_nights,p_method,account_number,account_name,cvv,total_price)
     VALUES ('$full_name','$email_address','$phone_number','$members','$num_rooms','$d_date','$r_date','$num_nights','$p_method','$account_number','$account_name','$cvv','$total_price')";
 
     $result = mysqli_query($con,$sql);
