@@ -102,7 +102,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 400LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Action Hero Chronicles', 12)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Neera', 400)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -147,7 +147,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 450LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Comedy Central Deluxe', 10)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('The Twists', 450)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -191,7 +191,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 500LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Space Odyssey 2025', 15)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('War of the Worlds', 500)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -237,7 +237,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 400LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('The Hearts Journey', 11)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Award Winner', 400)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -283,7 +283,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 550LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Midnight Shadows', 13)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Until Dawn', 550)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -329,7 +329,7 @@
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="fw-bold text-success fs-5">From 400LKR</span>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Guardian Force', 14)">
+                            <button class="btn btn-primary w-100" onclick="openMovieBooking('Superhero', 400)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -357,7 +357,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Select Cinema</label>
                                 <select class="form-select" id="cinemaSelect">
-                                    <option>AMC Theater Downtown</option>
+                                    <option>AMC Theater DownSouth</option>
                                     <option>Regal Cinema Complex</option>
                                     <option>CineMax IMAX Theater</option>
                                 </select>
@@ -365,9 +365,9 @@
                             <div class="mb-3">
                                 <label class="form-label">Select Date</label>
                                 <select class="form-select" id="dateSelect">
-                                    <option>Today - Dec 15, 2024</option>
-                                    <option>Tomorrow - Dec 16, 2024</option>
-                                    <option>Dec 17, 2024</option>
+                                    <option>Today - Dec 15, 2025</option>
+                                    <option>Tomorrow - Dec 16, 2025</option>
+                                    <option>Dec 17, 2025</option>
                                 </select>
                             </div>
                             <div class="mb-3">
@@ -496,14 +496,14 @@
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div>
                                 <strong>Selected Seats: </strong><span id="selectedSeats">None</span><br>
-                                <strong>Total: $<span id="movieTotalPrice">0.00</span></strong>
+                                <strong>Total: LKR<span id="movieTotalPrice">0.00</span></strong>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" onclick="addMovieToCart()">
-                            <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                        <button type="button" class="btn btn-secondary m-1" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary m-1" onclick="addMovieToCart()">
+                            <i class="fas fa-shopping-cart me-2 "></i>Add to Cart
                         </button>
-                        <button type="button" class="btn btn-success" onclick="proceedToMoviePayment()">
+                        <button type="button" class="btn btn-success m-1" onclick="proceedToMoviePayment()">
                             <i class="fas fa-credit-card me-2"></i>Buy Now
                         </button>
                     </div>
