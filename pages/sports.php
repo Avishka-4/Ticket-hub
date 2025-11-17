@@ -69,7 +69,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="football">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="images/sports/CRI.png">
+                            <img src="../assets/images/sports/CRI.png">
                             <span class="badge bg-danger position-absolute top-0 end-0 m-2">ODI Series</span>
                         </div>
                         <div class="card-body">
@@ -120,7 +120,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="cricket">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="images/sports/RUG.png">
+                            <img src="../assets/images/sports/RUG.png">
                             <span class="badge bg-success position-absolute top-0 end-0 m-2">RUGBY Cup</span>
                         </div>
                         <div class="card-body">
@@ -171,7 +171,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="basketball">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="images/sports/FB.png">
+                            <img src="../assets/images/sports/FB.png">
                             <span class="badge bg-warning position-absolute top-0 end-0 m-2">Football</span>
                         </div>
                         <div class="card-body">
@@ -221,7 +221,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="tennis">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="images/sports/NAC.png">
+                            <img src="../assets/images/sports/NAC.png">
                             <span class="badge bg-info position-absolute top-0 end-0 m-2">National Games</span>
                         </div>
                         <div class="card-body">
@@ -271,7 +271,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="baseball">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="images/sports/VLB.png">
+                            <img src="../assets/images/sports/VLB.png">
                             <span class="badge bg-primary position-absolute top-0 end-0 m-2">National Volleyball</span>
                         </div>
                         <div class="card-body">
@@ -322,7 +322,7 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-category="baseball">
                     <div class="card h-100 shadow-sm hover:shadow-lg transition-shadow">
                         <div class="position-relative">
-                            <img src="images/sports/BSB.png">
+                            <img src="../assets/images/sports/BSB.png">
                             <span class="badge bg-primary position-absolute top-0 end-0 m-2">National Basketball</span>
                         </div>
                         <div class="card-body">
