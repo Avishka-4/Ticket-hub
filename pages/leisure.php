@@ -113,7 +113,6 @@
                         <button class="btn btn-outline-primary" data-filter="water">Water Sports</button>
                         <button class="btn btn-outline-primary" data-filter="adventure">Adventure</button>
                         <button class="btn btn-outline-primary" data-filter="crafts">Relaxing</button>
-                        <button class="btn btn-outline-primary" data-filter="wellness">Creative or Artistic</button>
                         <button class="btn btn-outline-primary" data-filter="outdoor">Outdoor</button>
                     </div>
                 </div>
@@ -152,7 +151,7 @@
                             <p class="text-muted mb-2">
                                 <i class="fas fa-map-marker-alt me-2"></i>Sun Diving Centre, Yakdehimulla, Unawatuna, Sri Lanka​
                             </p>
-                            <p class="card-text">Explore the underwater world with certified instructors. Perfect for beginners and experienced divers alike.So many packages to choose for beginners , Certified divers, and Certification Courses </p></br>
+                            <p class="card-text">Explore the underwater world with certified instructors. Perfect for beginners and experienced divers alike.So many packages to choose for beginners , Certified divers, and Certification Courses </p>
                             
                             <!-- Available Dates -->
                             <div class="mb-3 mt-2">
@@ -200,7 +199,7 @@
                             <p class="text-muted mb-2">
                                 <i class="fas fa-map-marker-alt me-2"></i>Arugam Bay Beach
                             </p>
-                            <p class="card-text">Learn to surf with professional instructors on the best waves in town. With skilled instructors, quality surfboards, and access to Arugambay’s world-famous surf breaks, every session brings you closer to mastering the ocean. Stay with us, surf with us, and feel the true spirit of Arugambay — the paradise for wave lovers.</p>
+                            <p class="card-text">Learn to surf with professional instructors on the best waves in town. With skilled instructors, quality surfboards, and access to Arugambay’s every session brings you closer to mastering the ocean. Stay with us, surf with us, and feel the true spirit of Arugambay the paradise for wave lovers.</p>
                             
                             <div class="mb-3 mt-2">
                                 <small class="text-muted fw-bold">Available Dates:</small>
