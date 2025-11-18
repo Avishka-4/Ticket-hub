@@ -472,8 +472,6 @@
                             <span class="fw-bold">Total: LKR<span id="sportsTotalPrice">0.00</span></span>
                         </div>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" onclick="proceedToPayment()">
-                            <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                         </button>
                         <button type="button" class="btn btn-success" onclick="proceedToSportsPayment()">
                             <i class="fas fa-credit-card me-2"></i>Buy Now
