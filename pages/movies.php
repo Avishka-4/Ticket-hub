@@ -507,11 +507,8 @@
                             </div>
                         </div>
                         <button type="button" class="btn btn-secondary m-1" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary m-1" onclick="addMovieToCart()">
-                            <i class="fas fa-shopping-cart me-2 "></i>Add to Cart
-                        </button>
                         <button type="button" class="btn btn-success m-1" onclick="proceedToMoviePayment()">
-                            <i class="fas fa-credit-card me-2"></i>Buy Now
+                            <i class="fas fa-credit-card me-2"></i>Book Now
                         </button>
                     </div>
                 </div>

@@ -526,9 +526,6 @@
                             </div>
                         </div>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" onclick="addLeisureToCart()">
-                            <i class="fas fa-shopping-cart me-2"></i>Add to Cart
-                        </button>
                         <button type="button" class="btn btn-success" onclick="proceedToLeisurePayment()">
                             <i class="fas fa-credit-card me-2"></i>Book Now
                         </button>

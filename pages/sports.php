@@ -474,7 +474,7 @@
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                         </button>
                         <button type="button" class="btn btn-success" onclick="proceedToSportsPayment()">
-                            <i class="fas fa-credit-card me-2"></i>Buy Now
+                            <i class="fas fa-credit-card me-2"></i>Book Now
                         </button>
                     </div>
                 </div>
