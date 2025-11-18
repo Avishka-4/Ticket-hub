@@ -433,11 +433,8 @@
                             <span class="fw-bold">Total: LKR<span id="totalPrice">0.00</span></span>
                         </div>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" onclick="addToCart()">
-                            <i class="fas fa-shopping-cart me-2"></i>Add to Cart
-                        </button>
                         <button type="button" class="btn btn-success" onclick="proceedToPayment()">
-                            <i class="fas fa-credit-card me-2"></i>Buy Now
+                            <i class="fas fa-credit-card me-2"></i>Book Now
                         </button>
                     </div>
                 </div>
