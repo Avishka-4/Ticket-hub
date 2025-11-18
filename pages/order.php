@@ -6,6 +6,7 @@
   }else{
     die(mysqli_error($con));
   }
+  
   if($_SERVER['REQUEST_METHOD']==='POST'){
     $full_name      = $_POST['full_name'];
     $email_address  = $_POST['email_address'];
@@ -21,9 +22,29 @@
     $cvv            = $_POST['cvv'];
     $total_price    = $_POST['total_price']?? '';
 
+    // Generate booking reference
+    $booking_reference = 'TOUR-' . strtoupper(uniqid());
+    
+    // Clean price value (remove "LKR" and commas)
+    $clean_price = preg_replace('/[^0-9.]/', '', str_replace(',', '', $total_price));
+    
+    // Create additional booking details as JSON
+    $booking_details = json_encode([
+        'full_name' => $full_name,
+        'email_address' => $email_address,
+        'phone_number' => $phone_number,
+        'num_rooms' => $num_rooms,
+        'departure_date' => $d_date,
+        'return_date' => $r_date,
+        'num_nights' => $num_nights,
+        'payment_method' => $p_method,
+        'account_number' => $account_number,
+        'account_name' => $account_name,
+        'cvv' => $cvv
+    ]);
 
-    $sql = "INSERT INTO `tbl_order` (full_name,email_address,phone_number,members,num_rooms,d_date,r_date,num_nights,p_method,account_number,account_name,cvv,total_price)
-    VALUES ('$full_name','$email_address','$phone_number','$members','$num_rooms','$d_date','$r_date','$num_nights','$p_method','$account_number','$account_name','$cvv','$total_price')";
+    $sql = "INSERT INTO `bookings` (booking_type, booking_reference, booking_date, seats, total_price, selected_seats, status)
+    VALUES ('tour', '$booking_reference', '$d_date', '$members', '$clean_price', '$booking_details', 'pending')";
 
     $result = mysqli_query($con,$sql);
     if($result){
@@ -494,8 +515,7 @@
             <form class="row g-0" action="order.php" method="POST">
                 <div class="col-12">
                     <h2 class="form-title">
-                        <i class="fas fa-magic"></i>
-                        Book Your Dream Journey
+                        Fill this Form
                     </h2>
                 </div>
 
@@ -515,11 +535,11 @@
                         Email Address
                     </label>
                     <div class="input-glow">
-                        <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address" name="email_address" required>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address" name="email_address">
                     </div>
                 </div>
 
-                <div class="col-md-6 form-group">
+                <div class="col-md-3 form-group">
                     <label for="phone-number" class="form-label">
                         <i class="fas fa-phone"></i>
                         Phone Number
@@ -529,7 +549,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 form-group">
+                <div class="col-md-3 form-group">
                     <label for="members" class="form-label">
                         <i class="fas fa-users"></i>
                         Number of Members
@@ -539,7 +559,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 form-group">
+                <div class="col-md-6 form-group">
                     <label for="num_rooms" class="form-label">
                         <i class="fas fa-bed"></i>
                         Number of Rooms (1 Room for 4 members)
@@ -549,7 +569,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label for="d_date" class="form-label">
                         <i class="fas fa-calendar-alt"></i>
                         Departure Date
@@ -559,7 +579,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label for="r_date" class="form-label">
                         <i class="fas fa-calendar-check"></i>
                         Return Date
@@ -569,7 +589,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label for="nights" class="form-label">
                         <i class="fas fa-moon"></i>
                         Number of Nights
@@ -579,7 +599,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 form-group">
+                <div class="col-md-3 form-group">
                     <label for="p_method" class="form-label">
                         <i class="fas fa-credit-card"></i>
                         Payment Method
@@ -587,8 +607,8 @@
                     <div class="input-glow">
                         <select id="p_method" class="form-select" name="p_method" required>
                             <option value="" selected>Choose Your Payment Method</option>
-                            <option value="debit">Debit Card</option>
-                            <option value="credit">Credit Card</option>
+                            <option value="card">Debit Card</option>
+                            <option value="card">Credit Card</option>
                         </select>
                     </div>
                 </div>
@@ -603,7 +623,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-8 form-group">
+                <div class="col-md-9 form-group">
                     <label for="account_name" class="form-label">
                         <i class="fas fa-user-tag"></i>
                         Account Holder Name
@@ -613,37 +633,28 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 form-group">
+                <div class="col-md-3 form-group">
                     <label for="cvv" class="form-label">
                         <i class="fas fa-lock"></i>
                         CVV
                     </label>
                     <div class="input-glow">
-                        <input type="text" class="form-control" id="cvv" placeholder="CVV" name="cvv" maxlength="4" required>
+                        <input type="text" class="form-control" id="cvv" placeholder="CVV" name="cvv" required>
                     </div>
                 </div>
 
                 <div class="col-12">
-                    <div class="total-display">
-                        <div class="total-label">
-                            <i class="fas fa-calculator me-2"></i>
-                            Total Amount
-                        </div>
-                        <div class="total-amount" id="total-display">Rs. 0.00</div>
-                        <input type="hidden" id="total" name="total_price" value="0">
-                    </div>
+                    <label class="form-label">
+                        <i class="fas fa-calculator me-2"></i>
+                        Total Amount (LKR)
+                    </label>
+                    <input type="text" id="total" class="form-control" readonly name="total_price">
                 </div>
 
                 <div class="col-12">
                     <div class="btn-container">
-                        <button type="submit" class="btn-glow">
-                            <i class="fas fa-magic me-2"></i>
-                            Pay Now
-                        </button>
-                        <button type="reset" class="btn-reset">
-                            <i class="fas fa-redo me-2"></i>
-                            Reset Form
-                        </button>
+                        <button type="submit" class="btn-glow">Pay Now</button>
+                        <button type="reset" class="btn-reset">Reset</button>
                     </div>
                 </div>
             </form>
@@ -661,53 +672,10 @@
 
             let total = [(members * member_price) + (rooms * room_price)] * nights;
 
-            document.getElementById("total-display").textContent = "Rs. " + total.toLocaleString() + ".00";
-            document.getElementById("total").value = total;
+            document.getElementById("total").value = total.toLocaleString() + " LKR";
         }
 
-        // Auto-calculate rooms based on members
-        document.getElementById("members").addEventListener('input', function() {
-            const members = parseInt(this.value) || 0;
-            const suggestedRooms = Math.ceil(members / 4);
-            document.getElementById("num_rooms").value = suggestedRooms;
-            calculateTotal();
-        });
-
-        // Auto-calculate nights based on dates
-        document.getElementById("d_date").addEventListener('change', calculateNights);
-        document.getElementById("r_date").addEventListener('change', calculateNights);
-
-        function calculateNights() {
-            const departureDate = new Date(document.getElementById("d_date").value);
-            const returnDate = new Date(document.getElementById("r_date").value);
-            
-            if (departureDate && returnDate && returnDate > departureDate) {
-                const timeDiff = returnDate.getTime() - departureDate.getTime();
-                const nights = Math.ceil(timeDiff / (1000 * 3600 * 24));
-                document.getElementById("nights").value = nights;
-                calculateTotal();
-            }
-        }
-
-        // Initialize calculation
         calculateTotal();
-
-        // Add floating animation to particles
-        function animateParticles() {
-            const particles = document.querySelectorAll('.particle');
-            particles.forEach((particle, index) => {
-                const randomX = Math.random() * 100;
-                const randomY = Math.random() * 100;
-                particle.style.left = randomX + '%';
-                particle.style.top = randomY + '%';
-            });
-        }
-
-        // Animate particles every 10 seconds
-        setInterval(animateParticles, 10000);
-        
-        // Initial particle positioning
-        animateParticles();
     </script>
 </body>
 </html>
