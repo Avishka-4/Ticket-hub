@@ -29,6 +29,14 @@
         .card-body{
             margin-top: 20px;
         }
+        .modal-header {
+            background: linear-gradient(135deg, #8b5cf6 0%, #198754 100%);
+            color: white;
+        }
+        .feature-list i {
+            color: #198754;
+            width: 20px;
+        }
     </style>
 </head>
 <body>
@@ -489,23 +497,23 @@
                         </div>
                         <div class="col-md-6">
                             <h6 class="fw-bold mb-3">Activity Details</h6>
-                            <div class="activity-info p-3 bg-light rounded mb-3">
+                            <div class="activity-info p-3 bg-light rounded mb-3 feature-list">
                                 <div class="mb-2">
                                     <strong>What's Included:</strong>
                                     <ul class="mt-1 mb-0">
-                                        <li>Professional instruction</li>
-                                        <li>All necessary equipment</li>
-                                        <li>Safety briefing</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>Professional instruction</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>All necessary equipment</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>Safety briefing</li>
                                         
                                     </ul>
                                 </div>
                                 <div class="mb-2">
                                     <strong>What to Bring:</strong>
                                     <ul class="mt-1 mb-0">
-                                        <li>Comfortable clothing</li>
-                                        <li>Protection items</li>
-                                        <li>Water bottle</li>
-                                        <li>Camera (optional)</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>Comfortable clothing</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>Protection items</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>Water bottle</li>
+                                        <li><i class="fas fa-check-circle me-2"></i>Camera (optional)</li>
                                     </ul>
                                 </div>
                             </div>
