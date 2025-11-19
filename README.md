@@ -35,16 +35,16 @@ A basic but complete, PHP + MySQL ticket booking website scaffold with user auth
 - Implement CSRF protection and strict input validation for forms when going beyond a demo
 
 ##  Aims of the Project
-•	Centralize Event and Activity Bookings: To provide a single platform where users can find and book tickets for a diverse range of events, including movies, sports, leisure activities, and tourist attractions, instead of having to visit multiple websites.
-•	Enhance User Experience: To create a user-friendly interface that simplifies the process of finding, selecting, and purchasing tickets, including features like a secure login system and an easy-to-navigate homepage.
-•	Increase Accessibility: To make it easier for people to discover local events and activities they might not have otherwise known about.
-•	Streamline Business Operations: To offer a solution for event organizers, venue owners, and service providers to manage their ticket sales, bookings, and customer data more efficiently.
-•	Boost Revenue: To generate income through ticket sales commissions or service fees.
+- Centralize Event and Activity Bookings: To provide a single platform where users can find and book tickets for a diverse range of events, including movies, sports, leisure activities, and tourist attractions, instead of having to visit multiple websites.
+- Enhance User Experience: To create a user-friendly interface that simplifies the process of finding, selecting, and purchasing tickets, including features like a secure login system and an easy-to-navigate homepage.
+- Increase Accessibility: To make it easier for people to discover local events and activities they might not have otherwise known about.
+- Streamline Business Operations: To offer a solution for event organizers, venue owners, and service providers to manage their ticket sales, bookings, and customer data more efficiently.
+- Boost Revenue: To generate income through ticket sales commissions or service fees.
 
 ## Problems This Project Will Solve
 This platform will solve several key problems for both consumers and businesses:
-•	Fragmentation of Information: Currently, a person looking to book a movie, a sports game, or a tourist tour would have to visit separate websites for each. This project solves this by consolidating all these options into one place.
-•	Inconvenience for Users: The need to create multiple accounts and enter payment details on different sites is time-consuming and inconvenient. A single platform with a secure login solves this, creating a more streamlined booking process.
-•	Limited Exposure for Businesses: Smaller event organizers or local tourist destinations may struggle to get visibility. This platform will provide them with a dedicated space to list their offerings, increasing their market reach and potential customer base.
-•	Inefficient Ticket Management: For businesses, managing manual ticket sales and tracking bookings can be a logistical headache. The website will provide a digital solution for automated ticket sales, inventory management, and data analysis.
-•	Missed Opportunities: Users often don't know about local events happening around them.
+- Fragmentation of Information: Currently, a person looking to book a movie, a sports game, or a tourist tour would have to visit separate websites for each. This project solves this by consolidating all these options into one place.
+- Inconvenience for Users: The need to create multiple accounts and enter payment details on different sites is time-consuming and inconvenient. A single platform with a secure login solves this, creating a more streamlined booking process.
+- Limited Exposure for Businesses: Smaller event organizers or local tourist destinations may struggle to get visibility. This platform will provide them with a dedicated space to list their offerings, increasing their market reach and potential customer base.
+- Inefficient Ticket Management: For businesses, managing manual ticket sales and tracking bookings can be a logistical headache. The website will provide a digital solution for automated ticket sales, inventory management, and data analysis.
+- Missed Opportunities: Users often don't know about local events happening around them.
