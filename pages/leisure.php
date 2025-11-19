@@ -37,99 +37,110 @@
             color: #198754;
             width: 20px;
         }
+        /* Hero container */
+        .hero {
+            position: relative;
+        }
+
+        /* Make carousel images cover and have responsive heights */
+        .hero .carousel-inner img {
+            width: 100%;
+            height: 75vh;              /* desktop/tablet default */
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .hero .carousel-inner img {
+            height: 40vh;            /* smaller height for phones */
+            }
+        }
+
+        /* Overlay panel centered on the images */
+        .hero-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            width: calc(100% - 2rem);
+            max-width: 980px;
+            padding: 1rem 1.25rem;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+
+        /* Responsive title and subtitle using clamp() */
+        .hero-title {
+            color: #fff;
+            margin: 0;
+            font-weight: 700;
+            line-height: 1.05;
+            font-size: clamp(1.4rem, 6vw, 2.8rem); /* scales between phone and desktop */
+        }
+
+        .hero-sub {
+            color: #fff;
+            margin-top: 0.5rem;
+            font-size: clamp(0.95rem, 3.5vw, 1.25rem);
+        }
+
+        /* Slight shadow for carousel controls so they remain visible */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+        }
+
+        /* Optional: reduce overlay padding on very small screens */
+        @media (max-width: 400px) {
+            .hero-overlay {
+            padding: 0.6rem 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
     <?php include '../includes/navbar.php'; ?>
     
-    <!-- Hero Section -->
-    <section id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../assets/images/leisure/1.jpg" class="d-block w-100 vh-50" alt="boat ride">
-                <div class="carousel-caption position-absolute top-50 start-50 translate-middle w-75">
-                    <div class="text-center">
-                        <h1 class="display-4 fw-bold mb-3 d-none d-md-block">
-                            <i class="fas fa-umbrella-beach"></i>Leisure Activities
-                        </h1>
-                        <h2 class="fw-bold mb-2 d-md-none">
-                            <i class="fas fa-umbrella-beach"></i>Leisure Activities
-                        </h2>
-                        <p class="lead mb-4 d-none d-md-block">Book exciting adventures and leisure activities</p>
-                        <p class="mb-3 d-md-none">Book exciting adventures and leisure activities</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="../assets/images/leisure/2.jpg" class="d-block w-100 vh-50" alt="Cycling">
-                <div class="carousel-caption position-absolute top-50 start-50 translate-middle w-75">
-                    <div class="text-center">
-                        <h1 class="display-4 fw-bold mb-3 d-none d-md-block">
-                            <i class="fas fa-umbrella-beach"></i>Leisure Activities
-                        </h1>
-                        <h2 class="fw-bold mb-2 d-md-none">
-                            <i class="fas fa-umbrella-beach"></i>Leisure Activities
-                        </h2>
-                        <p class="lead mb-4 d-none d-md-block">Book exciting adventures and leisure activities</p>
-                        <p class="mb-3 d-md-none">Book exciting adventures and leisure activities</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="../assets/images/leisure/3.jpg" class="d-block w-100 vh-50" alt="Camping">
-                <div class="carousel-caption position-absolute top-50 start-50 translate-middle w-75">
-                    <div class="text-center">
-                        <h1 class="display-4 fw-bold mb-3 d-none d-md-block">
-                            <i class="fas fa-umbrella-beach"></i>Leisure Activities
-                        </h1>
-                        <h2 class="fw-bold mb-2 d-md-none">
-                            <i class="fas fa-umbrella-beach"></i>Leisure Activities
-                        </h2>
-                        <p class="lead mb-4 d-none d-md-block">Book exciting adventures and leisure activities</p>
-                        <p class="mb-3 d-md-none">Book exciting adventures and leisure activities</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="../assets/images/leisure/4.jpg" class="d-block w-100 vh-50" alt="Walking">
-                <div class="carousel-caption position-absolute top-50 start-50 translate-middle w-75">
-                    <div class="text-center">
-                        <h1 class="display-4 fw-bold mb-3 d-none d-md-block">
-                            <i class="fas fa-umbrella-beach"></i>Leisure Activities
-                        </h1>
-                        <h2 class="fw-bold mb-2 d-md-none">
-                            <i class="fas fa-umbrella-beach"></i>Leisure Activities
-                        </h2>
-                        <p class="lead mb-4 d-none d-md-block">Book exciting adventures and leisure activities</p>
-                        <p class="mb-3 d-md-none">Book exciting adventures and leisure activities</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="../assets/images/leisure/5.jpg" class="d-block w-100 vh-50" alt="Surfing">
-                <div class="carousel-caption position-absolute top-50 start-50 translate-middle w-75">
-                    <div class="text-center">
-                        <h1 class="display-4 fw-bold mb-3 d-none d-md-block">
-                            <i class="fas fa-umbrella-beach"></i>Leisure Activities
-                        </h1>
-                        <h2 class="fw-bold mb-2 d-md-none">
-                            <i class="fas fa-umbrella-beach"></i>Leisure Activities
-                        </h2>
-                        <p class="lead mb-4 d-none d-md-block">Book exciting adventures and leisure activities</p>
-                        <p class="mb-3 d-md-none">Book exciting adventures and leisure activities</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </section>
+<!-- Hero Section -->
+<div class="hero">
+  <!-- Overlay (text inside the image box) -->
+    <div class="hero-overlay text-white">
+        <h1 class="hero-title">
+        <i class="fas fa-umbrella-beach"></i>  Leisure Activities
+        </h1>
+        <p class="hero-sub">Book exciting adventures and leisure activities</p>
+    </div>
+
+  <!-- Carousel -->
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../assets/images/leisure/1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/images/leisure/2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/images/leisure/3.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/images/leisure/4.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/images/leisure/5.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
 
     <!-- Filter Section -->
     <section class="py-4 bg-light">
