@@ -1,5 +1,14 @@
 // Leisure page JavaScript
 
+// Category mapping for filters
+const categoryMapping = {
+    'all': 'all',
+    'water': 'Water Sports',
+    'adventure': 'Adventure',
+    'crafts': 'Relaxing',
+    'outdoor': 'Outdoor'
+};
+
 let currentLeisurePrice = 0;
 let currentLeisureActivity = '';
 let selectedActivityDate = '';
@@ -51,6 +60,21 @@ function updateLeisureTotal() {
     }
 }
 
+// Filter cards based on selected category
+function filterCards(filter) {
+    const cards = document.querySelectorAll('.col-md-6.col-lg-4.mb-4');
+    const targetCategory = categoryMapping[filter];
+
+    cards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (filter === 'all' || cardCategory === targetCategory) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
 // Initialize leisure page
 document.addEventListener('DOMContentLoaded', function() {
     // Update total when participants change
@@ -58,6 +82,28 @@ document.addEventListener('DOMContentLoaded', function() {
     if (participantsSelect) {
         participantsSelect.addEventListener('change', updateLeisureTotal);
     }
+
+    // Add event listeners to filter buttons
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.classList.add('btn-outline-primary');
+                btn.classList.remove('btn-primary');
+            });
+
+            // Add active class to clicked button
+            this.classList.add('active');
+            this.classList.remove('btn-outline-primary');
+            this.classList.add('btn-primary');
+
+            // Filter cards
+            const filter = this.getAttribute('data-filter');
+            filterCards(filter);
+        });
+    });
 });
 
 // Add leisure to cart
