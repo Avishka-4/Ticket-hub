@@ -155,7 +155,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('SUN FM Presents – Clean Bandit Live in Concert', 45)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('SUN FM Presents – Clean Bandit Live in Concert', 12000)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -193,7 +193,7 @@
                                     <small class="text-muted ms-1">(4.7)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('Léger & Roy Rosenfeld — Lost Miracle', 120)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('Léger & Roy Rosenfeld — Lost Miracle', 500)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -230,7 +230,7 @@
                                     <small class="text-muted ms-1">(4.8)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('Nenjame Nenjame – Tamil Musical Concert', 25)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('Nenjame Nenjame – Tamil Musical Concert', 1000)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -268,7 +268,7 @@
                                     <small class="text-muted ms-1">(4.6)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('The Saiko Show', 35)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('The Saiko Show', 3500)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -307,7 +307,7 @@
                                     <small class="text-muted ms-1">(4.9)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('Colombo Stand-up Comedy Night', 55)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('Colombo Stand-up Comedy Night', 2000)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -346,7 +346,7 @@
                                     <small class="text-muted ms-1">(4.5)</small>
                                 </div>
                             </div>
-                            <button class="btn btn-primary w-100" onclick="openBookingModal('Deep Jungle Music Festival – Ella', 75)">
+                            <button class="btn btn-primary w-100" onclick="openBookingModal('Deep Jungle Music Festival – Ella', 8500)">
                                 <i class="fas fa-ticket-alt me-2"></i>Book Tickets
                             </button>
                         </div>
@@ -433,11 +433,8 @@
                             <span class="fw-bold">Total: LKR<span id="totalPrice">0.00</span></span>
                         </div>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" onclick="addToCart()">
-                            <i class="fas fa-shopping-cart me-2"></i>Add to Cart
-                        </button>
                         <button type="button" class="btn btn-success" onclick="proceedToPayment()">
-                            <i class="fas fa-credit-card me-2"></i>Buy Now
+                            <i class="fas fa-credit-card me-2"></i>Book Now
                         </button>
                     </div>
                 </div>

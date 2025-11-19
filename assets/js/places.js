@@ -39,13 +39,13 @@ function updatePlaceTotal() {
     let roomUpgrade = 0;
     switch(roomType) {
         case 'deluxe':
-            roomUpgrade = 200;
+            roomUpgrade = 3000;
             break;
         case 'suite':
-            roomUpgrade = 500;
+            roomUpgrade = 5000;
             break;
         case 'presidential':
-            roomUpgrade = 1000;
+            roomUpgrade = 8000;
             break;
         default:
             roomUpgrade = 0;
