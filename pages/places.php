@@ -64,12 +64,12 @@
         /* Make carousel images cover and have responsive heights */
         .hero .carousel-inner img {
             width: 100%;
-            height: 60vh;              /* desktop/tablet default */
+            height: 60vh;              
             object-fit: cover;
         }
         @media (max-width: 768px) {
             .hero .carousel-inner img {
-            height: 40vh;            /* smaller height for phones */
+            height: 40vh;           
             }
         }
 
@@ -274,6 +274,7 @@
                                 <i class="fas fa-clock me-2"></i>10 Days / 9 Nights
                             </p>
                             <p class="card-text">Hikkaduwa, in south-west of Sri Lanka, is a large costal tourist area, covering 11 different villages over six kilometres (31⁄2 miles) on the ocean, and three kilometres (2 miles) inland.</p>
+                            <br>
                             <br>
                             <div class="tour-highlights mb-3">
                                 <small class="fw-bold text-muted">Destination Highlights:</small>
@@ -518,19 +519,19 @@
                             <h6 class="fw-bold mb-3">Additional Options</h6>
                             <div class="additional-options">
                                 <div class="form-check mb-2 p-2 option-card">
-                                    <input class="form-check-input" type="checkbox" id="travelInsurance" value="2000">
+                                    <input class="form-check-input me-3" type="checkbox" id="travelInsurance" value="2000">
                                     <label class="form-check-label" for="travelInsurance">
                                         Premium Travel Insurance (+Rs.2000)
                                     </label>
                                 </div>
                                 <div class="form-check mb-2 p-2 option-card">
-                                    <input class="form-check-input" type="checkbox" id="airportLounge" value="2500">
+                                    <input class="form-check-input me-2" type="checkbox" id="airportLounge" value="2500">
                                     <label class="form-check-label" for="airportLounge">
                                         Airport Lounge Access (+Rs.2500)
                                     </label>
                                 </div>
                                 <div class="form-check mb-2 p-2 option-card">
-                                    <input class="form-check-input" type="checkbox" id="photoPackage" value="7500">
+                                    <input class="form-check-input me-2" type="checkbox" id="photoPackage" value="7500">
                                     <label class="form-check-label" for="photoPackage">
                                         Professional Photo Package (+Rs.7500)
                                     </label>

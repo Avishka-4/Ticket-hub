@@ -368,10 +368,7 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Sports Event Card 7 -->
                 
-
             </div>
         </div>
     </section>
@@ -430,8 +427,8 @@
                                 <div class="row text-center">
                                     <div class="col-12 mb-2">
                                         <div class="d-flex justify-content-center gap-2">
-                                            <button class="btn btn-outline-warning btn-sm stadium-section" data-section="VIP-A">>VIP Colombo</button>
-                                            <button class="btn btn-outline-warning btn-sm stadium-section" data-section="VIP-B">VIP Kandy</button>
+                                            <button class="btn btn-outline-warning btn-sm stadium-section" data-section="VIP-A">VIP</button>
+                                            <button class="btn btn-outline-warning btn-sm stadium-section" data-section="VIP-B">VIP</button>
                                             
                                         </div>
                                         <small class="text-muted d-block">VIP Boxes</small>
