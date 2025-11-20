@@ -423,8 +423,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header booking-modal-header">
-                    <h5 class="modal-title">
-                        <i class="fas fa-plane me-2"></i>Book Your Adventure: <span id="placeTourTitle"></span>
+                    <h5 class="modal-title">Book Your Destination: <span id="placeTourTitle"></span>
                     </h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
