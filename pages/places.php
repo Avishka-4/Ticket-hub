@@ -275,7 +275,6 @@
                             </p>
                             <p class="card-text">Hikkaduwa, in south-west of Sri Lanka, is a large costal tourist area, covering 11 different villages over six kilometres (31⁄2 miles) on the ocean, and three kilometres (2 miles) inland.</p>
                             <br>
-                            <br>
                             <div class="tour-highlights mb-3">
                                 <small class="fw-bold text-muted">Destination Highlights:</small>
                                 <ul class="small mt-1 mb-0">
@@ -568,9 +567,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" onclick="addPlaceToCart()">
-                        <i class="fas fa-shopping-cart me-2"></i>Add to Cart
-                    </button>
                     <button type="button" class="btn btn-success" onclick="proceedToPlacePayment()">
                         <i class="fas fa-credit-card me-2"></i>Book Now
                     </button>

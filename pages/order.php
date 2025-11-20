@@ -1,6 +1,6 @@
 <?php
 
-  $con = new mysqli('localhost','root','1234','tickethub');
+  $con = new mysqli('localhost','root','','tickethub');
   if($con){
     echo "";
   }else{

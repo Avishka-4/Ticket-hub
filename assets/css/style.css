@@ -145,6 +145,10 @@ body {
     margin: 2px;
     border-radius: 6px;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .seat-btn.selected, .movie-seat.selected, .stadium-section.selected {

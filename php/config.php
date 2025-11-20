@@ -6,7 +6,7 @@ ini_set('display_errors', 1);
 $host = 'localhost';
 $dbname = 'tickethub';
 $username = 'root';
-$password = '1234';
+$password = '';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
